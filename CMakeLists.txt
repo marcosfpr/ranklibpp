@@ -4,6 +4,9 @@ set(CMAKE_CXX_STANDARD 14)
 
 find_package(spdlog REQUIRED)
 
+set(CPACK_PACKAGE_NAME "ranklibcpp")
+set(CPACK_PACKAGE_RELEASE 1)
+
 add_executable(
     ${PROJECT_NAME} main.cpp
     ${PROJECT_SOURCE_DIR}/src/impl/DataPoint.cpp
@@ -22,3 +25,4 @@ link_libraries(
 )
 
 
+include(CPack)
