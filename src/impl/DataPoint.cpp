@@ -235,12 +235,25 @@ DataPoint::DataPoint(const DataPoint& dp){
     this->p_impl = new DataPointImpl(*dp.p_impl);
 }
 
+DataPoint::DataPoint(DataPoint&& rhs){
+    this->p_impl = rhs.p_impl;
+    rhs.p_impl = nullptr;
+}
 
 DataPoint& DataPoint::operator=(const DataPoint& dp){
     p_impl->initFrom(*dp.p_impl);
     return *this;
 }
 
+DataPoint& DataPoint::operator=(DataPoint&& rhs){
+    if(this != &rhs)
+    {
+        delete p_impl;
+        p_impl = rhs.p_impl;
+        rhs.p_impl = nullptr;
+    }
+    return *this;
+}
 
 DataPoint::~DataPoint(){
     delete p_impl;
