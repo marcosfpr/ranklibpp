@@ -1,25 +1,4 @@
-find_package(Boost REQUIRED)
+add_subdirectory(lib)
 
-set(SOURCES
-    ${PROJECT_SOURCE_DIR}/ranklib/RankLib.cpp
-    ${PROJECT_SOURCE_DIR}/ranklib/src/impl/DataPoint.cpp
-    ${PROJECT_SOURCE_DIR}/ranklib/src/impl/RankList.cpp
-)
-
-add_executable(
-    ranklib
-    ${SOURCES}
-)
-
-target_include_directories(
-    ranklib PUBLIC
-    api
-    ${Boost_INCLUDE_DIRS}
-)
-
-set_target_properties(
-    ranklib PROPERTIES PUBLIC_HEADER
-    RankLib.hpp
-)
-
-set_target_properties(ranklib PROPERTIES SOVERSION 1)
+add_executable(main main.cpp)
+target_link_libraries(main ranklib)

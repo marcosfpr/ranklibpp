@@ -1,7 +1,20 @@
+#include <ranklib.hpp>
+
 #include <check.h>
 
-START_TEST(test_sample_create) {
-    ck_assert_int_eq(1, 1);
+START_TEST(test_construct_datapoints) {
+    DataPoint* dp = new DataPoint();
+    ck_assert_ptr_ne(dp, nullptr);
+
+    //copying
+    DataPoint dp2(*dp);
+    ck_assert_ptr_ne(dp, &dp2);
+
+    //moving
+    DataPoint dp3 = std::move(dp2);
+    ck_assert_ptr_ne(&dp3, nullptr);
+
+    delete dp;
 }
 END_TEST
 
@@ -15,7 +28,7 @@ Suite* make_sample_creation_suite(){
     /* Creation test case */
     tc_core = tcase_create("Test Cases of DataPoints");
 
-    tcase_add_test(tc_core, test_sample_create);
+    tcase_add_test(tc_core, test_construct_datapoints);
 
     suite_add_tcase(s, tc_core);
 

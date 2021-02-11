@@ -11,8 +11,8 @@
 #ifndef RANKLIB_HPP_
 #define RANKLIB_HPP_
 
-#include "./src/api/DataPoint.hpp"
-#include "./src/api/RankList.hpp"
-#include "./src/api/RankLibError.hpp"
+#include "DataPoint.hpp"
+#include "RankList.hpp"
+#include "RankLibError.hpp"
 
 #endif //RANKLIB_HPP_
