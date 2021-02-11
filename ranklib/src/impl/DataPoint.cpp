@@ -18,8 +18,6 @@
 
 #include "boost/algorithm/string.hpp"
 
-#include "spdlog/spdlog.h"
-
 #define NaN -1000.00
 
 using std::move;
@@ -177,10 +175,8 @@ class DataPointImpl{
                 this->label = std::stof(tokens[0]);
 
                 if(label < 0)
-                {
-                    spdlog::warn("Relevance label cannot be negative. System will now exit");
-                    std::exit(1);
-                }
+                    throw new RankLibError("Relevance label cannot be negative. System will now exit");
+                
                 this->id_ = tokens[1];
 
                 std::pair<string, string> key_value;

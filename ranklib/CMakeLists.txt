@@ -1,4 +1,4 @@
-find_package(spdlog REQUIRED)
+# find_package(spdlog REQUIRED)
 find_package(Boost REQUIRED)
 
 add_executable(
@@ -11,7 +11,7 @@ add_executable(
 target_include_directories(
     ranklib PUBLIC
     api
-    ${SPDLOG_INCLUDE_DIRS}
+    # ${SPDLOG_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
 )
 
