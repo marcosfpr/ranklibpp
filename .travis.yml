@@ -1,4 +1,4 @@
-# Travis-CI Build for ranklib++
+# Travis-CI Build for ranklib++ library
 
 language: c++
 
