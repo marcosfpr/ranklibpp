@@ -1,5 +1,3 @@
-find_package(spdlog REQUIRED)
-
 add_executable(
     ranklib
     ${PROJECT_SOURCE_DIR}/ranklib/RankLib.cpp
@@ -10,7 +8,6 @@ add_executable(
 target_include_directories(
     ranklib PUBLIC
     api
-    ${SPDLOG_INCLUDE_DIRS}
 )
 
 set_target_properties(
