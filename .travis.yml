@@ -13,9 +13,7 @@ before_install:
   - sudo apt-get install -y build-essential cmake check valgrind lcov
 
 install:
-  - sudo apt-get install -y libspdlog-dev libboost-all-dev
-  - whereis spdlog
-  - whereis boost
+  - sudo apt-get install -y libboost-all-dev
 
 before_script:
   - mkdir build
