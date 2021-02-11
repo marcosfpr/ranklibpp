@@ -50,7 +50,7 @@ public:
 
 
     std::string toString(){
-        return "<RankList object with" + std::to_string(this->data_points.size()) + " samples>";
+        return "<RankList object with " + std::to_string(this->data_points.size()) + " samples>";
     }
 
     size_t size(){
@@ -129,7 +129,7 @@ RankList::RankList(sample_t data_points){
     this->p_impl = new RankListImpl(move(data_points));
 }
 
-RankList::RankList(const RankList& rl, vector<int> idx, int offset=0){
+RankList::RankList(const RankList& rl, vector<int> idx, int offset){
     this->p_impl = new RankListImpl(*rl.p_impl, move(idx), offset);
 }
 
@@ -179,14 +179,14 @@ void RankList::set(int k, shared_ptr<DataPoint> dp){
 
 RankList* RankList::getRanking(int fid){
     RankListImpl* impl = p_impl->getRanking(fid);
-    RankList rl = *this;
-    rl.p_impl = impl;
-    return &rl;
+    RankList* rl = this;
+    rl->p_impl = impl;
+    return rl;
 }
 
 RankList* RankList::getCorrectRanking(){
     RankListImpl* impl = p_impl->getCorrectRanking();
-    RankList rl = *this;
-    rl.p_impl = impl;
-    return &rl;
+    RankList* rl = this;
+    rl->p_impl = impl;
+    return rl;
 }
