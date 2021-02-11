@@ -23,6 +23,8 @@ script:
   - cmake ..
   - make
   - make test
+  - make gcov 
+  - make lcov 
 
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -X gcov || echo "Codecov did not collect coverage reports"
