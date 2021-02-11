@@ -19,7 +19,7 @@ add_executable(
 target_link_libraries(test_ranklib ${CHECK_LIBRARIES} pthread)
 
 # Create testing target and redirect its output to `Testing` folder
-add_test(NAME test_ranklib COMMAND test_ranklib WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Testing)
+add_test(NAME test_ranklib COMMAND test_ranklib WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/ranklib)
 set_tests_properties(test_ranklib PROPERTIES TIMEOUT 30) 
 
 # Aditional Valgrind test to check memory leaks in code

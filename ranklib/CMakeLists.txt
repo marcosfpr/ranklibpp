@@ -1,17 +1,19 @@
-# find_package(spdlog REQUIRED)
 find_package(Boost REQUIRED)
 
-add_executable(
-    ranklib
+set(SOURCES
     ${PROJECT_SOURCE_DIR}/ranklib/RankLib.cpp
     ${PROJECT_SOURCE_DIR}/ranklib/src/impl/DataPoint.cpp
     ${PROJECT_SOURCE_DIR}/ranklib/src/impl/RankList.cpp
 )
 
+add_executable(
+    ranklib
+    ${SOURCES}
+)
+
 target_include_directories(
     ranklib PUBLIC
     api
-    # ${SPDLOG_INCLUDE_DIRS}
     ${Boost_INCLUDE_DIRS}
 )
 
@@ -21,10 +23,3 @@ set_target_properties(
 )
 
 set_target_properties(ranklib PROPERTIES SOVERSION 1)
-
-install(TARGETS ranklib
-  RUNTIME DESTINATION bin
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
-  PUBLIC_HEADER DESTINATION api
-)

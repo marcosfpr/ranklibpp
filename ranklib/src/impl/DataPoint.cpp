@@ -104,14 +104,14 @@ class DataPointImpl{
 
      float getFeatureValue(int featureID) {
         if(featureID <= 0 || featureID > this->feature_values.size())
-            throw new RankLibError("Error in DataPoint::getFeatureValue(): requesting unspecified feature, fid=" + featureID);
+            throw new RankLibError("Error in DataPoint::getFeatureValue(): requesting unspecified feature, fid=" + std::to_string(featureID));
         return this->feature_values[featureID];
      }
 
 
      void setFeatureValue(int featureID, float featureValue) {
          if(featureID <= 0 || featureID > this->feature_values.size())
-            throw new RankLibError("Error in DataPoint::setFeatureValue(): requesting unspecified feature, fid=" + featureID);
+            throw new RankLibError("Error in DataPoint::setFeatureValue(): requesting unspecified feature, fid=" + std::to_string(featureID));
         this->feature_values[featureID] = featureValue;
      }
 
