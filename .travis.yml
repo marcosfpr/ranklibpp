@@ -10,7 +10,7 @@ branches:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y build-essential cmake check valgrind lcov
+  - sudo apt-get install -y build-essential cmake check valgrind lcov libspdlog-dev libboost-all-dev
 
 before_script:
   - mkdir build
