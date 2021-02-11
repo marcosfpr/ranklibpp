@@ -14,6 +14,8 @@ before_install:
 
 install:
   - sudo apt-get install -y libspdlog-dev libboost-all-dev
+  - whereis spdlog
+  - whereis boost
 
 before_script:
   - mkdir build
