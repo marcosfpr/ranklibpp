@@ -15,7 +15,6 @@ add_subdirectory(ranklib)
 enable_testing()
 add_subdirectory(tests)
 
-# Add build target to generate Coverage Test Report to all compiled object files
 find_program(GCOV gcov)
 find_program(LCOV lcov)
 find_program(GENHTML genhtml)
@@ -36,7 +35,7 @@ add_custom_target(gcov
 )
 
 add_custom_command(TARGET gcov POST_BUILD
-  COMMAND find ${CMAKE_BINARY_DIR} -type f -name *.c.o -exec ${GCOV} {} "\;"
+  COMMAND find ${CMAKE_BINARY_DIR} -type f -name *.cpp.o -exec ${GCOV} {} "\;"
   COMMAND echo "Coverage reports generated."
   COMMAND echo "You can find them on ${CMAKE_BINARY_DIR}/Coverage"
   WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Coverage
@@ -58,5 +57,4 @@ add_custom_command(TARGET lcov POST_BUILD
   COMMENT "Coverage Reports Generated"
 )
 
-# Add 'Coverage' folder into clean target
 set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES Coverage)

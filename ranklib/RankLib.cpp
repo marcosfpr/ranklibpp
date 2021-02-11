@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "RankLib.h"
+#include "RankLib.hpp"
 
 #include <memory>
 

@@ -19,7 +19,7 @@ target_include_directories(
 
 set_target_properties(
     ranklib PROPERTIES PUBLIC_HEADER
-    RankLib.h 
+    RankLib.hpp
 )
 
 set_target_properties(ranklib PROPERTIES SOVERSION 1)
