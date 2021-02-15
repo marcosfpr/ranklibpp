@@ -1,4 +1,4 @@
-find_package(GTest REQUIRED)
+find_package(GTest)
 
 add_executable(
   test_ranklib
@@ -6,8 +6,6 @@ add_executable(
   unit/DataPointTest.cpp
   unit/RankListTest.cpp
 )
-
-include_directories(${GTEST_INCLUDE_DIRS})
 
 target_link_libraries(test_ranklib ranklib pthread ${GTEST_LIBRARIES} ${GTEST_MAIN_LIBRARIES})
 

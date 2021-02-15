@@ -13,7 +13,8 @@ before_install:
   - sudo apt-get install -y build-essential cmake libgtest-dev valgrind lcov
 
 install:
-  - sudo apt-get install -y libboost-all-dev googletest
+  - sudo sh external/gtest.sh
+  - sudo apt-get install -y libboost-all-dev
 
 before_script:
   - mkdir build
