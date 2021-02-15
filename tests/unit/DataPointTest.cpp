@@ -1,69 +1,84 @@
 #include <ranklib.hpp>
 
-#include <check.h>
+#include <gtest/gtest.h>
 
-START_TEST(test_construct_datapoints) {
+TEST(test_datapoints, constructor) {
     DataPoint* dp = new DataPoint();
-    ck_assert_ptr_ne(dp, nullptr);
+    EXPECT_TRUE(dp != nullptr);
 
     //copying
     DataPoint dp2(*dp);
-    ck_assert_ptr_ne(dp, &dp2);
+    EXPECT_TRUE(dp != &dp2);
+    EXPECT_TRUE(dp != nullptr);
 
     //moving
     DataPoint dp3 = std::move(dp2);
-    ck_assert_ptr_ne(&dp3, nullptr);
+    EXPECT_TRUE(&dp3 != nullptr);
 
     delete dp;
 }
-END_TEST
 
 
-Suite* make_sample_creation_suite(){
-    Suite *s;
-    TCase *tc_core;
+TEST(test_datapoints, operators) {
 
-    s = suite_create("Sample Creation Test Suite");
+    DataPoint dp;
+    dp.setDescription("d1");
 
-    /* Creation test case */
-    tc_core = tcase_create("Test Cases of DataPoints");
+    ASSERT_STREQ(dp.getDescription().c_str(), "d1");
 
-    tcase_add_test(tc_core, test_construct_datapoints);
+    DataPoint dp2;
+    dp2 = dp;
 
-    suite_add_tcase(s, tc_core);
+    ASSERT_STREQ(dp2.getDescription().c_str(), "d1");
+    EXPECT_TRUE(&dp != nullptr);
 
-    return s;
+    DataPoint dp3;
+    dp3 = std::move(dp);
+
+    ASSERT_STREQ(dp3.getDescription().c_str(), "d1");
 }
 
-Suite * make_sample_limits_suite() {
-    Suite *s;
-    TCase *tc_limits;
+TEST(test_datapoints, getters_and_setters) {
+    DataPoint dp;
+    std::vector<float> features = {0, 21, 2.3, 4.5};
 
-    s = suite_create("DataPoint Limits Test Suite");
+    dp.setCached(1.2);
+    dp.setDescription("desc");
+    dp.setFeatureVector(features);
+    dp.setFeatureValue(1, 21);
+    dp.setID("qid:10");
+    dp.setLabel(1);
+    std::string str = dp.toString();
 
-    /* Limits test case */
-    tc_limits = tcase_create("Simple Test Cases");
+    EXPECT_TRUE(dp.getCached() == 1.2);
+    EXPECT_TRUE(dp.getDescription() == "desc");
+    EXPECT_TRUE(dp.getFeatureValue(1) == 21);
+    EXPECT_TRUE(dp.getFeatureVector() == features);
+    EXPECT_TRUE(dp.getID() == "qid:10");
+    EXPECT_TRUE(dp.getLabel() == 1);
+    ASSERT_STREQ(dp.toString().c_str(),"1 qid:10 1:21.00 2:2.30 3:4.50 # desc");
 
-    // tcase_add_test(tc_limits, test_sample_create_neg);
-    // tcase_add_test(tc_limits, test_sample_create_pos);
+    dp.resetCached();
+    EXPECT_TRUE(dp.getCached() != 1.2);
+    EXPECT_TRUE(dp.getFeatureCount() == 3);
 
-    // suite_add_tcase(s, tc_limits);
-
-    return s;
 }
 
-int main(void) {
-  int number_failed;
-  SRunner *sr;
+TEST(test_datapoints, parse) {
+    DataPoint dp("0 qid:9 1:10 # doc1");
+    
+    EXPECT_TRUE(dp.getLabel() == 0);
+    EXPECT_TRUE(dp.getFeatureValue(1) == 10);
+    EXPECT_TRUE(dp.getID() == "qid:9");
 
-  sr = srunner_create(make_sample_creation_suite());
-  srunner_set_fork_status(sr, CK_NOFORK);
-  srunner_add_suite (sr, make_sample_limits_suite());
-  srunner_set_log (sr, "test.log");
-  srunner_set_xml (sr, "test.xml");
-  srunner_run_all(sr, CK_VERBOSE);
+    ASSERT_ANY_THROW(new DataPoint("-1 qid:9 1:10 # doc1"));
 
-  number_failed = srunner_ntests_failed(sr);
-  srunner_free(sr);
-  return (number_failed == 0) ? 0 : 1;
+    
 }
+
+TEST(test_datapoints, limits){
+    DataPoint dp("0 qid:9 1:10");
+    ASSERT_ANY_THROW(dp.getFeatureValue(100));
+    ASSERT_ANY_THROW(dp.setFeatureValue(0, 20));
+}
+

@@ -24,6 +24,7 @@ using std::move;
 using std::string;
 using std::vector;
 using std::shared_ptr;
+using std::unique_ptr;
 
 
 class RankListImpl{
@@ -67,37 +68,29 @@ public:
     void set(int k, shared_ptr<DataPoint> dp){
         if(k >= 0 && k < this->data_points.size()){
             this->data_points[k] = dp;
+            return;
         }
-        else
-            throw RankLibError("Error in RankList::set with k="+k);
+        throw RankLibError("Error in RankList::set with k="+k);
     }
 
 
-    RankListImpl* getCorrectRanking(){
-        vector<double> scores(this->data_points.size());
-        for(int i=0; i < this->data_points.size(); i++){
-            scores[i] = this->data_points[i]->getLabel();
-        }
-        vector<int> indexes(this->data_points.size());
-        std::iota(indexes.begin(), indexes.end(), 0);
-        std::stable_sort(indexes.begin(), indexes.end(),
-                [scores](size_t t1, size_t t2){return scores[t1] > scores[t2];});
-        
-        return new RankListImpl(*this, move(indexes));
+    void ranking(){
+        std::stable_sort(data_points.begin(), data_points.end(),
+                [](shared_ptr<DataPoint> dp1, shared_ptr<DataPoint> dp2)
+                {
+                    return dp1->getLabel() > dp2->getLabel();
+                }
+        );
     }
 
 
-    RankListImpl* getRanking(short fid){
-        vector<float> scores(this->data_points.size());
-        for(int i=0; i < this->data_points.size(); i++){
-            scores[i] = this->data_points[i]->getFeatureValue(fid);
-        }
-        vector<int> indexes(this->data_points.size());
-        std::iota(indexes.begin(), indexes.end(), 0);
-        std::stable_sort(indexes.begin(), indexes.end(),
-                [scores](size_t t1, size_t t2){return scores[t1] > scores[t2];});
-        
-        return new RankListImpl(*this, move(indexes));
+    void partialRanking(short fid){
+        std::stable_sort(data_points.begin(), data_points.end(),
+                [fid](shared_ptr<DataPoint> dp1, shared_ptr<DataPoint> dp2)
+                {
+                    return dp1->getFeatureValue(fid) > dp2->getFeatureValue(fid);
+                }
+        );
     }
 
     void init(sample_t data_points) {
@@ -107,12 +100,17 @@ public:
     void initFrom(const RankListImpl& rl, std::vector<int> idx, int offset=0){
         this->data_points.resize(rl.data_points.size());
         for(size_t i = 0; i < idx.size(); i++) {
-            this->data_points[i] = rl.get(idx[i]-offset);
+            shared_ptr<DataPoint> ref = rl.get(idx[i]-offset);
+            this->data_points[i] = std::make_shared<DataPoint>(DataPoint(*ref));
         }
     }
 
     void initFrom(const RankListImpl& rl){
-        this->data_points = rl.data_points;
+        this->data_points.resize(rl.data_points.size());
+        for(size_t i = 0; i < rl.data_points.size(); i++) {
+            shared_ptr<DataPoint> ref = rl.get(i);
+            this->data_points[i] = std::make_shared<DataPoint>(DataPoint(*ref));
+        }
     }
 
     void freePointers(){
@@ -177,16 +175,14 @@ void RankList::set(int k, shared_ptr<DataPoint> dp){
     p_impl->set(k, move(dp));
 }
 
-RankList* RankList::getRanking(int fid){
-    RankListImpl* impl = p_impl->getRanking(fid);
-    RankList* rl = this;
-    rl->p_impl = impl;
+RankList RankList::getPartialRanking(int fid){
+    RankList rl(RankList(*this));
+    rl.p_impl->partialRanking(fid);
     return rl;
 }
 
-RankList* RankList::getCorrectRanking(){
-    RankListImpl* impl = p_impl->getCorrectRanking();
-    RankList* rl = this;
-    rl->p_impl = impl;
+RankList RankList::getRanking(){
+    RankList rl(RankList(*this));
+    rl.p_impl->ranking();
     return rl;
 }

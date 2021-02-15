@@ -17,6 +17,7 @@
 #include <memory>
 
 using std::shared_ptr;
+using std::unique_ptr;
 using std::vector;
 
 class DataPoint;
@@ -114,20 +115,21 @@ public:
      */
     void set(int k, shared_ptr<DataPoint> dp);
 
+
     /**
      * @brief Get the Ranking object
      * 
      * @param fid 
-     * @return RankList*
+     * @return RankList
      */
-    RankList* getRanking(int fid);
+    RankList getPartialRanking(int fid);
 
     /**
      * @brief Get the Correct Ranking object
      * 
-     * @return RankList*
+     * @return RankList&&
      */
-    RankList* getCorrectRanking();
+    RankList getRanking();
 
 
 private:

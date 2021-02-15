@@ -12,6 +12,8 @@
 #include <iostream>
 #include <algorithm>
 #include <utility>
+#include <sstream>
+#include <iomanip>
 
 #include  "../api/DataPoint.hpp"
 #include  "../api/RankLibError.hpp"
@@ -23,6 +25,10 @@
 using std::move;
 using std::string;
 using std::vector;
+
+#define MAX_FEATURES 51
+#define FEATURE_RESIZE_STEP 10
+
 
 class DataPointImpl{
     public:
@@ -46,11 +52,13 @@ class DataPointImpl{
         string output = std::to_string((int)label) + " " + id_ + " ";
         for(int i=1; i<feature_values.size(); i++){
             float fVal = getFeatureValue(i);
+            std::stringstream ss;
+            ss << std::fixed << std::setprecision(2) << fVal;
             if(fVal != NaN){
-                output += std::to_string(i) + ":" + std::to_string(fVal) + (i==feature_values.size()-1 ? "" : " ");
+                output += std::to_string(i) + ":" + ss.str() + (i==feature_values.size()-1 ? "" : " ");
             }
         }
-        output += " " + description;
+        output += " # " + description;
         return output;
     }
 
@@ -121,6 +129,7 @@ class DataPointImpl{
 
 
      void setFeatureVector(vector<float> featureVector){
+         this->feature_count = featureVector.size() - 1;
          this->feature_values = move(featureVector);
      }
 
@@ -130,7 +139,8 @@ class DataPointImpl{
     void init(string raw=""){
         this->label = 0.0;
         this->cached = -1;
-        this->known_features = 0;
+        this->known_features = 0;            
+        this->feature_values.resize(max_feature, NaN);
         if(!raw.empty())
             parse(move(raw));
     }
@@ -158,7 +168,6 @@ class DataPointImpl{
         }
 
         void parse(string raw){
-            this->feature_values.resize(max_feature);
             std::fill(feature_values.begin(), feature_values.end(), NaN);
             int last_feature = -1;
             try{
@@ -217,8 +226,8 @@ class DataPointImpl{
 
 };
 
-int DataPointImpl::max_feature = 51;
-int DataPointImpl::feature_increase = 10;
+int DataPointImpl::max_feature = MAX_FEATURES;
+int DataPointImpl::feature_increase = FEATURE_RESIZE_STEP;
 int DataPointImpl::feature_count = 0;
 
 
