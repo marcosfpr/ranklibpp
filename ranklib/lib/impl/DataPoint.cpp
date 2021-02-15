@@ -132,9 +132,6 @@ class DataPointImpl{
          this->feature_count = featureVector.size() - 1;
          this->feature_values = move(featureVector);
      }
-
-
-    friend std::ostream& operator<<(std::ostream& os, const DataPoint& dp);
     
     void init(string raw=""){
         this->label = 0.0;

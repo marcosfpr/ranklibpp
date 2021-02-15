@@ -137,7 +137,7 @@ public:
     double getCached();
 
     /**
-     * @brief 
+     * @brief Reset cached value
      * 
      */
     void resetCached();
@@ -171,15 +171,6 @@ public:
      * @param featureVector 
      */
     void setFeatureVector(std::vector<float> featureVector);
-
-    /**
-     * @brief Overload << operator
-     * 
-     * @param os 
-     * @param dp 
-     * @return std::ostream& 
-     */
-    friend std::ostream &operator<<(std::ostream &os, const DataPoint &dp);
 
 private:
     DataPointImpl *p_impl;
