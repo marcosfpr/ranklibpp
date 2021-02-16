@@ -47,14 +47,17 @@ TEST(test_ranklists, operators) {
 
     EXPECT_TRUE(rl.size() == 3);
 
-    RankList rl2 = rl; // copy
+    RankList rl2({});
+    rl2 = rl; // copy
 
     EXPECT_TRUE(rl2.size() == 3);
     EXPECT_TRUE(&(*rl2.get(0)) != &(*rl.get(0))); //different portions of memory
 
-    RankList rl3 = std::move(rl); // mode
+    RankList rl3({});
+    rl3  = std::move(rl); // mode
     EXPECT_TRUE(rl3.size() == 3);
     // rl impl is null now
+
 }
 
 TEST(test_ranklists, utils) {
@@ -73,6 +76,8 @@ TEST(test_ranklists, utils) {
     ASSERT_STREQ(rl.get(2)->getID().c_str(), "qid:10");
 
     ASSERT_ANY_THROW(rl.set(10, std::make_shared<DataPoint>(DataPoint())));
+    ASSERT_ANY_THROW(rl.get(-1));
+
 }
 
 TEST(test_ranklists, ranking) {
