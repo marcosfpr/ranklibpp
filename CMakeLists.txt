@@ -11,6 +11,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage -O0")
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 add_subdirectory(ranklib)
+add_subdirectory(external/googletest)
 
 enable_testing()
 add_subdirectory(tests)

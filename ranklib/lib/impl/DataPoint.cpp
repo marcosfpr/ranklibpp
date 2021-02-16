@@ -181,7 +181,7 @@ class DataPointImpl{
                 this->label = std::stof(tokens[0]);
 
                 if(label < 0)
-                    throw new RankLibError("Relevance label cannot be negative. System will now exit");
+                    throw new RankLibError("Relevance label cannot be negative.");
                 
                 this->id_ = tokens[1];
 

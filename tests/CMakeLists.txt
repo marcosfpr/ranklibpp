@@ -1,4 +1,4 @@
-find_package(GTest)
+include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
 add_executable(
   test_ranklib
@@ -7,7 +7,7 @@ add_executable(
   unit/RankListTest.cpp
 )
 
-target_link_libraries(test_ranklib ranklib pthread ${GTEST_LIBRARIES} ${GTEST_MAIN_LIBRARIES})
+target_link_libraries(test_ranklib ranklib pthread gtest gtest_main)
 
 # Create testing target and redirect its output to `Testing` folder
 add_test(NAME test_ranklib COMMAND test_ranklib WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Testing)

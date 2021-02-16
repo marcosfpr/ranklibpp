@@ -9,7 +9,6 @@ TEST(test_datapoints, constructor) {
     //copying
     DataPoint dp2(*dp);
     EXPECT_TRUE(dp != &dp2);
-    EXPECT_TRUE(dp != nullptr);
 
     //moving
     DataPoint dp3 = std::move(dp2);
@@ -81,4 +80,3 @@ TEST(test_datapoints, limits){
     ASSERT_ANY_THROW(dp.getFeatureValue(100));
     ASSERT_ANY_THROW(dp.setFeatureValue(0, 20));
 }
-

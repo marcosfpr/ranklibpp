@@ -97,4 +97,3 @@ TEST(test_ranklists, ranking) {
     ASSERT_STREQ(rl3.get(1)->getDescription().c_str(), "# doc1");
     ASSERT_STREQ(rl3.get(2)->getDescription().c_str(), "# doc3");
 }
-
