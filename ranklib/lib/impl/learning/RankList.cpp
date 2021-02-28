@@ -16,9 +16,9 @@
 #include <utility>
 
 
-#include "../api/RankList.hpp"
-#include "../api/RankLibError.hpp"
-#include "../api/DataPoint.hpp"
+#include "../../api/learning/RankList.hpp"
+#include "../../api/RankLibError.hpp"
+#include "../../api/learning/DataPoint.hpp"
 
 using std::move;
 using std::string;
@@ -26,8 +26,9 @@ using std::vector;
 using std::shared_ptr;
 using std::unique_ptr;
 
+using namespace ranklib;
 
-class RankListImpl{
+class ranklib::RankListImpl{
 public:
 
     RankListImpl(sample_t data_points) {
@@ -63,6 +64,10 @@ public:
             return this->data_points[k];
         }
         throw RankLibError("Error in RankList::get with k="+k);
+    }
+
+    DataPoint& operator[](size_t i){
+        return *this->data_points[i];
     }
 
     void set(int k, shared_ptr<DataPoint> dp){
@@ -169,6 +174,10 @@ size_t RankList::size(){
 
 shared_ptr<DataPoint> RankList::get(int k) const{
     return p_impl->get(k);
+}
+
+DataPoint& RankList::operator[](size_t i){
+    return (*p_impl)[i];
 }
 
 void RankList::set(int k, shared_ptr<DataPoint> dp){

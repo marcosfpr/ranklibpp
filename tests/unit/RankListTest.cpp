@@ -7,6 +7,8 @@
 using std::shared_ptr;
 using std::vector;
 
+using namespace ranklib;
+
 TEST(test_ranklists, constructor) { 
    
     sample_t sample = {
@@ -74,6 +76,7 @@ TEST(test_ranklists, utils) {
     rl.set(2,std::make_shared<DataPoint>(DataPoint("0 qid:10 1:12 2:2.5 3:4.7 4:5.2 # doc1")));
 
     ASSERT_STREQ(rl.get(2)->getID().c_str(), "qid:10");
+    ASSERT_STREQ(rl[2].getID().c_str(), "qid:10");
 
     ASSERT_ANY_THROW(rl.set(10, std::make_shared<DataPoint>(DataPoint())));
     ASSERT_ANY_THROW(rl.get(-1));

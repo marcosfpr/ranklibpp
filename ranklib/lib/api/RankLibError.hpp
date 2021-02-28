@@ -15,14 +15,17 @@
 #include <string>
 #include <stdexcept>
 
-/**
- * @brief Error occurrence in Ranklib core.my_cool_project
- * 
- */
-class RankLibError : public std::runtime_error{
-    public:
-        RankLibError():std::runtime_error("RankLibError"){}
-        RankLibError(std::string message):std::runtime_error(message.c_str()){}
+namespace ranklib{
+        
+    /**
+     * @brief Error occurrence in Ranklib core.my_cool_project
+     * 
+     */
+    class RankLibError : public std::runtime_error{
+        public:
+            RankLibError():std::runtime_error("RankLibError"){}
+            RankLibError(std::string message):std::runtime_error(message.c_str()){}
+    };
 };
 
 #endif

@@ -15,8 +15,8 @@
 #include <sstream>
 #include <iomanip>
 
-#include  "../api/DataPoint.hpp"
-#include  "../api/RankLibError.hpp"
+#include  "../../api/learning/DataPoint.hpp"
+#include  "../../api/RankLibError.hpp"
 
 #include "boost/algorithm/string.hpp"
 
@@ -26,11 +26,13 @@ using std::move;
 using std::string;
 using std::vector;
 
+using namespace ranklib;
+
 #define MAX_FEATURES 51
 #define FEATURE_RESIZE_STEP 10
 
 
-class DataPointImpl{
+class ranklib::DataPointImpl{
     public:
 	
 

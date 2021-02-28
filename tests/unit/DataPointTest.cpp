@@ -2,6 +2,8 @@
 
 #include <gtest/gtest.h>
 
+using namespace ranklib;
+
 TEST(test_datapoints, constructor) {
     DataPoint* dp = new DataPoint();
     EXPECT_TRUE(dp != nullptr);

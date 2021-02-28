@@ -1,8 +1,10 @@
 find_package(Boost REQUIRED)
 
 set(SOURCES
-    impl/DataPoint.cpp
-    impl/RankList.cpp
+    impl/learning/DataPoint.cpp
+    impl/learning/RankList.cpp
+    impl/metric/MetricScorer.cpp
+    impl/metric/MAPScorer.cpp
 )
 
 add_library(

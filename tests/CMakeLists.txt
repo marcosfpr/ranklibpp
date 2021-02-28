@@ -5,6 +5,7 @@ add_executable(
   main.cpp
   unit/DataPointTest.cpp
   unit/RankListTest.cpp
+  unit/MAPScorerTest.cpp
 )
 
 target_link_libraries(test_ranklib ranklib pthread gtest gtest_main)

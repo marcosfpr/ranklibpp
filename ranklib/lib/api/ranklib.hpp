@@ -11,8 +11,12 @@
 #ifndef RANKLIB_HPP_
 #define RANKLIB_HPP_
 
-#include "DataPoint.hpp"
-#include "RankList.hpp"
+#include "learning/DataPoint.hpp"
+#include "learning/RankList.hpp"
+
+#include "metric/MetricScorer.hpp"
+#include "metric/MAPScorer.hpp"
+
 #include "RankLibError.hpp"
 
 #endif //RANKLIB_HPP_
