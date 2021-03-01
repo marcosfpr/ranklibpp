@@ -10,7 +10,7 @@ branches:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y build-essential cmake libgtest-dev valgrind lcov
+  - sudo apt-get install -y build-essential cmake libgtest-dev valgrind lcov doxygen
 
 install:
   - sudo apt-get install -y libboost-all-dev
