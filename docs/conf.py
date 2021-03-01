@@ -14,31 +14,6 @@
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 
-import subprocess, os
-
-def configureDoxyfile(input_dir, output_dir):
-    with open('Doxyfile.in', 'r') as file :
-        filedata = file.read()
-
-    filedata = filedata.replace('@DOXYGEN_INPUT_DIR@', input_dir)
-    filedata = filedata.replace('@DOXYGEN_OUTPUT_DIR@', output_dir)
-
-    with open('Doxyfile', 'w') as file:
-        file.write(filedata)
-
-# Check if we're running on Read the Docs' servers
-read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
-
-breathe_projects = {}
-
-if read_the_docs_build:
-    input_dir = '../ranklib'
-    output_dir = '.'
-    configureDoxyfile(input_dir, output_dir)
-    subprocess.call('doxygen', shell=True)
-    breathe_projects['ranklib'] = output_dir + '/xml'
-
-
 # -- Project information -----------------------------------------------------
 
 project = 'ranklib++'
@@ -81,3 +56,26 @@ html_theme = 'sphinx_rtd_theme'
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 
+import subprocess, os
+
+def configureDoxyfile(input_dir, output_dir):
+    with open('Doxyfile.in', 'r') as file :
+        filedata = file.read()
+
+    filedata = filedata.replace('@DOXYGEN_INPUT_DIR@', input_dir)
+    filedata = filedata.replace('@DOXYGEN_OUTPUT_DIR@', output_dir)
+
+    with open('Doxyfile', 'w') as file:
+        file.write(filedata)
+
+# Check if we're running on Read the Docs' servers
+read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
+
+breathe_projects = {}
+
+if read_the_docs_build:
+    input_dir = '../ranklib'
+    output_dir = '.'
+    configureDoxyfile(input_dir, output_dir)
+    subprocess.call('doxygen', shell=True)
+    breathe_projects['ranklib'] = output_dir + '/xml'
