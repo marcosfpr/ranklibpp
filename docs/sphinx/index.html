@@ -420,6 +420,379 @@
 </div>
 </dd></dl>
 
+<dl class="cpp class">
+<dt id="_CPPv4N7ranklib8RankListE">
+<span id="_CPPv3N7ranklib8RankListE"></span><span id="_CPPv2N7ranklib8RankListE"></span><span id="ranklib::RankList"></span><span class="target" id="classranklib_1_1_rank_list"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ranklib</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">RankList</span></code><a class="headerlink" href="#_CPPv4N7ranklib8RankListE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This class implement the list of objects (each of which is a <a class="reference internal" href="#classranklib_1_1_data_point"><span class="std std-ref">DataPoint</span></a>) to be ranked. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankList8RankListE8sample_t">
+<span id="_CPPv3N7ranklib8RankList8RankListE8sample_t"></span><span id="_CPPv2N7ranklib8RankList8RankListE8sample_t"></span><span id="ranklib::RankList::RankList__sample_t"></span><span class="target" id="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f"></span><code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><span class="pre">sample_t</span> <em><span class="pre">data_points</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankList8RankListE8sample_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new Rank List object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">data_points</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankList8RankListERK8RankList6vectorIiEi">
+<span id="_CPPv3N7ranklib8RankList8RankListERK8RankList6vectorIiEi"></span><span id="_CPPv2N7ranklib8RankList8RankListERK8RankList6vectorIiEi"></span><span id="ranklib::RankList::RankList__RankListCR.vector:i:.i"></span><span class="target" id="classranklib_1_1_rank_list_1a7328669b281ef0836e63109bf0b9b066"></span><code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N7ranklib8RankList8RankListERK8RankList6vectorIiEi" title="ranklib::RankList::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><em><span class="pre">rl</span></em>, <span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">int</span><span class="pre">&gt;</span> <em><span class="pre">idx</span></em>, <span class="pre">int</span> <em><span class="pre">offset</span></em> <span class="pre">=</span> <span class="pre">0</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankList8RankListERK8RankList6vectorIiEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new Rank List object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">idx</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">offset</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankList8RankListERK8RankList">
+<span id="_CPPv3N7ranklib8RankList8RankListERK8RankList"></span><span id="_CPPv2N7ranklib8RankList8RankListERK8RankList"></span><span id="ranklib::RankList::RankList__RankListCR"></span><span class="target" id="classranklib_1_1_rank_list_1ac4201f553630131084076b8ba856eeea"></span><code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N7ranklib8RankList8RankListERK8RankList" title="ranklib::RankList::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankList8RankListERK8RankList" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new Rank List object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: other ranklist </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankList8RankListERR8RankList">
+<span id="_CPPv3N7ranklib8RankList8RankListERR8RankList"></span><span id="_CPPv2N7ranklib8RankList8RankListERR8RankList"></span><span id="ranklib::RankList::RankList__RankListRR"></span><span class="target" id="classranklib_1_1_rank_list_1a67541798cf45331b2be2ce0356331749"></span><code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7ranklib8RankList8RankListERR8RankList" title="ranklib::RankList::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankList8RankListERR8RankList" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new Rank List object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankListaSERK8RankList">
+<span id="_CPPv3N7ranklib8RankListaSERK8RankList"></span><span id="_CPPv2N7ranklib8RankListaSERK8RankList"></span><span id="ranklib::RankList::assign-operator__RankListCR"></span><span class="target" id="classranklib_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b"></span><a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankListaSERK8RankList" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assign operator for RankLists. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classranklib_1_1_rank_list"><span class="std std-ref">RankList</span></a>&amp; </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dp</span></code>: other ranklist </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankListaSERR8RankList">
+<span id="_CPPv3N7ranklib8RankListaSERR8RankList"></span><span id="_CPPv2N7ranklib8RankListaSERR8RankList"></span><span id="ranklib::RankList::assign-operator__RankListRR"></span><span class="target" id="classranklib_1_1_rank_list_1a50cef171525b4aca632b407ac113acc3"></span><a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankListaSERR8RankList" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Move operator for ranklists. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classranklib_1_1_rank_list"><span class="std std-ref">RankList</span></a>&amp; </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankListD0Ev">
+<span id="_CPPv3N7ranklib8RankListD0Ev"></span><span id="_CPPv2N7ranklib8RankListD0Ev"></span><span id="ranklib::RankList::~RankList"></span><span class="target" id="classranklib_1_1_rank_list_1ad2ed9420312f06389716efe2e071dd94"></span><code class="sig-name descname"><span class="pre">~RankList</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankListD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroy the <a class="reference internal" href="#classranklib_1_1_rank_list"><span class="std std-ref">RankList</span></a> object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankList8toStringEv">
+<span id="_CPPv3N7ranklib8RankList8toStringEv"></span><span id="_CPPv2N7ranklib8RankList8toStringEv"></span><span id="ranklib::RankList::toString"></span><span class="target" id="classranklib_1_1_rank_list_1a0fd0b8c54a69d57a7ad529d617334944"></span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <code class="sig-name descname"><span class="pre">toString</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankList8toStringEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return string representation of a ranklist. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>std::string </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankList4sizeEv">
+<span id="_CPPv3N7ranklib8RankList4sizeEv"></span><span id="_CPPv2N7ranklib8RankList4sizeEv"></span><span id="ranklib::RankList::size"></span><span class="target" id="classranklib_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80"></span><span class="pre">size_t</span> <code class="sig-name descname"><span class="pre">size</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankList4sizeEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get size of ranklist </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>size_t </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4NK7ranklib8RankList3getEi">
+<span id="_CPPv3NK7ranklib8RankList3getEi"></span><span id="_CPPv2NK7ranklib8RankList3getEi"></span><span id="ranklib::RankList::get__iC"></span><span class="target" id="classranklib_1_1_rank_list_1a4b738c5b7a18492abf2cec423d348178"></span><span class="pre">shared_ptr</span><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4N7ranklib9DataPointE" title="ranklib::DataPoint"><span class="pre">DataPoint</span></a><span class="pre">&gt;</span> <code class="sig-name descname"><span class="pre">get</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">k</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK7ranklib8RankList3getEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get a single datapoint </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classranklib_1_1_data_point"><span class="std std-ref">DataPoint</span></a>&amp; </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">k</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankListixE6size_t">
+<span id="_CPPv3N7ranklib8RankListixE6size_t"></span><span id="_CPPv2N7ranklib8RankListixE6size_t"></span><span id="ranklib::RankList::subscript-operator__s"></span><span class="target" id="classranklib_1_1_rank_list_1afb21fbbfaeb2522880b1ccb67b9c7360"></span><a class="reference internal" href="#_CPPv4N7ranklib9DataPointE" title="ranklib::DataPoint"><span class="pre">DataPoint</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator[]</span></code><span class="sig-paren">(</span><span class="pre">size_t</span> <em><span class="pre">i</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankListixE6size_t" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>get a referente to a single datapoint </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classranklib_1_1_data_point"><span class="std std-ref">DataPoint</span></a>&amp; </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">i</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankList3setEi10shared_ptrI9DataPointE">
+<span id="_CPPv3N7ranklib8RankList3setEi10shared_ptrI9DataPointE"></span><span id="_CPPv2N7ranklib8RankList3setEi10shared_ptrI9DataPointE"></span><span id="ranklib::RankList::set__i.shared_ptr:DataPoint:"></span><span class="target" id="classranklib_1_1_rank_list_1a06e3827183a027a463ca2484803a5aa1"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">set</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">k</span></em>, <span class="pre">shared_ptr</span><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4N7ranklib9DataPointE" title="ranklib::DataPoint"><span class="pre">DataPoint</span></a><span class="pre">&gt;</span> <em><span class="pre">dp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankList3setEi10shared_ptrI9DataPointE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>set a single datapoint </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">k</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dp</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankList17getPartialRankingEi">
+<span id="_CPPv3N7ranklib8RankList17getPartialRankingEi"></span><span id="_CPPv2N7ranklib8RankList17getPartialRankingEi"></span><span id="ranklib::RankList::getPartialRanking__i"></span><span class="target" id="classranklib_1_1_rank_list_1ab9d16fc32d076eebde9c96409d1ce5c4"></span><a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a> <code class="sig-name descname"><span class="pre">getPartialRanking</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">fid</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankList17getPartialRankingEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the Ranking object. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classranklib_1_1_rank_list"><span class="std std-ref">RankList</span></a> </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">fid</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib8RankList10getRankingEv">
+<span id="_CPPv3N7ranklib8RankList10getRankingEv"></span><span id="_CPPv2N7ranklib8RankList10getRankingEv"></span><span id="ranklib::RankList::getRanking"></span><span class="target" id="classranklib_1_1_rank_list_1a607c962520a97ce0e8cdd909985950c5"></span><a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a> <code class="sig-name descname"><span class="pre">getRanking</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib8RankList10getRankingEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the Correct Ranking object. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classranklib_1_1_rank_list"><span class="std std-ref">RankList</span></a>&amp;&amp; </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N7ranklib12MetricScorerE">
+<span id="_CPPv3N7ranklib12MetricScorerE"></span><span id="_CPPv2N7ranklib12MetricScorerE"></span><span id="ranklib::MetricScorer"></span><span class="target" id="classranklib_1_1_metric_scorer"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ranklib</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">MetricScorer</span></code><a class="headerlink" href="#_CPPv4N7ranklib12MetricScorerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>A generic retrieval measure computation interface. </p>
+<p><dl class="simple">
+<dt><strong>Author</strong></dt><dd><p>Marcos Pontes and vdang </p>
+</dd>
+</dl>
+</p>
+<p>Subclassed by <a class="reference internal" href="#classranklib_1_1_m_a_p_scorer"><span class="std std-ref">ranklib::MAPScorer</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib12MetricScorer12MetricScorerEv">
+<span id="_CPPv3N7ranklib12MetricScorer12MetricScorerEv"></span><span id="_CPPv2N7ranklib12MetricScorer12MetricScorerEv"></span><span id="ranklib::MetricScorer::MetricScorer"></span><span class="target" id="classranklib_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb"></span><code class="sig-name descname"><span class="pre">MetricScorer</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib12MetricScorer12MetricScorerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new Metric Scorer object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib12MetricScorerD0Ev">
+<span id="_CPPv3N7ranklib12MetricScorerD0Ev"></span><span id="_CPPv2N7ranklib12MetricScorerD0Ev"></span><span id="ranklib::MetricScorer::~MetricScorer"></span><span class="target" id="classranklib_1_1_metric_scorer_1a6dc1a9c79e6ef48ec9272d5379e4c337"></span><code class="sig-name descname"><span class="pre">~MetricScorer</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib12MetricScorerD0Ev" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Destroy the Metric Scorer object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib12MetricScorer12MetricScorerERK12MetricScorer">
+<span id="_CPPv3N7ranklib12MetricScorer12MetricScorerERK12MetricScorer"></span><span id="_CPPv2N7ranklib12MetricScorer12MetricScorerERK12MetricScorer"></span><span id="ranklib::MetricScorer::MetricScorer__MetricScorerCR"></span><span class="target" id="classranklib_1_1_metric_scorer_1aa19a5430103a9215ba855bad2b5aeba4"></span><code class="sig-name descname"><span class="pre">MetricScorer</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N7ranklib12MetricScorer12MetricScorerERK12MetricScorer" title="ranklib::MetricScorer::MetricScorer"><span class="pre">MetricScorer</span></a> <span class="pre">&amp;</span><em><span class="pre">ms</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib12MetricScorer12MetricScorerERK12MetricScorer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new MetricScorert object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: other <a class="reference internal" href="#classranklib_1_1_metric_scorer"><span class="std std-ref">MetricScorer</span></a> </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib12MetricScoreraSERK12MetricScorer">
+<span id="_CPPv3N7ranklib12MetricScoreraSERK12MetricScorer"></span><span id="_CPPv2N7ranklib12MetricScoreraSERK12MetricScorer"></span><span id="ranklib::MetricScorer::assign-operator__MetricScorerCR"></span><span class="target" id="classranklib_1_1_metric_scorer_1a1b3757c0012820a8a842e4d54f422c45"></span><a class="reference internal" href="#_CPPv4N7ranklib12MetricScorerE" title="ranklib::MetricScorer"><span class="pre">MetricScorer</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N7ranklib12MetricScorerE" title="ranklib::MetricScorer"><span class="pre">MetricScorer</span></a> <span class="pre">&amp;</span><em><span class="pre">ms</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib12MetricScoreraSERK12MetricScorer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assign operator for <a class="reference internal" href="#classranklib_1_1_metric_scorer"><span class="std std-ref">MetricScorer</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classranklib_1_1_metric_scorer"><span class="std std-ref">MetricScorer</span></a>&amp; </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">dp</span></code>: other <a class="reference internal" href="#classranklib_1_1_metric_scorer"><span class="std std-ref">MetricScorer</span></a> </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib12MetricScorer8setDepthEi">
+<span id="_CPPv3N7ranklib12MetricScorer8setDepthEi"></span><span id="_CPPv2N7ranklib12MetricScorer8setDepthEi"></span><span id="ranklib::MetricScorer::setDepth__i"></span><span class="target" id="classranklib_1_1_metric_scorer_1a37576d07e18405c4195bf3ed60643126"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setDepth</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">depth</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib12MetricScorer8setDepthEi" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the Depth value. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">depth</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib12MetricScorer8getDepthEv">
+<span id="_CPPv3N7ranklib12MetricScorer8getDepthEv"></span><span id="_CPPv2N7ranklib12MetricScorer8getDepthEv"></span><span id="ranklib::MetricScorer::getDepth"></span><span class="target" id="classranklib_1_1_metric_scorer_1a8347d53c4d39a69db8110e53d757a6e4"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">getDepth</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib12MetricScorer8getDepthEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Get the Depth value. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>int </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib12MetricScorer5scoreE4listI8RankListE">
+<span id="_CPPv3N7ranklib12MetricScorer5scoreE4listI8RankListE"></span><span id="_CPPv2N7ranklib12MetricScorer5scoreE4listI8RankListE"></span><span id="ranklib::MetricScorer::score__list:RankList:"></span><span class="target" id="classranklib_1_1_metric_scorer_1a46a4b327848c8d4e41d3437999f4f8e0"></span><span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><span class="pre">list</span><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a><span class="pre">&gt;</span> <em><span class="pre">rls</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib12MetricScorer5scoreE4listI8RankListE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return score for multiple RankLists. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>double </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rls</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib12MetricScorer5scoreE8RankList">
+<span id="_CPPv3N7ranklib12MetricScorer5scoreE8RankList"></span><span id="_CPPv2N7ranklib12MetricScorer5scoreE8RankList"></span><span id="ranklib::MetricScorer::score__RankList"></span><span class="target" id="classranklib_1_1_metric_scorer_1a07e13cf2629fa3f1aa0fad974aaf65e3"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a> <em><span class="pre">rl</span></em><span class="sig-paren">)</span> <span class="pre">=</span> <span class="pre">0</span><a class="headerlink" href="#_CPPv4N7ranklib12MetricScorer5scoreE8RankList" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return score for a single <a class="reference internal" href="#classranklib_1_1_rank_list"><span class="std std-ref">RankList</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>double </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+<dl class="cpp class">
+<dt id="_CPPv4N7ranklib9MAPScorerE">
+<span id="_CPPv3N7ranklib9MAPScorerE"></span><span id="_CPPv2N7ranklib9MAPScorerE"></span><span id="ranklib::MAPScorer"></span><span class="target" id="classranklib_1_1_m_a_p_scorer"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ranklib</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">MAPScorer</span></code> <span class="pre">:</span> <em class="property"><span class="pre">public</span></em> <span class="pre">ranklib</span><span class="pre">::</span><a class="reference internal" href="#_CPPv4N7ranklib12MetricScorerE" title="ranklib::MetricScorer"><span class="pre">MetricScorer</span></a><a class="headerlink" href="#_CPPv4N7ranklib9MAPScorerE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib). </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib9MAPScorer9MAPScorerEv">
+<span id="_CPPv3N7ranklib9MAPScorer9MAPScorerEv"></span><span id="_CPPv2N7ranklib9MAPScorer9MAPScorerEv"></span><span id="ranklib::MAPScorer::MAPScorer"></span><span class="target" id="classranklib_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51"></span><code class="sig-name descname"><span class="pre">MAPScorer</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib9MAPScorer9MAPScorerEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classranklib_1_1_m_a_p_scorer"><span class="std std-ref">MAPScorer</span></a> object. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib9MAPScorer9MAPScorerERK9MAPScorer">
+<span id="_CPPv3N7ranklib9MAPScorer9MAPScorerERK9MAPScorer"></span><span id="_CPPv2N7ranklib9MAPScorer9MAPScorerERK9MAPScorer"></span><span id="ranklib::MAPScorer::MAPScorer__MAPScorerCR"></span><span class="target" id="classranklib_1_1_m_a_p_scorer_1a661dfa171b19ed4bfc8207042674104c"></span><code class="sig-name descname"><span class="pre">MAPScorer</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N7ranklib9MAPScorer9MAPScorerERK9MAPScorer" title="ranklib::MAPScorer::MAPScorer"><span class="pre">MAPScorer</span></a> <span class="pre">&amp;</span><em><span class="pre">ms</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib9MAPScorer9MAPScorerERK9MAPScorer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classranklib_1_1_m_a_p_scorer"><span class="std std-ref">MAPScorer</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ms</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib9MAPScoreraSERK9MAPScorer">
+<span id="_CPPv3N7ranklib9MAPScoreraSERK9MAPScorer"></span><span id="_CPPv2N7ranklib9MAPScoreraSERK9MAPScorer"></span><span id="ranklib::MAPScorer::assign-operator__MAPScorerCR"></span><span class="target" id="classranklib_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548"></span><a class="reference internal" href="#_CPPv4N7ranklib9MAPScorerE" title="ranklib::MAPScorer"><span class="pre">MAPScorer</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N7ranklib9MAPScorerE" title="ranklib::MAPScorer"><span class="pre">MAPScorer</span></a> <span class="pre">&amp;</span><em><span class="pre">ms</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib9MAPScoreraSERK9MAPScorer" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Assignment operator for <a class="reference internal" href="#classranklib_1_1_m_a_p_scorer"><span class="std std-ref">MAPScorer</span></a> object. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classranklib_1_1_m_a_p_scorer"><span class="std std-ref">MAPScorer</span></a>&amp; </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ms</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib9MAPScorer5scoreE8RankList">
+<span id="_CPPv3N7ranklib9MAPScorer5scoreE8RankList"></span><span id="_CPPv2N7ranklib9MAPScorer5scoreE8RankList"></span><span id="ranklib::MAPScorer::score__RankList"></span><span class="target" id="classranklib_1_1_m_a_p_scorer_1a511abfa657189ddc1a00b382a7bc23d9"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a> <em><span class="pre">rl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib9MAPScorer5scoreE8RankList" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Compute MAP for a single <a class="reference internal" href="#classranklib_1_1_rank_list"><span class="std std-ref">RankList</span></a>. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>double </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N7ranklib9MAPScorer5scoreE4listI8RankListE">
+<span id="_CPPv3N7ranklib9MAPScorer5scoreE4listI8RankListE"></span><span id="_CPPv2N7ranklib9MAPScorer5scoreE4listI8RankListE"></span><span id="ranklib::MAPScorer::score__list:RankList:"></span><span class="target" id="classranklib_1_1_m_a_p_scorer_1a89a6320352e8b7f2bcf3f3383454bc08"></span><span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><span class="pre">list</span><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4N7ranklib8RankListE" title="ranklib::RankList"><span class="pre">RankList</span></a><span class="pre">&gt;</span> <em><span class="pre">rls</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7ranklib9MAPScorer5scoreE4listI8RankListE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Compute MAP for a list of RankLists. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>double </p>
+</dd>
+<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rls</span></code>: </p></li>
+</ul>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
 <div class="toctree-wrapper compound">
 </div>
 </div>
