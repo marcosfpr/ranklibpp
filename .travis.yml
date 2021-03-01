@@ -7,10 +7,11 @@ sudo: required
 branches:
   only:
     - master
+    - dev
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y build-essential cmake libgtest-dev valgrind lcov doxygen
+  - sudo apt-get install -y build-essential cmake libgtest-dev valgrind lcov doxygen graphviz
 
 install:
   - sudo apt-get install -y libboost-all-dev
