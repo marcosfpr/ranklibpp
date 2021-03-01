@@ -6,28 +6,23 @@
 Welcome to ranklib++'s documentation!
 =====================================
 
-Docs
-====
-.. doxygenclass:: ranklib::DataPoint
-   :members:
+RankLib++ is a C++ library based on `RankLib`_ project.
 
-.. doxygenclass:: ranklib::RankList
-   :members:
+.. _RankLib: https://sourceforge.net/p/lemur/wiki/RankLib/
 
-.. doxygenclass:: ranklib::MetricScorer
-   :members:
-
-.. doxygenclass:: ranklib::MAPScorer
-   :members:
-
+Currently in development.
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   overview
+   license
+   help
+
+
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+
