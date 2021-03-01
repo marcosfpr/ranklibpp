@@ -8,6 +8,8 @@ Welcome to ranklib++'s documentation!
 
 RankLib++ is a C++ library based on `RankLib`_ project.
 
+.. _RankLib: https://sourceforge.net/p/lemur/wiki/RankLib/
+
 Currently in development.
 
 .. toctree::

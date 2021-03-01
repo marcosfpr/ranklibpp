@@ -1,4 +1,4 @@
-Overview RankLib++.
+Components
 ===================
 
 .. doxygenclass:: ranklib::DataPoint
