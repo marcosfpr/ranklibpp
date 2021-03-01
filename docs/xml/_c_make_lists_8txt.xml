@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_c_make_lists_8txt" kind="file" language="C++">
+    <compoundname>CMakeLists.txt</compoundname>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_c_make_lists_8txt_1a7b9ebd044db49d09be198ed69dc50181" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>find_package</definition>
+        <argsstring>(Boost REQUIRED) set(SOURCES impl/learning/DataPoint.cpp impl/learning/RankList.cpp impl/metric/MetricScorer.cpp impl/metric/MAPScorer.cpp) add_library(ranklib $</argsstring>
+        <name>find_package</name>
+        <param>
+          <type>Boost</type>
+          <declname>REQUIRED</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/CMakeLists.txt" line="1" column="5" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/CMakeLists.txt" bodystart="1" bodyend="12"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">find_package(Boost<sp/>REQUIRED)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">set(SOURCES</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>impl/learning/DataPoint.cpp</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>impl/learning/RankList.cpp</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>impl/metric/MetricScorer.cpp</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/>impl/metric/MAPScorer.cpp</highlight></codeline>
+<codeline lineno="8"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal">add_library(</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>ranklib</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>${SOURCES}</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">target_include_directories(</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>ranklib<sp/>PUBLIC<sp/>api<sp/>PRIVATE</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>${Boost_INCLUDE_DIRS}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">set_target_properties(</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/>ranklib<sp/>PROPERTIES<sp/>PUBLIC_HEADER</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>/api/ranklib.hpp</highlight></codeline>
+<codeline lineno="23"><highlight class="normal">)</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">set_target_properties(ranklib<sp/>PROPERTIES<sp/>SOVERSION<sp/>1)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">install(TARGETS<sp/>ranklib</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/>RUNTIME<sp/>DESTINATION<sp/>bin</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/>LIBRARY<sp/>DESTINATION<sp/>lib</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/>ARCHIVE<sp/>DESTINATION<sp/>lib</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/>PUBLIC_HEADER<sp/>DESTINATION<sp/>api</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">)</highlight></codeline>
+    </programlisting>
+    <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/CMakeLists.txt"/>
+  </compounddef>
+</doxygen>

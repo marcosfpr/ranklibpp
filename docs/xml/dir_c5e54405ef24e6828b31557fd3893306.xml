@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_c5e54405ef24e6828b31557fd3893306" kind="dir">
+    <compoundname>/home/marcos/Projetos/ranklibcpp/ranklib</compoundname>
+    <innerdir refid="dir_5a127079ba1c4e95e418b397b7ba34f9">/home/marcos/Projetos/ranklibcpp/ranklib/lib</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/marcos/Projetos/ranklibcpp/ranklib/"/>
+  </compounddef>
+</doxygen>

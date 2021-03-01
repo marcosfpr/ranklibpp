@@ -1,0 +1,4 @@
+<map id="ranklib::MAPScorer" name="ranklib::MAPScorer">
+<area shape="rect" id="node1" title="This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib)." alt="" coords="11,80,157,107"/>
+<area shape="rect" id="node2" href="$classranklib_1_1_metric_scorer.html" title="A generic retrieval measure computation interface." alt="" coords="5,5,163,32"/>
+</map>

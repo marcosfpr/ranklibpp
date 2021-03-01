@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_6dc8bf9dd670622a9b7a4954ec0d5a7d" kind="dir">
+    <compoundname>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric</compoundname>
+    <innerfile refid="_m_a_p_scorer_8cpp">MAPScorer.cpp</innerfile>
+    <innerfile refid="_metric_scorer_8cpp">MetricScorer.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/"/>
+  </compounddef>
+</doxygen>

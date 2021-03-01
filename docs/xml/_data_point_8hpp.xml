@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_data_point_8hpp" kind="file" language="C++">
+    <compoundname>DataPoint.hpp</compoundname>
+    <includes local="no">vector</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includedby refid="ranklib_8hpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/ranklib.hpp</includedby>
+    <includedby refid="_data_point_8cpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp</includedby>
+    <includedby refid="_rank_list_8cpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/RankList.cpp</includedby>
+    <includedby refid="_m_a_p_scorer_8cpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp</includedby>
+    <includedby refid="_metric_scorer_8cpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MetricScorer.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/learning/DataPoint.hpp</label>
+        <link refid="_data_point_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="6">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MetricScorer.cpp</label>
+        <link refid="_metric_scorer_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/RankList.cpp</label>
+        <link refid="_rank_list_8cpp"/>
+      </node>
+      <node id="1">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/learning/DataPoint.hpp</label>
+        <link refid="_data_point_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp</label>
+        <link refid="_m_a_p_scorer_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/ranklib.hpp</label>
+        <link refid="ranklib_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp</label>
+        <link refid="_data_point_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classranklib_1_1_data_point" prot="public">ranklib::DataPoint</innerclass>
+    <innernamespace refid="namespaceranklib">ranklib</innernamespace>
+    <briefdescription>
+<para>A DataPoint is an object to be ranked (Like in RankLib) </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Marcos Pontes </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-02-06</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="11"><highlight class="preprocessor">#ifndef<sp/>DATA_POINT_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DATA_POINT_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ranklib{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DataPointImpl;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26" refid="classranklib_1_1_data_point" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_data_point_1a0670ee95b57173291576ecbb960ebd7c" kindref="member">DataPoint</ref>(std::string<sp/>raw<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_data_point_1a0670ee95b57173291576ecbb960ebd7c" kindref="member">DataPoint</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref><sp/>&amp;dp);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_data_point_1a0670ee95b57173291576ecbb960ebd7c" kindref="member">DataPoint</ref>(<ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref>&amp;&amp;<sp/>rhs);</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref>&amp;<sp/><ref refid="classranklib_1_1_data_point_1a25aec10e66a39b588237268eaac966c7" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref><sp/>&amp;dp);</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref>&amp;<sp/><ref refid="classranklib_1_1_data_point_1a25aec10e66a39b588237268eaac966c7" kindref="member">operator=</ref>(<ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref>&amp;&amp;<sp/>rhs);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_data_point_1a69770421a98781a4b34cfff206a24a79" kindref="member">~DataPoint</ref>();</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classranklib_1_1_data_point_1ae6bf8a887a67e15dfdbdd2f3f3d7b81e" kindref="member">toString</ref>();</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1a9f6dec9849f8844694c1da64b056231e" kindref="member">setID</ref>(std::string<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classranklib_1_1_data_point_1a9bac6962aaf7d3c0b26dffa9ca5a83d9" kindref="member">getID</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1aa1a72b3213c0b48bbb4b691bf7106d26" kindref="member">getFeatureCount</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1a3f7d451c784662862e364aabed0ca9c0" kindref="member">getLabel</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1af569565aa8d16e7187f30f1a211e4492" kindref="member">setLabel</ref>(</highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>label);</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classranklib_1_1_data_point_1a9e6d26b089df360716c33a101552f740" kindref="member">getDescription</ref>();</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1a52990ef0644da2f94865bcab52830246" kindref="member">setDescription</ref>(std::string<sp/>description);</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1a94cc352cd262add926cc8d0ddd1bcea2" kindref="member">setCached</ref>(</highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/>c);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1a5aeecc1b0a5ccb6cd7eaac931234deed" kindref="member">getCached</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1a9ed9b710f37c1a2d7b5489b49f9e5b25" kindref="member">resetCached</ref>();</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1a513110c4758ff17cb576fee15cd3b840" kindref="member">getFeatureValue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>featureID);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1a26a6a7c22f97026d45e7b6b8aa0e041d" kindref="member">setFeatureValue</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>featureID,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>featureValue);</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;float&gt;<sp/><ref refid="classranklib_1_1_data_point_1ac00576f4698a43124a8fce1c16e76acf" kindref="member">getFeatureVector</ref>();</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_data_point_1ac2bff67dc480edae347a55b72834bb87" kindref="member">setFeatureVector</ref>(std::vector&lt;float&gt;<sp/>featureVector);</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_data_point_impl" kindref="compound">DataPointImpl</ref><sp/>*p_impl;</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>DATA_POINT_HPP_</highlight></codeline>
+    </programlisting>
+    <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/learning/DataPoint.hpp"/>
+  </compounddef>
+</doxygen>

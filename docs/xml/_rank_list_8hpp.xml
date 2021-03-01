@@ -1,0 +1,142 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_rank_list_8hpp" kind="file" language="C++">
+    <compoundname>RankList.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">memory</includes>
+    <includedby refid="ranklib_8hpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/ranklib.hpp</includedby>
+    <includedby refid="_rank_list_8cpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/RankList.cpp</includedby>
+    <includedby refid="_m_a_p_scorer_8cpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp</includedby>
+    <includedby refid="_metric_scorer_8cpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MetricScorer.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/learning/RankList.hpp</label>
+        <link refid="_rank_list_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/learning/RankList.hpp</label>
+        <link refid="_rank_list_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MetricScorer.cpp</label>
+        <link refid="_metric_scorer_8cpp"/>
+      </node>
+      <node id="3">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/RankList.cpp</label>
+        <link refid="_rank_list_8cpp"/>
+      </node>
+      <node id="4">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp</label>
+        <link refid="_m_a_p_scorer_8cpp"/>
+      </node>
+      <node id="2">
+        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/ranklib.hpp</label>
+        <link refid="ranklib_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classranklib_1_1_rank_list" prot="public">ranklib::RankList</innerclass>
+    <innernamespace refid="namespaceranklib">ranklib</innernamespace>
+    <briefdescription>
+<para>Definition of RankLists. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>your name (<ulink url="mailto:you@domain.com">you@domain.com</ulink>) </para>
+</simplesect>
+<simplesect kind="version"><para>0.1 </para>
+</simplesect>
+<simplesect kind="date"><para>2021-02-07</para>
+</simplesect>
+<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#ifndef<sp/>RANK_LIST_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>RANK_LIST_HPP_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::shared_ptr;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::unique_ptr;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::vector;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ranklib{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">DataPoint;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RankListImpl;</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>vector&lt;shared_ptr&lt;DataPoint&gt;&gt;<sp/>sample_t;<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="classranklib_1_1_rank_list" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref><sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList</ref>(sample_t<sp/>data_points);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl,<sp/>vector&lt;int&gt;<sp/>idx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset=0);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList</ref>(<ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;&amp;<sp/>rl);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/><ref refid="classranklib_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/><ref refid="classranklib_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" kindref="member">operator=</ref>(<ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;&amp;<sp/>rl);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list_1ad2ed9420312f06389716efe2e071dd94" kindref="member">~RankList</ref>();</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classranklib_1_1_rank_list_1a0fd0b8c54a69d57a7ad529d617334944" kindref="member">toString</ref>();</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80" kindref="member">size</ref>();</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shared_ptr&lt;DataPoint&gt;<sp/><ref refid="classranklib_1_1_rank_list_1a4b738c5b7a18492abf2cec423d348178" kindref="member">get</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref>&amp;<sp/><ref refid="classranklib_1_1_rank_list_1afb21fbbfaeb2522880b1ccb67b9c7360" kindref="member">operator[]</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_1a06e3827183a027a463ca2484803a5aa1" kindref="member">set</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/>shared_ptr&lt;DataPoint&gt;<sp/>dp);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref><sp/><ref refid="classranklib_1_1_rank_list_1ab9d16fc32d076eebde9c96409d1ce5c4" kindref="member">getPartialRanking</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref><sp/><ref refid="classranklib_1_1_rank_list_1a607c962520a97ce0e8cdd909985950c5" kindref="member">getRanking</ref>();</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"></highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>*<sp/>p_impl;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="148"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+    </programlisting>
+    <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/learning/RankList.hpp"/>
+  </compounddef>
+</doxygen>

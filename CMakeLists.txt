@@ -16,6 +16,8 @@ add_subdirectory(external/googletest)
 enable_testing()
 add_subdirectory(tests)
 
+add_subdirectory(docs)
+
 find_program(GCOV gcov)
 find_program(LCOV lcov)
 find_program(GENHTML genhtml)

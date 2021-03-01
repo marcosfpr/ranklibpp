@@ -1,0 +1,555 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classranklib_1_1_data_point_impl" kind="class" language="C++" prot="public">
+    <compoundname>ranklib::DataPointImpl</compoundname>
+      <sectiondef kind="public-static-attrib">
+      <memberdef kind="variable" id="classranklib_1_1_data_point_impl_1a51f4a7d53ea132d8b036c4efce7ea143" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int DataPointImpl::max_feature</definition>
+        <argsstring></argsstring>
+        <name>max_feature</name>
+        <initializer>= MAX_FEATURES</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="158" column="16" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classranklib_1_1_data_point_impl_1adc931c4fb051ee8b267a0e74c0cd8284" prot="public" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int DataPointImpl::feature_increase</definition>
+        <argsstring></argsstring>
+        <name>feature_increase</name>
+        <initializer>= FEATURE_RESIZE_STEP</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="159" column="16" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-static-attrib">
+      <memberdef kind="variable" id="classranklib_1_1_data_point_impl_1aaa1338ea3ac6df10c2a45e003257104e" prot="protected" static="yes" mutable="no">
+        <type>int</type>
+        <definition>int DataPointImpl::feature_count</definition>
+        <argsstring></argsstring>
+        <name>feature_count</name>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="219" column="20" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classranklib_1_1_data_point_impl_1af7980e908f0b7574a162c0ee3f924715" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ranklib::DataPointImpl::known_features</definition>
+        <argsstring></argsstring>
+        <name>known_features</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="220" column="13" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="220" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classranklib_1_1_data_point_impl_1ae47059368055e01139716e5e0a74a971" prot="protected" static="no" mutable="no">
+        <type>float</type>
+        <definition>float ranklib::DataPointImpl::label</definition>
+        <argsstring></argsstring>
+        <name>label</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="221" column="15" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classranklib_1_1_data_point_impl_1a97184e5a38dd24d70d8736969f352c98" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ranklib::DataPointImpl::cached</definition>
+        <argsstring></argsstring>
+        <name>cached</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="222" column="16" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="222" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classranklib_1_1_data_point_impl_1abc1e1099a11bf2dc917e87fd3644774b" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ranklib::DataPointImpl::id_</definition>
+        <argsstring></argsstring>
+        <name>id_</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="223" column="16" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classranklib_1_1_data_point_impl_1a9c7abb80f9e4ab32b8772f16be4e4888" prot="protected" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ranklib::DataPointImpl::description</definition>
+        <argsstring></argsstring>
+        <name>description</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="223" column="20" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classranklib_1_1_data_point_impl_1a9267e755257735934b280c04c4f8f6dc" prot="protected" static="no" mutable="no">
+        <type>vector&lt; float &gt;</type>
+        <definition>vector&lt;float&gt; ranklib::DataPointImpl::feature_values</definition>
+        <argsstring></argsstring>
+        <name>feature_values</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="224" column="16" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a985138829693bd60c5a7da44e721e9e5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ranklib::DataPointImpl::DataPointImpl</definition>
+        <argsstring>(string raw=&quot;&quot;)</argsstring>
+        <name>DataPointImpl</name>
+        <param>
+          <type>string</type>
+          <declname>raw</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="39" column="5" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1af9ba4b13803d79e64c3f76cd0ca95e15" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ranklib::DataPointImpl::DataPointImpl</definition>
+        <argsstring>(const DataPointImpl &amp;dp)</argsstring>
+        <name>DataPointImpl</name>
+        <param>
+          <type>const <ref refid="classranklib_1_1_data_point_impl" kindref="compound">DataPointImpl</ref> &amp;</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="44" column="5" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1ab12fd0014dec437c877203290addc2dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ranklib::DataPointImpl::~DataPointImpl</definition>
+        <argsstring>()</argsstring>
+        <name>~DataPointImpl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="49" column="5" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a992b80411ef1d87ee479b9e18245536d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string ranklib::DataPointImpl::toString</definition>
+        <argsstring>()</argsstring>
+        <name>toString</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="53" column="12" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="53" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1af5ca4af8051bf2eaefd9bdc5f7cd086a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::setID</definition>
+        <argsstring>(string id)</argsstring>
+        <name>setID</name>
+        <param>
+          <type>string</type>
+          <declname>id</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="67" column="11" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="67" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a34d5665ca2920fdf4e36bee5bf407af5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string ranklib::DataPointImpl::getID</definition>
+        <argsstring>()</argsstring>
+        <name>getID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="71" column="13" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="71" bodyend="73"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a1f11aed43a59a226ff26ff3484c5cbd2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>int</type>
+        <definition>int ranklib::DataPointImpl::getFeatureCount</definition>
+        <argsstring>()</argsstring>
+        <name>getFeatureCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="76" column="9" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1afa9978ba5008d86eac5ffa70be42ff19" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float ranklib::DataPointImpl::getLabel</definition>
+        <argsstring>()</argsstring>
+        <name>getLabel</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="81" column="11" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a4e2c14abb1efe41602262e94a1c16b85" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::setLabel</definition>
+        <argsstring>(float label)</argsstring>
+        <name>setLabel</name>
+        <param>
+          <type>float</type>
+          <declname>label</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="86" column="10" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="86" bodyend="88"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a2b9cf871ec76913a2114dc70a80c909c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>string</type>
+        <definition>string ranklib::DataPointImpl::getDescription</definition>
+        <argsstring>()</argsstring>
+        <name>getDescription</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="91" column="12" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="91" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a834da6e5fc5b5e055ee17c3acd54de36" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::setDescription</definition>
+        <argsstring>(string description)</argsstring>
+        <name>setDescription</name>
+        <param>
+          <type>string</type>
+          <declname>description</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="96" column="10" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="96" bodyend="98"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1ac0020fa9dba9f4ec61ee425a14990e04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::setCached</definition>
+        <argsstring>(double c)</argsstring>
+        <name>setCached</name>
+        <param>
+          <type>double</type>
+          <declname>c</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="100" column="7" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="100" bodyend="102"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1af7cea0b0092112e148a85f09481453a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>double</type>
+        <definition>double ranklib::DataPointImpl::getCached</definition>
+        <argsstring>()</argsstring>
+        <name>getCached</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="105" column="9" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="105" bodyend="107"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1ac1c3006682b3eb1a79f96593aae7e932" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::resetCached</definition>
+        <argsstring>()</argsstring>
+        <name>resetCached</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="110" column="7" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="110" bodyend="112"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a3da8f2592b7b521aa62a9fca56e26dce" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float ranklib::DataPointImpl::getFeatureValue</definition>
+        <argsstring>(int featureID)</argsstring>
+        <name>getFeatureValue</name>
+        <param>
+          <type>int</type>
+          <declname>featureID</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="115" column="12" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="115" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a8b18bf90a5d1e48749c37c3093eeb6b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::setFeatureValue</definition>
+        <argsstring>(int featureID, float featureValue)</argsstring>
+        <name>setFeatureValue</name>
+        <param>
+          <type>int</type>
+          <declname>featureID</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>featureValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="122" column="11" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="122" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1aba4c28f030aabc3ea9f5d14da5aa46a1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>vector&lt; float &gt;</type>
+        <definition>vector&lt;float&gt; ranklib::DataPointImpl::getFeatureVector</definition>
+        <argsstring>()</argsstring>
+        <name>getFeatureVector</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="128" column="13" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="128" bodyend="130"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1aa8a24221889894eba89fbf4d323c9ba4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::setFeatureVector</definition>
+        <argsstring>(vector&lt; float &gt; featureVector)</argsstring>
+        <name>setFeatureVector</name>
+        <param>
+          <type>vector&lt; float &gt;</type>
+          <declname>featureVector</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="133" column="11" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="133" bodyend="136"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1ae1c048a364367e8034d800afcaf40eeb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::init</definition>
+        <argsstring>(string raw=&quot;&quot;)</argsstring>
+        <name>init</name>
+        <param>
+          <type>string</type>
+          <declname>raw</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="138" column="10" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="138" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1aecea208628b209a15ad295d6e07d8896" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::initFrom</definition>
+        <argsstring>(const DataPointImpl &amp;dp)</argsstring>
+        <name>initFrom</name>
+        <param>
+          <type>const <ref refid="classranklib_1_1_data_point_impl" kindref="compound">DataPointImpl</ref> &amp;</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="147" column="10" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="147" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1aca1caff35b491a6d74ae3c0163e35efb" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::freePointers</definition>
+        <argsstring>()</argsstring>
+        <name>freePointers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="156" column="10" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="156" bodyend="156"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1ad07e822601ff1c1eb85ff3ecc113a759" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::getKeyValueFeaturePair</definition>
+        <argsstring>(std::pair&lt; string, string &gt; &amp;keyValue, string feature)</argsstring>
+        <name>getKeyValueFeaturePair</name>
+        <param>
+          <type>std::pair&lt; string, string &gt; &amp;</type>
+          <declname>keyValue</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>feature</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="163" column="14" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="163" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_data_point_impl_1a016b42940b161d32b792cb1803821053" prot="protected" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void ranklib::DataPointImpl::parse</definition>
+        <argsstring>(string raw)</argsstring>
+        <name>parse</name>
+        <param>
+          <type>string</type>
+          <declname>raw</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="169" column="14" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="169" bodyend="217"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>ranklib::DataPointImpl</label>
+        <link refid="classranklib_1_1_data_point_impl"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>id_</edgelabel>
+          <edgelabel>description</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>feature_values</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>vector&lt; float &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" line="35" column="29" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/DataPoint.cpp" bodystart="35" bodyend="226"/>
+    <listofallmembers>
+      <member refid="classranklib_1_1_data_point_impl_1a97184e5a38dd24d70d8736969f352c98" prot="protected" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>cached</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a985138829693bd60c5a7da44e721e9e5" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>DataPointImpl</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1af9ba4b13803d79e64c3f76cd0ca95e15" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>DataPointImpl</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a9c7abb80f9e4ab32b8772f16be4e4888" prot="protected" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>description</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1aaa1338ea3ac6df10c2a45e003257104e" prot="protected" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>feature_count</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1adc931c4fb051ee8b267a0e74c0cd8284" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>feature_increase</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a9267e755257735934b280c04c4f8f6dc" prot="protected" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>feature_values</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1aca1caff35b491a6d74ae3c0163e35efb" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>freePointers</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1af7cea0b0092112e148a85f09481453a1" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>getCached</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a2b9cf871ec76913a2114dc70a80c909c" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>getDescription</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a1f11aed43a59a226ff26ff3484c5cbd2" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>getFeatureCount</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a3da8f2592b7b521aa62a9fca56e26dce" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>getFeatureValue</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1aba4c28f030aabc3ea9f5d14da5aa46a1" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>getFeatureVector</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a34d5665ca2920fdf4e36bee5bf407af5" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>getID</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1ad07e822601ff1c1eb85ff3ecc113a759" prot="protected" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>getKeyValueFeaturePair</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1afa9978ba5008d86eac5ffa70be42ff19" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>getLabel</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1abc1e1099a11bf2dc917e87fd3644774b" prot="protected" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>id_</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1ae1c048a364367e8034d800afcaf40eeb" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>init</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1aecea208628b209a15ad295d6e07d8896" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>initFrom</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1af7980e908f0b7574a162c0ee3f924715" prot="protected" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>known_features</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1ae47059368055e01139716e5e0a74a971" prot="protected" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>label</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a51f4a7d53ea132d8b036c4efce7ea143" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>max_feature</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a016b42940b161d32b792cb1803821053" prot="protected" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>parse</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1ac1c3006682b3eb1a79f96593aae7e932" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>resetCached</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1ac0020fa9dba9f4ec61ee425a14990e04" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>setCached</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a834da6e5fc5b5e055ee17c3acd54de36" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>setDescription</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a8b18bf90a5d1e48749c37c3093eeb6b0" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>setFeatureValue</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1aa8a24221889894eba89fbf4d323c9ba4" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>setFeatureVector</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1af5ca4af8051bf2eaefd9bdc5f7cd086a" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>setID</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a4e2c14abb1efe41602262e94a1c16b85" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>setLabel</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1a992b80411ef1d87ee479b9e18245536d" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>toString</name></member>
+      <member refid="classranklib_1_1_data_point_impl_1ab12fd0014dec437c877203290addc2dd" prot="public" virt="non-virtual"><scope>ranklib::DataPointImpl</scope><name>~DataPointImpl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

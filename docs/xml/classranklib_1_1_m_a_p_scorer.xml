@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classranklib_1_1_m_a_p_scorer" kind="class" language="C++" prot="public">
+    <compoundname>ranklib::MAPScorer</compoundname>
+    <basecompoundref refid="classranklib_1_1_metric_scorer" prot="public" virt="non-virtual">ranklib::MetricScorer</basecompoundref>
+    <includes refid="_m_a_p_scorer_8hpp" local="no">MAPScorer.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classranklib_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MAPScorer::MAPScorer</definition>
+        <argsstring>()</argsstring>
+        <name>MAPScorer</name>
+        <briefdescription>
+<para>Construct a new <ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp" line="31" column="9" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_m_a_p_scorer_1a661dfa171b19ed4bfc8207042674104c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>MAPScorer::MAPScorer</definition>
+        <argsstring>(const MAPScorer &amp;ms)</argsstring>
+        <name>MAPScorer</name>
+        <param>
+          <type>const <ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref> &amp;</type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp" line="38" column="9" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref> &amp;</type>
+        <definition>MAPScorer &amp; MAPScorer::operator=</definition>
+        <argsstring>(const MAPScorer &amp;ms)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref> &amp;</type>
+          <declname>ms</declname>
+        </param>
+        <briefdescription>
+<para>Assignment operator for <ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp" line="47" column="19" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp" bodystart="22" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_m_a_p_scorer_1a511abfa657189ddc1a00b382a7bc23d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double MAPScorer::score</definition>
+        <argsstring>(RankList rl)</argsstring>
+        <name>score</name>
+        <reimplements refid="classranklib_1_1_metric_scorer_1a07e13cf2629fa3f1aa0fad974aaf65e3">score</reimplements>
+        <param>
+          <type><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref></type>
+          <declname>rl</declname>
+        </param>
+        <briefdescription>
+<para>Compute MAP for a single <ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp" line="56" column="16" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp" bodystart="27" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="classranklib_1_1_m_a_p_scorer_1a89a6320352e8b7f2bcf3f3383454bc08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double MAPScorer::score</definition>
+        <argsstring>(list&lt; RankList &gt; rls)</argsstring>
+        <name>score</name>
+        <param>
+          <type>list&lt; <ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref> &gt;</type>
+          <declname>rls</declname>
+        </param>
+        <briefdescription>
+<para>Compute MAP for a list of RankLists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rls</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp" line="64" column="16" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp" bodystart="39" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib). </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ranklib::MAPScorer</label>
+        <link refid="classranklib_1_1_m_a_p_scorer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ranklib::MetricScorer</label>
+        <link refid="classranklib_1_1_metric_scorer"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ranklib::MAPScorer</label>
+        <link refid="classranklib_1_1_m_a_p_scorer"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ranklib::MetricScorer</label>
+        <link refid="classranklib_1_1_metric_scorer"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp" line="24" column="40" bodyfile="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp" bodystart="24" bodyend="66"/>
+    <listofallmembers>
+      <member refid="classranklib_1_1_metric_scorer_1a1af10a2f7cc3017420f18a4d773c3f85" prot="protected" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>depth</name></member>
+      <member refid="classranklib_1_1_metric_scorer_1a8347d53c4d39a69db8110e53d757a6e4" prot="public" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>getDepth</name></member>
+      <member refid="classranklib_1_1_metric_scorer_1ab9ddb58509a8ee09d8ec8b8b12a18c1c" prot="protected" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>getRelevanceLabels</name></member>
+      <member refid="classranklib_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" prot="public" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>MAPScorer</name></member>
+      <member refid="classranklib_1_1_m_a_p_scorer_1a661dfa171b19ed4bfc8207042674104c" prot="public" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>MAPScorer</name></member>
+      <member refid="classranklib_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb" prot="public" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>MetricScorer</name></member>
+      <member refid="classranklib_1_1_metric_scorer_1aa19a5430103a9215ba855bad2b5aeba4" prot="public" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>MetricScorer</name></member>
+      <member refid="classranklib_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548" prot="public" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>operator=</name></member>
+      <member refid="classranklib_1_1_metric_scorer_1a1b3757c0012820a8a842e4d54f422c45" prot="public" virt="non-virtual" ambiguityscope="ranklib::MetricScorer::"><scope>ranklib::MAPScorer</scope><name>operator=</name></member>
+      <member refid="classranklib_1_1_m_a_p_scorer_1a511abfa657189ddc1a00b382a7bc23d9" prot="public" virt="virtual"><scope>ranklib::MAPScorer</scope><name>score</name></member>
+      <member refid="classranklib_1_1_m_a_p_scorer_1a89a6320352e8b7f2bcf3f3383454bc08" prot="public" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>score</name></member>
+      <member refid="classranklib_1_1_metric_scorer_1a37576d07e18405c4195bf3ed60643126" prot="public" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>setDepth</name></member>
+      <member refid="classranklib_1_1_metric_scorer_1a6dc1a9c79e6ef48ec9272d5379e4c337" prot="public" virt="non-virtual"><scope>ranklib::MAPScorer</scope><name>~MetricScorer</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

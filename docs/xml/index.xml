@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
+  <compound refid="classranklib_1_1_data_point" kind="class"><name>ranklib::DataPoint</name>
+    <member refid="classranklib_1_1_data_point_1a085a64b21b531364b17e3b4f40144c1f" kind="variable"><name>p_impl</name></member>
+    <member refid="classranklib_1_1_data_point_1a0670ee95b57173291576ecbb960ebd7c" kind="function"><name>DataPoint</name></member>
+    <member refid="classranklib_1_1_data_point_1a405c4f74a458bbd3ee3189969c984291" kind="function"><name>DataPoint</name></member>
+    <member refid="classranklib_1_1_data_point_1a1e2a03c42c6f5d02155e5c26535b0cac" kind="function"><name>DataPoint</name></member>
+    <member refid="classranklib_1_1_data_point_1a25aec10e66a39b588237268eaac966c7" kind="function"><name>operator=</name></member>
+    <member refid="classranklib_1_1_data_point_1a1119de2abb699b8820a46854aad2d837" kind="function"><name>operator=</name></member>
+    <member refid="classranklib_1_1_data_point_1a69770421a98781a4b34cfff206a24a79" kind="function"><name>~DataPoint</name></member>
+    <member refid="classranklib_1_1_data_point_1ae6bf8a887a67e15dfdbdd2f3f3d7b81e" kind="function"><name>toString</name></member>
+    <member refid="classranklib_1_1_data_point_1a9f6dec9849f8844694c1da64b056231e" kind="function"><name>setID</name></member>
+    <member refid="classranklib_1_1_data_point_1a9bac6962aaf7d3c0b26dffa9ca5a83d9" kind="function"><name>getID</name></member>
+    <member refid="classranklib_1_1_data_point_1aa1a72b3213c0b48bbb4b691bf7106d26" kind="function"><name>getFeatureCount</name></member>
+    <member refid="classranklib_1_1_data_point_1a3f7d451c784662862e364aabed0ca9c0" kind="function"><name>getLabel</name></member>
+    <member refid="classranklib_1_1_data_point_1af569565aa8d16e7187f30f1a211e4492" kind="function"><name>setLabel</name></member>
+    <member refid="classranklib_1_1_data_point_1a9e6d26b089df360716c33a101552f740" kind="function"><name>getDescription</name></member>
+    <member refid="classranklib_1_1_data_point_1a52990ef0644da2f94865bcab52830246" kind="function"><name>setDescription</name></member>
+    <member refid="classranklib_1_1_data_point_1a94cc352cd262add926cc8d0ddd1bcea2" kind="function"><name>setCached</name></member>
+    <member refid="classranklib_1_1_data_point_1a5aeecc1b0a5ccb6cd7eaac931234deed" kind="function"><name>getCached</name></member>
+    <member refid="classranklib_1_1_data_point_1a9ed9b710f37c1a2d7b5489b49f9e5b25" kind="function"><name>resetCached</name></member>
+    <member refid="classranklib_1_1_data_point_1a513110c4758ff17cb576fee15cd3b840" kind="function"><name>getFeatureValue</name></member>
+    <member refid="classranklib_1_1_data_point_1a26a6a7c22f97026d45e7b6b8aa0e041d" kind="function"><name>setFeatureValue</name></member>
+    <member refid="classranklib_1_1_data_point_1ac00576f4698a43124a8fce1c16e76acf" kind="function"><name>getFeatureVector</name></member>
+    <member refid="classranklib_1_1_data_point_1ac2bff67dc480edae347a55b72834bb87" kind="function"><name>setFeatureVector</name></member>
+  </compound>
+  <compound refid="classranklib_1_1_data_point_impl" kind="class"><name>ranklib::DataPointImpl</name>
+    <member refid="classranklib_1_1_data_point_impl_1a51f4a7d53ea132d8b036c4efce7ea143" kind="variable"><name>max_feature</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1adc931c4fb051ee8b267a0e74c0cd8284" kind="variable"><name>feature_increase</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1aaa1338ea3ac6df10c2a45e003257104e" kind="variable"><name>feature_count</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1af7980e908f0b7574a162c0ee3f924715" kind="variable"><name>known_features</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1ae47059368055e01139716e5e0a74a971" kind="variable"><name>label</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a97184e5a38dd24d70d8736969f352c98" kind="variable"><name>cached</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1abc1e1099a11bf2dc917e87fd3644774b" kind="variable"><name>id_</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a9c7abb80f9e4ab32b8772f16be4e4888" kind="variable"><name>description</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a9267e755257735934b280c04c4f8f6dc" kind="variable"><name>feature_values</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a985138829693bd60c5a7da44e721e9e5" kind="function"><name>DataPointImpl</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1af9ba4b13803d79e64c3f76cd0ca95e15" kind="function"><name>DataPointImpl</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1ab12fd0014dec437c877203290addc2dd" kind="function"><name>~DataPointImpl</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a992b80411ef1d87ee479b9e18245536d" kind="function"><name>toString</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1af5ca4af8051bf2eaefd9bdc5f7cd086a" kind="function"><name>setID</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a34d5665ca2920fdf4e36bee5bf407af5" kind="function"><name>getID</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a1f11aed43a59a226ff26ff3484c5cbd2" kind="function"><name>getFeatureCount</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1afa9978ba5008d86eac5ffa70be42ff19" kind="function"><name>getLabel</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a4e2c14abb1efe41602262e94a1c16b85" kind="function"><name>setLabel</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a2b9cf871ec76913a2114dc70a80c909c" kind="function"><name>getDescription</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a834da6e5fc5b5e055ee17c3acd54de36" kind="function"><name>setDescription</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1ac0020fa9dba9f4ec61ee425a14990e04" kind="function"><name>setCached</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1af7cea0b0092112e148a85f09481453a1" kind="function"><name>getCached</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1ac1c3006682b3eb1a79f96593aae7e932" kind="function"><name>resetCached</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a3da8f2592b7b521aa62a9fca56e26dce" kind="function"><name>getFeatureValue</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a8b18bf90a5d1e48749c37c3093eeb6b0" kind="function"><name>setFeatureValue</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1aba4c28f030aabc3ea9f5d14da5aa46a1" kind="function"><name>getFeatureVector</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1aa8a24221889894eba89fbf4d323c9ba4" kind="function"><name>setFeatureVector</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1ae1c048a364367e8034d800afcaf40eeb" kind="function"><name>init</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1aecea208628b209a15ad295d6e07d8896" kind="function"><name>initFrom</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1aca1caff35b491a6d74ae3c0163e35efb" kind="function"><name>freePointers</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1ad07e822601ff1c1eb85ff3ecc113a759" kind="function"><name>getKeyValueFeaturePair</name></member>
+    <member refid="classranklib_1_1_data_point_impl_1a016b42940b161d32b792cb1803821053" kind="function"><name>parse</name></member>
+  </compound>
+  <compound refid="classranklib_1_1_m_a_p_scorer" kind="class"><name>ranklib::MAPScorer</name>
+    <member refid="classranklib_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" kind="function"><name>MAPScorer</name></member>
+    <member refid="classranklib_1_1_m_a_p_scorer_1a661dfa171b19ed4bfc8207042674104c" kind="function"><name>MAPScorer</name></member>
+    <member refid="classranklib_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548" kind="function"><name>operator=</name></member>
+    <member refid="classranklib_1_1_m_a_p_scorer_1a511abfa657189ddc1a00b382a7bc23d9" kind="function"><name>score</name></member>
+    <member refid="classranklib_1_1_m_a_p_scorer_1a89a6320352e8b7f2bcf3f3383454bc08" kind="function"><name>score</name></member>
+  </compound>
+  <compound refid="classranklib_1_1_metric_scorer" kind="class"><name>ranklib::MetricScorer</name>
+    <member refid="classranklib_1_1_metric_scorer_1a1af10a2f7cc3017420f18a4d773c3f85" kind="variable"><name>depth</name></member>
+    <member refid="classranklib_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb" kind="function"><name>MetricScorer</name></member>
+    <member refid="classranklib_1_1_metric_scorer_1a6dc1a9c79e6ef48ec9272d5379e4c337" kind="function"><name>~MetricScorer</name></member>
+    <member refid="classranklib_1_1_metric_scorer_1aa19a5430103a9215ba855bad2b5aeba4" kind="function"><name>MetricScorer</name></member>
+    <member refid="classranklib_1_1_metric_scorer_1a1b3757c0012820a8a842e4d54f422c45" kind="function"><name>operator=</name></member>
+    <member refid="classranklib_1_1_metric_scorer_1a37576d07e18405c4195bf3ed60643126" kind="function"><name>setDepth</name></member>
+    <member refid="classranklib_1_1_metric_scorer_1a8347d53c4d39a69db8110e53d757a6e4" kind="function"><name>getDepth</name></member>
+    <member refid="classranklib_1_1_metric_scorer_1a46a4b327848c8d4e41d3437999f4f8e0" kind="function"><name>score</name></member>
+    <member refid="classranklib_1_1_metric_scorer_1a07e13cf2629fa3f1aa0fad974aaf65e3" kind="function"><name>score</name></member>
+    <member refid="classranklib_1_1_metric_scorer_1ab9ddb58509a8ee09d8ec8b8b12a18c1c" kind="function"><name>getRelevanceLabels</name></member>
+  </compound>
+  <compound refid="classranklib_1_1_rank_lib_error" kind="class"><name>ranklib::RankLibError</name>
+    <member refid="classranklib_1_1_rank_lib_error_1a1d92a2bed6e05e115b58a013d5329e8e" kind="function"><name>RankLibError</name></member>
+    <member refid="classranklib_1_1_rank_lib_error_1a8557a4622c6246448b4fe3e88a7e6d81" kind="function"><name>RankLibError</name></member>
+  </compound>
+  <compound refid="classranklib_1_1_rank_list" kind="class"><name>ranklib::RankList</name>
+    <member refid="classranklib_1_1_rank_list_1a4f29717d4da05db6a6fcbf642f0768fc" kind="variable"><name>p_impl</name></member>
+    <member refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kind="function"><name>RankList</name></member>
+    <member refid="classranklib_1_1_rank_list_1a7328669b281ef0836e63109bf0b9b066" kind="function"><name>RankList</name></member>
+    <member refid="classranklib_1_1_rank_list_1ac4201f553630131084076b8ba856eeea" kind="function"><name>RankList</name></member>
+    <member refid="classranklib_1_1_rank_list_1a67541798cf45331b2be2ce0356331749" kind="function"><name>RankList</name></member>
+    <member refid="classranklib_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" kind="function"><name>operator=</name></member>
+    <member refid="classranklib_1_1_rank_list_1a50cef171525b4aca632b407ac113acc3" kind="function"><name>operator=</name></member>
+    <member refid="classranklib_1_1_rank_list_1ad2ed9420312f06389716efe2e071dd94" kind="function"><name>~RankList</name></member>
+    <member refid="classranklib_1_1_rank_list_1a0fd0b8c54a69d57a7ad529d617334944" kind="function"><name>toString</name></member>
+    <member refid="classranklib_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80" kind="function"><name>size</name></member>
+    <member refid="classranklib_1_1_rank_list_1a4b738c5b7a18492abf2cec423d348178" kind="function"><name>get</name></member>
+    <member refid="classranklib_1_1_rank_list_1afb21fbbfaeb2522880b1ccb67b9c7360" kind="function"><name>operator[]</name></member>
+    <member refid="classranklib_1_1_rank_list_1a06e3827183a027a463ca2484803a5aa1" kind="function"><name>set</name></member>
+    <member refid="classranklib_1_1_rank_list_1ab9d16fc32d076eebde9c96409d1ce5c4" kind="function"><name>getPartialRanking</name></member>
+    <member refid="classranklib_1_1_rank_list_1a607c962520a97ce0e8cdd909985950c5" kind="function"><name>getRanking</name></member>
+  </compound>
+  <compound refid="classranklib_1_1_rank_list_impl" kind="class"><name>ranklib::RankListImpl</name>
+    <member refid="classranklib_1_1_rank_list_impl_1a187d9bd646fe91dfee5c2edae9b3d8c1" kind="variable"><name>data_points</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a2e75e91455216401513b88636e89f25b" kind="function"><name>RankListImpl</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1aa052c2bda8016611270417bc2cd40720" kind="function"><name>RankListImpl</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a4944e5c63041a42f07b3ad8a89d5c176" kind="function"><name>RankListImpl</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a398f8cb436071d77711665c1ed45338a" kind="function"><name>~RankListImpl</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a6bd872ad65c1131ef3c08ed0293a4c03" kind="function"><name>toString</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a38babfa7f8d79a13853c1e6dd93c4152" kind="function"><name>size</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a442c6f576039f830821fada371a65278" kind="function"><name>get</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a873248bed61925a0e6965acc4113e20d" kind="function"><name>operator[]</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a23630970dee1304ba0474f7376da9aeb" kind="function"><name>set</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1ab5bc331a3bd789a43dcf989810a7a605" kind="function"><name>ranking</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a775d35c2a7071cc1db227ee1760dc738" kind="function"><name>partialRanking</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a7e682f8150a01ff81814103fc3848192" kind="function"><name>init</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a7ac09771c9d7b318b0eee858a3c05349" kind="function"><name>initFrom</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1a4ce05277451c339c2755f543d9e86031" kind="function"><name>initFrom</name></member>
+    <member refid="classranklib_1_1_rank_list_impl_1af63653d0231830a14dcc3c493303e2cd" kind="function"><name>freePointers</name></member>
+  </compound>
+  <compound refid="namespaceranklib" kind="namespace"><name>ranklib</name>
+    <member refid="_rank_list_8hpp_1a4c6f59f7b2fc337b609aef7b81026aab" kind="typedef"><name>sample_t</name></member>
+  </compound>
+  <compound refid="_data_point_8hpp" kind="file"><name>DataPoint.hpp</name>
+  </compound>
+  <compound refid="_rank_list_8hpp" kind="file"><name>RankList.hpp</name>
+  </compound>
+  <compound refid="_m_a_p_scorer_8hpp" kind="file"><name>MAPScorer.hpp</name>
+  </compound>
+  <compound refid="_metric_scorer_8hpp" kind="file"><name>MetricScorer.hpp</name>
+  </compound>
+  <compound refid="ranklib_8hpp" kind="file"><name>ranklib.hpp</name>
+  </compound>
+  <compound refid="_rank_lib_error_8hpp" kind="file"><name>RankLibError.hpp</name>
+  </compound>
+  <compound refid="_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+    <member refid="_c_make_lists_8txt_1a7b9ebd044db49d09be198ed69dc50181" kind="function"><name>find_package</name></member>
+  </compound>
+  <compound refid="_data_point_8cpp" kind="file"><name>DataPoint.cpp</name>
+    <member refid="_data_point_8cpp_1a953f667fb27fb68dd74a487d002b19b5" kind="define"><name>NaN</name></member>
+    <member refid="_data_point_8cpp_1a4d9fe772374abf747ca6641581e5adf2" kind="define"><name>MAX_FEATURES</name></member>
+    <member refid="_data_point_8cpp_1a47e1233d770fa47be6e7269f723d2bd5" kind="define"><name>FEATURE_RESIZE_STEP</name></member>
+  </compound>
+  <compound refid="_rank_list_8cpp" kind="file"><name>RankList.cpp</name>
+  </compound>
+  <compound refid="_m_a_p_scorer_8cpp" kind="file"><name>MAPScorer.cpp</name>
+  </compound>
+  <compound refid="_metric_scorer_8cpp" kind="file"><name>MetricScorer.cpp</name>
+  </compound>
+  <compound refid="dir_c740d4e23841bf9768e354a83ffc7b3f" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api</name>
+  </compound>
+  <compound refid="dir_6a7a2f1d940d2e1f8880fad3e0e77f14" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl</name>
+  </compound>
+  <compound refid="dir_2335ada1007e25916f854d446a4b7339" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/learning</name>
+  </compound>
+  <compound refid="dir_e1ede9d863e721bae9fd0dca959a0248" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning</name>
+  </compound>
+  <compound refid="dir_5a127079ba1c4e95e418b397b7ba34f9" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib</name>
+  </compound>
+  <compound refid="dir_6dc8bf9dd670622a9b7a4954ec0d5a7d" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric</name>
+  </compound>
+  <compound refid="dir_564f72b8613a803f57895a2d0f5668f7" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric</name>
+  </compound>
+  <compound refid="dir_c5e54405ef24e6828b31557fd3893306" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib</name>
+  </compound>
+</doxygenindex>

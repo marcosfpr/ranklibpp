@@ -89,6 +89,12 @@ namespace ranklib{
 
     protected:
 
+        /**
+         * @brief Get the Relevance Labels of a RankList
+         * 
+         * @param rl 
+         * @return vector<int> 
+         */
         vector<int> getRelevanceLabels(RankList& rl);
         
         int depth;
