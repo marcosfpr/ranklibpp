@@ -71,6 +71,7 @@ TEST(test_datapoints, parse) {
     EXPECT_TRUE(dp.getLabel() == 0);
     EXPECT_TRUE(dp.getFeatureValue(1) == 10);
     EXPECT_TRUE(dp.getID() == "qid:9");
+    ASSERT_STREQ(dp.getDescription().c_str(), "doc1");
 
     ASSERT_ANY_THROW(new DataPoint("-1 qid:9 1:10 # doc1"));
 

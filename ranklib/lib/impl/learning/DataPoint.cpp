@@ -15,8 +15,8 @@
 #include <sstream>
 #include <iomanip>
 
-#include  "../../api/learning/DataPoint.hpp"
-#include  "../../api/RankLibError.hpp"
+#include "../../api/learning/DataPoint.hpp"
+#include "../../api/RankLibError.hpp"
 
 #include "boost/algorithm/string.hpp"
 
@@ -31,120 +31,128 @@ using namespace ranklib;
 #define MAX_FEATURES 51
 #define FEATURE_RESIZE_STEP 10
 
-
-class ranklib::DataPointImpl{
-    public:
-	
-
-    DataPointImpl(string raw=""){
+class ranklib::DataPointImpl
+{
+public:
+    DataPointImpl(string raw = "")
+    {
         init(move(raw));
     }
 
-
-    DataPointImpl(const DataPointImpl& dp){
+    DataPointImpl(const DataPointImpl &dp)
+    {
         initFrom(dp);
     }
 
-
-    ~DataPointImpl(){
+    ~DataPointImpl()
+    {
         freePointers();
     }
 
-    string toString(){
+    string toString()
+    {
         string output = std::to_string((int)label) + " " + id_ + " ";
-        for(int i=1; i<feature_values.size(); i++){
+        for (int i = 1; i < feature_values.size(); i++)
+        {
             float fVal = getFeatureValue(i);
             std::stringstream ss;
             ss << std::fixed << std::setprecision(2) << fVal;
-            if(fVal != NaN){
-                output += std::to_string(i) + ":" + ss.str() + (i==feature_values.size()-1 ? "" : " ");
+            if (fVal != NaN)
+            {
+                output += std::to_string(i) + ":" + ss.str() + (i == feature_values.size() - 1 ? "" : " ");
             }
         }
         output += " # " + description;
         return output;
     }
 
-    void  setID(string id){
+    void setID(string id)
+    {
         this->id_ = id;
     }
 
-    string  getID(){
+    string getID()
+    {
         return this->id_;
     }
 
-
-    int getFeatureCount() {
+    int getFeatureCount()
+    {
         return feature_count;
     }
 
-
-    float getLabel() {
+    float getLabel()
+    {
         return this->label;
     }
-	
 
-    void setLabel(float label) {
+    void setLabel(float label)
+    {
         this->label = label;
     }
-	
 
-    string getDescription() {
+    string getDescription()
+    {
         return this->description;
     }
-	
 
-    void setDescription(string description) {
+    void setDescription(string description)
+    {
         this->description = description;
     }
 
-	 void setCached(double c){
-         this->cached = c;
-     }
-	
+    void setCached(double c)
+    {
+        this->cached = c;
+    }
 
-	 double getCached(){
-         return this->cached;
-     }
-	
-    
-	 void resetCached() {
-         this->cached = -1000;
-     }
+    double getCached()
+    {
+        return this->cached;
+    }
 
+    void resetCached()
+    {
+        this->cached = -1000;
+    }
 
-     float getFeatureValue(int featureID) {
-        if(featureID <= 0 || featureID > this->feature_values.size())
+    float getFeatureValue(int featureID)
+    {
+        if (featureID <= 0 || featureID > this->feature_values.size())
             throw new RankLibError("Error in DataPoint::getFeatureValue(): requesting unspecified feature, fid=" + std::to_string(featureID));
         return this->feature_values[featureID];
-     }
+    }
 
-
-     void setFeatureValue(int featureID, float featureValue) {
-         if(featureID <= 0 || featureID > this->feature_values.size())
+    void setFeatureValue(int featureID, float featureValue)
+    {
+        if (featureID <= 0 || featureID > this->feature_values.size())
             throw new RankLibError("Error in DataPoint::setFeatureValue(): requesting unspecified feature, fid=" + std::to_string(featureID));
         this->feature_values[featureID] = featureValue;
-     }
+    }
 
-     vector<float> getFeatureVector(){
-         return this->feature_values;
-     }
+    vector<float> getFeatureVector()
+    {
+        return this->feature_values;
+    }
 
+    void setFeatureVector(vector<float> featureVector)
+    {
+        this->feature_count = featureVector.size() - 1;
+        this->feature_values = move(featureVector);
+    }
 
-     void setFeatureVector(vector<float> featureVector){
-         this->feature_count = featureVector.size() - 1;
-         this->feature_values = move(featureVector);
-     }
-    
-    void init(string raw=""){
+    void init(string raw = "")
+    {
         this->label = 0.0;
         this->cached = -1;
-        this->known_features = 0;            
+        this->known_features = 0;
         this->feature_values.resize(max_feature, NaN);
-        if(!raw.empty())
+        if (!raw.empty())
             parse(move(raw));
     }
 
-    void initFrom(const DataPointImpl& dp){
+    void initFrom(const DataPointImpl &dp)
+    {
         this->label = dp.label;
         this->cached = dp.cached;
         this->description = dp.description;
@@ -152,105 +160,116 @@ class ranklib::DataPointImpl{
         this->known_features = dp.known_features;
         this->feature_values = dp.feature_values;
     }
-    
-    void freePointers(){}
+
+    void freePointers() {}
 
     static int max_feature;
     static int feature_increase;
 
-    protected:
+protected:
+    void getKeyValueFeaturePair(std::pair<string, string> &keyValue, string feature)
+    {
+        vector<string> tokens;
+        boost::split(tokens, feature, boost::is_any_of(":"));
+        keyValue = std::make_pair(tokens[0], tokens[1]);
+    }
 
-        void getKeyValueFeaturePair(std::pair<string, string>& keyValue, string feature){
+    void parse(string raw)
+    {
+        std::fill(feature_values.begin(), feature_values.end(), NaN);
+        int last_feature = -1;
+        try
+        {
+            std::size_t idx = raw.find("#");
+            if (idx != string::npos)
+            {
+                this->description = raw.substr(idx+1);
+                raw = raw.substr(0, idx); // raw text without comments
+                boost::trim(raw);
+                boost::trim(this->description);
+            }
+
             vector<string> tokens;
-            boost::split(tokens, feature, boost::is_any_of(":"));
-            keyValue = std::make_pair(tokens[0], tokens[1]);
-        }
+            boost::split(tokens, raw, boost::is_any_of(" "));
 
-        void parse(string raw){
-            std::fill(feature_values.begin(), feature_values.end(), NaN);
-            int last_feature = -1;
-            try{
-                std::size_t idx = raw.find("#");
-                if(idx != string::npos){
-                    this->description = raw.substr(idx);
-                    raw = raw.substr(0, idx); // raw text without comments
-                    boost::trim(raw);
-                }
+            this->label = std::stof(tokens[0]);
 
-                vector<string> tokens;
-                boost::split(tokens, raw, boost::is_any_of(" "));
+            if (label < 0)
+                throw new RankLibError("Relevance label cannot be negative.");
 
-                this->label = std::stof(tokens[0]);
+            this->id_ = tokens[1];
 
-                if(label < 0)
-                    throw new RankLibError("Relevance label cannot be negative.");
-                
-                this->id_ = tokens[1];
+            std::pair<string, string> key_value;
+            for (int i = 2; i < tokens.size(); i++)
+            {
+                this->known_features++;
+                getKeyValueFeaturePair(key_value, tokens[i]);
 
-                std::pair<string, string> key_value;
-                for(int i = 2; i < tokens.size(); i++){
-                    this->known_features++;
-                    getKeyValueFeaturePair(key_value, tokens[i]);
-
-                    int fid = std::stoi(key_value.first);
-                    if(fid <= 0) throw new RankLibError("Cannot use feature numbering less than or equal to zero. Start your features at 1.");
-                    if(fid >= max_feature){
-                        while(fid >= max_feature){
-                            max_feature +=  feature_increase;
-                        }
-                        this->feature_values.resize(max_feature, NaN);
+                int fid = std::stoi(key_value.first);
+                if (fid <= 0)
+                    throw new RankLibError("Cannot use feature numbering less than or equal to zero. Start your features at 1.");
+                if (fid >= max_feature)
+                {
+                    while (fid >= max_feature)
+                    {
+                        max_feature += feature_increase;
                     }
-                    this->feature_values[fid] = std::stof(key_value.second);
-
-                    if(fid > feature_count)
-                        feature_count = fid; // max_feature for entire dataset
-                    
-                    if(fid > last_feature){
-                        last_feature = fid; // max_feature for datapoint
-                    }
+                    this->feature_values.resize(max_feature, NaN);
                 }
+                this->feature_values[fid] = std::stof(key_value.second);
 
-            }
-            catch(std::exception e){
-                throw new RankLibError("Error in DataPoint::parse()");
+                if (fid > feature_count)
+                    feature_count = fid; // max_feature for entire dataset
+
+                if (fid > last_feature)
+                {
+                    last_feature = fid; // max_feature for datapoint
+                }
             }
         }
+        catch (std::exception e)
+        {
+            throw new RankLibError("Error in DataPoint::parse()");
+        }
+    }
 
-        static int feature_count;
-        int known_features;
-        float label;
-        double cached;
-        string id_, description;
-        vector<float> feature_values;     
-
+    static int feature_count;
+    int known_features;
+    float label;
+    double cached;
+    string id_, description;
+    vector<float> feature_values;
 };
 
 int DataPointImpl::max_feature = MAX_FEATURES;
 int DataPointImpl::feature_increase = FEATURE_RESIZE_STEP;
 int DataPointImpl::feature_count = 0;
 
-
-DataPoint::DataPoint(string raw){
+DataPoint::DataPoint(string raw)
+{
     this->p_impl = new DataPointImpl(std::move(raw));
 }
 
-
-DataPoint::DataPoint(const DataPoint& dp){
+DataPoint::DataPoint(const DataPoint &dp)
+{
     this->p_impl = new DataPointImpl(*dp.p_impl);
 }
 
-DataPoint::DataPoint(DataPoint&& rhs){
+DataPoint::DataPoint(DataPoint &&rhs)
+{
     this->p_impl = rhs.p_impl;
     rhs.p_impl = nullptr;
 }
 
-DataPoint& DataPoint::operator=(const DataPoint& dp){
+DataPoint &DataPoint::operator=(const DataPoint &dp)
+{
     p_impl->initFrom(*dp.p_impl);
     return *this;
 }
 
-DataPoint& DataPoint::operator=(DataPoint&& rhs){
-    if(this != &rhs)
+DataPoint &DataPoint::operator=(DataPoint &&rhs)
+{
+    if (this != &rhs)
     {
         delete p_impl;
         p_impl = rhs.p_impl;
@@ -259,71 +278,82 @@ DataPoint& DataPoint::operator=(DataPoint&& rhs){
     return *this;
 }
 
-DataPoint::~DataPoint(){
+DataPoint::~DataPoint()
+{
     delete p_impl;
 }
 
-
-void DataPoint::setID(string id) {
+void DataPoint::setID(string id)
+{
     p_impl->setID(id);
 }
 
-
- string  DataPoint::getID() {
+string DataPoint::getID() const
+{
     return p_impl->getID();
- }
+}
 
- int DataPoint::getFeatureCount() {
+int DataPoint::getFeatureCount() const
+{
     return p_impl->getFeatureCount();
- }
+}
 
-
- float DataPoint::getLabel(){
+float DataPoint::getLabel() const
+{
     return p_impl->getLabel();
- }
+}
 
-
- void DataPoint::setLabel(float label){
+void DataPoint::setLabel(float label)
+{
     p_impl->setLabel(label);
- }
+}
 
- string DataPoint::getDescription(){
+string DataPoint::getDescription() const
+{
     return p_impl->getDescription();
- }
+}
 
- void DataPoint::setDescription(string description){
+void DataPoint::setDescription(string description)
+{
     p_impl->setDescription(description);
- }
+}
 
- void DataPoint::setCached(double c){
+void DataPoint::setCached(double c)
+{
     p_impl->setCached(c);
- }
+}
 
- double DataPoint::getCached(){
+double DataPoint::getCached() const
+{
     return p_impl->getCached();
- }
+}
 
- void DataPoint::resetCached(){
+void DataPoint::resetCached()
+{
     p_impl->resetCached();
- }
+}
 
- float DataPoint::getFeatureValue(int featureID){
+float DataPoint::getFeatureValue(int featureID) const
+{
     return p_impl->getFeatureValue(featureID);
- }
+}
 
- void DataPoint::setFeatureValue(int featureID, float featureValue){
+void DataPoint::setFeatureValue(int featureID, float featureValue)
+{
     p_impl->setFeatureValue(featureID, featureValue);
- }
+}
 
- vector<float> DataPoint::getFeatureVector(){
+vector<float> DataPoint::getFeatureVector() const
+{
     return p_impl->getFeatureVector();
- }
+}
 
- void DataPoint::setFeatureVector(vector<float> featureVector){
+void DataPoint::setFeatureVector(vector<float> featureVector)
+{
     p_impl->setFeatureVector(move(featureVector));
- }
+}
 
-
-string DataPoint::toString(){
+string DataPoint::toString() const
+{
     return p_impl->toString();
 }

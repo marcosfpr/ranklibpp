@@ -31,7 +31,7 @@ using namespace ranklib;
 class ranklib::RankListImpl{
 public:
 
-    RankListImpl(sample_t data_points) {
+    RankListImpl(Sample data_points) {
         init(move(data_points));
     }
 
@@ -59,18 +59,18 @@ public:
         return this->data_points.size();
     }
 
-    shared_ptr<DataPoint> get(int k) const{
+    ReadableDataPoint get(int k) const{
         if(k >= 0 && k < this->data_points.size()){
             return this->data_points[k];
         }
         throw RankLibError("Error in RankList::get with k="+k);
     }
 
-    DataPoint& operator[](size_t i){
+    const DataPoint& operator[](size_t i){
         return *this->data_points[i];
     }
 
-    void set(int k, shared_ptr<DataPoint> dp){
+    void set(int k, ReadableDataPoint dp){
         if(k >= 0 && k < this->data_points.size()){
             this->data_points[k] = dp;
             return;
@@ -81,7 +81,7 @@ public:
 
     void ranking(){
         std::stable_sort(data_points.begin(), data_points.end(),
-                [](shared_ptr<DataPoint> dp1, shared_ptr<DataPoint> dp2)
+                [](ReadableDataPoint dp1, ReadableDataPoint dp2)
                 {
                     return dp1->getLabel() > dp2->getLabel();
                 }
@@ -91,21 +91,29 @@ public:
 
     void partialRanking(short fid){
         std::stable_sort(data_points.begin(), data_points.end(),
-                [fid](shared_ptr<DataPoint> dp1, shared_ptr<DataPoint> dp2)
+                [fid](ReadableDataPoint dp1, ReadableDataPoint dp2)
                 {
                     return dp1->getFeatureValue(fid) > dp2->getFeatureValue(fid);
                 }
         );
     }
 
-    void init(sample_t data_points) {
+    void permute(vector<int>& idx) {
+        Sample new_datapoints(this->data_points.size());
+        for(int i=0; i < idx.size(); i++){
+            new_datapoints[i] = this->data_points[idx[i]];
+        }
+        this->data_points = move(new_datapoints);
+    }
+
+    void init(Sample data_points) {
         this->data_points = data_points;
     }
 
     void initFrom(const RankListImpl& rl, std::vector<int> idx, int offset=0){
         this->data_points.resize(rl.data_points.size());
         for(size_t i = 0; i < idx.size(); i++) {
-            shared_ptr<DataPoint> ref = rl.get(idx[i]-offset);
+            ReadableDataPoint ref = rl.get(idx[i]-offset);
             this->data_points[i] = std::make_shared<DataPoint>(DataPoint(*ref));
         }
     }
@@ -113,7 +121,7 @@ public:
     void initFrom(const RankListImpl& rl){
         this->data_points.resize(rl.data_points.size());
         for(size_t i = 0; i < rl.data_points.size(); i++) {
-            shared_ptr<DataPoint> ref = rl.get(i);
+            ReadableDataPoint ref = rl.get(i);
             this->data_points[i] = std::make_shared<DataPoint>(DataPoint(*ref));
         }
     }
@@ -123,12 +131,12 @@ public:
     }
 
 private:
-    sample_t data_points;
+    Sample data_points;
 };
 
 
 
-RankList::RankList(sample_t data_points){
+RankList::RankList(Sample data_points){
     this->p_impl = new RankListImpl(move(data_points));
 }
 
@@ -164,7 +172,7 @@ RankList::~RankList(){
     delete p_impl;
 }
 
-std::string RankList::toString(){
+std::string RankList::toString() const{
     return p_impl->toString();
 }
 
@@ -172,26 +180,30 @@ size_t RankList::size(){
     return p_impl->size();
 }
 
-shared_ptr<DataPoint> RankList::get(int k) const{
+ReadableDataPoint RankList::get(int k) const{
     return p_impl->get(k);
 }
 
-DataPoint& RankList::operator[](size_t i){
+const DataPoint& RankList::operator[](size_t i){
     return (*p_impl)[i];
 }
 
-void RankList::set(int k, shared_ptr<DataPoint> dp){
+void RankList::set(int k, ReadableDataPoint dp){
     p_impl->set(k, move(dp));
 }
 
-RankList RankList::getPartialRanking(int fid){
+RankList RankList::getPartialRanking(int fid) const{
     RankList rl(RankList(*this));
     rl.p_impl->partialRanking(fid);
     return rl;
 }
 
-RankList RankList::getRanking(){
+RankList RankList::getRanking() const{
     RankList rl(RankList(*this));
     rl.p_impl->ranking();
     return rl;
+}
+
+void RankList::permute(vector<int>& idx) {
+    this->p_impl->permute(idx);
 }

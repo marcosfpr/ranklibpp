@@ -36,6 +36,6 @@ double MAPScorer::score(RankList rl){
     return count > 0.0 ? averagePrecision / count : 0.0;
 }
 
-double MAPScorer::score(list<RankList> rls){
-    return MetricScorer::score(std::move(rls));
+double MAPScorer::score(DataSet ds){
+    return MetricScorer::score(std::move(ds));
 }

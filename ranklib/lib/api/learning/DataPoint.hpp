@@ -74,7 +74,7 @@ namespace ranklib{
          * 
          * @return std::string 
          */
-        std::string toString();
+        std::string toString() const;
 
         /**
          * @brief Update the id value
@@ -88,21 +88,21 @@ namespace ranklib{
          * 
          * @return std::string 
          */
-        std::string getID();
+        std::string getID() const;
 
         /**
          * @brief Get the Feature Count
          * 
          * @return int 
          */
-        int getFeatureCount();
+        int getFeatureCount() const;
 
         /**
          * @brief Get the Label
          * 
          * @return float 
          */
-        float getLabel();
+        float getLabel() const;
 
         /**
          * @brief Set the Label
@@ -116,7 +116,7 @@ namespace ranklib{
          * 
          * @return std::string 
          */
-        std::string getDescription();
+        std::string getDescription() const;
 
         /**
          * @brief Set the Description
@@ -137,7 +137,7 @@ namespace ranklib{
          * 
          * @return double 
          */
-        double getCached();
+        double getCached() const;
 
         /**
          * @brief Reset cached value
@@ -151,7 +151,7 @@ namespace ranklib{
          * @param featureID 
          * @return float 
          */
-        float getFeatureValue(int featureID);
+        float getFeatureValue(int featureID) const;
 
         /**
          * @brief Set the Feature Value object
@@ -166,7 +166,7 @@ namespace ranklib{
          * 
          * @return std::vector<float> 
          */
-        std::vector<float> getFeatureVector();
+        std::vector<float> getFeatureVector() const;
 
         /**
          * @brief Sets the value of all features with the provided dense array of feature values

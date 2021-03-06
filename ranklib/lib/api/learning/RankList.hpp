@@ -14,17 +14,20 @@
 
 #include <string>
 #include <vector>
+#include <list>
 #include <memory>
 
 using std::shared_ptr;
 using std::unique_ptr;
 using std::vector;
+using std::list;
 
 namespace ranklib{
     class DataPoint;
     class RankListImpl;
 
-    typedef vector<shared_ptr<DataPoint>> sample_t; 
+    typedef shared_ptr<const DataPoint> ReadableDataPoint;
+    typedef vector<ReadableDataPoint> Sample; 
 
     /**
      * @brief This class implement the list of objects (each of which is a DataPoint) to be ranked. 
@@ -38,7 +41,7 @@ namespace ranklib{
          * 
          * @param data_points 
          */
-        RankList(sample_t data_points);
+        RankList(Sample data_points);
 
         /**
          * @brief Construct a new Rank List object
@@ -90,7 +93,7 @@ namespace ranklib{
          * 
          * @return std::string 
          */
-        std::string toString();
+        std::string toString() const;
 
         /**
          * @brief get size of ranklist
@@ -105,7 +108,7 @@ namespace ranklib{
          * @param k 
          * @return DataPoint& 
          */
-        shared_ptr<DataPoint> get(int k) const;
+        ReadableDataPoint get(int k) const;
 
         /**
          * @brief get a referente to a single datapoint
@@ -113,7 +116,7 @@ namespace ranklib{
          * @param i 
          * @return DataPoint& 
          */
-        DataPoint& operator[](size_t i);
+        const DataPoint& operator[](size_t i);
 
         /**
          * @brief set a single datapoint
@@ -121,7 +124,7 @@ namespace ranklib{
          * @param k 
          * @param dp 
          */
-        void set(int k, shared_ptr<DataPoint> dp);
+        void set(int k, ReadableDataPoint dp);
 
 
         /**
@@ -130,21 +133,28 @@ namespace ranklib{
          * @param fid 
          * @return RankList
          */
-        RankList getPartialRanking(int fid);
+        RankList getPartialRanking(int fid) const;
 
         /**
          * @brief Get the Correct Ranking object
          * 
          * @return RankList&&
          */
-        RankList getRanking();
+        RankList getRanking() const;
 
+        /**
+         * @brief Permute ranklist considering indexes
+         * 
+         * @param idx 
+         */
+        void permute(vector<int>& idx);
 
     private:
 
         RankListImpl* p_impl;
 
     };
+
 };
 
 #endif

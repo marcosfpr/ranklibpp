@@ -61,7 +61,7 @@ namespace ranklib{
          * @param rls 
          * @return double 
          */
-        double score(list<RankList> rls);
+        double score(DataSet rls);
 
     };
 };

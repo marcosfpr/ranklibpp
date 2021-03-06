@@ -1,9 +1,11 @@
 #include <memory>
 #include <vector>
+#include <iostream>
 
 #include <ranklib.hpp>
 #include <gtest/gtest.h>
 
+using std::cout;
 using std::shared_ptr;
 using std::vector;
 
@@ -11,7 +13,7 @@ using namespace ranklib;
 
 TEST(test_ranklists, constructor) { 
    
-    sample_t sample = {
+    Sample sample = {
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:10 2:1.2 3:4.3 4:5.4 # doc1")),
         std::make_shared<DataPoint>(DataPoint("1 qid:9 1:11 2:2.2 3:4.5 4:5.6 # doc2")),
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:12 2:2.5 3:4.7 4:5.2 # doc3"))
@@ -39,7 +41,7 @@ TEST(test_ranklists, constructor) {
 
 
 TEST(test_ranklists, operators) {
-    sample_t sample = {
+    Sample sample = {
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:10 2:1.2 3:4.3 4:5.4 # doc1")),
         std::make_shared<DataPoint>(DataPoint("1 qid:9 1:11 2:2.2 3:4.5 4:5.6 # doc2")),
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:12 2:2.5 3:4.7 4:5.2 # doc3"))
@@ -63,7 +65,7 @@ TEST(test_ranklists, operators) {
 }
 
 TEST(test_ranklists, utils) {
-    sample_t sample = {
+    Sample sample = {
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:10 2:1.2 3:4.3 4:5.4 # doc1")),
         std::make_shared<DataPoint>(DataPoint("1 qid:9 1:11 2:2.2 3:4.5 4:5.6 # doc2")),
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:12 2:2.5 3:4.7 4:5.2 # doc3"))
@@ -84,7 +86,7 @@ TEST(test_ranklists, utils) {
 }
 
 TEST(test_ranklists, ranking) {
-    sample_t sample = {
+    Sample sample = {
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:10 2:1.2 3:4.3 4:5.4 # doc1")),
         std::make_shared<DataPoint>(DataPoint("1 qid:9 1:11 2:2.2 3:4.5 4:5.6 # doc2")),
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:12 2:2.5 3:4.7 4:5.2 # doc3"))
@@ -94,14 +96,21 @@ TEST(test_ranklists, ranking) {
 
     RankList rl2 = std::move(rl.getPartialRanking(1));
     EXPECT_TRUE(rl2.size() == 3);
-    ASSERT_STREQ(rl2.get(0)->getDescription().c_str(), "# doc3");
-    ASSERT_STREQ(rl2.get(1)->getDescription().c_str(), "# doc2");
-    ASSERT_STREQ(rl2.get(2)->getDescription().c_str(), "# doc1");
+    ASSERT_STREQ(rl2.get(0)->getDescription().c_str(), "doc3");
+    ASSERT_STREQ(rl2.get(1)->getDescription().c_str(), "doc2");
+    ASSERT_STREQ(rl2.get(2)->getDescription().c_str(), "doc1");
 
 
     RankList rl3 = std::move(rl.getRanking());
     EXPECT_TRUE(rl3.size() == 3);
-    ASSERT_STREQ(rl3.get(0)->getDescription().c_str(), "# doc2");
-    ASSERT_STREQ(rl3.get(1)->getDescription().c_str(), "# doc1");
-    ASSERT_STREQ(rl3.get(2)->getDescription().c_str(), "# doc3");
+    ASSERT_STREQ(rl3.get(0)->getDescription().c_str(), "doc2");
+    ASSERT_STREQ(rl3.get(1)->getDescription().c_str(), "doc1");
+    ASSERT_STREQ(rl3.get(2)->getDescription().c_str(), "doc3");
+
+    vector<int> indexes = {1, 2, 0};
+    rl.permute(indexes);
+    
+    ASSERT_STREQ(rl.get(0)->getDescription().c_str(), "doc2");
+    ASSERT_STREQ(rl.get(1)->getDescription().c_str(), "doc3");
+    ASSERT_STREQ(rl.get(2)->getDescription().c_str(), "doc1");
 }

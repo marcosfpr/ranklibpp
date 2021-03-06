@@ -39,13 +39,13 @@ int MetricScorer::getDepth(){
     return this->depth;
 }
 
-double MetricScorer::score(list<RankList> rls){
+double MetricScorer::score(DataSet ds){
     double score = 0.0;
-    for(list<RankList>::iterator it = rls.begin(); it != rls.end(); it++){
+    for(DataSet::iterator it = ds.begin(); it != ds.end(); it++){
         RankList singlelist = *it;
         score += this->score(singlelist);
     }
-    return score/rls.size(); // average score by ranklists
+    return score/ds.size(); // average score by ranklists
 }
 
 vector<int> MetricScorer::getRelevanceLabels(RankList& rl){

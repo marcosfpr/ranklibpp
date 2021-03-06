@@ -12,10 +12,9 @@
 #ifndef METRIC_SCORER_HPP_
 #define METRIC_SCORER_HPP_
 
-#include <list>
 #include <vector>
+#include "../learning/DataSet.hpp"
 
-using std::list;
 using std::vector;
 
 namespace ranklib{
@@ -74,10 +73,10 @@ namespace ranklib{
         /**
          * @brief Return score for multiple RankLists
          * 
-         * @param rls 
+         * @param ds 
          * @return double 
          */
-        double score(list<RankList> rls);
+        double score(DataSet ds);
 
         /**
          * @brief Return score for a single RankList
