@@ -16,14 +16,16 @@
 #include <string>
 #include <memory>
 
+#include "DataSet.hpp"
+#include "RankList.hpp"
+
+using std::unique_ptr;
 using std::string;
 using std::list;
 using std::vector;
 
 namespace ranklib {
 
-    class RankList;
-    class DataPoint;
     class MetricScorer;
     
     class RankerImpl;
@@ -35,7 +37,7 @@ namespace ranklib {
          * @brief Initialization of Ranking algorithm.
          * 
          */
-        virtual void init() = 0;
+        virtual void start() = 0;
 
         /**
          * @brief Learn method for some learning algorithm.
@@ -93,7 +95,7 @@ namespace ranklib {
          * @param features 
          * @param scorer 
          */
-        Ranker(DataSet dataset, vector<int> features, MetricScorer* scorer);
+        Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features={});
 
         /**
          * @brief Destroy the Ranker object
@@ -142,7 +144,7 @@ namespace ranklib {
          * 
          * @param scorer 
          */
-        void setScorer(MetricScorer* scorer);
+        void setScorer(unique_ptr<MetricScorer> scorer);
 
         /**
          * @brief Get the Training Score

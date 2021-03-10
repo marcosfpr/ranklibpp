@@ -14,6 +14,7 @@
 #include "learning/DataPoint.hpp"
 #include "learning/RankList.hpp"
 #include "learning/DataSet.hpp"
+#include "learning/Ranker.hpp"
 
 #include "metric/MetricScorer.hpp"
 #include "metric/MAPScorer.hpp"

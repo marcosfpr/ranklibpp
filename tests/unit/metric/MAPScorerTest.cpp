@@ -4,6 +4,7 @@
 #include <ranklib.hpp>
 #include <gtest/gtest.h>
 
+using std::unique_ptr;
 using std::shared_ptr;
 using std::vector;
 
@@ -25,6 +26,12 @@ TEST(test_mapscorer, constructor) {
    EXPECT_TRUE(scorer->getDepth() == 0);
    scorer->setDepth(1);
    EXPECT_TRUE(scorer->getDepth() == 1);
+
+   unique_ptr<MetricScorer> ptr_scorer(scorer);
+   unique_ptr<MetricScorer> ptr2_scorer = ptr_scorer->clone();
+
+   EXPECT_TRUE(ptr_scorer != ptr2_scorer);
+
 
 }
 
@@ -63,7 +70,7 @@ TEST(test_mapscorer, scores) {
 
 
    DataSet l = {sample1, sample2, sample3};   
-   ASSERT_NEAR(scorer.score(std::move(l)), 0.4444, 0.001);
+   ASSERT_NEAR(scorer.score(l), 0.4444, 0.001);
 
 
 }

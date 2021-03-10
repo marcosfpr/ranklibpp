@@ -13,6 +13,8 @@
 #include "../../api/learning/Ranker.hpp"
 #include "../../api/learning/RankList.hpp"
 #include "../../api/learning/DataPoint.hpp"
+#include "../../api/learning/DataSet.hpp"
+
 #include "../../api/metric/MetricScorer.hpp"
 #include "../../api/RankLibError.hpp"
 
@@ -21,6 +23,9 @@
 #include <string>
 #include <memory>
 #include <algorithm>
+#include <iostream>    
+#include <fstream>               
+#include <filesystem>
 
 
 using std::move;
@@ -32,64 +37,32 @@ using std::vector;
 
 using namespace ranklib;
 
-class RankerImpl {
+class ranklib::RankerImpl {
 public:
 
-        virtual void init() = 0;
-
-        virtual void learn() = 0;
-
-        virtual double eval(ReadableDataPoint dp) = 0;
-
-        virtual string toString() = 0;
-
-        virtual string model() = 0;
-
-        virtual void loadString(string model) = 0;
-
-        virtual string name() = 0;
-
-        virtual void print() = 0;
-
-
-        RankerImpl(list<RankList> samples, vector<int> features, unique_ptr<MetricScorer> scorer){
-            this->training_samples = move(samples);
-            this->features = move(features);
-            this->scorer = move(scorer);
-            this->score_training = 0.0;
-            this->score_validation = 0.0;
+        RankerImpl(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features){
+            init(move(dataset), move(features), move(scorer));
         }
 
         ~RankerImpl(){
-            this->training_samples.clear();
-            this->validation_samples.clear();
-            this->features.clear();
+            freePointers();
         }
 
 
         RankerImpl(const RankerImpl& rk){
-            this->features = rk.features;
-            this->scorer = std::make_unique<MetricScorer>(rk.scorer);
-            this->training_samples.clear();
-            for(RankList rl : rk.training_samples) {
-                this->training_samples.push_back(RankList(rl));
-            }
-            this->validation_samples.clear();
-            for(RankList rl : rk.validation_samples) {
-                this->validation_samples.push_back(RankList(rl));
-            }
+            initFrom(rk);
         }
 
-        void setTrainingSet(list<RankList> samples){
-            this->training_samples = move(samples);
+        void setTrainingSet(DataSet ds){
+            this->training_samples = move(ds);
         }
 
         void setFeatures(vector<int> features){
             this->features = move(features);
         }
 
-        void setValidationSet(list<RankList> samples){
-            this->validation_samples = move(samples);
+        void setValidationSet(DataSet ds){
+            this->validation_samples = move(ds);
         }
 
 
@@ -110,6 +83,14 @@ public:
             return this->features;
         }
 
+        double eval(ReadableDataPoint dp){
+            return 0.0;
+        }
+
+        string model(){ 
+            return "Generic Ranker Model";
+        }
+
         void rank(RankList& rl){
             vector<int> indexes(rl.size());
             vector<double> scores(rl.size());
@@ -123,17 +104,57 @@ public:
                 }
             );
 
-            // todo: craete permutation method on RankList to reranking elements
+            rl.permute(indexes);
         }
 
-        void rank(list<RankList>* l){
-
+        void rank(DataSet& ds){
+            for(RankList& rl : ds)
+                rank(rl);
         }
 
-        void save(string fileToSave);
+        void save(string fileToSave){
+            std::filesystem::path path = std::filesystem::path(fileToSave.c_str());
+
+            std::filesystem::path dir = path.parent_path();
+
+            if(! std::filesystem::exists(dir))
+                std::filesystem::create_directory(dir);
+            
+            std::ofstream file(fileToSave.c_str());
+            file << model();
+            file.close();
+            
+        }
+
+        void init(DataSet dataset, vector<int> features, unique_ptr<MetricScorer> scorer){
+            this->training_samples = move(dataset);
+            this->features = move(features);
+            this->scorer = move(scorer);
+            this->score_training = 0.0;
+            this->score_validation = 0.0;
+        }
+
+        void initFrom(const RankerImpl& rk){
+            this->features = rk.features;
+            this->scorer = rk.scorer->clone();
+            this->training_samples.clear();
+            for(RankList rl : rk.training_samples) {
+                this->training_samples.push_back(RankList(rl));
+            }
+            this->validation_samples.clear();
+            for(RankList rl : rk.validation_samples) {
+                this->validation_samples.push_back(RankList(rl));
+            }
+        }
+
+        void freePointers() {
+            this->training_samples.clear();
+            this->validation_samples.clear();
+            this->features.clear();
+        }
 
 protected:
-    list<RankList> training_samples, validation_samples;
+    DataSet training_samples, validation_samples;
     vector<int> features;
     unique_ptr<MetricScorer> scorer;
     double score_training, score_validation;
@@ -141,3 +162,59 @@ protected:
 };
 
 
+Ranker::Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features){
+    this->p_impl = new RankerImpl(move(dataset), move(scorer), move(features));
+}
+
+Ranker::Ranker(const Ranker& rk){
+    this->p_impl = new RankerImpl(*rk.p_impl);
+}
+
+Ranker& Ranker::operator=(const Ranker& rk){
+    p_impl->initFrom(*rk.p_impl);
+    return *this;
+}
+
+Ranker::~Ranker(){
+    delete p_impl;
+}
+
+void Ranker::setTrainingSet(DataSet dataset){
+    this->p_impl->setTrainingSet(move(dataset));
+}
+
+void Ranker::setFeatures(vector<int> features){
+    this->p_impl->setFeatures(move(features));
+}
+
+void Ranker::setValidationSet(DataSet dataset){
+    this->p_impl->setValidationSet(move(dataset));
+}
+
+void Ranker::setScorer(unique_ptr<MetricScorer> scorer){
+    this->p_impl->setScorer(move(scorer));
+}
+
+double Ranker::getTrainingScore(){
+    return this->p_impl->getTrainingScore();
+}
+
+double Ranker::getValidationScore(){
+    return this->p_impl->getValidationScore();
+}
+
+vector<int> Ranker::getFeatures(){
+    return this->p_impl->getFeatures();
+}
+
+void Ranker::rank(DataSet& l){
+    this->p_impl->rank(l);
+}
+
+void Ranker::rank(RankList& rl){
+    this->p_impl->rank(rl);
+}
+
+void Ranker::save(string fileToSave){
+    this->p_impl->save(fileToSave);
+}

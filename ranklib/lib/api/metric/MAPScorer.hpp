@@ -53,7 +53,7 @@ namespace ranklib{
          * @param rl 
          * @return double 
          */
-        double score(RankList rl);
+        double score(RankList& rl) override;
 
         /**
          * @brief  Compute MAP for a list of RankLists
@@ -61,7 +61,14 @@ namespace ranklib{
          * @param rls 
          * @return double 
          */
-        double score(DataSet rls);
+        double score(DataSet& rls);
+
+        /**
+         * @brief Clone MetricScorer object
+         * 
+         * @return unique_ptr<MetricScorer> 
+         */
+        unique_ptr<MetricScorer> clone() const override;
 
     };
 };

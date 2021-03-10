@@ -24,7 +24,7 @@ MAPScorer& MAPScorer::operator=(const MAPScorer& ms){
     return *this;
 }
 
-double MAPScorer::score(RankList rl){
+double MAPScorer::score(RankList& rl){
     double averagePrecision = 0.0;
     int count = 0.0;
     for(int i=0; i < rl.size(); i++) {
@@ -36,6 +36,10 @@ double MAPScorer::score(RankList rl){
     return count > 0.0 ? averagePrecision / count : 0.0;
 }
 
-double MAPScorer::score(DataSet ds){
-    return MetricScorer::score(std::move(ds));
+double MAPScorer::score(DataSet& ds){
+    return MetricScorer::score(ds);
+}
+
+unique_ptr<MetricScorer> MAPScorer::clone() const{
+    return std::make_unique<MAPScorer>( *this ); 
 }

@@ -3,9 +3,10 @@ include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 add_executable(
   test_ranklib
   main.cpp
-  unit/DataPointTest.cpp
-  unit/RankListTest.cpp
-  unit/MAPScorerTest.cpp
+  unit/learning/DataPointTest.cpp
+  unit/learning/RankListTest.cpp
+  unit/learning/RankerTest.cpp
+  unit/metric/MAPScorerTest.cpp
 )
 
 target_link_libraries(test_ranklib ranklib pthread gtest gtest_main)

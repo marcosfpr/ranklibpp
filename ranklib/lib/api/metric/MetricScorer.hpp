@@ -13,9 +13,12 @@
 #define METRIC_SCORER_HPP_
 
 #include <vector>
+#include <memory>
+
 #include "../learning/DataSet.hpp"
 
 using std::vector;
+using std::unique_ptr;
 
 namespace ranklib{
         
@@ -76,7 +79,7 @@ namespace ranklib{
          * @param ds 
          * @return double 
          */
-        double score(DataSet ds);
+        double score(DataSet& ds);
 
         /**
          * @brief Return score for a single RankList
@@ -84,7 +87,14 @@ namespace ranklib{
          * @param rl
          * @return double 
          */
-        virtual double score(RankList rl) = 0;
+        virtual double score(RankList& rl) = 0;
+
+        /**
+         * @brief Clone a MetricScorer pointer
+         * 
+         * @return std::unique_ptr<Material> 
+         */
+        virtual unique_ptr<MetricScorer> clone() const = 0;
 
     protected:
 

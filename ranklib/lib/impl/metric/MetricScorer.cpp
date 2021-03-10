@@ -39,7 +39,7 @@ int MetricScorer::getDepth(){
     return this->depth;
 }
 
-double MetricScorer::score(DataSet ds){
+double MetricScorer::score(DataSet& ds){
     double score = 0.0;
     for(DataSet::iterator it = ds.begin(); it != ds.end(); it++){
         RankList singlelist = *it;
