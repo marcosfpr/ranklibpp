@@ -1,19 +1,41 @@
-dist: trusty
-sudo: required
+version: 1.0
+language: cpp
+dist: bionic
 
-language:
-  - cpp
-compiler:
-  - gcc
+cache:
+  - ccache
+  - directories:
+      - $TRAVIS_BUILD_DIR/vcpkg
+
 addons:
   apt:
     sources:
-      - ubuntu-toolchain-r-test
+      - sourceline: 'ppa:ubuntu-toolchain-r/test'
+      - sourceline: 'deb http://apt.llvm.org/bionic/ llvm-toolchain-bionic-10 main'
+        key_url: 'https://apt.llvm.org/llvm-snapshot.gpg.key'
     packages:
+      - build-essential
+      - automake
       - gcc-10
       - g++-10
-      - cmake
+      - cppcheck
+      - valgrind
+      - doxygen
+      - graphviz
+      - lcov
+  homebrew:
+    packages:
+      - automake
+      - gcc
       - python3
+      - ccache
+    update: true
+
+os:
+  - linux
+
+compiler:
+  - g++-10
 
 branches:
   only:
