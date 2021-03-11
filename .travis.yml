@@ -12,7 +12,7 @@ matrix:
           sources:
             - sourceline: 'ppa:ubuntu-toolchain-r/test'
           packages:
-            - g++-10
+            - gcc-10
       env:
         - MATRIX_EVAL="CC=gcc-10 CXX=g++-10"
 
@@ -22,7 +22,7 @@ branches:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y build-essential cmake libgtest-dev valgrind lcov doxygen graphviz python-dev build-essential python3-pip
+  - sudo apt-get install -y build-essential g++-10 cmake libgtest-dev valgrind lcov doxygen graphviz python-dev build-essential python3-pip
   - pip3 install sphinx breathe
 
 install:
