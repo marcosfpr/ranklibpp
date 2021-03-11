@@ -4,6 +4,18 @@ language: c++
 
 sudo: required
 
+matrix:
+  include:
+    - os: linux
+      addons:
+        apt:
+          sources:
+            - sourceline: 'ppa:ubuntu-toolchain-r/test'
+          packages:
+            - g++-10
+      env:
+        - MATRIX_EVAL="CC=gcc-10 CXX=g++-10"
+
 branches:
   only:
     - master
