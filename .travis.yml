@@ -16,8 +16,8 @@ addons:
     - sourceline: 'ppa:ubuntu-toolchain-r/test'
     packages:
     - cmake
-    - gcc-10
-    - g++-10
+    - gcc-7
+    - g++-7
 
 branches:
   only:
@@ -30,14 +30,14 @@ before_install:
 
 install:
   # /usr/bin/gcc points to an older compiler on both Linux and macOS.
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-10" CC="gcc-10"; fi
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-7" CC="gcc-7"; fi
   # /usr/bin/clang points to an older compiler on both Linux and macOS.
   #
   # Homebrew's llvm package doesn't ship a versioned clang++ binary, so the values
   # below don't work on macOS. Fortunately, the path change above makes the
   # default values (clang and clang++) resolve to the correct compiler on macOS.
   - if [ "$TRAVIS_OS_NAME" = "linux" ]; then
-      if [ "$CXX" = "clang++" ]; then export CXX="clang++-10" CC="clang-10"; fi;
+      if [ "$CXX" = "clang++" ]; then export CXX="clang++-7" CC="clang-7"; fi;
     fi
   - echo ${CC}
   - echo ${CXX}
