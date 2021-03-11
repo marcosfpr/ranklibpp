@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_cf8dd54dfd2fc1358b9ffd537e87755d" kind="dir">
+    <compoundname>/home/marcos/Projetos/ltrpp/ltr/lib/api/metric</compoundname>
+    <innerfile refid="_m_a_p_scorer_8hpp">MAPScorer.hpp</innerfile>
+    <innerfile refid="_metric_scorer_8hpp">MetricScorer.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/"/>
+  </compounddef>
+</doxygen>

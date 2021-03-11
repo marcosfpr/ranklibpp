@@ -4,7 +4,7 @@
 #include <filesystem>
 #include <fstream>
 
-#include <ranklib.hpp>
+#include <ltr.hpp>
 #include <gtest/gtest.h>
 
 using std::cout;
@@ -12,9 +12,9 @@ using std::unique_ptr;
 using std::shared_ptr;
 using std::vector;
 
-using namespace ranklib;
+using namespace ltr;
 
-class MockRanker : public ranklib::Ranker{
+class MockRanker : public ltr::Ranker{
     public:
 
         MockRanker(DataSet dataset, vector<int> features, unique_ptr<MetricScorer> scorer)

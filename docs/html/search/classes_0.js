@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['datapoint_45',['DataPoint',['../classranklib_1_1_data_point.html',1,'ranklib']]],
-  ['datapointimpl_46',['DataPointImpl',['../classranklib_1_1_data_point_impl.html',1,'ranklib']]]
+  ['adarank_82',['AdaRank',['../classltr_1_1_ada_rank.html',1,'ltr']]],
+  ['adarankimpl_83',['AdaRankImpl',['../classltr_1_1_ada_rank_impl.html',1,'ltr']]]
 ];

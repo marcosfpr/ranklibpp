@@ -1,6 +1,8 @@
-<map id="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp" name="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp">
-<area shape="rect" id="node1" title="Mean Average Precision scorer for RankLists." alt="" coords="5,5,199,61"/>
-<area shape="rect" id="node2" href="$_metric_scorer_8hpp.html" title="Generic retrieval measure computation interface (like Ranklib)" alt="" coords="37,109,167,136"/>
-<area shape="rect" id="node3" title=" " alt="" coords="42,184,85,211"/>
-<area shape="rect" id="node4" title=" " alt="" coords="109,184,172,211"/>
+<map id="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" name="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp">
+<area shape="rect" id="node1" title="Mean Average Precision scorer for RankLists." alt="" coords="45,5,217,61"/>
+<area shape="rect" id="node2" href="$_metric_scorer_8hpp.html" title="Generic retrieval measure computation interface (like Ranklib)" alt="" coords="66,109,197,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,184,68,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="93,184,170,211"/>
+<area shape="rect" id="node5" href="$_data_set_8hpp.html" title="Define a simple DataSet representation." alt="" coords="194,184,365,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="258,259,301,285"/>
 </map>

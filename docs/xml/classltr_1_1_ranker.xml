@@ -1,0 +1,597 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classltr_1_1_ranker" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ltr::Ranker</compoundname>
+    <derivedcompoundref refid="classltr_1_1_ada_rank" prot="public" virt="non-virtual">ltr::AdaRank</derivedcompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classltr_1_1_ranker_1a513d4e27c9344253a0fdfce88ae77a65" prot="private" static="no" mutable="no">
+        <type><ref refid="classltr_1_1_ranker_impl" kindref="compound">RankerImpl</ref> *</type>
+        <definition>RankerImpl* ltr::Ranker::p_impl</definition>
+        <argsstring></argsstring>
+        <name>p_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="192" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classltr_1_1_ranker_1aaa7e4f3b4349cbc510b259959cb62e3e" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ltr::Ranker::start</definition>
+        <argsstring>()=0</argsstring>
+        <name>start</name>
+        <reimplementedby refid="classltr_1_1_ada_rank_1a12377c6c46ecfe8af2ccf801e2b97019">start</reimplementedby>
+        <briefdescription>
+<para>Initialization of Ranking algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="40" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a5240af98d2e6d2b0c1006bade11108e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ltr::Ranker::learn</definition>
+        <argsstring>()=0</argsstring>
+        <name>learn</name>
+        <reimplementedby refid="classltr_1_1_ada_rank_1aa339f77d275838bdac0c846f7b860e73">learn</reimplementedby>
+        <briefdescription>
+<para>Learn method for some learning algorithm. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="46" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a1516810fc4c57e57afa8c265ecb9c46d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double ltr::Ranker::eval</definition>
+        <argsstring>(ReadableDataPoint dp)=0</argsstring>
+        <name>eval</name>
+        <reimplementedby refid="classltr_1_1_ada_rank_1adb41492ecfc39e77196b059dd6face78">eval</reimplementedby>
+        <param>
+          <type>ReadableDataPoint</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+<para>Evaluation of a single datapoint object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="54" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1ad1533de97cfb7bc63b6ad77a1d755dcc" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>string</type>
+        <definition>virtual string ltr::Ranker::toString</definition>
+        <argsstring>()=0</argsstring>
+        <name>toString</name>
+        <reimplementedby refid="classltr_1_1_ada_rank_1a4bc24c0bdfd7563362e88123c6040605">toString</reimplementedby>
+        <briefdescription>
+<para>String representation of ranker. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="61" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1af4cba93739d84ef26d5c40259e5d6b52" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>string</type>
+        <definition>virtual string ltr::Ranker::model</definition>
+        <argsstring>()=0</argsstring>
+        <name>model</name>
+        <reimplementedby refid="classltr_1_1_ada_rank_1a3cc26e5e7378fcbaee68fcf306fefba2">model</reimplementedby>
+        <briefdescription>
+<para>String representation of model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="68" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a567ec8aaf3f44fb0dffcd797333f7a79" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ltr::Ranker::loadString</definition>
+        <argsstring>(string model)=0</argsstring>
+        <name>loadString</name>
+        <reimplementedby refid="classltr_1_1_ada_rank_1ac4a88ed483c22e4a70edb23d4a51ded4">loadString</reimplementedby>
+        <param>
+          <type>string</type>
+          <declname>model</declname>
+        </param>
+        <briefdescription>
+<para>Load model from string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="75" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1ad75d03d7a7abc271e81ea7d647299d17" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>string</type>
+        <definition>virtual string ltr::Ranker::name</definition>
+        <argsstring>()=0</argsstring>
+        <name>name</name>
+        <reimplementedby refid="classltr_1_1_ada_rank_1acf031a815215fd100a653a58efd7f0fd">name</reimplementedby>
+        <briefdescription>
+<para>String name of model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="82" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a38b579c9fe937a99184770bf553244a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void ltr::Ranker::print</definition>
+        <argsstring>()=0</argsstring>
+        <name>print</name>
+        <reimplementedby refid="classltr_1_1_ada_rank_1a701ae320a3369c240d15dcc264c91323">print</reimplementedby>
+        <briefdescription>
+<para>Logging model stats. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="88" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a2e68024d42f548eb46c31fa463d6025f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ranker::Ranker</definition>
+        <argsstring>(DataSet dataset, unique_ptr&lt; MetricScorer &gt; scorer, vector&lt; int &gt; features={})</argsstring>
+        <name>Ranker</name>
+        <param>
+          <type><ref refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kindref="member">DataSet</ref></type>
+          <declname>dataset</declname>
+        </param>
+        <param>
+          <type>unique_ptr&lt; <ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref> &gt;</type>
+          <declname>scorer</declname>
+        </param>
+        <param>
+          <type>vector&lt; int &gt;</type>
+          <declname>features</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>features</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scorer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="98" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="165" bodyend="167"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1aa24c1f390119dcb7bf1520d99d09dd52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ranker::~Ranker</definition>
+        <argsstring>()</argsstring>
+        <name>~Ranker</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="104" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="178" bodyend="180"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a4e67022d26ca959c71bdd20b93388e60" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Ranker::Ranker</definition>
+        <argsstring>(const Ranker &amp;rk)</argsstring>
+        <name>Ranker</name>
+        <param>
+          <type>const <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> &amp;</type>
+          <declname>rk</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="111" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="169" bodyend="171"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a036571337f575241f661f452faf870b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> &amp;</type>
+        <definition>Ranker &amp; Ranker::operator=</definition>
+        <argsstring>(const Ranker &amp;rk)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> &amp;</type>
+          <declname>rk</declname>
+        </param>
+        <briefdescription>
+<para>Assign operator for Rankers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>other ranker </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="119" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="173" bodyend="176"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1abc1372c4de267531fef282da26300744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ranker::setTrainingSet</definition>
+        <argsstring>(DataSet dataset)</argsstring>
+        <name>setTrainingSet</name>
+        <param>
+          <type><ref refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kindref="member">DataSet</ref></type>
+          <declname>dataset</declname>
+        </param>
+        <briefdescription>
+<para>Set the Training Set of <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dataset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="126" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="182" bodyend="184"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1aa6d964305fa87c7f6cae57a18ee13c2b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ranker::setFeatures</definition>
+        <argsstring>(vector&lt; int &gt; features)</argsstring>
+        <name>setFeatures</name>
+        <param>
+          <type>vector&lt; int &gt;</type>
+          <declname>features</declname>
+        </param>
+        <briefdescription>
+<para>Set the Features for <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>features</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="133" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="186" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a1e1f6a229ac7771342218361b07b071a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ranker::setValidationSet</definition>
+        <argsstring>(DataSet dataset)</argsstring>
+        <name>setValidationSet</name>
+        <param>
+          <type><ref refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kindref="member">DataSet</ref></type>
+          <declname>dataset</declname>
+        </param>
+        <briefdescription>
+<para>Set the Validation Set for <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>samples</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="140" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="190" bodyend="192"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a3a8ca56cac6338257b3af3008653098f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ranker::setScorer</definition>
+        <argsstring>(unique_ptr&lt; MetricScorer &gt; scorer)</argsstring>
+        <name>setScorer</name>
+        <param>
+          <type>unique_ptr&lt; <ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref> &gt;</type>
+          <declname>scorer</declname>
+        </param>
+        <briefdescription>
+<para>Set the Scorer wich will be used for <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>scorer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="147" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="194" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1ac5b782501ae5f4543141655454af75b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Ranker::getTrainingScore</definition>
+        <argsstring>()</argsstring>
+        <name>getTrainingScore</name>
+        <briefdescription>
+<para>Get the Training Score. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="154" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="198" bodyend="200"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1ab9051e82a25fd91ff0a0e1a15834775e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double Ranker::getValidationScore</definition>
+        <argsstring>()</argsstring>
+        <name>getValidationScore</name>
+        <briefdescription>
+<para>Get the Validation Score. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="161" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="202" bodyend="204"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a584b627bf90240d0004e2d7cd09294c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>vector&lt; int &gt;</type>
+        <definition>vector&lt; int &gt; Ranker::getFeatures</definition>
+        <argsstring>()</argsstring>
+        <name>getFeatures</name>
+        <briefdescription>
+<para>Get the used Features. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>vector&lt;int&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="168" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="206" bodyend="208"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a51882650994d54f692b8715e379ab4dd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ranker::rank</definition>
+        <argsstring>(DataSet &amp;l)</argsstring>
+        <name>rank</name>
+        <param>
+          <type><ref refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kindref="member">DataSet</ref> &amp;</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Perform ranking in samples. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="175" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="210" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1ad314913beb5d2ccbcf19ed06a9b60faf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ranker::rank</definition>
+        <argsstring>(RankList &amp;rl)</argsstring>
+        <name>rank</name>
+        <param>
+          <type><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;</type>
+          <declname>rl</declname>
+        </param>
+        <briefdescription>
+<para>Perform ranking in one sample. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="182" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="214" bodyend="216"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ranker_1a9f53df9271fa870744b9e891d652c4f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Ranker::save</definition>
+        <argsstring>(string fileToSave)</argsstring>
+        <name>save</name>
+        <param>
+          <type>string</type>
+          <declname>fileToSave</declname>
+        </param>
+        <briefdescription>
+<para>Save model in file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fileToSave</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="189" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="218" bodyend="220"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ltr::AdaRank</label>
+        <link refid="classltr_1_1_ada_rank"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ltr::Ranker</label>
+        <link refid="classltr_1_1_ranker"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="33" column="17" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" bodystart="33" bodyend="194"/>
+    <listofallmembers>
+      <member refid="classltr_1_1_ranker_1a1516810fc4c57e57afa8c265ecb9c46d" prot="public" virt="pure-virtual"><scope>ltr::Ranker</scope><name>eval</name></member>
+      <member refid="classltr_1_1_ranker_1a584b627bf90240d0004e2d7cd09294c1" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>getFeatures</name></member>
+      <member refid="classltr_1_1_ranker_1ac5b782501ae5f4543141655454af75b8" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>getTrainingScore</name></member>
+      <member refid="classltr_1_1_ranker_1ab9051e82a25fd91ff0a0e1a15834775e" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>getValidationScore</name></member>
+      <member refid="classltr_1_1_ranker_1a5240af98d2e6d2b0c1006bade11108e7" prot="public" virt="pure-virtual"><scope>ltr::Ranker</scope><name>learn</name></member>
+      <member refid="classltr_1_1_ranker_1a567ec8aaf3f44fb0dffcd797333f7a79" prot="public" virt="pure-virtual"><scope>ltr::Ranker</scope><name>loadString</name></member>
+      <member refid="classltr_1_1_ranker_1af4cba93739d84ef26d5c40259e5d6b52" prot="public" virt="pure-virtual"><scope>ltr::Ranker</scope><name>model</name></member>
+      <member refid="classltr_1_1_ranker_1ad75d03d7a7abc271e81ea7d647299d17" prot="public" virt="pure-virtual"><scope>ltr::Ranker</scope><name>name</name></member>
+      <member refid="classltr_1_1_ranker_1a036571337f575241f661f452faf870b8" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>operator=</name></member>
+      <member refid="classltr_1_1_ranker_1a513d4e27c9344253a0fdfce88ae77a65" prot="private" virt="non-virtual"><scope>ltr::Ranker</scope><name>p_impl</name></member>
+      <member refid="classltr_1_1_ranker_1a38b579c9fe937a99184770bf553244a9" prot="public" virt="pure-virtual"><scope>ltr::Ranker</scope><name>print</name></member>
+      <member refid="classltr_1_1_ranker_1a51882650994d54f692b8715e379ab4dd" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>rank</name></member>
+      <member refid="classltr_1_1_ranker_1ad314913beb5d2ccbcf19ed06a9b60faf" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>rank</name></member>
+      <member refid="classltr_1_1_ranker_1a2e68024d42f548eb46c31fa463d6025f" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>Ranker</name></member>
+      <member refid="classltr_1_1_ranker_1a4e67022d26ca959c71bdd20b93388e60" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>Ranker</name></member>
+      <member refid="classltr_1_1_ranker_1a9f53df9271fa870744b9e891d652c4f5" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>save</name></member>
+      <member refid="classltr_1_1_ranker_1aa6d964305fa87c7f6cae57a18ee13c2b" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>setFeatures</name></member>
+      <member refid="classltr_1_1_ranker_1a3a8ca56cac6338257b3af3008653098f" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>setScorer</name></member>
+      <member refid="classltr_1_1_ranker_1abc1372c4de267531fef282da26300744" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>setTrainingSet</name></member>
+      <member refid="classltr_1_1_ranker_1a1e1f6a229ac7771342218361b07b071a" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>setValidationSet</name></member>
+      <member refid="classltr_1_1_ranker_1aaa7e4f3b4349cbc510b259959cb62e3e" prot="public" virt="pure-virtual"><scope>ltr::Ranker</scope><name>start</name></member>
+      <member refid="classltr_1_1_ranker_1ad1533de97cfb7bc63b6ad77a1d755dcc" prot="public" virt="pure-virtual"><scope>ltr::Ranker</scope><name>toString</name></member>
+      <member refid="classltr_1_1_ranker_1aa24c1f390119dcb7bf1520d99d09dd52" prot="public" virt="non-virtual"><scope>ltr::Ranker</scope><name>~Ranker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

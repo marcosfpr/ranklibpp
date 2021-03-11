@@ -1,0 +1,10 @@
+<map id="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" name="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp">
+<area shape="rect" id="node1" title="Listwise boost algorithm based on AdaBoost." alt="" coords="123,5,297,61"/>
+<area shape="rect" id="node2" href="$_ranker_8hpp.html" title="Ranker generic class." alt="" coords="157,109,263,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="54,259,97,285"/>
+<area shape="rect" id="node4" title=" " alt="" coords="136,259,199,285"/>
+<area shape="rect" id="node5" title=" " alt="" coords="238,259,297,285"/>
+<area shape="rect" id="node6" title=" " alt="" coords="345,259,422,285"/>
+<area shape="rect" id="node7" href="$_data_set_8hpp.html" title="Define a simple DataSet representation." alt="" coords="24,184,127,211"/>
+<area shape="rect" id="node8" href="$_rank_list_8hpp.html" title="Definition of RankLists." alt="" coords="202,184,309,211"/>
+</map>

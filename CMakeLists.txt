@@ -1,8 +1,8 @@
 cmake_minimum_required(VERSION 3.0.0)
-project(ranklibpp VERSION 0.1.0)
+project(ltrpp VERSION 0.1.0)
 
 set(CMAKE_CXX_STANDARD 20)
-set(CPACK_PACKAGE_NAME "ranklibcpp")
+set(CPACK_PACKAGE_NAME "ltrpp")
 set(CPACK_PACKAGE_RELEASE 1)
 set(BUILD_SHARED_LIBS OFF)
 set(CMAKE_BUILD_TYPE Debug)
@@ -11,7 +11,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage -O0")
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
-add_subdirectory(ranklib)
+add_subdirectory(ltr)
 add_subdirectory(external/googletest)
 
 enable_testing()

@@ -1,143 +1,239 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
-  <compound refid="classranklib_1_1_data_point" kind="class"><name>ranklib::DataPoint</name>
-    <member refid="classranklib_1_1_data_point_1a085a64b21b531364b17e3b4f40144c1f" kind="variable"><name>p_impl</name></member>
-    <member refid="classranklib_1_1_data_point_1a0670ee95b57173291576ecbb960ebd7c" kind="function"><name>DataPoint</name></member>
-    <member refid="classranklib_1_1_data_point_1a405c4f74a458bbd3ee3189969c984291" kind="function"><name>DataPoint</name></member>
-    <member refid="classranklib_1_1_data_point_1a1e2a03c42c6f5d02155e5c26535b0cac" kind="function"><name>DataPoint</name></member>
-    <member refid="classranklib_1_1_data_point_1a25aec10e66a39b588237268eaac966c7" kind="function"><name>operator=</name></member>
-    <member refid="classranklib_1_1_data_point_1a1119de2abb699b8820a46854aad2d837" kind="function"><name>operator=</name></member>
-    <member refid="classranklib_1_1_data_point_1a69770421a98781a4b34cfff206a24a79" kind="function"><name>~DataPoint</name></member>
-    <member refid="classranklib_1_1_data_point_1ae6bf8a887a67e15dfdbdd2f3f3d7b81e" kind="function"><name>toString</name></member>
-    <member refid="classranklib_1_1_data_point_1a9f6dec9849f8844694c1da64b056231e" kind="function"><name>setID</name></member>
-    <member refid="classranklib_1_1_data_point_1a9bac6962aaf7d3c0b26dffa9ca5a83d9" kind="function"><name>getID</name></member>
-    <member refid="classranklib_1_1_data_point_1aa1a72b3213c0b48bbb4b691bf7106d26" kind="function"><name>getFeatureCount</name></member>
-    <member refid="classranklib_1_1_data_point_1a3f7d451c784662862e364aabed0ca9c0" kind="function"><name>getLabel</name></member>
-    <member refid="classranklib_1_1_data_point_1af569565aa8d16e7187f30f1a211e4492" kind="function"><name>setLabel</name></member>
-    <member refid="classranklib_1_1_data_point_1a9e6d26b089df360716c33a101552f740" kind="function"><name>getDescription</name></member>
-    <member refid="classranklib_1_1_data_point_1a52990ef0644da2f94865bcab52830246" kind="function"><name>setDescription</name></member>
-    <member refid="classranklib_1_1_data_point_1a94cc352cd262add926cc8d0ddd1bcea2" kind="function"><name>setCached</name></member>
-    <member refid="classranklib_1_1_data_point_1a5aeecc1b0a5ccb6cd7eaac931234deed" kind="function"><name>getCached</name></member>
-    <member refid="classranklib_1_1_data_point_1a9ed9b710f37c1a2d7b5489b49f9e5b25" kind="function"><name>resetCached</name></member>
-    <member refid="classranklib_1_1_data_point_1a513110c4758ff17cb576fee15cd3b840" kind="function"><name>getFeatureValue</name></member>
-    <member refid="classranklib_1_1_data_point_1a26a6a7c22f97026d45e7b6b8aa0e041d" kind="function"><name>setFeatureValue</name></member>
-    <member refid="classranklib_1_1_data_point_1ac00576f4698a43124a8fce1c16e76acf" kind="function"><name>getFeatureVector</name></member>
-    <member refid="classranklib_1_1_data_point_1ac2bff67dc480edae347a55b72834bb87" kind="function"><name>setFeatureVector</name></member>
+  <compound refid="classltr_1_1_ada_rank" kind="class"><name>ltr::AdaRank</name>
+    <member refid="classltr_1_1_ada_rank_1ae30ae550f2c8349aa3d1abc521698051" kind="variable"><name>p_impl</name></member>
+    <member refid="classltr_1_1_ada_rank_1a00533e6bfedf6199a642ae739ec31a42" kind="function"><name>AdaRank</name></member>
+    <member refid="classltr_1_1_ada_rank_1a376f76b6b374de8b674fe982172d3d18" kind="function"><name>~AdaRank</name></member>
+    <member refid="classltr_1_1_ada_rank_1a069f54eb1100aa039cb7ca6a8fc9561f" kind="function"><name>AdaRank</name></member>
+    <member refid="classltr_1_1_ada_rank_1acfa96e794371cdacb5518b02dbac0f3b" kind="function"><name>operator=</name></member>
+    <member refid="classltr_1_1_ada_rank_1a12377c6c46ecfe8af2ccf801e2b97019" kind="function"><name>start</name></member>
+    <member refid="classltr_1_1_ada_rank_1aa339f77d275838bdac0c846f7b860e73" kind="function"><name>learn</name></member>
+    <member refid="classltr_1_1_ada_rank_1adb41492ecfc39e77196b059dd6face78" kind="function"><name>eval</name></member>
+    <member refid="classltr_1_1_ada_rank_1a4bc24c0bdfd7563362e88123c6040605" kind="function"><name>toString</name></member>
+    <member refid="classltr_1_1_ada_rank_1a3cc26e5e7378fcbaee68fcf306fefba2" kind="function"><name>model</name></member>
+    <member refid="classltr_1_1_ada_rank_1ac4a88ed483c22e4a70edb23d4a51ded4" kind="function"><name>loadString</name></member>
+    <member refid="classltr_1_1_ada_rank_1acf031a815215fd100a653a58efd7f0fd" kind="function"><name>name</name></member>
+    <member refid="classltr_1_1_ada_rank_1a701ae320a3369c240d15dcc264c91323" kind="function"><name>print</name></member>
+    <member refid="classltr_1_1_ada_rank_1a955077fca9d727a1e6991acdb991b656" kind="function"><name>setIterations</name></member>
+    <member refid="classltr_1_1_ada_rank_1aeed163a1b4c2135d0d27597d640afdbe" kind="function"><name>getIterations</name></member>
+    <member refid="classltr_1_1_ada_rank_1ab8c0285d8b8b43c1749be4d7504bc572" kind="function"><name>setTolerance</name></member>
+    <member refid="classltr_1_1_ada_rank_1acbc552df345bc06e4dad9384e784e5d0" kind="function"><name>getTolerance</name></member>
+    <member refid="classltr_1_1_ada_rank_1a0b0a72dd61c32f6368ac7ebb594c9200" kind="function"><name>setEnqueue</name></member>
+    <member refid="classltr_1_1_ada_rank_1adb9bf4ec936f84fb942797e874cf8571" kind="function"><name>getEnqueue</name></member>
+    <member refid="classltr_1_1_ada_rank_1a505cededf0e0758350a668a70523fc53" kind="function"><name>setMaxSelCount</name></member>
+    <member refid="classltr_1_1_ada_rank_1af7ad029fa7508b8ea03cd2671c8bb62f" kind="function"><name>getMaxSelCount</name></member>
   </compound>
-  <compound refid="classranklib_1_1_data_point_impl" kind="class"><name>ranklib::DataPointImpl</name>
-    <member refid="classranklib_1_1_data_point_impl_1a51f4a7d53ea132d8b036c4efce7ea143" kind="variable"><name>max_feature</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1adc931c4fb051ee8b267a0e74c0cd8284" kind="variable"><name>feature_increase</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1aaa1338ea3ac6df10c2a45e003257104e" kind="variable"><name>feature_count</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1af7980e908f0b7574a162c0ee3f924715" kind="variable"><name>known_features</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1ae47059368055e01139716e5e0a74a971" kind="variable"><name>label</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a97184e5a38dd24d70d8736969f352c98" kind="variable"><name>cached</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1abc1e1099a11bf2dc917e87fd3644774b" kind="variable"><name>id_</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a9c7abb80f9e4ab32b8772f16be4e4888" kind="variable"><name>description</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a9267e755257735934b280c04c4f8f6dc" kind="variable"><name>feature_values</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a985138829693bd60c5a7da44e721e9e5" kind="function"><name>DataPointImpl</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1af9ba4b13803d79e64c3f76cd0ca95e15" kind="function"><name>DataPointImpl</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1ab12fd0014dec437c877203290addc2dd" kind="function"><name>~DataPointImpl</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a992b80411ef1d87ee479b9e18245536d" kind="function"><name>toString</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1af5ca4af8051bf2eaefd9bdc5f7cd086a" kind="function"><name>setID</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a34d5665ca2920fdf4e36bee5bf407af5" kind="function"><name>getID</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a1f11aed43a59a226ff26ff3484c5cbd2" kind="function"><name>getFeatureCount</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1afa9978ba5008d86eac5ffa70be42ff19" kind="function"><name>getLabel</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a4e2c14abb1efe41602262e94a1c16b85" kind="function"><name>setLabel</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a2b9cf871ec76913a2114dc70a80c909c" kind="function"><name>getDescription</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a834da6e5fc5b5e055ee17c3acd54de36" kind="function"><name>setDescription</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1ac0020fa9dba9f4ec61ee425a14990e04" kind="function"><name>setCached</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1af7cea0b0092112e148a85f09481453a1" kind="function"><name>getCached</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1ac1c3006682b3eb1a79f96593aae7e932" kind="function"><name>resetCached</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a3da8f2592b7b521aa62a9fca56e26dce" kind="function"><name>getFeatureValue</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a8b18bf90a5d1e48749c37c3093eeb6b0" kind="function"><name>setFeatureValue</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1aba4c28f030aabc3ea9f5d14da5aa46a1" kind="function"><name>getFeatureVector</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1aa8a24221889894eba89fbf4d323c9ba4" kind="function"><name>setFeatureVector</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1ae1c048a364367e8034d800afcaf40eeb" kind="function"><name>init</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1aecea208628b209a15ad295d6e07d8896" kind="function"><name>initFrom</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1aca1caff35b491a6d74ae3c0163e35efb" kind="function"><name>freePointers</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1ad07e822601ff1c1eb85ff3ecc113a759" kind="function"><name>getKeyValueFeaturePair</name></member>
-    <member refid="classranklib_1_1_data_point_impl_1a016b42940b161d32b792cb1803821053" kind="function"><name>parse</name></member>
+  <compound refid="classltr_1_1_ada_rank_impl" kind="class"><name>ltr::AdaRankImpl</name>
+    <member refid="classltr_1_1_ada_rank_impl_1ace79d9ab800d76bef73886a7b455790e" kind="variable"><name>nIteration</name></member>
+    <member refid="classltr_1_1_ada_rank_impl_1a95cc6c341315fc9348a1747f1f249596" kind="variable"><name>maxSelCount</name></member>
+    <member refid="classltr_1_1_ada_rank_impl_1af59f65f7c9dbc271bd27f9c0761a0aae" kind="variable"><name>enqueueTrain</name></member>
+    <member refid="classltr_1_1_ada_rank_impl_1a959b8b92942c60884fb426540f7264f7" kind="variable"><name>tolerance</name></member>
   </compound>
-  <compound refid="classranklib_1_1_m_a_p_scorer" kind="class"><name>ranklib::MAPScorer</name>
-    <member refid="classranklib_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" kind="function"><name>MAPScorer</name></member>
-    <member refid="classranklib_1_1_m_a_p_scorer_1a661dfa171b19ed4bfc8207042674104c" kind="function"><name>MAPScorer</name></member>
-    <member refid="classranklib_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548" kind="function"><name>operator=</name></member>
-    <member refid="classranklib_1_1_m_a_p_scorer_1a511abfa657189ddc1a00b382a7bc23d9" kind="function"><name>score</name></member>
-    <member refid="classranklib_1_1_m_a_p_scorer_1a89a6320352e8b7f2bcf3f3383454bc08" kind="function"><name>score</name></member>
+  <compound refid="classltr_1_1_data_point" kind="class"><name>ltr::DataPoint</name>
+    <member refid="classltr_1_1_data_point_1abdf056fcb3df0997c499567739212be2" kind="variable"><name>p_impl</name></member>
+    <member refid="classltr_1_1_data_point_1a750f6bd50dba3dfc024073a08e508d45" kind="function"><name>DataPoint</name></member>
+    <member refid="classltr_1_1_data_point_1a405c4f74a458bbd3ee3189969c984291" kind="function"><name>DataPoint</name></member>
+    <member refid="classltr_1_1_data_point_1a1e2a03c42c6f5d02155e5c26535b0cac" kind="function"><name>DataPoint</name></member>
+    <member refid="classltr_1_1_data_point_1a25aec10e66a39b588237268eaac966c7" kind="function"><name>operator=</name></member>
+    <member refid="classltr_1_1_data_point_1a1119de2abb699b8820a46854aad2d837" kind="function"><name>operator=</name></member>
+    <member refid="classltr_1_1_data_point_1a69770421a98781a4b34cfff206a24a79" kind="function"><name>~DataPoint</name></member>
+    <member refid="classltr_1_1_data_point_1a90e00f6f8d0669457e676c15954c78b3" kind="function"><name>toString</name></member>
+    <member refid="classltr_1_1_data_point_1a9f6dec9849f8844694c1da64b056231e" kind="function"><name>setID</name></member>
+    <member refid="classltr_1_1_data_point_1a26a198c90449dab21eaa32d788a37bf1" kind="function"><name>getID</name></member>
+    <member refid="classltr_1_1_data_point_1afa99d3b2af98c6e4decc5bf3196fc499" kind="function"><name>getFeatureCount</name></member>
+    <member refid="classltr_1_1_data_point_1a0088094057c56b88b8dee2bd19f7b222" kind="function"><name>getLabel</name></member>
+    <member refid="classltr_1_1_data_point_1af569565aa8d16e7187f30f1a211e4492" kind="function"><name>setLabel</name></member>
+    <member refid="classltr_1_1_data_point_1a8ad3aea20be5cbd61f87a2d437e5fb2f" kind="function"><name>getDescription</name></member>
+    <member refid="classltr_1_1_data_point_1a52990ef0644da2f94865bcab52830246" kind="function"><name>setDescription</name></member>
+    <member refid="classltr_1_1_data_point_1a94cc352cd262add926cc8d0ddd1bcea2" kind="function"><name>setCached</name></member>
+    <member refid="classltr_1_1_data_point_1aad6f93104ca44609dbecfb6834ff193e" kind="function"><name>getCached</name></member>
+    <member refid="classltr_1_1_data_point_1a9ed9b710f37c1a2d7b5489b49f9e5b25" kind="function"><name>resetCached</name></member>
+    <member refid="classltr_1_1_data_point_1a92f1ecb8817784d47bdf20684f000c1a" kind="function"><name>getFeatureValue</name></member>
+    <member refid="classltr_1_1_data_point_1a26a6a7c22f97026d45e7b6b8aa0e041d" kind="function"><name>setFeatureValue</name></member>
+    <member refid="classltr_1_1_data_point_1a29cbf20c9e21eed09af3f1c65e9eb1b7" kind="function"><name>getFeatureVector</name></member>
+    <member refid="classltr_1_1_data_point_1ac2bff67dc480edae347a55b72834bb87" kind="function"><name>setFeatureVector</name></member>
   </compound>
-  <compound refid="classranklib_1_1_metric_scorer" kind="class"><name>ranklib::MetricScorer</name>
-    <member refid="classranklib_1_1_metric_scorer_1a1af10a2f7cc3017420f18a4d773c3f85" kind="variable"><name>depth</name></member>
-    <member refid="classranklib_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb" kind="function"><name>MetricScorer</name></member>
-    <member refid="classranklib_1_1_metric_scorer_1a6dc1a9c79e6ef48ec9272d5379e4c337" kind="function"><name>~MetricScorer</name></member>
-    <member refid="classranklib_1_1_metric_scorer_1aa19a5430103a9215ba855bad2b5aeba4" kind="function"><name>MetricScorer</name></member>
-    <member refid="classranklib_1_1_metric_scorer_1a1b3757c0012820a8a842e4d54f422c45" kind="function"><name>operator=</name></member>
-    <member refid="classranklib_1_1_metric_scorer_1a37576d07e18405c4195bf3ed60643126" kind="function"><name>setDepth</name></member>
-    <member refid="classranklib_1_1_metric_scorer_1a8347d53c4d39a69db8110e53d757a6e4" kind="function"><name>getDepth</name></member>
-    <member refid="classranklib_1_1_metric_scorer_1a46a4b327848c8d4e41d3437999f4f8e0" kind="function"><name>score</name></member>
-    <member refid="classranklib_1_1_metric_scorer_1a07e13cf2629fa3f1aa0fad974aaf65e3" kind="function"><name>score</name></member>
-    <member refid="classranklib_1_1_metric_scorer_1ab9ddb58509a8ee09d8ec8b8b12a18c1c" kind="function"><name>getRelevanceLabels</name></member>
+  <compound refid="classltr_1_1_data_point_impl" kind="class"><name>ltr::DataPointImpl</name>
+    <member refid="classltr_1_1_data_point_impl_1a51f4a7d53ea132d8b036c4efce7ea143" kind="variable"><name>max_feature</name></member>
+    <member refid="classltr_1_1_data_point_impl_1adc931c4fb051ee8b267a0e74c0cd8284" kind="variable"><name>feature_increase</name></member>
+    <member refid="classltr_1_1_data_point_impl_1aaa1338ea3ac6df10c2a45e003257104e" kind="variable"><name>feature_count</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a743ab81445170c99b9e65bec9ae12e66" kind="variable"><name>known_features</name></member>
+    <member refid="classltr_1_1_data_point_impl_1aa2c27f356f457edbb135fa4bc79274ff" kind="variable"><name>label</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a0ce59ed593543b60c4ec35975cfda351" kind="variable"><name>cached</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a14538028c58bb8bfbf693853f841705f" kind="variable"><name>id_</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a2caca4cdbfe0e70fc8764b1fa647431c" kind="variable"><name>description</name></member>
+    <member refid="classltr_1_1_data_point_impl_1aad34327edc224f2e48fc476adf2b31b0" kind="variable"><name>feature_values</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a767641caad40ca12f0026310495be2bb" kind="function"><name>DataPointImpl</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a0337369b501fb457083fd85300896d7f" kind="function"><name>DataPointImpl</name></member>
+    <member refid="classltr_1_1_data_point_impl_1ae5daec7d2447ae1dfb0c27ba277fb604" kind="function"><name>~DataPointImpl</name></member>
+    <member refid="classltr_1_1_data_point_impl_1ab984b796415fc35b4a509c1e2a3bae82" kind="function"><name>toString</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a49a03aff3d6225225f57af06e848d6db" kind="function"><name>setID</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a26f13482ed4efeb4e865444d03ed5268" kind="function"><name>getID</name></member>
+    <member refid="classltr_1_1_data_point_impl_1ad6c825d2d5e0295c1573476ef9153e1a" kind="function"><name>getFeatureCount</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a5584b44817cdff118c28fc71ebfd033e" kind="function"><name>getLabel</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a1548f0b5a755f2c254226486e936241c" kind="function"><name>setLabel</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a271534cbc967f23b0978fd3085423504" kind="function"><name>getDescription</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a696c86c53b384ccd7969d4c10abbd2e5" kind="function"><name>setDescription</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a681f3d677b3718cd7719046a489028fe" kind="function"><name>setCached</name></member>
+    <member refid="classltr_1_1_data_point_impl_1ae96f390a115fb7d86cfc843cb0ae47fc" kind="function"><name>getCached</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a38296d925d757c1c305a9e377528f7f0" kind="function"><name>resetCached</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a9af7f66b290e5115a8e1d59f4e6bc1c0" kind="function"><name>getFeatureValue</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a684fc26f1ec3d66dab03c921c0b60bcf" kind="function"><name>setFeatureValue</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a82f9dd8a4f7d6b88b9a403b018f76aec" kind="function"><name>getFeatureVector</name></member>
+    <member refid="classltr_1_1_data_point_impl_1aa1b873f7cd17424b34e8a14206273fb8" kind="function"><name>setFeatureVector</name></member>
+    <member refid="classltr_1_1_data_point_impl_1aae79273938700be381991644d76631fc" kind="function"><name>init</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a1fbe63c41a7fd65daa4e5824cac4bbea" kind="function"><name>initFrom</name></member>
+    <member refid="classltr_1_1_data_point_impl_1aaea0ac663a64052315b841042eee49a4" kind="function"><name>freePointers</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a067eeaec4db4e47463c6662351701a55" kind="function"><name>getKeyValueFeaturePair</name></member>
+    <member refid="classltr_1_1_data_point_impl_1a88fa8f4d62d7d1a3652385db7aa1f2a6" kind="function"><name>parse</name></member>
   </compound>
-  <compound refid="classranklib_1_1_rank_lib_error" kind="class"><name>ranklib::RankLibError</name>
-    <member refid="classranklib_1_1_rank_lib_error_1a1d92a2bed6e05e115b58a013d5329e8e" kind="function"><name>RankLibError</name></member>
-    <member refid="classranklib_1_1_rank_lib_error_1a8557a4622c6246448b4fe3e88a7e6d81" kind="function"><name>RankLibError</name></member>
+  <compound refid="classltr_1_1_ltr_error" kind="class"><name>ltr::LtrError</name>
+    <member refid="classltr_1_1_ltr_error_1a3482b4f5d9a77f76948d3699092eb4ba" kind="function"><name>LtrError</name></member>
+    <member refid="classltr_1_1_ltr_error_1af6ab97ff509ea596c41fc4b75577748f" kind="function"><name>LtrError</name></member>
   </compound>
-  <compound refid="classranklib_1_1_rank_list" kind="class"><name>ranklib::RankList</name>
-    <member refid="classranklib_1_1_rank_list_1a4f29717d4da05db6a6fcbf642f0768fc" kind="variable"><name>p_impl</name></member>
-    <member refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kind="function"><name>RankList</name></member>
-    <member refid="classranklib_1_1_rank_list_1a7328669b281ef0836e63109bf0b9b066" kind="function"><name>RankList</name></member>
-    <member refid="classranklib_1_1_rank_list_1ac4201f553630131084076b8ba856eeea" kind="function"><name>RankList</name></member>
-    <member refid="classranklib_1_1_rank_list_1a67541798cf45331b2be2ce0356331749" kind="function"><name>RankList</name></member>
-    <member refid="classranklib_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" kind="function"><name>operator=</name></member>
-    <member refid="classranklib_1_1_rank_list_1a50cef171525b4aca632b407ac113acc3" kind="function"><name>operator=</name></member>
-    <member refid="classranklib_1_1_rank_list_1ad2ed9420312f06389716efe2e071dd94" kind="function"><name>~RankList</name></member>
-    <member refid="classranklib_1_1_rank_list_1a0fd0b8c54a69d57a7ad529d617334944" kind="function"><name>toString</name></member>
-    <member refid="classranklib_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80" kind="function"><name>size</name></member>
-    <member refid="classranklib_1_1_rank_list_1a4b738c5b7a18492abf2cec423d348178" kind="function"><name>get</name></member>
-    <member refid="classranklib_1_1_rank_list_1afb21fbbfaeb2522880b1ccb67b9c7360" kind="function"><name>operator[]</name></member>
-    <member refid="classranklib_1_1_rank_list_1a06e3827183a027a463ca2484803a5aa1" kind="function"><name>set</name></member>
-    <member refid="classranklib_1_1_rank_list_1ab9d16fc32d076eebde9c96409d1ce5c4" kind="function"><name>getPartialRanking</name></member>
-    <member refid="classranklib_1_1_rank_list_1a607c962520a97ce0e8cdd909985950c5" kind="function"><name>getRanking</name></member>
+  <compound refid="classltr_1_1_m_a_p_scorer" kind="class"><name>ltr::MAPScorer</name>
+    <member refid="classltr_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" kind="function"><name>MAPScorer</name></member>
+    <member refid="classltr_1_1_m_a_p_scorer_1a661dfa171b19ed4bfc8207042674104c" kind="function"><name>MAPScorer</name></member>
+    <member refid="classltr_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548" kind="function"><name>operator=</name></member>
+    <member refid="classltr_1_1_m_a_p_scorer_1a49e7a9b42c2b75f971124695bcc6e368" kind="function"><name>score</name></member>
+    <member refid="classltr_1_1_m_a_p_scorer_1a880a754ea6f91c9ea77b5ec1fa8ae990" kind="function"><name>score</name></member>
+    <member refid="classltr_1_1_m_a_p_scorer_1a86c043d27c1a55b80b25fcedf67b8d79" kind="function"><name>clone</name></member>
   </compound>
-  <compound refid="classranklib_1_1_rank_list_impl" kind="class"><name>ranklib::RankListImpl</name>
-    <member refid="classranklib_1_1_rank_list_impl_1a187d9bd646fe91dfee5c2edae9b3d8c1" kind="variable"><name>data_points</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a2e75e91455216401513b88636e89f25b" kind="function"><name>RankListImpl</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1aa052c2bda8016611270417bc2cd40720" kind="function"><name>RankListImpl</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a4944e5c63041a42f07b3ad8a89d5c176" kind="function"><name>RankListImpl</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a398f8cb436071d77711665c1ed45338a" kind="function"><name>~RankListImpl</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a6bd872ad65c1131ef3c08ed0293a4c03" kind="function"><name>toString</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a38babfa7f8d79a13853c1e6dd93c4152" kind="function"><name>size</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a442c6f576039f830821fada371a65278" kind="function"><name>get</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a873248bed61925a0e6965acc4113e20d" kind="function"><name>operator[]</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a23630970dee1304ba0474f7376da9aeb" kind="function"><name>set</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1ab5bc331a3bd789a43dcf989810a7a605" kind="function"><name>ranking</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a775d35c2a7071cc1db227ee1760dc738" kind="function"><name>partialRanking</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a7e682f8150a01ff81814103fc3848192" kind="function"><name>init</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a7ac09771c9d7b318b0eee858a3c05349" kind="function"><name>initFrom</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1a4ce05277451c339c2755f543d9e86031" kind="function"><name>initFrom</name></member>
-    <member refid="classranklib_1_1_rank_list_impl_1af63653d0231830a14dcc3c493303e2cd" kind="function"><name>freePointers</name></member>
+  <compound refid="classltr_1_1_metric_scorer" kind="class"><name>ltr::MetricScorer</name>
+    <member refid="classltr_1_1_metric_scorer_1a123f9aba73472a6a5f6e3301019f9ac1" kind="variable"><name>depth</name></member>
+    <member refid="classltr_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb" kind="function"><name>MetricScorer</name></member>
+    <member refid="classltr_1_1_metric_scorer_1a6dc1a9c79e6ef48ec9272d5379e4c337" kind="function"><name>~MetricScorer</name></member>
+    <member refid="classltr_1_1_metric_scorer_1aa19a5430103a9215ba855bad2b5aeba4" kind="function"><name>MetricScorer</name></member>
+    <member refid="classltr_1_1_metric_scorer_1a1b3757c0012820a8a842e4d54f422c45" kind="function"><name>operator=</name></member>
+    <member refid="classltr_1_1_metric_scorer_1a37576d07e18405c4195bf3ed60643126" kind="function"><name>setDepth</name></member>
+    <member refid="classltr_1_1_metric_scorer_1a8347d53c4d39a69db8110e53d757a6e4" kind="function"><name>getDepth</name></member>
+    <member refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kind="function"><name>score</name></member>
+    <member refid="classltr_1_1_metric_scorer_1ac191873cb029c29d8d018e62d2db75bb" kind="function"><name>score</name></member>
+    <member refid="classltr_1_1_metric_scorer_1a62c1e00993aa9d07266e600413629dd2" kind="function"><name>clone</name></member>
+    <member refid="classltr_1_1_metric_scorer_1ab9ddb58509a8ee09d8ec8b8b12a18c1c" kind="function"><name>getRelevanceLabels</name></member>
   </compound>
-  <compound refid="namespaceranklib" kind="namespace"><name>ranklib</name>
-    <member refid="_rank_list_8hpp_1a4c6f59f7b2fc337b609aef7b81026aab" kind="typedef"><name>sample_t</name></member>
+  <compound refid="classltr_1_1_ranker" kind="class"><name>ltr::Ranker</name>
+    <member refid="classltr_1_1_ranker_1a513d4e27c9344253a0fdfce88ae77a65" kind="variable"><name>p_impl</name></member>
+    <member refid="classltr_1_1_ranker_1aaa7e4f3b4349cbc510b259959cb62e3e" kind="function"><name>start</name></member>
+    <member refid="classltr_1_1_ranker_1a5240af98d2e6d2b0c1006bade11108e7" kind="function"><name>learn</name></member>
+    <member refid="classltr_1_1_ranker_1a1516810fc4c57e57afa8c265ecb9c46d" kind="function"><name>eval</name></member>
+    <member refid="classltr_1_1_ranker_1ad1533de97cfb7bc63b6ad77a1d755dcc" kind="function"><name>toString</name></member>
+    <member refid="classltr_1_1_ranker_1af4cba93739d84ef26d5c40259e5d6b52" kind="function"><name>model</name></member>
+    <member refid="classltr_1_1_ranker_1a567ec8aaf3f44fb0dffcd797333f7a79" kind="function"><name>loadString</name></member>
+    <member refid="classltr_1_1_ranker_1ad75d03d7a7abc271e81ea7d647299d17" kind="function"><name>name</name></member>
+    <member refid="classltr_1_1_ranker_1a38b579c9fe937a99184770bf553244a9" kind="function"><name>print</name></member>
+    <member refid="classltr_1_1_ranker_1a2e68024d42f548eb46c31fa463d6025f" kind="function"><name>Ranker</name></member>
+    <member refid="classltr_1_1_ranker_1aa24c1f390119dcb7bf1520d99d09dd52" kind="function"><name>~Ranker</name></member>
+    <member refid="classltr_1_1_ranker_1a4e67022d26ca959c71bdd20b93388e60" kind="function"><name>Ranker</name></member>
+    <member refid="classltr_1_1_ranker_1a036571337f575241f661f452faf870b8" kind="function"><name>operator=</name></member>
+    <member refid="classltr_1_1_ranker_1abc1372c4de267531fef282da26300744" kind="function"><name>setTrainingSet</name></member>
+    <member refid="classltr_1_1_ranker_1aa6d964305fa87c7f6cae57a18ee13c2b" kind="function"><name>setFeatures</name></member>
+    <member refid="classltr_1_1_ranker_1a1e1f6a229ac7771342218361b07b071a" kind="function"><name>setValidationSet</name></member>
+    <member refid="classltr_1_1_ranker_1a3a8ca56cac6338257b3af3008653098f" kind="function"><name>setScorer</name></member>
+    <member refid="classltr_1_1_ranker_1ac5b782501ae5f4543141655454af75b8" kind="function"><name>getTrainingScore</name></member>
+    <member refid="classltr_1_1_ranker_1ab9051e82a25fd91ff0a0e1a15834775e" kind="function"><name>getValidationScore</name></member>
+    <member refid="classltr_1_1_ranker_1a584b627bf90240d0004e2d7cd09294c1" kind="function"><name>getFeatures</name></member>
+    <member refid="classltr_1_1_ranker_1a51882650994d54f692b8715e379ab4dd" kind="function"><name>rank</name></member>
+    <member refid="classltr_1_1_ranker_1ad314913beb5d2ccbcf19ed06a9b60faf" kind="function"><name>rank</name></member>
+    <member refid="classltr_1_1_ranker_1a9f53df9271fa870744b9e891d652c4f5" kind="function"><name>save</name></member>
+  </compound>
+  <compound refid="classltr_1_1_ranker_impl" kind="class"><name>ltr::RankerImpl</name>
+    <member refid="classltr_1_1_ranker_impl_1a1d6481c766c39fdefb07f1c69ffa4470" kind="variable"><name>training_samples</name></member>
+    <member refid="classltr_1_1_ranker_impl_1afdeaeae96073d38cc6dc592ac4001429" kind="variable"><name>validation_samples</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a50f2bbcd49466f5f4b94223ef388983d" kind="variable"><name>features</name></member>
+    <member refid="classltr_1_1_ranker_impl_1aa56866d725d5dd490010e1e2dd1a4b13" kind="variable"><name>scorer</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a83975055bb7121c855ef37a0b4406808" kind="variable"><name>score_training</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a55a9ba522ff6fe5399034e8782b49834" kind="variable"><name>score_validation</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a071bf8a98b4de808489549927856f798" kind="function"><name>RankerImpl</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a274025f32c3442aec92bafb9eddbc621" kind="function"><name>~RankerImpl</name></member>
+    <member refid="classltr_1_1_ranker_impl_1ac7bbdd62fade18e656d926e3722d9fed" kind="function"><name>RankerImpl</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a9b6ed7ad50f1ad20e821b331c084c2f1" kind="function"><name>setTrainingSet</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a5a90278b121b0a49d4875208828cd3d8" kind="function"><name>setFeatures</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a32211d2e9f95bacfb6d6248bc0e59291" kind="function"><name>setValidationSet</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a8bfe197a5700defb3f529f739f895eda" kind="function"><name>setScorer</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a46be0acdf17e0cc420440139c11ce0cc" kind="function"><name>getTrainingScore</name></member>
+    <member refid="classltr_1_1_ranker_impl_1abe61700d1ef196e34edd4bd4f5272c58" kind="function"><name>getValidationScore</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a91d16a3408c2bddec09c6d93c901bcd6" kind="function"><name>getFeatures</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a83ed2b2cbf5db6dfd43d3c25bc4e9f0c" kind="function"><name>eval</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a6d72b6e650a1fa8a7633bc5e282fe5e3" kind="function"><name>model</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a999a7b7bcc037d34b11b4ad56b47aba9" kind="function"><name>rank</name></member>
+    <member refid="classltr_1_1_ranker_impl_1ad0c268a9b5d73b1f4042643ca25e9d8d" kind="function"><name>rank</name></member>
+    <member refid="classltr_1_1_ranker_impl_1ae7e8ffd395bb6510f73dcbd089447238" kind="function"><name>save</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a6d4123495bfa492cb5fa5cbec4239341" kind="function"><name>init</name></member>
+    <member refid="classltr_1_1_ranker_impl_1accaacdf6cc38d82be79120c8830a4ada" kind="function"><name>initFrom</name></member>
+    <member refid="classltr_1_1_ranker_impl_1a92d8c8ad36c75f2ac001d045fcbb40b9" kind="function"><name>freePointers</name></member>
+  </compound>
+  <compound refid="classltr_1_1_rank_list" kind="class"><name>ltr::RankList</name>
+    <member refid="classltr_1_1_rank_list_1a54cf2d4153824863e365f949fe286b78" kind="variable"><name>p_impl</name></member>
+    <member refid="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3" kind="function"><name>RankList</name></member>
+    <member refid="classltr_1_1_rank_list_1a7328669b281ef0836e63109bf0b9b066" kind="function"><name>RankList</name></member>
+    <member refid="classltr_1_1_rank_list_1ac4201f553630131084076b8ba856eeea" kind="function"><name>RankList</name></member>
+    <member refid="classltr_1_1_rank_list_1a67541798cf45331b2be2ce0356331749" kind="function"><name>RankList</name></member>
+    <member refid="classltr_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" kind="function"><name>operator=</name></member>
+    <member refid="classltr_1_1_rank_list_1a50cef171525b4aca632b407ac113acc3" kind="function"><name>operator=</name></member>
+    <member refid="classltr_1_1_rank_list_1ad2ed9420312f06389716efe2e071dd94" kind="function"><name>~RankList</name></member>
+    <member refid="classltr_1_1_rank_list_1a87a2983f9be7dfb492c531eb2318ccf0" kind="function"><name>toString</name></member>
+    <member refid="classltr_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80" kind="function"><name>size</name></member>
+    <member refid="classltr_1_1_rank_list_1a51b857a46d0b1afa9c87724ba26ec384" kind="function"><name>get</name></member>
+    <member refid="classltr_1_1_rank_list_1adc071b87f0a21857f38d167fc6898a03" kind="function"><name>operator[]</name></member>
+    <member refid="classltr_1_1_rank_list_1a877292f658419351084f230eab01ada4" kind="function"><name>set</name></member>
+    <member refid="classltr_1_1_rank_list_1a0e44c3c26e00dbb773234cd97514bd67" kind="function"><name>getPartialRanking</name></member>
+    <member refid="classltr_1_1_rank_list_1a6e73baf96dbe5e21ce57458ea2a9fbb5" kind="function"><name>getRanking</name></member>
+    <member refid="classltr_1_1_rank_list_1a93e6b593b766811a5cd77d9ac1b13c1f" kind="function"><name>permute</name></member>
+  </compound>
+  <compound refid="classltr_1_1_rank_list_impl" kind="class"><name>ltr::RankListImpl</name>
+    <member refid="classltr_1_1_rank_list_impl_1a33cb7545b7b00b5b766548dad59ade05" kind="variable"><name>data_points</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1aeafea9eaf3bcdaa4ec9dfb7be75a46d1" kind="function"><name>RankListImpl</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a13312474f2dfe519def84b33a78fd7c2" kind="function"><name>RankListImpl</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a2ca1c58faafd8046a99c2a77bed31fe5" kind="function"><name>RankListImpl</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a26077ccaa25125622c5dd40dbc860269" kind="function"><name>~RankListImpl</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a519a60432a53bfb67507d2d454372206" kind="function"><name>toString</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a19504f3819f9acdd6b2d28296b867e47" kind="function"><name>size</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a57e9101188cc438d65b6a659a56bcd64" kind="function"><name>get</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a8a4dc1d9462c7165288173cd91a72eef" kind="function"><name>operator[]</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1aa4ac4301a627a0167311632e7f3cd591" kind="function"><name>set</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1af5dc11dc1eca72da4bf9a16e2327b9b9" kind="function"><name>ranking</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1ab00bc6a8a004366e57098abc33b9f565" kind="function"><name>partialRanking</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a504be88cbf47d575331880b2ebe56ae1" kind="function"><name>permute</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a64f45055445cab3f1572ce1cd02a3c35" kind="function"><name>init</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a9d324b07bc6028964fe75f5fa75deb82" kind="function"><name>initFrom</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a4ec20a7c3698bd3496ac8bd60927fa4f" kind="function"><name>initFrom</name></member>
+    <member refid="classltr_1_1_rank_list_impl_1a371f7b5c43f450a06d5bd8d19c2316dd" kind="function"><name>freePointers</name></member>
+  </compound>
+  <compound refid="namespaceltr" kind="namespace"><name>ltr</name>
+    <member refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kind="typedef"><name>DataSet</name></member>
+    <member refid="_rank_list_8hpp_1a20ddcf0e5318cfcfa87f0fd5821d1c8b" kind="typedef"><name>ReadableDataPoint</name></member>
+    <member refid="_rank_list_8hpp_1a2027db64d94276e4824691bced873c6b" kind="typedef"><name>Sample</name></member>
+  </compound>
+  <compound refid="_ada_rank_8hpp" kind="file"><name>AdaRank.hpp</name>
   </compound>
   <compound refid="_data_point_8hpp" kind="file"><name>DataPoint.hpp</name>
   </compound>
+  <compound refid="_data_set_8hpp" kind="file"><name>DataSet.hpp</name>
+  </compound>
+  <compound refid="_ranker_8hpp" kind="file"><name>Ranker.hpp</name>
+  </compound>
   <compound refid="_rank_list_8hpp" kind="file"><name>RankList.hpp</name>
+  </compound>
+  <compound refid="ltr_8hpp" kind="file"><name>ltr.hpp</name>
+  </compound>
+  <compound refid="_ltr_error_8hpp" kind="file"><name>LtrError.hpp</name>
   </compound>
   <compound refid="_m_a_p_scorer_8hpp" kind="file"><name>MAPScorer.hpp</name>
   </compound>
   <compound refid="_metric_scorer_8hpp" kind="file"><name>MetricScorer.hpp</name>
   </compound>
-  <compound refid="ranklib_8hpp" kind="file"><name>ranklib.hpp</name>
-  </compound>
-  <compound refid="_rank_lib_error_8hpp" kind="file"><name>RankLibError.hpp</name>
-  </compound>
   <compound refid="_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
-    <member refid="_c_make_lists_8txt_1a7b9ebd044db49d09be198ed69dc50181" kind="function"><name>find_package</name></member>
+    <member refid="_c_make_lists_8txt_1ab059cd3412c3b5d7a08ba08ced03eee7" kind="function"><name>find_package</name></member>
+  </compound>
+  <compound refid="_ada_rank_8cpp" kind="file"><name>AdaRank.cpp</name>
   </compound>
   <compound refid="_data_point_8cpp" kind="file"><name>DataPoint.cpp</name>
     <member refid="_data_point_8cpp_1a953f667fb27fb68dd74a487d002b19b5" kind="define"><name>NaN</name></member>
     <member refid="_data_point_8cpp_1a4d9fe772374abf747ca6641581e5adf2" kind="define"><name>MAX_FEATURES</name></member>
     <member refid="_data_point_8cpp_1a47e1233d770fa47be6e7269f723d2bd5" kind="define"><name>FEATURE_RESIZE_STEP</name></member>
+  </compound>
+  <compound refid="_ranker_8cpp" kind="file"><name>Ranker.cpp</name>
   </compound>
   <compound refid="_rank_list_8cpp" kind="file"><name>RankList.cpp</name>
   </compound>
@@ -145,20 +241,24 @@
   </compound>
   <compound refid="_metric_scorer_8cpp" kind="file"><name>MetricScorer.cpp</name>
   </compound>
-  <compound refid="dir_c740d4e23841bf9768e354a83ffc7b3f" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api</name>
+  <compound refid="dir_7fa9c85e78b9cd1ecb217fa3b67fe5cc" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/api</name>
   </compound>
-  <compound refid="dir_6a7a2f1d940d2e1f8880fad3e0e77f14" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl</name>
+  <compound refid="dir_7609ca0ee18e749777b62eec7655f5cd" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting</name>
   </compound>
-  <compound refid="dir_2335ada1007e25916f854d446a4b7339" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/learning</name>
+  <compound refid="dir_3ec4017c90896c6a42287019070dfa4b" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting</name>
   </compound>
-  <compound refid="dir_e1ede9d863e721bae9fd0dca959a0248" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning</name>
+  <compound refid="dir_19e429dc30c463c633407e1ef50132f9" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl</name>
   </compound>
-  <compound refid="dir_5a127079ba1c4e95e418b397b7ba34f9" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib</name>
+  <compound refid="dir_5d08dd7e4f2ba303fe2df3a58d8dcdef" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning</name>
   </compound>
-  <compound refid="dir_6dc8bf9dd670622a9b7a4954ec0d5a7d" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric</name>
+  <compound refid="dir_2adde966242bb5644a992a6c3dc2b6bd" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning</name>
   </compound>
-  <compound refid="dir_564f72b8613a803f57895a2d0f5668f7" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric</name>
+  <compound refid="dir_75e9323bb0f9fc7c99b0c774e0f06622" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib</name>
   </compound>
-  <compound refid="dir_c5e54405ef24e6828b31557fd3893306" kind="dir"><name>/home/marcos/Projetos/ranklibcpp/ranklib</name>
+  <compound refid="dir_4af5f4954906a24be8474025cf6a4c92" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr</name>
+  </compound>
+  <compound refid="dir_126863dc25ffa171e6a4f8d36af4182e" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric</name>
+  </compound>
+  <compound refid="dir_cf8dd54dfd2fc1358b9ffd537e87755d" kind="dir"><name>/home/marcos/Projetos/ltrpp/ltr/lib/api/metric</name>
   </compound>
 </doxygenindex>

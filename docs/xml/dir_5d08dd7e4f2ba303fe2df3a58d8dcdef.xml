@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_5d08dd7e4f2ba303fe2df3a58d8dcdef" kind="dir">
+    <compoundname>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning</compoundname>
+    <innerdir refid="dir_3ec4017c90896c6a42287019070dfa4b">/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting</innerdir>
+    <innerfile refid="_data_point_8cpp">DataPoint.cpp</innerfile>
+    <innerfile refid="_ranker_8cpp">Ranker.cpp</innerfile>
+    <innerfile refid="_rank_list_8cpp">RankList.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/"/>
+  </compounddef>
+</doxygen>

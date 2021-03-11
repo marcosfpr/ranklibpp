@@ -2,14 +2,14 @@
 #include <vector>
 #include <iostream>
 
-#include <ranklib.hpp>
+#include <ltr.hpp>
 #include <gtest/gtest.h>
 
 using std::cout;
 using std::shared_ptr;
 using std::vector;
 
-using namespace ranklib;
+using namespace ltr;
 
 TEST(test_ranklists, constructor) { 
    

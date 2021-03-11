@@ -1,0 +1,4 @@
+<map id="ltr::MetricScorer" name="ltr::MetricScorer">
+<area shape="rect" id="node1" title="A generic retrieval measure computation interface." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$classltr_1_1_m_a_p_scorer.html" title="This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib)." alt="" coords="11,80,126,107"/>
+</map>

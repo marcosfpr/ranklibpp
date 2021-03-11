@@ -1,14 +1,14 @@
 #include <memory>
 #include <list>
 
-#include <ranklib.hpp>
+#include <ltr.hpp>
 #include <gtest/gtest.h>
 
 using std::unique_ptr;
 using std::shared_ptr;
 using std::vector;
 
-using namespace ranklib;
+using namespace ltr;
 
 TEST(test_mapscorer, constructor) { 
    

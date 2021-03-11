@@ -2,10 +2,10 @@ find_package(Doxygen REQUIRED)
 find_package(Sphinx REQUIRED)
 
 # Find all the public headers
-get_target_property(RANKLIB_PUBLIC_HEADER_DIR ranklib INTERFACE_INCLUDE_DIRECTORIES)
-file(GLOB_RECURSE CAT_CUTIFIER_PUBLIC_HEADERS ${RANKLIB_PUBLIC_HEADER_DIR}/*.h)
+get_target_property(LTR_PUBLIC_HEADER_DIR ltr INTERFACE_INCLUDE_DIRECTORIES)
+file(GLOB_RECURSE CAT_CUTIFIER_PUBLIC_HEADERS ${LTR_PUBLIC_HEADER_DIR}/*.h)
 
-set(DOXYGEN_INPUT_DIR ${PROJECT_SOURCE_DIR}/ranklib)
+set(DOXYGEN_INPUT_DIR ${PROJECT_SOURCE_DIR}/ltr)
 set(DOXYGEN_OUTPUT_DIR ${PROJECT_SOURCE_DIR}/docs)
 set(DOXYGEN_INDEX_FILE ${DOXYGEN_OUTPUT_DIR}/xml/index.xml)
 set(DOXYFILE_IN ${CMAKE_CURRENT_SOURCE_DIR}/Doxyfile.in)
@@ -40,7 +40,7 @@ add_custom_command(OUTPUT ${SPHINX_INDEX_FILE}
                    COMMAND 
                      ${SPHINX_EXECUTABLE} -b html
                      # Tell Breathe where to find the Doxygen output
-                     -Dbreathe_projects.ranklib=${DOXYGEN_OUTPUT_DIR}/xml
+                     -Dbreathe_projects.ltr=${DOXYGEN_OUTPUT_DIR}/xml
                    ${SPHINX_SOURCE} ${SPHINX_BUILD}
                    WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
                    DEPENDS

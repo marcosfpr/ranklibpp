@@ -1,8 +1,8 @@
-#include <ranklib.hpp>
+#include <ltr.hpp>
 
 #include <gtest/gtest.h>
 
-using namespace ranklib;
+using namespace ltr;
 
 TEST(test_datapoints, constructor) {
     DataPoint* dp = new DataPoint();

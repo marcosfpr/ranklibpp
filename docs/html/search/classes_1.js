@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mapscorer_47',['MAPScorer',['../classranklib_1_1_m_a_p_scorer.html',1,'ranklib']]],
-  ['metricscorer_48',['MetricScorer',['../classranklib_1_1_metric_scorer.html',1,'ranklib']]]
+  ['datapoint_84',['DataPoint',['../classltr_1_1_data_point.html',1,'ltr']]],
+  ['datapointimpl_85',['DataPointImpl',['../classltr_1_1_data_point_impl.html',1,'ltr']]]
 ];

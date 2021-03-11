@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classltr_1_1_ada_rank_impl" kind="class" language="C++" prot="public">
+    <compoundname>ltr::AdaRankImpl</compoundname>
+    <basecompoundref refid="classltr_1_1_ranker_impl" prot="public" virt="non-virtual">ltr::RankerImpl</basecompoundref>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_impl_1ace79d9ab800d76bef73886a7b455790e" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ltr::AdaRankImpl::nIteration</definition>
+        <argsstring></argsstring>
+        <name>nIteration</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" line="25" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_impl_1a95cc6c341315fc9348a1747f1f249596" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ltr::AdaRankImpl::maxSelCount</definition>
+        <argsstring></argsstring>
+        <name>maxSelCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" line="25" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_impl_1af59f65f7c9dbc271bd27f9c0761a0aae" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool ltr::AdaRankImpl::enqueueTrain</definition>
+        <argsstring></argsstring>
+        <name>enqueueTrain</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" line="26" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="26" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_impl_1a959b8b92942c60884fb426540f7264f7" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ltr::AdaRankImpl::tolerance</definition>
+        <argsstring></argsstring>
+        <name>tolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" line="27" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ltr::AdaRankImpl</label>
+        <link refid="classltr_1_1_ada_rank_impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ltr::RankerImpl</label>
+        <link refid="classltr_1_1_ranker_impl"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="4">
+        <label>vector&lt; int &gt;</label>
+      </node>
+      <node id="1">
+        <label>ltr::AdaRankImpl</label>
+        <link refid="classltr_1_1_ada_rank_impl"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ltr::RankerImpl</label>
+        <link refid="classltr_1_1_ranker_impl"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>scorer</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>features</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>validation_samples</edgelabel>
+          <edgelabel>training_samples</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>list&lt; RankList &gt;</label>
+      </node>
+      <node id="3">
+        <label>unique_ptr&lt; ltr::MetricScorer &gt;</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" line="21" column="46" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="21" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classltr_1_1_ada_rank_impl_1af59f65f7c9dbc271bd27f9c0761a0aae" prot="private" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>enqueueTrain</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a83ed2b2cbf5db6dfd43d3c25bc4e9f0c" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>eval</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a50f2bbcd49466f5f4b94223ef388983d" prot="protected" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>features</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a92d8c8ad36c75f2ac001d045fcbb40b9" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>freePointers</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a91d16a3408c2bddec09c6d93c901bcd6" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>getFeatures</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a46be0acdf17e0cc420440139c11ce0cc" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>getTrainingScore</name></member>
+      <member refid="classltr_1_1_ranker_impl_1abe61700d1ef196e34edd4bd4f5272c58" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>getValidationScore</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a6d4123495bfa492cb5fa5cbec4239341" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>init</name></member>
+      <member refid="classltr_1_1_ranker_impl_1accaacdf6cc38d82be79120c8830a4ada" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>initFrom</name></member>
+      <member refid="classltr_1_1_ada_rank_impl_1a95cc6c341315fc9348a1747f1f249596" prot="private" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>maxSelCount</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a6d72b6e650a1fa8a7633bc5e282fe5e3" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>model</name></member>
+      <member refid="classltr_1_1_ada_rank_impl_1ace79d9ab800d76bef73886a7b455790e" prot="private" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>nIteration</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a999a7b7bcc037d34b11b4ad56b47aba9" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>rank</name></member>
+      <member refid="classltr_1_1_ranker_impl_1ad0c268a9b5d73b1f4042643ca25e9d8d" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>rank</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a071bf8a98b4de808489549927856f798" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>RankerImpl</name></member>
+      <member refid="classltr_1_1_ranker_impl_1ac7bbdd62fade18e656d926e3722d9fed" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>RankerImpl</name></member>
+      <member refid="classltr_1_1_ranker_impl_1ae7e8ffd395bb6510f73dcbd089447238" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>save</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a83975055bb7121c855ef37a0b4406808" prot="protected" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>score_training</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a55a9ba522ff6fe5399034e8782b49834" prot="protected" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>score_validation</name></member>
+      <member refid="classltr_1_1_ranker_impl_1aa56866d725d5dd490010e1e2dd1a4b13" prot="protected" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>scorer</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a5a90278b121b0a49d4875208828cd3d8" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>setFeatures</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a8bfe197a5700defb3f529f739f895eda" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>setScorer</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a9b6ed7ad50f1ad20e821b331c084c2f1" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>setTrainingSet</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a32211d2e9f95bacfb6d6248bc0e59291" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>setValidationSet</name></member>
+      <member refid="classltr_1_1_ada_rank_impl_1a959b8b92942c60884fb426540f7264f7" prot="private" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>tolerance</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a1d6481c766c39fdefb07f1c69ffa4470" prot="protected" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>training_samples</name></member>
+      <member refid="classltr_1_1_ranker_impl_1afdeaeae96073d38cc6dc592ac4001429" prot="protected" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>validation_samples</name></member>
+      <member refid="classltr_1_1_ranker_impl_1a274025f32c3442aec92bafb9eddbc621" prot="public" virt="non-virtual"><scope>ltr::AdaRankImpl</scope><name>~RankerImpl</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
