@@ -25,8 +25,8 @@ branches:
 
 before_install:
   - sudo apt-get -qq update
-  - sudo apt-get install -y build-essential cmake libgtest-dev valgrind lcov doxygen graphviz python-dev build-essential python3-pip
-  - pip3 install sphinx breathe
+  - sudo apt-get install -y build-essential cmake libgtest-dev valgrind lcov doxygen graphviz python-dev python3-pip
+  - pip3 install sphinx breathe sphinx_rtd_theme
 
 install:
   # /usr/bin/gcc points to an older compiler on both Linux and macOS.
