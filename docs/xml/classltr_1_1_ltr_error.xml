@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classltr_1_1_ltr_error" kind="class" language="C++" prot="public">
+    <compoundname>ltr::LtrError</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">runtime_error</basecompoundref>
+    <includes refid="_ltr_error_8hpp" local="no">LtrError.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classltr_1_1_ltr_error_1a3482b4f5d9a77f76948d3699092eb4ba" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ltr::LtrError::LtrError</definition>
+        <argsstring>()</argsstring>
+        <name>LtrError</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" line="26" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" bodystart="26" bodyend="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ltr_error_1af6ab97ff509ea596c41fc4b75577748f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>ltr::LtrError::LtrError</definition>
+        <argsstring>(std::string message)</argsstring>
+        <name>LtrError</name>
+        <param>
+          <type>std::string</type>
+          <declname>message</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" line="27" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" bodystart="27" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Error occurrence in <ref refid="classltr_1_1_ltr_error" kindref="compound">LtrError</ref> core.my_cool_project. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>ltr::LtrError</label>
+        <link refid="classltr_1_1_ltr_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>ltr::LtrError</label>
+        <link refid="classltr_1_1_ltr_error"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>std::runtime_error</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" line="24" column="45" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/LtrError.hpp" bodystart="24" bodyend="28"/>
+    <listofallmembers>
+      <member refid="classltr_1_1_ltr_error_1a3482b4f5d9a77f76948d3699092eb4ba" prot="public" virt="non-virtual"><scope>ltr::LtrError</scope><name>LtrError</name></member>
+      <member refid="classltr_1_1_ltr_error_1af6ab97ff509ea596c41fc4b75577748f" prot="public" virt="non-virtual"><scope>ltr::LtrError</scope><name>LtrError</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

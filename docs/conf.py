@@ -16,7 +16,7 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'ranklib++'
+project = 'ltr++'
 copyright = '2021, Marcos Pontes and The Lemur Project'
 author = 'Marcos Pontes and The Lemur Project'
 
@@ -33,7 +33,7 @@ extensions = [
     "breathe"
 ]
 
-breathe_default_project = "ranklib"
+breathe_default_project = "ltr"
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -74,8 +74,8 @@ read_the_docs_build = os.environ.get('READTHEDOCS', None) == 'True'
 breathe_projects = {}
 
 if read_the_docs_build:
-    input_dir = '../ranklib'
+    input_dir = '../ltr'
     output_dir = '.'
     configureDoxyfile(input_dir, output_dir)
     subprocess.call('doxygen', shell=True)
-    breathe_projects['ranklib'] = output_dir + '/xml'
+    breathe_projects['ltr'] = output_dir + '/xml'

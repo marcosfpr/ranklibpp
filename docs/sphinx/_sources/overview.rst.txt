@@ -1,14 +1,14 @@
 Components
 ===================
 
-.. doxygenclass:: ranklib::DataPoint
+.. doxygenclass:: ltr::DataPoint
    :members:
 
-.. doxygenclass:: ranklib::RankList
+.. doxygenclass:: ltr::RankList
    :members:
 
-.. doxygenclass:: ranklib::MetricScorer
+.. doxygenclass:: ltr::MetricScorer
    :members:
 
-.. doxygenclass:: ranklib::MAPScorer
+.. doxygenclass:: ltr::MAPScorer
    :members:

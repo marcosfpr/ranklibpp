@@ -1,4 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,5,116,32"/>
-<area shape="rect" id="node2" href="$classranklib_1_1_rank_lib_error.html" title="Error occurrence in Ranklib core.my_cool_project." alt="" coords="164,5,323,32"/>
+<area shape="rect" id="node1" href="$classltr_1_1_metric_scorer.html" title="A generic retrieval measure computation interface." alt="" coords="5,5,132,32"/>
+<area shape="rect" id="node2" href="$classltr_1_1_m_a_p_scorer.html" title="This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib)." alt="" coords="180,5,295,32"/>
 </map>

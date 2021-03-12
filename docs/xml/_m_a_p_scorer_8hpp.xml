@@ -3,11 +3,17 @@
   <compounddef id="_m_a_p_scorer_8hpp" kind="file" language="C++">
     <compoundname>MAPScorer.hpp</compoundname>
     <includes refid="_metric_scorer_8hpp" local="yes">MetricScorer.hpp</includes>
-    <includedby refid="ranklib_8hpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/ranklib.hpp</includedby>
-    <includedby refid="_m_a_p_scorer_8cpp" local="yes">/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp</includedby>
+    <includedby refid="ltr_8hpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/api/ltr.hpp</includedby>
+    <includedby refid="_m_a_p_scorer_8cpp" local="yes">/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp</includedby>
     <incdepgraph>
-      <node id="3">
+      <node id="6">
         <label>list</label>
+      </node>
+      <node id="5">
+        <label>../learning/DataSet.hpp</label>
+        <link refid="_data_set_8hpp"/>
+        <childnode refid="6" relation="include">
+        </childnode>
       </node>
       <node id="2">
         <label>MetricScorer.hpp</label>
@@ -16,37 +22,42 @@
         </childnode>
         <childnode refid="4" relation="include">
         </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
       </node>
-      <node id="4">
+      <node id="3">
         <label>vector</label>
       </node>
       <node id="1">
-        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp</label>
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp</label>
         <link refid="_m_a_p_scorer_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
+      <node id="4">
+        <label>memory</label>
+      </node>
     </incdepgraph>
     <invincdepgraph>
       <node id="3">
-        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/metric/MAPScorer.cpp</label>
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp</label>
         <link refid="_m_a_p_scorer_8cpp"/>
       </node>
+      <node id="2">
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/ltr.hpp</label>
+        <link refid="ltr_8hpp_source"/>
+      </node>
       <node id="1">
-        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp</label>
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp</label>
         <link refid="_m_a_p_scorer_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
-      <node id="2">
-        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/ranklib.hpp</label>
-        <link refid="ranklib_8hpp_source"/>
-      </node>
     </invincdepgraph>
-    <innerclass refid="classranklib_1_1_m_a_p_scorer" prot="public">ranklib::MAPScorer</innerclass>
-    <innernamespace refid="namespaceranklib">ranklib</innernamespace>
+    <innerclass refid="classltr_1_1_m_a_p_scorer" prot="public">ltr::MAPScorer</innerclass>
+    <innernamespace refid="namespaceltr">ltr</innernamespace>
     <briefdescription>
 <para>Mean Average Precision scorer for RankLists. </para>
     </briefdescription>
@@ -68,29 +79,31 @@
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_metric_scorer_8hpp" kindref="compound">MetricScorer.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ranklib{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal">ltr{</highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">RankList;</highlight></codeline>
-<codeline lineno="24" refid="classranklib_1_1_m_a_p_scorer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_metric_scorer" kindref="compound">MetricScorer</ref>{</highlight></codeline>
+<codeline lineno="24" refid="classltr_1_1_m_a_p_scorer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classltr_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref>{</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" kindref="member">MAPScorer</ref>();</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" kindref="member">MAPScorer</ref>();</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" kindref="member">MAPScorer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref>&amp;<sp/>ms);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" kindref="member">MAPScorer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref>&amp;<sp/>ms);</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref>&amp;<sp/><ref refid="classranklib_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref>&amp;<sp/>ms);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref>&amp;<sp/><ref refid="classltr_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548" kindref="member">operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref>&amp;<sp/>ms);</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_m_a_p_scorer_1a511abfa657189ddc1a00b382a7bc23d9" kindref="member">score</ref>(<ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref><sp/>rl);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_m_a_p_scorer_1a49e7a9b42c2b75f971124695bcc6e368" kindref="member">score</ref>(<ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_m_a_p_scorer_1a511abfa657189ddc1a00b382a7bc23d9" kindref="member">score</ref>(list&lt;RankList&gt;<sp/>rls);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_m_a_p_scorer_1a49e7a9b42c2b75f971124695bcc6e368" kindref="member">score</ref>(<ref refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kindref="member">DataSet</ref>&amp;<sp/>rls);</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="67"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MAP_SCORER_HPP_</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unique_ptr&lt;MetricScorer&gt;<sp/><ref refid="classltr_1_1_m_a_p_scorer_1a86c043d27c1a55b80b25fcedf67b8d79" kindref="member">clone</ref>()<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/>//<sp/>MAP_SCORER_HPP_</highlight></codeline>
     </programlisting>
-    <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp"/>
   </compounddef>
 </doxygen>

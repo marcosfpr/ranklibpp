@@ -1,10 +1,22 @@
 var searchData=
 [
-  ['rankliberror_24',['RankLibError',['../classranklib_1_1_rank_lib_error.html',1,'ranklib']]],
-  ['rankliberror_2ehpp_25',['RankLibError.hpp',['../_rank_lib_error_8hpp.html',1,'']]],
-  ['ranklist_26',['RankList',['../classranklib_1_1_rank_list.html',1,'ranklib::RankList'],['../classranklib_1_1_rank_list.html#afdfa13b77ec0b0b395e1448e40b7576f',1,'ranklib::RankList::RankList(sample_t data_points)'],['../classranklib_1_1_rank_list.html#a7328669b281ef0836e63109bf0b9b066',1,'ranklib::RankList::RankList(const RankList &amp;rl, vector&lt; int &gt; idx, int offset=0)'],['../classranklib_1_1_rank_list.html#ac4201f553630131084076b8ba856eeea',1,'ranklib::RankList::RankList(const RankList &amp;rl)'],['../classranklib_1_1_rank_list.html#a67541798cf45331b2be2ce0356331749',1,'ranklib::RankList::RankList(RankList &amp;&amp;rl)']]],
-  ['ranklist_2ecpp_27',['RankList.cpp',['../_rank_list_8cpp.html',1,'']]],
-  ['ranklist_2ehpp_28',['RankList.hpp',['../_rank_list_8hpp.html',1,'']]],
-  ['ranklistimpl_29',['RankListImpl',['../classranklib_1_1_rank_list_impl.html',1,'ranklib']]],
-  ['resetcached_30',['resetCached',['../classranklib_1_1_data_point.html#a9ed9b710f37c1a2d7b5489b49f9e5b25',1,'ranklib::DataPoint']]]
+  ['get_11',['get',['../classltr_1_1_rank_list.html#a51b857a46d0b1afa9c87724ba26ec384',1,'ltr::RankList']]],
+  ['getcached_12',['getCached',['../classltr_1_1_data_point.html#aad6f93104ca44609dbecfb6834ff193e',1,'ltr::DataPoint']]],
+  ['getdepth_13',['getDepth',['../classltr_1_1_metric_scorer.html#a8347d53c4d39a69db8110e53d757a6e4',1,'ltr::MetricScorer']]],
+  ['getdescription_14',['getDescription',['../classltr_1_1_data_point.html#a8ad3aea20be5cbd61f87a2d437e5fb2f',1,'ltr::DataPoint']]],
+  ['getenqueue_15',['getEnqueue',['../classltr_1_1_ada_rank.html#adb9bf4ec936f84fb942797e874cf8571',1,'ltr::AdaRank']]],
+  ['getfeaturecount_16',['getFeatureCount',['../classltr_1_1_data_point.html#afa99d3b2af98c6e4decc5bf3196fc499',1,'ltr::DataPoint']]],
+  ['getfeatures_17',['getFeatures',['../classltr_1_1_ranker.html#a584b627bf90240d0004e2d7cd09294c1',1,'ltr::Ranker']]],
+  ['getfeaturevalue_18',['getFeatureValue',['../classltr_1_1_data_point.html#a92f1ecb8817784d47bdf20684f000c1a',1,'ltr::DataPoint']]],
+  ['getfeaturevector_19',['getFeatureVector',['../classltr_1_1_data_point.html#a29cbf20c9e21eed09af3f1c65e9eb1b7',1,'ltr::DataPoint']]],
+  ['getid_20',['getID',['../classltr_1_1_data_point.html#a26a198c90449dab21eaa32d788a37bf1',1,'ltr::DataPoint']]],
+  ['getiterations_21',['getIterations',['../classltr_1_1_ada_rank.html#aeed163a1b4c2135d0d27597d640afdbe',1,'ltr::AdaRank']]],
+  ['getlabel_22',['getLabel',['../classltr_1_1_data_point.html#a0088094057c56b88b8dee2bd19f7b222',1,'ltr::DataPoint']]],
+  ['getmaxselcount_23',['getMaxSelCount',['../classltr_1_1_ada_rank.html#af7ad029fa7508b8ea03cd2671c8bb62f',1,'ltr::AdaRank']]],
+  ['getpartialranking_24',['getPartialRanking',['../classltr_1_1_rank_list.html#a0e44c3c26e00dbb773234cd97514bd67',1,'ltr::RankList']]],
+  ['getranking_25',['getRanking',['../classltr_1_1_rank_list.html#a6e73baf96dbe5e21ce57458ea2a9fbb5',1,'ltr::RankList']]],
+  ['getrelevancelabels_26',['getRelevanceLabels',['../classltr_1_1_metric_scorer.html#ab9ddb58509a8ee09d8ec8b8b12a18c1c',1,'ltr::MetricScorer']]],
+  ['gettolerance_27',['getTolerance',['../classltr_1_1_ada_rank.html#acbc552df345bc06e4dad9384e784e5d0',1,'ltr::AdaRank']]],
+  ['gettrainingscore_28',['getTrainingScore',['../classltr_1_1_ranker.html#ac5b782501ae5f4543141655454af75b8',1,'ltr::Ranker']]],
+  ['getvalidationscore_29',['getValidationScore',['../classltr_1_1_ranker.html#ab9051e82a25fd91ff0a0e1a15834775e',1,'ltr::Ranker']]]
 ];

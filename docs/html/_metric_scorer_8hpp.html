@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RankLib++: /home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MetricScorer.hpp File Reference</title>
+<title>LTR++: /home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MetricScorer.hpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RankLib++
+   <div id="projectname">LTR++
    &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">Learning to Rank Library based on RankLib Project</div>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c5e54405ef24e6828b31557fd3893306.html">ranklib</a></li><li class="navelem"><a class="el" href="dir_5a127079ba1c4e95e418b397b7ba34f9.html">lib</a></li><li class="navelem"><a class="el" href="dir_c740d4e23841bf9768e354a83ffc7b3f.html">api</a></li><li class="navelem"><a class="el" href="dir_564f72b8613a803f57895a2d0f5668f7.html">metric</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4af5f4954906a24be8474025cf6a4c92.html">ltr</a></li><li class="navelem"><a class="el" href="dir_75e9323bb0f9fc7c99b0c774e0f06622.html">lib</a></li><li class="navelem"><a class="el" href="dir_7fa9c85e78b9cd1ecb217fa3b67fe5cc.html">api</a></li><li class="navelem"><a class="el" href="dir_cf8dd54dfd2fc1358b9ffd537e87755d.html">metric</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,28 +76,32 @@ $(function() {
 
 <p>Generic retrieval measure computation interface (like Ranklib)  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;list&gt;</code><br />
-<code>#include &lt;vector&gt;</code><br />
+<div class="textblock"><code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;memory&gt;</code><br />
+<code>#include &quot;<a class="el" href="_data_set_8hpp_source.html">../learning/DataSet.hpp</a>&quot;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for MetricScorer.hpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_metric_scorer_8hpp__incl.png" border="0" usemap="#_2home_2marcos_2_projetos_2ranklibcpp_2ranklib_2lib_2api_2metric_2_metric_scorer_8hpp" alt=""/></div>
-<map name="_2home_2marcos_2_projetos_2ranklibcpp_2ranklib_2lib_2api_2metric_2_metric_scorer_8hpp" id="_2home_2marcos_2_projetos_2ranklibcpp_2ranklib_2lib_2api_2metric_2_metric_scorer_8hpp">
-<area shape="rect" title="Generic retrieval measure computation interface (like Ranklib)" alt="" coords="5,5,211,61"/>
-<area shape="rect" title=" " alt="" coords="48,109,91,136"/>
-<area shape="rect" title=" " alt="" coords="115,109,178,136"/>
+<div class="center"><img src="_metric_scorer_8hpp__incl.png" border="0" usemap="#_2home_2marcos_2_projetos_2ltrpp_2ltr_2lib_2api_2metric_2_metric_scorer_8hpp" alt=""/></div>
+<map name="_2home_2marcos_2_projetos_2ltrpp_2ltr_2lib_2api_2metric_2_metric_scorer_8hpp" id="_2home_2marcos_2_projetos_2ltrpp_2ltr_2lib_2api_2metric_2_metric_scorer_8hpp">
+<area shape="rect" title="Generic retrieval measure computation interface (like Ranklib)" alt="" coords="45,5,217,61"/>
+<area shape="rect" title=" " alt="" coords="5,109,68,136"/>
+<area shape="rect" title=" " alt="" coords="93,109,170,136"/>
+<area shape="rect" href="_data_set_8hpp.html" title="Define a simple DataSet representation." alt="" coords="194,109,365,136"/>
+<area shape="rect" title=" " alt="" coords="258,184,301,211"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_metric_scorer_8hpp__dep__incl.png" border="0" usemap="#_2home_2marcos_2_projetos_2ranklibcpp_2ranklib_2lib_2api_2metric_2_metric_scorer_8hppdep" alt=""/></div>
-<map name="_2home_2marcos_2_projetos_2ranklibcpp_2ranklib_2lib_2api_2metric_2_metric_scorer_8hppdep" id="_2home_2marcos_2_projetos_2ranklibcpp_2ranklib_2lib_2api_2metric_2_metric_scorer_8hppdep">
-<area shape="rect" title="Generic retrieval measure computation interface (like Ranklib)" alt="" coords="123,5,329,61"/>
-<area shape="rect" href="_m_a_p_scorer_8hpp.html" title="Mean Average Precision scorer for RankLists." alt="" coords="129,109,323,165"/>
-<area shape="rect" href="ranklib_8hpp_source.html" title=" " alt="" coords="5,213,177,269"/>
-<area shape="rect" href="_metric_scorer_8cpp.html" title=" " alt="" coords="347,109,561,165"/>
-<area shape="rect" href="_m_a_p_scorer_8cpp.html" title="Implementation of MAPScorer." alt="" coords="201,213,403,269"/>
+<div class="center"><img src="_metric_scorer_8hpp__dep__incl.png" border="0" usemap="#_2home_2marcos_2_projetos_2ltrpp_2ltr_2lib_2api_2metric_2_metric_scorer_8hppdep" alt=""/></div>
+<map name="_2home_2marcos_2_projetos_2ltrpp_2ltr_2lib_2api_2metric_2_metric_scorer_8hppdep" id="_2home_2marcos_2_projetos_2ltrpp_2ltr_2lib_2api_2metric_2_metric_scorer_8hppdep">
+<area shape="rect" title="Generic retrieval measure computation interface (like Ranklib)" alt="" coords="231,5,403,61"/>
+<area shape="rect" href="ltr_8hpp_source.html" title=" " alt="" coords="5,221,177,262"/>
+<area shape="rect" href="_m_a_p_scorer_8hpp.html" title="Mean Average Precision scorer for RankLists." alt="" coords="129,109,301,165"/>
+<area shape="rect" href="_ranker_8cpp.html" title="Ranker class implementation." alt="" coords="326,109,510,165"/>
+<area shape="rect" href="_metric_scorer_8cpp.html" title=" " alt="" coords="534,109,707,165"/>
+<area shape="rect" href="_m_a_p_scorer_8cpp.html" title="Implementation of MAPScorer." alt="" coords="202,213,375,269"/>
 </map>
 </div>
 </div>
@@ -105,8 +109,8 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classranklib_1_1_metric_scorer.html">ranklib::MetricScorer</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic retrieval measure computation interface.  <a href="classranklib_1_1_metric_scorer.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">A generic retrieval measure computation interface.  <a href="classltr_1_1_metric_scorer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>

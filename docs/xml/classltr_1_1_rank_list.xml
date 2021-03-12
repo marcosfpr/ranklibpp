@@ -1,0 +1,468 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classltr_1_1_rank_list" kind="class" language="C++" prot="public">
+    <compoundname>ltr::RankList</compoundname>
+    <includes refid="_rank_list_8hpp" local="no">RankList.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classltr_1_1_rank_list_1a54cf2d4153824863e365f949fe286b78" prot="private" static="no" mutable="no">
+        <type><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref> *</type>
+        <definition>RankListImpl* ltr::RankList::p_impl</definition>
+        <argsstring></argsstring>
+        <name>p_impl</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="154" column="22" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RankList::RankList</definition>
+        <argsstring>(Sample data_points)</argsstring>
+        <name>RankList</name>
+        <param>
+          <type>Sample</type>
+          <declname>data_points</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Rank List object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data_points</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="44" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="139" bodyend="141"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a7328669b281ef0836e63109bf0b9b066" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RankList::RankList</definition>
+        <argsstring>(const RankList &amp;rl, vector&lt; int &gt; idx, int offset=0)</argsstring>
+        <name>RankList</name>
+        <param>
+          <type>const <ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;</type>
+          <declname>rl</declname>
+        </param>
+        <param>
+          <type>vector&lt; int &gt;</type>
+          <declname>idx</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>offset</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new Rank List object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>offset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="53" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="143" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1ac4201f553630131084076b8ba856eeea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RankList::RankList</definition>
+        <argsstring>(const RankList &amp;rl)</argsstring>
+        <name>RankList</name>
+        <param>
+          <type>const <ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;</type>
+          <declname>rl</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Rank List object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>other ranklist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="60" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="147" bodyend="149"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a67541798cf45331b2be2ce0356331749" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RankList::RankList</definition>
+        <argsstring>(RankList &amp;&amp;rl)</argsstring>
+        <name>RankList</name>
+        <param>
+          <type><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;&amp;</type>
+          <declname>rl</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Rank List object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="67" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="151" bodyend="154"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;</type>
+        <definition>RankList &amp; RankList::operator=</definition>
+        <argsstring>(const RankList &amp;rl)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;</type>
+          <declname>rl</declname>
+        </param>
+        <briefdescription>
+<para>Assign operator for RankLists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>other ranklist </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="75" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="156" bodyend="159"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a50cef171525b4aca632b407ac113acc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;</type>
+        <definition>RankList &amp; RankList::operator=</definition>
+        <argsstring>(RankList &amp;&amp;rl)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;&amp;</type>
+          <declname>rl</declname>
+        </param>
+        <briefdescription>
+<para>Move operator for ranklists. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="83" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="161" bodyend="169"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1ad2ed9420312f06389716efe2e071dd94" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>RankList::~RankList</definition>
+        <argsstring>()</argsstring>
+        <name>~RankList</name>
+        <briefdescription>
+<para>Destroy the <ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="89" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="171" bodyend="173"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a87a2983f9be7dfb492c531eb2318ccf0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string RankList::toString</definition>
+        <argsstring>() const</argsstring>
+        <name>toString</name>
+        <briefdescription>
+<para>Return string representation of a ranklist. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>std::string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="96" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="175" bodyend="177"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t RankList::size</definition>
+        <argsstring>()</argsstring>
+        <name>size</name>
+        <briefdescription>
+<para>get size of ranklist </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>size_t </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="103" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="179" bodyend="181"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a51b857a46d0b1afa9c87724ba26ec384" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>ReadableDataPoint</type>
+        <definition>ReadableDataPoint RankList::get</definition>
+        <argsstring>(int k) const</argsstring>
+        <name>get</name>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <briefdescription>
+<para>get a single datapoint </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="111" column="27" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="183" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1adc071b87f0a21857f38d167fc6898a03" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> &amp;</type>
+        <definition>const DataPoint &amp; RankList::operator[]</definition>
+        <argsstring>(size_t i)</argsstring>
+        <name>operator[]</name>
+        <param>
+          <type>size_t</type>
+          <declname>i</declname>
+        </param>
+        <briefdescription>
+<para>get a referente to a single datapoint </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>i</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="119" column="25" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="187" bodyend="189"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a877292f658419351084f230eab01ada4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RankList::set</definition>
+        <argsstring>(int k, ReadableDataPoint dp)</argsstring>
+        <name>set</name>
+        <param>
+          <type>int</type>
+          <declname>k</declname>
+        </param>
+        <param>
+          <type>ReadableDataPoint</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+<para>set a single datapoint </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>k</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>dp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="127" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="191" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a0e44c3c26e00dbb773234cd97514bd67" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref></type>
+        <definition>RankList RankList::getPartialRanking</definition>
+        <argsstring>(int fid) const</argsstring>
+        <name>getPartialRanking</name>
+        <param>
+          <type>int</type>
+          <declname>fid</declname>
+        </param>
+        <briefdescription>
+<para>Get the Ranking object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fid</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="136" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="195" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a6e73baf96dbe5e21ce57458ea2a9fbb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref></type>
+        <definition>RankList RankList::getRanking</definition>
+        <argsstring>() const</argsstring>
+        <name>getRanking</name>
+        <briefdescription>
+<para>Get the Correct Ranking object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;&amp; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="143" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="201" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_rank_list_1a93e6b593b766811a5cd77d9ac1b13c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void RankList::permute</definition>
+        <argsstring>(vector&lt; int &gt; &amp;idx)</argsstring>
+        <name>permute</name>
+        <param>
+          <type>vector&lt; int &gt; &amp;</type>
+          <declname>idx</declname>
+        </param>
+        <briefdescription>
+<para>Permute ranklist considering indexes. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>idx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="150" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp" bodystart="207" bodyend="209"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>This class implement the list of objects (each of which is a <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>) to be ranked. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="36" column="19" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" bodystart="36" bodyend="156"/>
+    <listofallmembers>
+      <member refid="classltr_1_1_rank_list_1a51b857a46d0b1afa9c87724ba26ec384" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>get</name></member>
+      <member refid="classltr_1_1_rank_list_1a0e44c3c26e00dbb773234cd97514bd67" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>getPartialRanking</name></member>
+      <member refid="classltr_1_1_rank_list_1a6e73baf96dbe5e21ce57458ea2a9fbb5" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>getRanking</name></member>
+      <member refid="classltr_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>operator=</name></member>
+      <member refid="classltr_1_1_rank_list_1a50cef171525b4aca632b407ac113acc3" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>operator=</name></member>
+      <member refid="classltr_1_1_rank_list_1adc071b87f0a21857f38d167fc6898a03" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>operator[]</name></member>
+      <member refid="classltr_1_1_rank_list_1a54cf2d4153824863e365f949fe286b78" prot="private" virt="non-virtual"><scope>ltr::RankList</scope><name>p_impl</name></member>
+      <member refid="classltr_1_1_rank_list_1a93e6b593b766811a5cd77d9ac1b13c1f" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>permute</name></member>
+      <member refid="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>RankList</name></member>
+      <member refid="classltr_1_1_rank_list_1a7328669b281ef0836e63109bf0b9b066" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>RankList</name></member>
+      <member refid="classltr_1_1_rank_list_1ac4201f553630131084076b8ba856eeea" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>RankList</name></member>
+      <member refid="classltr_1_1_rank_list_1a67541798cf45331b2be2ce0356331749" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>RankList</name></member>
+      <member refid="classltr_1_1_rank_list_1a877292f658419351084f230eab01ada4" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>set</name></member>
+      <member refid="classltr_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>size</name></member>
+      <member refid="classltr_1_1_rank_list_1a87a2983f9be7dfb492c531eb2318ccf0" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>toString</name></member>
+      <member refid="classltr_1_1_rank_list_1ad2ed9420312f06389716efe2e071dd94" prot="public" virt="non-virtual"><scope>ltr::RankList</scope><name>~RankList</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

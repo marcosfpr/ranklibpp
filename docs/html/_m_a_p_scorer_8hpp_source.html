@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>RankLib++: /home/marcos/Projetos/ranklibcpp/ranklib/lib/api/metric/MAPScorer.hpp Source File</title>
+<title>LTR++: /home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">RankLib++
+   <div id="projectname">LTR++
    &#160;<span id="projectnumber">0.0.1</span>
    </div>
    <div id="projectbrief">Learning to Rank Library based on RankLib Project</div>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_c5e54405ef24e6828b31557fd3893306.html">ranklib</a></li><li class="navelem"><a class="el" href="dir_5a127079ba1c4e95e418b397b7ba34f9.html">lib</a></li><li class="navelem"><a class="el" href="dir_c740d4e23841bf9768e354a83ffc7b3f.html">api</a></li><li class="navelem"><a class="el" href="dir_564f72b8613a803f57895a2d0f5668f7.html">metric</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_4af5f4954906a24be8474025cf6a4c92.html">ltr</a></li><li class="navelem"><a class="el" href="dir_75e9323bb0f9fc7c99b0c774e0f06622.html">lib</a></li><li class="navelem"><a class="el" href="dir_7fa9c85e78b9cd1ecb217fa3b67fe5cc.html">api</a></li><li class="navelem"><a class="el" href="dir_cf8dd54dfd2fc1358b9ffd537e87755d.html">metric</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,36 +77,40 @@ $(function() {
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_metric_scorer_8hpp.html">MetricScorer.hpp</a>&quot;</span></div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>ranklib{</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>ltr{</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">class </span>RankList;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classranklib_1_1_m_a_p_scorer.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classranklib_1_1_m_a_p_scorer.html">MAPScorer</a> : <span class="keyword">public</span> <a class="code" href="classranklib_1_1_metric_scorer.html">MetricScorer</a>{</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classltr_1_1_m_a_p_scorer.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a> : <span class="keyword">public</span> <a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a>{</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classranklib_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">MAPScorer</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classltr_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">MAPScorer</a>();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classranklib_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">MAPScorer</a>(<span class="keyword">const</span> <a class="code" href="classranklib_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; ms);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classltr_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">MAPScorer</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; ms);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classranklib_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; <a class="code" href="classranklib_1_1_m_a_p_scorer.html#a79321cabcd75fa6575156beea8b1c548">operator=</a>(<span class="keyword">const</span> <a class="code" href="classranklib_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; ms);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; <a class="code" href="classltr_1_1_m_a_p_scorer.html#a79321cabcd75fa6575156beea8b1c548">operator=</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; ms);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classranklib_1_1_m_a_p_scorer.html#a511abfa657189ddc1a00b382a7bc23d9">score</a>(<a class="code" href="classranklib_1_1_rank_list.html">RankList</a> rl);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">score</a>(<a class="code" href="classltr_1_1_rank_list.html">RankList</a>&amp; rl) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classranklib_1_1_m_a_p_scorer.html#a511abfa657189ddc1a00b382a7bc23d9">score</a>(list&lt;RankList&gt; rls);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">score</a>(<a class="code" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a>&amp; rls);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    };</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;};</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">#endif // MAP_SCORER_HPP_</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        unique_ptr&lt;MetricScorer&gt; <a class="code" href="classltr_1_1_m_a_p_scorer.html#a86c043d27c1a55b80b25fcedf67b8d79">clone</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // MAP_SCORER_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="a_metric_scorer_8hpp_html"><div class="ttname"><a href="_metric_scorer_8hpp.html">MetricScorer.hpp</a></div><div class="ttdoc">Generic retrieval measure computation interface (like Ranklib)</div></div>
-<div class="ttc" id="aclassranklib_1_1_m_a_p_scorer_html"><div class="ttname"><a href="classranklib_1_1_m_a_p_scorer.html">ranklib::MAPScorer</a></div><div class="ttdoc">This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib).</div><div class="ttdef"><b>Definition:</b> MAPScorer.hpp:24</div></div>
-<div class="ttc" id="aclassranklib_1_1_m_a_p_scorer_html_a79321cabcd75fa6575156beea8b1c548"><div class="ttname"><a href="classranklib_1_1_m_a_p_scorer.html#a79321cabcd75fa6575156beea8b1c548">ranklib::MAPScorer::operator=</a></div><div class="ttdeci">MAPScorer &amp; operator=(const MAPScorer &amp;ms)</div><div class="ttdoc">Assignment operator for MAPScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:22</div></div>
-<div class="ttc" id="aclassranklib_1_1_rank_list_html"><div class="ttname"><a href="classranklib_1_1_rank_list.html">ranklib::RankList</a></div><div class="ttdoc">This class implement the list of objects (each of which is a DataPoint) to be ranked.</div><div class="ttdef"><b>Definition:</b> RankList.hpp:33</div></div>
-<div class="ttc" id="aclassranklib_1_1_metric_scorer_html"><div class="ttname"><a href="classranklib_1_1_metric_scorer.html">ranklib::MetricScorer</a></div><div class="ttdoc">A generic retrieval measure computation interface.</div><div class="ttdef"><b>Definition:</b> MetricScorer.hpp:29</div></div>
-<div class="ttc" id="aclassranklib_1_1_m_a_p_scorer_html_aa5a1f733d769e0b0b615a12e6e8f4c51"><div class="ttname"><a href="classranklib_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">ranklib::MAPScorer::MAPScorer</a></div><div class="ttdeci">MAPScorer()</div><div class="ttdoc">Construct a new MAPScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:18</div></div>
-<div class="ttc" id="aclassranklib_1_1_m_a_p_scorer_html_a511abfa657189ddc1a00b382a7bc23d9"><div class="ttname"><a href="classranklib_1_1_m_a_p_scorer.html#a511abfa657189ddc1a00b382a7bc23d9">ranklib::MAPScorer::score</a></div><div class="ttdeci">double score(RankList rl)</div><div class="ttdoc">Compute MAP for a single RankList.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:27</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a79321cabcd75fa6575156beea8b1c548"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a79321cabcd75fa6575156beea8b1c548">ltr::MAPScorer::operator=</a></div><div class="ttdeci">MAPScorer &amp; operator=(const MAPScorer &amp;ms)</div><div class="ttdoc">Assignment operator for MAPScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:22</div></div>
+<div class="ttc" id="a_data_set_8hpp_html_ac1f8c5fc3e425c5fc38401d07c1c4747"><div class="ttname"><a href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">ltr::DataSet</a></div><div class="ttdeci">list&lt; RankList &gt; DataSet</div><div class="ttdoc">Initially, a dataset is represented as a linkedlist of RankList objects.</div><div class="ttdef"><b>Definition:</b> DataSet.hpp:21</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html">ltr::MAPScorer</a></div><div class="ttdoc">This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib).</div><div class="ttdef"><b>Definition:</b> MAPScorer.hpp:24</div></div>
+<div class="ttc" id="aclassltr_1_1_rank_list_html"><div class="ttname"><a href="classltr_1_1_rank_list.html">ltr::RankList</a></div><div class="ttdoc">This class implement the list of objects (each of which is a DataPoint) to be ranked.</div><div class="ttdef"><b>Definition:</b> RankList.hpp:36</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html"><div class="ttname"><a href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></div><div class="ttdoc">A generic retrieval measure computation interface.</div><div class="ttdef"><b>Definition:</b> MetricScorer.hpp:31</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_aa5a1f733d769e0b0b615a12e6e8f4c51"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">ltr::MAPScorer::MAPScorer</a></div><div class="ttdeci">MAPScorer()</div><div class="ttdoc">Construct a new MAPScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:18</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a49e7a9b42c2b75f971124695bcc6e368"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">ltr::MAPScorer::score</a></div><div class="ttdeci">double score(RankList &amp;rl) override</div><div class="ttdoc">Compute MAP for a single RankList.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:27</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a86c043d27c1a55b80b25fcedf67b8d79"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a86c043d27c1a55b80b25fcedf67b8d79">ltr::MAPScorer::clone</a></div><div class="ttdeci">unique_ptr&lt; MetricScorer &gt; clone() const override</div><div class="ttdoc">Clone MetricScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:43</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

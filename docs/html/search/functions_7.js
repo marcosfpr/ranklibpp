@@ -1,6 +1,4 @@
 var searchData=
 [
-  ['_7edatapoint_91',['~DataPoint',['../classranklib_1_1_data_point.html#a69770421a98781a4b34cfff206a24a79',1,'ranklib::DataPoint']]],
-  ['_7emetricscorer_92',['~MetricScorer',['../classranklib_1_1_metric_scorer.html#a6dc1a9c79e6ef48ec9272d5379e4c337',1,'ranklib::MetricScorer']]],
-  ['_7eranklist_93',['~RankList',['../classranklib_1_1_rank_list.html#ad2ed9420312f06389716efe2e071dd94',1,'ranklib::RankList']]]
+  ['name_134',['name',['../classltr_1_1_ada_rank.html#acf031a815215fd100a653a58efd7f0fd',1,'ltr::AdaRank::name()'],['../classltr_1_1_ranker.html#ad75d03d7a7abc271e81ea7d647299d17',1,'ltr::Ranker::name()']]]
 ];

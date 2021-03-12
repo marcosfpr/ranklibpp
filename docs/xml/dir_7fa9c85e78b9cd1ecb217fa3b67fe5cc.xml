@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_7fa9c85e78b9cd1ecb217fa3b67fe5cc" kind="dir">
+    <compoundname>/home/marcos/Projetos/ltrpp/ltr/lib/api</compoundname>
+    <innerdir refid="dir_2adde966242bb5644a992a6c3dc2b6bd">/home/marcos/Projetos/ltrpp/ltr/lib/api/learning</innerdir>
+    <innerdir refid="dir_cf8dd54dfd2fc1358b9ffd537e87755d">/home/marcos/Projetos/ltrpp/ltr/lib/api/metric</innerdir>
+    <innerfile refid="ltr_8hpp">ltr.hpp</innerfile>
+    <innerfile refid="_ltr_error_8hpp">LtrError.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/"/>
+  </compounddef>
+</doxygen>

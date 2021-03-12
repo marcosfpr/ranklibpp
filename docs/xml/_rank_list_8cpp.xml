@@ -8,9 +8,29 @@
     <includes local="no">algorithm</includes>
     <includes local="no">utility</includes>
     <includes refid="_rank_list_8hpp" local="yes">../../api/learning/RankList.hpp</includes>
-    <includes refid="_rank_lib_error_8hpp" local="yes">../../api/RankLibError.hpp</includes>
+    <includes refid="_ltr_error_8hpp" local="yes">../../api/LtrError.hpp</includes>
     <includes refid="_data_point_8hpp" local="yes">../../api/learning/DataPoint.hpp</includes>
     <incdepgraph>
+      <node id="10">
+        <label>list</label>
+      </node>
+      <node id="12">
+        <label>../../api/LtrError.hpp</label>
+        <link refid="_ltr_error_8hpp"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>stdexcept</label>
+      </node>
+      <node id="2">
+        <label>numeric</label>
+      </node>
+      <node id="8">
+        <label>string</label>
+      </node>
       <node id="7">
         <label>../../api/learning/RankList.hpp</label>
         <link refid="_rank_list_8hpp"/>
@@ -20,26 +40,11 @@
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
-      </node>
-      <node id="11">
-        <label>../../api/RankLibError.hpp</label>
-        <link refid="_rank_lib_error_8hpp"/>
-        <childnode refid="8" relation="include">
+        <childnode refid="11" relation="include">
         </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
-        <label>stdexcept</label>
-      </node>
-      <node id="2">
-        <label>numeric</label>
-      </node>
-      <node id="8">
-        <label>string</label>
       </node>
       <node id="1">
-        <label>/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/RankList.cpp</label>
+        <label>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp</label>
         <link refid="_rank_list_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -53,19 +58,9 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="11" relation="include">
+        <childnode refid="12" relation="include">
         </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-      </node>
-      <node id="13">
-        <label>../../api/learning/DataPoint.hpp</label>
-        <link refid="_data_point_8hpp"/>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="14" relation="include">
         </childnode>
       </node>
       <node id="9">
@@ -80,14 +75,24 @@
       <node id="4">
         <label>iostream</label>
       </node>
+      <node id="14">
+        <label>../../api/learning/DataPoint.hpp</label>
+        <link refid="_data_point_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
       <node id="5">
         <label>algorithm</label>
       </node>
-      <node id="10">
+      <node id="11">
         <label>memory</label>
       </node>
     </incdepgraph>
-    <innerclass refid="classranklib_1_1_rank_list_impl" prot="public">ranklib::RankListImpl</innerclass>
+    <innerclass refid="classltr_1_1_rank_list_impl" prot="public">ltr::RankListImpl</innerclass>
     <briefdescription>
 <para>RankList impl. </para>
     </briefdescription>
@@ -112,7 +117,7 @@
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/learning/RankList.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/RankLibError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/learning/DataPoint.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::move;</highlight></codeline>
@@ -121,27 +126,27 @@
 <codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::shared_ptr;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>std::unique_ptr;</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">ranklib;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">ltr;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31" refid="classranklib_1_1_rank_list_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">ranklib::RankListImpl</ref>{</highlight></codeline>
+<codeline lineno="31" refid="classltr_1_1_rank_list_impl" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classltr_1_1_rank_list_impl" kindref="compound">ltr::RankListImpl</ref>{</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(sample_t<sp/>data_points)<sp/>{</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(Sample<sp/>data_points)<sp/>{</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>init(move(data_points));</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>&amp;<sp/>rl,<sp/>std::vector&lt;int&gt;<sp/>idx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset=0){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>&amp;<sp/>rl,<sp/>std::vector&lt;int&gt;<sp/>idx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset=0){</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initFrom(rl,<sp/>move(idx),<sp/>offset);</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>&amp;<sp/>rl){</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>&amp;<sp/>rl){</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>initFrom(rl);</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"></highlight></codeline>
 <codeline lineno="48"><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>~<ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(){</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>freePointers();</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
@@ -154,29 +159,29 @@
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;data_points.size();</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>shared_ptr&lt;DataPoint&gt;<sp/>get(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>ReadableDataPoint<sp/>get(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(k<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>k<sp/>&lt;<sp/>this-&gt;data_points.size()){</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;data_points[k];</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_lib_error" kindref="compound">RankLibError</ref>(</highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>RankList::get<sp/>with<sp/>k=&quot;</highlight><highlight class="normal">+k);</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ltr_error" kindref="compound">LtrError</ref>(</highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>RankList::get<sp/>with<sp/>k=&quot;</highlight><highlight class="normal">+k);</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref>&amp;<sp/>operator[](</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i){</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>&amp;<sp/>operator[](</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i){</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*this-&gt;data_points[i];</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"></highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/>shared_ptr&lt;DataPoint&gt;<sp/>dp){</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>set(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/>ReadableDataPoint<sp/>dp){</highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(k<sp/>&gt;=<sp/>0<sp/>&amp;&amp;<sp/>k<sp/>&lt;<sp/>this-&gt;data_points.size()){</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points[k]<sp/>=<sp/>dp;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_lib_error" kindref="compound">RankLibError</ref>(</highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>RankList::set<sp/>with<sp/>k=&quot;</highlight><highlight class="normal">+k);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_ltr_error" kindref="compound">LtrError</ref>(</highlight><highlight class="stringliteral">&quot;Error<sp/>in<sp/>RankList::set<sp/>with<sp/>k=&quot;</highlight><highlight class="normal">+k);</highlight></codeline>
 <codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal"></highlight></codeline>
 <codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>ranking(){</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stable_sort(data_points.begin(),<sp/>data_points.end(),</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](shared_ptr&lt;DataPoint&gt;<sp/>dp1,<sp/>shared_ptr&lt;DataPoint&gt;<sp/>dp2)</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[](ReadableDataPoint<sp/>dp1,<sp/>ReadableDataPoint<sp/>dp2)</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>dp1-&gt;getLabel()<sp/>&gt;<sp/>dp2-&gt;getLabel();</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -186,111 +191,123 @@
 <codeline lineno="91"><highlight class="normal"></highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>partialRanking(</highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>fid){</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::stable_sort(data_points.begin(),<sp/>data_points.end(),</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[fid](shared_ptr&lt;DataPoint&gt;<sp/>dp1,<sp/>shared_ptr&lt;DataPoint&gt;<sp/>dp2)</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[fid](ReadableDataPoint<sp/>dp1,<sp/>ReadableDataPoint<sp/>dp2)</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>dp1-&gt;getFeatureValue(fid)<sp/>&gt;<sp/>dp2-&gt;getFeatureValue(fid);</highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>);</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"></highlight></codeline>
-<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init(sample_t<sp/>data_points)<sp/>{</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points<sp/>=<sp/>data_points;</highlight></codeline>
-<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initFrom(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>&amp;<sp/>rl,<sp/>std::vector&lt;int&gt;<sp/>idx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset=0){</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points.resize(rl.data_points.size());</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>idx.size();<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shared_ptr&lt;DataPoint&gt;<sp/>ref<sp/>=<sp/>rl.get(idx[i]-offset);</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points[i]<sp/>=<sp/>std::make_shared&lt;DataPoint&gt;(<ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref>(*ref));</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>permute(vector&lt;int&gt;&amp;<sp/>idx)<sp/>{</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Sample<sp/>new_datapoints(this-&gt;data_points.size());</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>idx.size();<sp/>i++){</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>new_datapoints[i]<sp/>=<sp/>this-&gt;data_points[idx[i]];</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points<sp/>=<sp/>move(new_datapoints);</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>init(Sample<sp/>data_points)<sp/>{</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points<sp/>=<sp/>data_points;</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initFrom(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>&amp;<sp/>rl){</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initFrom(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>&amp;<sp/>rl,<sp/>std::vector&lt;int&gt;<sp/>idx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset=0){</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points.resize(rl.data_points.size());</highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rl.data_points.size();<sp/>i++)<sp/>{</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>shared_ptr&lt;DataPoint&gt;<sp/>ref<sp/>=<sp/>rl.get(i);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points[i]<sp/>=<sp/>std::make_shared&lt;DataPoint&gt;(<ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref>(*ref));</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>idx.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ReadableDataPoint<sp/>ref<sp/>=<sp/>rl.get(idx[i]-offset);</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points[i]<sp/>=<sp/>std::make_shared&lt;DataPoint&gt;(<ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>(*ref));</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="120"><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>freePointers(){</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_points.clear();</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"></highlight></codeline>
-<codeline lineno="125"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/>sample_t<sp/>data_points;</highlight></codeline>
-<codeline lineno="127"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initFrom(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>&amp;<sp/>rl){</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points.resize(rl.data_points.size());</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rl.data_points.size();<sp/>i++)<sp/>{</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ReadableDataPoint<sp/>ref<sp/>=<sp/>rl.get(i);</highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;data_points[i]<sp/>=<sp/>std::make_shared&lt;DataPoint&gt;(<ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>(*ref));</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
-<codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList::RankList</ref>(sample_t<sp/>data_points){</highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p_impl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(move(data_points));</highlight></codeline>
-<codeline lineno="133"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList::RankList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl,<sp/>vector&lt;int&gt;<sp/>idx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset){</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p_impl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(*rl.p_impl,<sp/>move(idx),<sp/>offset);</highlight></codeline>
-<codeline lineno="137"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>freePointers(){</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>data_points.clear();</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>Sample<sp/>data_points;</highlight></codeline>
+<codeline lineno="135"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="137"><highlight class="normal"></highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList::RankList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl){</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p_impl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(*rl.p_impl);</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><ref refid="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3" kindref="member">RankList::RankList</ref>(Sample<sp/>data_points){</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p_impl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(move(data_points));</highlight></codeline>
 <codeline lineno="141"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="143"><highlight class="normal"><ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList::RankList</ref>(<ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;&amp;<sp/>rl){</highlight></codeline>
-<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p_impl<sp/>=<sp/>rl.p_impl;</highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>rl.p_impl<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="146"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="148"><highlight class="normal"><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/><ref refid="classranklib_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" kindref="member">RankList::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl){</highlight></codeline>
-<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>p_impl-&gt;initFrom(*rl.p_impl);</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="151"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="152"><highlight class="normal"></highlight></codeline>
-<codeline lineno="153"><highlight class="normal"><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/><ref refid="classranklib_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" kindref="member">RankList::operator=</ref>(<ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref>&amp;&amp;<sp/>rl){</highlight></codeline>
-<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;rl)</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>p_impl;</highlight></codeline>
-<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p_impl<sp/>=<sp/>rl.p_impl;</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rl.p_impl<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="161"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"><ref refid="classranklib_1_1_rank_list_1ad2ed9420312f06389716efe2e071dd94" kindref="member">RankList::~RankList</ref>(){</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>p_impl;</highlight></codeline>
-<codeline lineno="165"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight></codeline>
-<codeline lineno="167"><highlight class="normal">std::string<sp/><ref refid="classranklib_1_1_rank_list_1a0fd0b8c54a69d57a7ad529d617334944" kindref="member">RankList::toString</ref>(){</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_impl-&gt;toString();</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><ref refid="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3" kindref="member">RankList::RankList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl,<sp/>vector&lt;int&gt;<sp/>idx,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>offset){</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p_impl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(*rl.p_impl,<sp/>move(idx),<sp/>offset);</highlight></codeline>
+<codeline lineno="145"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="146"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><ref refid="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3" kindref="member">RankList::RankList</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl){</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p_impl<sp/>=<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_impl" kindref="compound">RankListImpl</ref>(*rl.p_impl);</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><ref refid="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3" kindref="member">RankList::RankList</ref>(<ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;&amp;<sp/>rl){</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p_impl<sp/>=<sp/>rl.p_impl;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/>rl.p_impl<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/><ref refid="classltr_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" kindref="member">RankList::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl){</highlight></codeline>
+<codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>p_impl-&gt;initFrom(*rl.p_impl);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/><ref refid="classltr_1_1_rank_list_1a4a1001d8064f7504affa708f0b3db06b" kindref="member">RankList::operator=</ref>(<ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;&amp;<sp/>rl){</highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(</highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>!=<sp/>&amp;rl)</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>p_impl;</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>p_impl<sp/>=<sp/>rl.p_impl;</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rl.p_impl<sp/>=<sp/></highlight><highlight class="keyword">nullptr</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="169"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"></highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80" kindref="member">RankList::size</ref>(){</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_impl-&gt;size();</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><ref refid="classltr_1_1_rank_list_1ad2ed9420312f06389716efe2e071dd94" kindref="member">RankList::~RankList</ref>(){</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">delete</highlight><highlight class="normal"><sp/>p_impl;</highlight></codeline>
 <codeline lineno="173"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"></highlight></codeline>
-<codeline lineno="175"><highlight class="normal">shared_ptr&lt;DataPoint&gt;<sp/><ref refid="classranklib_1_1_rank_list_1a4b738c5b7a18492abf2cec423d348178" kindref="member">RankList::get</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_impl-&gt;get(k);</highlight></codeline>
+<codeline lineno="175"><highlight class="normal">std::string<sp/><ref refid="classltr_1_1_rank_list_1a87a2983f9be7dfb492c531eb2318ccf0" kindref="member">RankList::toString</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_impl-&gt;toString();</highlight></codeline>
 <codeline lineno="177"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"></highlight></codeline>
-<codeline lineno="179"><highlight class="normal"><ref refid="classranklib_1_1_data_point" kindref="compound">DataPoint</ref>&amp;<sp/><ref refid="classranklib_1_1_rank_list_1afb21fbbfaeb2522880b1ccb67b9c7360" kindref="member">RankList::operator[]</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i){</highlight></codeline>
-<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*p_impl)[i];</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80" kindref="member">RankList::size</ref>(){</highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_impl-&gt;size();</highlight></codeline>
 <codeline lineno="181"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="182"><highlight class="normal"></highlight></codeline>
-<codeline lineno="183"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classranklib_1_1_rank_list_1a06e3827183a027a463ca2484803a5aa1" kindref="member">RankList::set</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/>shared_ptr&lt;DataPoint&gt;<sp/>dp){</highlight></codeline>
-<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>p_impl-&gt;set(k,<sp/>move(dp));</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">ReadableDataPoint<sp/><ref refid="classltr_1_1_rank_list_1a51b857a46d0b1afa9c87724ba26ec384" kindref="member">RankList::get</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>p_impl-&gt;get(k);</highlight></codeline>
 <codeline lineno="185"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="186"><highlight class="normal"></highlight></codeline>
-<codeline lineno="187"><highlight class="normal"><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref><sp/><ref refid="classranklib_1_1_rank_list_1ab9d16fc32d076eebde9c96409d1ce5c4" kindref="member">RankList::getPartialRanking</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid){</highlight></codeline>
-<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref><sp/>rl(<ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>rl.p_impl-&gt;partialRanking(fid);</highlight></codeline>
-<codeline lineno="190"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rl;</highlight></codeline>
-<codeline lineno="191"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="192"><highlight class="normal"></highlight></codeline>
-<codeline lineno="193"><highlight class="normal"><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref><sp/><ref refid="classranklib_1_1_rank_list_1a607c962520a97ce0e8cdd909985950c5" kindref="member">RankList::getRanking</ref>(){</highlight></codeline>
-<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classranklib_1_1_rank_list" kindref="compound">RankList</ref><sp/>rl(<ref refid="classranklib_1_1_rank_list_1afdfa13b77ec0b0b395e1448e40b7576f" kindref="member">RankList</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
-<codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/>rl.p_impl-&gt;ranking();</highlight></codeline>
-<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rl;</highlight></codeline>
-<codeline lineno="197"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>&amp;<sp/><ref refid="classltr_1_1_rank_list_1adc071b87f0a21857f38d167fc6898a03" kindref="member">RankList::operator[]</ref>(</highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i){</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>(*p_impl)[i];</highlight></codeline>
+<codeline lineno="189"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_1a877292f658419351084f230eab01ada4" kindref="member">RankList::set</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>k,<sp/>ReadableDataPoint<sp/>dp){</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"><sp/><sp/><sp/><sp/>p_impl-&gt;set(k,<sp/>move(dp));</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="194"><highlight class="normal"></highlight></codeline>
+<codeline lineno="195"><highlight class="normal"><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref><sp/><ref refid="classltr_1_1_rank_list_1a0e44c3c26e00dbb773234cd97514bd67" kindref="member">RankList::getPartialRanking</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>fid)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref><sp/>rl(<ref refid="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3" kindref="member">RankList</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/>rl.p_impl-&gt;partialRanking(fid);</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rl;</highlight></codeline>
+<codeline lineno="199"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal"><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref><sp/><ref refid="classltr_1_1_rank_list_1a6e73baf96dbe5e21ce57458ea2a9fbb5" kindref="member">RankList::getRanking</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref><sp/>rl(<ref refid="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3" kindref="member">RankList</ref>(*</highlight><highlight class="keyword">this</highlight><highlight class="normal">));</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>rl.p_impl-&gt;ranking();</highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rl;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="206"><highlight class="normal"></highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_rank_list_1a93e6b593b766811a5cd77d9ac1b13c1f" kindref="member">RankList::permute</ref>(vector&lt;int&gt;&amp;<sp/>idx)<sp/>{</highlight></codeline>
+<codeline lineno="208"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;p_impl-&gt;permute(idx);</highlight></codeline>
+<codeline lineno="209"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/marcos/Projetos/ranklibcpp/ranklib/lib/impl/learning/RankList.cpp"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/RankList.cpp"/>
   </compounddef>
 </doxygen>
