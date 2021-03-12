@@ -25,8 +25,7 @@
 #include <algorithm>
 #include <iostream>    
 #include <fstream>               
-#include <filesystem>
-
+#include <experimental/filesystem>
 
 using std::move;
 using std::unique_ptr;
@@ -34,6 +33,7 @@ using std::shared_ptr;
 using std::string;
 using std::list;
 using std::vector;
+namespace fs = std::experimental::filesystem;
 
 using namespace ltr;
 
@@ -113,12 +113,12 @@ public:
         }
 
         void save(string fileToSave){
-            std::filesystem::path path = std::filesystem::path(fileToSave.c_str());
+            fs::path path = fs::path(fileToSave.c_str());
 
-            std::filesystem::path dir = path.parent_path();
+            fs::path dir = path.parent_path();
 
-            if(! std::filesystem::exists(dir))
-                std::filesystem::create_directory(dir);
+            if(! fs::exists(dir))
+                fs::create_directory(dir);
             
             std::ofstream file(fileToSave.c_str());
             file << model();

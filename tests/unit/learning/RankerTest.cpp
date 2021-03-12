@@ -1,7 +1,7 @@
 #include <memory>
 #include <vector>
 #include <iostream>
-#include <filesystem>
+#include <experimental/filesystem>
 #include <fstream>
 
 #include <ltr.hpp>
@@ -11,6 +11,7 @@ using std::cout;
 using std::unique_ptr;
 using std::shared_ptr;
 using std::vector;
+namespace fs = std::experimental::filesystem;
 
 using namespace ltr;
 
@@ -125,9 +126,9 @@ TEST(test_ranker, save) {
     string file_path = "./mocked.txt";
     ranker.save(file_path);
 
-    std::filesystem::path path = std::filesystem::path(file_path.c_str());
+    fs::path path = fs::path(file_path.c_str());
 
-    ASSERT_TRUE(std::filesystem::exists(path));
+    ASSERT_TRUE(fs::exists(path));
 
     std::ifstream file_stream{file_path.c_str()};
     
@@ -139,6 +140,6 @@ TEST(test_ranker, save) {
     std::getline(file_stream, response);
     ASSERT_STREQ(response.c_str(), expected.c_str());
 
-    std::filesystem::remove(path);
+    fs::remove(path);
 
 }

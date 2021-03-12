@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.0.0)
 project(ltrpp VERSION 0.1.0)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 14)
 set(CPACK_PACKAGE_NAME "ltrpp")
 set(CPACK_PACKAGE_RELEASE 1)
 set(BUILD_SHARED_LIBS OFF)
@@ -10,6 +10,8 @@ set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -Wall -Wextra")
 set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage -O0")
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+
+link_libraries(stdc++fs)
 
 add_subdirectory(ltr)
 add_subdirectory(external/googletest)
