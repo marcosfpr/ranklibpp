@@ -23,8 +23,6 @@ class MockRanker : public ltr::Ranker{
 
         MockRanker(const MockRanker& rk): Ranker(rk) {}
 
-        void start() override {}
-
         void fit() override {}
 
         double predict(ReadableDataPoint dp) override { return 0.0;}
@@ -35,9 +33,6 @@ class MockRanker : public ltr::Ranker{
 
         void loadString(string model) override {}
 
-        string name() override {return "Mocked";}
-
-        void print() override {}
 };
 
 TEST(test_ranker, constructor) { 
