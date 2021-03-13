@@ -83,7 +83,7 @@ public:
             return this->features;
         }
 
-        double eval(ReadableDataPoint dp){
+        double predict(ReadableDataPoint dp){
             return 0.0;
         }
 
@@ -96,7 +96,7 @@ public:
             vector<double> scores(rl.size());
             for(int i = 0; i < rl.size(); i++){
                 indexes[i] = i;
-                scores[i] = this->eval(rl.get(i));
+                scores[i] = this->predict(rl.get(i));
             }
             std::sort(indexes.begin(), indexes.end(),
                 [&](const int& a, const int& b) {

@@ -43,7 +43,7 @@ namespace ltr {
          * @brief Learn method for some learning algorithm.
          * 
          */
-        virtual void learn() = 0;
+        virtual void fit() = 0;
 
         /**
          * @brief Evaluation of a single datapoint object
@@ -51,7 +51,7 @@ namespace ltr {
          * @param dp 
          * @return double 
          */
-        virtual double eval(ReadableDataPoint dp) = 0;
+        virtual double predict(ReadableDataPoint dp) = 0;
 
         /**
          * @brief String representation of ranker

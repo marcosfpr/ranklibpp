@@ -25,9 +25,9 @@ class MockRanker : public ltr::Ranker{
 
         void start() override {}
 
-        void learn() override {}
+        void fit() override {}
 
-        double eval(ReadableDataPoint dp) override { return 0.0;}
+        double predict(ReadableDataPoint dp) override { return 0.0;}
 
         string toString() override { return "Mocked";}
 
