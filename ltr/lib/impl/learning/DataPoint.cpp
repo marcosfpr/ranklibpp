@@ -1,13 +1,23 @@
-/**
- * @file DataPoint.cpp
- * @author Marcos Pontes
- * @brief Impl of a DataPoint
- * @version 0.1
- * @date 2021-02-06
- * 
- * @copyright Copyright (c) 2021
- * 
- */
+// Copyright (c) 2021 LTR++ Project (Marcos Pontes)
+
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+
 #include <cstdlib>
 #include <iostream>
 #include <algorithm>
@@ -101,21 +111,6 @@ public:
         this->description = description;
     }
 
-    void setCached(double c)
-    {
-        this->cached = c;
-    }
-
-    double getCached()
-    {
-        return this->cached;
-    }
-
-    void resetCached()
-    {
-        this->cached = -1000;
-    }
-
     float getFeatureValue(int featureID)
     {
         if (featureID <= 0 || featureID > this->feature_values.size())
@@ -144,7 +139,6 @@ public:
     void init(string raw = "")
     {
         this->label = 0.0;
-        this->cached = -1;
         this->known_features = 0;
         this->feature_values.resize(max_feature, NaN);
         if (!raw.empty())
@@ -154,7 +148,6 @@ public:
     void initFrom(const DataPointImpl &dp)
     {
         this->label = dp.label;
-        this->cached = dp.cached;
         this->description = dp.description;
         this->id_ = dp.id_;
         this->known_features = dp.known_features;
@@ -236,7 +229,6 @@ protected:
     static int feature_count;
     int known_features;
     float label;
-    double cached;
     string id_, description;
     vector<float> feature_values;
 };
@@ -316,21 +308,6 @@ string DataPoint::getDescription() const
 void DataPoint::setDescription(string description)
 {
     p_impl->setDescription(description);
-}
-
-void DataPoint::setCached(double c)
-{
-    p_impl->setCached(c);
-}
-
-double DataPoint::getCached() const
-{
-    return p_impl->getCached();
-}
-
-void DataPoint::resetCached()
-{
-    p_impl->resetCached();
 }
 
 float DataPoint::getFeatureValue(int featureID) const

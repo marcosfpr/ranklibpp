@@ -1,49 +1,64 @@
-/**
- * @file DataPoint.hpp
- * @author Marcos Pontes
- * @brief A DataPoint is an object to be ranked (Like in RankLib) 
- * @version 0.1
- * @date 2021-02-06
- * 
- * @copyright Copyright (c) 2021
- * 
- */
+// Copyright (c) 2021 LTR++ Project (Marcos Pontes)
+
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
+
 #ifndef DATA_POINT_HPP_
 #define DATA_POINT_HPP_
 #include <vector>
 #include <string>
+#include <memory>
 #include <iostream>
 
+using std::shared_ptr;
 
 namespace ltr{
-    
+
     class DataPointImpl;
 
     /**
      * @brief A DataPoint is an object to be ranked (Like in RankLib) 
-     * 
+     * @details A DataPoint represent a pair [item, query] extracted
+     *  in svm-light format for learning to rank tasks:
+     * @code "<LABEL> qid:<QUERY_ID> [<FEATURE_ID: FEATURE_VALUE>]"
+     * @endcode
      */
     class DataPoint
     {
     public:
         /**
-         * @brief Construct a new Data Point object
+         * @brief Construct a new DataPoint object based on SVM-Light format string
          * 
-         * @param raw raw text that represents all features
+         * @param raw : SVM-Light string
          */
         DataPoint(std::string raw = "");
 
         /**
-         * @brief Construct a new Data Point object
+         * @brief Copy construct  DataPoint object
          * 
          * @param dp other datapoint
          */
         DataPoint(const DataPoint &dp);
 
         /**
-         * @brief Construct a new Data Point object
+         * @brief Move operator for DataPoint object
          * 
-         * @param rhs 
+         * @param rhs  other datapoint
          */
         DataPoint(DataPoint&& rhs);
 
@@ -58,7 +73,7 @@ namespace ltr{
         /**
          * @brief Move operator for DataPoints
          * 
-         * @param rhs 
+         * @param rhs other datapoint
          * @return DataPoint& 
          */
         DataPoint& operator=(DataPoint&& rhs);
@@ -70,80 +85,61 @@ namespace ltr{
         ~DataPoint();
 
         /**
-         * @brief Return string representation of a datapoint
+         * @brief Return string representation of a DataPoint in SVM-Light format
          * 
          * @return std::string 
          */
         std::string toString() const;
 
         /**
-         * @brief Update the id value
+         * @brief Update the id of DataPoint
          * 
-         * @param id 
+         * @param id  new item id
          */
         void setID(std::string id);
 
         /**
-         * @brief Get the id value
+         * @brief Get the id of DataPoint
          * 
          * @return std::string 
          */
         std::string getID() const;
 
         /**
-         * @brief Get the Feature Count
+         * @brief Get the number of features used
          * 
          * @return int 
          */
         int getFeatureCount() const;
 
         /**
-         * @brief Get the Label
+         * @brief Get the Label of this DataPoint
          * 
          * @return float 
          */
         float getLabel() const;
 
         /**
-         * @brief Set the Label
+         * @brief Set the Label value for this DataPoint
          * 
-         * @param label 
+         * @param label new label value
          */
         void setLabel(float label);
 
         /**
-         * @brief Get the Description
+         * @brief Get the Description of this DataPointImpl
+         * @note In SVM-Light, description is started with "#" keyword
          * 
          * @return std::string 
          */
         std::string getDescription() const;
 
         /**
-         * @brief Set the Description
+         * @brief Set the Description value (sometimes indicates the document name)
          * 
          * @param description 
          */
         void setDescription(std::string description);
-
-        /**
-         * @brief Set the Cached value
-         * 
-         * @param c 
-         */
-        void setCached(double c);
-
-        /**
-         * @brief Get the Cached value
-         * 
-         * @return double 
-         */
-        double getCached() const;
-
-        /**
-         * @brief Reset cached value
-         * 
-         */
-        void resetCached();
 
         /**
          * @brief Get the Feature Value object
@@ -178,6 +174,14 @@ namespace ltr{
     private:
         DataPointImpl *p_impl;
     };
+
+
+    /**
+     * @brief Define a readable datapoint
+     * 
+     */
+    typedef shared_ptr<const DataPoint> ReadableDataPoint;
+
 
 };
 

@@ -58,7 +58,6 @@ TEST(test_mapscorer, scores) {
    RankList rl2(sample2);
    ASSERT_NEAR(scorer.score(rl2), 0.8333, 0.001);
 
-
    Sample sample3 = {
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:10 2:1.2 3:4.3 4:5.4 # doc1")),
         std::make_shared<DataPoint>(DataPoint("0 qid:9 1:11 2:2.2 3:4.5 4:5.6 # doc2")),

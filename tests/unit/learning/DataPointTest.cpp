@@ -43,7 +43,6 @@ TEST(test_datapoints, getters_and_setters) {
     DataPoint dp;
     std::vector<float> features = {0, 21, 2.3, 4.5};
 
-    dp.setCached(1.2);
     dp.setDescription("desc");
     dp.setFeatureVector(features);
     dp.setFeatureValue(1, 21);
@@ -51,7 +50,6 @@ TEST(test_datapoints, getters_and_setters) {
     dp.setLabel(1);
     std::string str = dp.toString();
 
-    EXPECT_TRUE(dp.getCached() == 1.2);
     EXPECT_TRUE(dp.getDescription() == "desc");
     EXPECT_TRUE(dp.getFeatureValue(1) == 21);
     EXPECT_TRUE(dp.getFeatureVector() == features);
@@ -59,8 +57,6 @@ TEST(test_datapoints, getters_and_setters) {
     EXPECT_TRUE(dp.getLabel() == 1);
     ASSERT_STREQ(dp.toString().c_str(),"1 qid:10 1:21.00 2:2.30 3:4.50 # desc");
 
-    dp.resetCached();
-    EXPECT_TRUE(dp.getCached() != 1.2);
     EXPECT_TRUE(dp.getFeatureCount() == 3);
 
 }

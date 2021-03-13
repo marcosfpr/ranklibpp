@@ -24,6 +24,7 @@ MAPScorer& MAPScorer::operator=(const MAPScorer& ms){
     return *this;
 }
 
+
 double MAPScorer::score(RankList& rl){
     double averagePrecision = 0.0;
     int count = 0.0;

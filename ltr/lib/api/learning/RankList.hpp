@@ -1,16 +1,27 @@
-/**
- * @file RankList.hpp
- * @author your name (you@domain.com)
- * @brief Definition of RankLists
- * @version 0.1
- * @date 2021-02-07
- * 
- * @copyright Copyright (c) 2021
- * 
- */
+// Copyright (c) 2021 LTR++ Project (Marcos Pontes)
+
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 
 #ifndef RANK_LIST_HPP_
 #define RANK_LIST_HPP_
+
+#include "DataPoint.hpp"
 
 #include <string>
 #include <vector>
@@ -23,28 +34,27 @@ using std::vector;
 using std::list;
 
 namespace ltr{
-    class DataPoint;
     class RankListImpl;
 
-    typedef shared_ptr<const DataPoint> ReadableDataPoint;
     typedef vector<ReadableDataPoint> Sample; 
 
     /**
-     * @brief This class implement the list of objects (each of which is a DataPoint) to be ranked. 
+     * @brief A RankList is the object to be ranked by models.
+     * @details A single RankList corresponds to one sample to train or predict.
      * 
      */
     class RankList {
     public:
 
         /**
-         * @brief Construct a new Rank List object
+         * @brief Construct a new RankList object
          * 
-         * @param data_points 
+         * @param data_points Vector of datapoints corresponding to all datapoints for a single queryID.
          */
         RankList(Sample data_points);
 
         /**
-         * @brief Construct a new Rank List object
+         * @brief Construct a new RankList object
          * 
          * @param rl 
          * @param idx 
@@ -53,14 +63,14 @@ namespace ltr{
         RankList(const RankList& rl, vector<int> idx, int offset=0);
 
         /**
-         * @brief Construct a new Rank List object
+         * @brief Construct a new RankList object
          * 
          * @param rl other ranklist
          */
         RankList(const RankList& rl);
 
         /**
-         * @brief Construct a new Rank List object
+         * @brief Construct a new RankList object
          * 
          * @param rl 
          */
