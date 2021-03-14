@@ -32,7 +32,8 @@
 #include <memory>
 #include <algorithm>
 #include <iostream>    
-#include <fstream>               
+#include <fstream>    
+#include <stdexcept>           
 #include <experimental/filesystem>
 
 using std::move;
@@ -168,6 +169,31 @@ protected:
     double score_training, score_validation;
 
 };
+
+
+void Ranker::fit(){
+   	throw std::logic_error("No implementation of 'Ranker::fit' provided");
+}
+
+
+double Ranker::predict(ReadableDataPoint dp){
+    throw std::logic_error("No implementation of 'Ranker::predict' provided");
+}
+
+
+string Ranker::toString(){
+    throw std::logic_error("No implementation of 'Ranker::toString' provided");
+}
+
+
+string Ranker::model(){
+    throw std::logic_error("No implementation of 'Ranker::model' provided");
+}
+
+
+void Ranker::loadString(string model){
+    throw std::logic_error("No implementation of 'Ranker::loadString' provided");
+}
 
 
 Ranker::Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features){

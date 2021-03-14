@@ -36,10 +36,9 @@ using std::vector;
 
 namespace ltr {
 
+    class RankerImpl;
     class MetricScorer;
     
-    class RankerImpl;
-
     /**
      * @brief Generic Ranker class
      * 
@@ -51,7 +50,7 @@ namespace ltr {
              * @brief Learn method for some learning algorithm.
              * 
              */
-            virtual void fit() = 0;
+            virtual void fit();
 
             /**
              * @brief Evaluation of a single datapoint object
@@ -59,28 +58,28 @@ namespace ltr {
              * @param dp 
              * @return double 
              */
-            virtual double predict(ReadableDataPoint dp) = 0;
+            virtual double predict(ReadableDataPoint dp);
 
             /**
              * @brief String representation of ranker
              * 
              * @return string 
              */
-            virtual string toString() = 0;
+            virtual string toString();
 
             /**
              * @brief String representation of model
              * 
              * @return string 
              */
-            virtual string model() = 0;
+            virtual string model();
 
             /**
              * @brief Load model from string
              * 
              * @param model 
              */
-            virtual void loadString(string model) = 0;
+            virtual void loadString(string model);
 
 
             /**
@@ -182,9 +181,10 @@ namespace ltr {
              * @param fileToSave 
              */
             void save(string fileToSave);
-
+        
         private:
-            RankerImpl * p_impl_ranker;
+            
+            RankerImpl* p_impl_ranker;
 
     };
 
