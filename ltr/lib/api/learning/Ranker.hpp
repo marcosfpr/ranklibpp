@@ -81,6 +81,19 @@ namespace ltr {
              */
             virtual void loadString(string model);
 
+            /**
+             * @brief Perform ranking in samples
+             * 
+             * @param l 
+             */
+            void rank(DataSet& l);
+
+            /**
+             * @brief Perform ranking in one sample
+             * 
+             * @param l 
+             */
+            void rank(RankList& rl);
 
             /**
              * @brief Construct a new Ranker object
@@ -162,20 +175,6 @@ namespace ltr {
             vector<int> getFeatures();
 
             /**
-             * @brief Perform ranking in samples
-             * 
-             * @param l 
-             */
-            void rank(DataSet& l);
-
-            /**
-             * @brief Perform ranking in one sample
-             * 
-             * @param l 
-             */
-            void rank(RankList& rl);
-
-            /**
              * @brief Save model in file
              * 
              * @param fileToSave 
@@ -184,7 +183,7 @@ namespace ltr {
         
         private:
             
-            RankerImpl* p_impl_ranker;
+            RankerImpl* p_impl;
 
     };
 
