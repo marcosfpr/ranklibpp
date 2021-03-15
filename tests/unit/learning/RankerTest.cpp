@@ -23,16 +23,6 @@ class MockRanker : public ltr::Ranker{
 
         MockRanker(const MockRanker& rk): Ranker(rk) {}
 
-        void fit() override {}
-
-        double predict(ReadableDataPoint dp) override { return 0.0;}
-
-        string toString() override { return "Mocked";}
-
-        string model() override {return "Mocked";}
-
-        void loadString(string model) override {}
-
 };
 
 TEST(test_ranker, constructor) { 
@@ -136,5 +126,30 @@ TEST(test_ranker, save) {
     ASSERT_STREQ(response.c_str(), expected.c_str());
 
     fs::remove(path);
+
+}
+
+TEST(test_ranker, virtuals) {
+    Sample sample = {
+        std::make_shared<DataPoint>("0 qid:9 1:10 2:1.2 3:4.3 4:5.4 # doc1"),
+        std::make_shared<DataPoint>("1 qid:9 1:11 2:2.2 3:4.5 4:5.6 # doc2"),
+        std::make_shared<DataPoint>("0 qid:9 1:12 2:2.5 3:4.7 4:5.2 # doc3")
+    };
+
+    RankList rl(sample);
+
+    DataSet dataset = {sample};
+
+    vector<int> features = {1,2,3,4};
+
+    unique_ptr<MetricScorer> scorer = std::make_unique<MAPScorer>();
+
+    MockRanker ranker(dataset, features, scorer->clone());
+
+    ASSERT_ANY_THROW(ranker.fit());
+    ASSERT_ANY_THROW(ranker.predict(rl.get(1)));
+    ASSERT_ANY_THROW(ranker.toString());
+    ASSERT_ANY_THROW(ranker.model());
+    ASSERT_ANY_THROW(ranker.loadString("foo"));
 
 }

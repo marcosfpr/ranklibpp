@@ -32,7 +32,8 @@
 #include <memory>
 #include <algorithm>
 #include <iostream>    
-#include <fstream>               
+#include <fstream>    
+#include <stdexcept>           
 #include <experimental/filesystem>
 
 using std::move;
@@ -170,59 +171,83 @@ protected:
 };
 
 
+void Ranker::fit(){
+   	throw std::logic_error("No implementation of 'Ranker::fit' provided");
+}
+
+double Ranker::predict(ReadableDataPoint dp){
+    throw std::logic_error("No implementation of 'Ranker::predict' provided");
+}
+
+
+string Ranker::toString(){
+    throw std::logic_error("No implementation of 'Ranker::toString' provided");
+}
+
+
+string Ranker::model(){
+    throw std::logic_error("No implementation of 'Ranker::model' provided");
+}
+
+
+void Ranker::loadString(string model){
+    throw std::logic_error("No implementation of 'Ranker::loadString' provided");
+}
+
+
 Ranker::Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features){
-    this->p_impl_ranker = new RankerImpl(move(dataset), move(scorer), move(features));
+    this->p_impl = new RankerImpl(move(dataset), move(scorer), move(features));
 }
 
 Ranker::Ranker(const Ranker& rk){
-    this->p_impl_ranker = new RankerImpl(*rk.p_impl_ranker);
+    this->p_impl = new RankerImpl(*rk.p_impl);
 }
 
 Ranker& Ranker::operator=(const Ranker& rk){
-    p_impl_ranker->initFrom(*rk.p_impl_ranker);
+    p_impl->initFrom(*rk.p_impl);
     return *this;
 }
 
 Ranker::~Ranker(){
-    delete p_impl_ranker;
+    delete p_impl;
 }
 
 void Ranker::setTrainingSet(DataSet dataset){
-    this->p_impl_ranker->setTrainingSet(move(dataset));
+    this->p_impl->setTrainingSet(move(dataset));
 }
 
 void Ranker::setFeatures(vector<int> features){
-    this->p_impl_ranker->setFeatures(move(features));
+    this->p_impl->setFeatures(move(features));
 }
 
 void Ranker::setValidationSet(DataSet dataset){
-    this->p_impl_ranker->setValidationSet(move(dataset));
+    this->p_impl->setValidationSet(move(dataset));
 }
 
 void Ranker::setScorer(unique_ptr<MetricScorer> scorer){
-    this->p_impl_ranker->setScorer(move(scorer));
+    this->p_impl->setScorer(move(scorer));
 }
 
 double Ranker::getTrainingScore(){
-    return this->p_impl_ranker->getTrainingScore();
+    return this->p_impl->getTrainingScore();
 }
 
 double Ranker::getValidationScore(){
-    return this->p_impl_ranker->getValidationScore();
+    return this->p_impl->getValidationScore();
 }
 
 vector<int> Ranker::getFeatures(){
-    return this->p_impl_ranker->getFeatures();
+    return this->p_impl->getFeatures();
 }
 
 void Ranker::rank(DataSet& l){
-    this->p_impl_ranker->rank(l);
+    this->p_impl->rank(l);
 }
 
 void Ranker::rank(RankList& rl){
-    this->p_impl_ranker->rank(rl);
+    this->p_impl->rank(rl);
 }
 
 void Ranker::save(string fileToSave){
-    this->p_impl_ranker->save(fileToSave);
+    this->p_impl->save(fileToSave);
 }
