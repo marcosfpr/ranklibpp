@@ -18,22 +18,28 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#ifndef LTR_HPP_
-#define LTR_HPP_
+#include "../../api/utils/JsonParser.hpp"
 
-#include "learning/DataPoint.hpp"
-#include "learning/RankList.hpp"
-#include "learning/DataSet.hpp"
-#include "learning/Ranker.hpp"
-#include "learning/Learner.hpp"
+#include <iostream>
+#include <fstream>
 
-#include "metric/MetricScorer.hpp"
-#include "metric/MAPScorer.hpp"
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
 
-#include "utils/KeyValue.hpp"
-#include "utils/JsonParser.hpp"
+namespace pt = boost::property_tree;
 
+void ltr::write_json(std::ofstream& file, string model, map<string, double> parameters) {
+    
+    pt::ptree root;
 
-#include "LtrError.hpp"
+    root.put("model", model);
 
-#endif //LTR_HPP_
+    pt::ptree parameters_node;
+    for(auto& parameter: parameters) 
+        parameters_node.put(parameter.first, parameter.second);
+    
+    root.add_child("parameters", parameters_node);
+
+    pt::write_json(file, root);
+
+}

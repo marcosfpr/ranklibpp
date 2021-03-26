@@ -18,22 +18,21 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#ifndef LTR_HPP_
-#define LTR_HPP_
+#ifndef LTR_JSON_HPP_
+#define LTR_JSON_HPP_
 
-#include "learning/DataPoint.hpp"
-#include "learning/RankList.hpp"
-#include "learning/DataSet.hpp"
-#include "learning/Ranker.hpp"
-#include "learning/Learner.hpp"
+#include <map>
+#include <string>
+#include <fstream>
 
-#include "metric/MetricScorer.hpp"
-#include "metric/MAPScorer.hpp"
+using std::map;
+using std::string;
 
-#include "utils/KeyValue.hpp"
-#include "utils/JsonParser.hpp"
+namespace ltr {
 
+    //TODO: insert data. still undefined.
+    void write_json(std::ofstream& file, string model, map<string, double> parameters);
 
-#include "LtrError.hpp"
+};
 
-#endif //LTR_HPP_
+#endif

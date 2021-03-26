@@ -18,22 +18,30 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#ifndef LTR_HPP_
-#define LTR_HPP_
+#include <algorithm>
 
-#include "learning/DataPoint.hpp"
-#include "learning/RankList.hpp"
-#include "learning/DataSet.hpp"
-#include "learning/Ranker.hpp"
-#include "learning/Learner.hpp"
+#include "../../api/learning/Learner.hpp"
+#include "../../api/LtrError.hpp"
 
-#include "metric/MetricScorer.hpp"
-#include "metric/MAPScorer.hpp"
+using namespace ltr;
 
-#include "utils/KeyValue.hpp"
-#include "utils/JsonParser.hpp"
+void Learner::rank(RankList& rl){
+    vector<int> indexes(rl.size());
+    vector<double> scores(rl.size());
+    for(int i = 0; i < rl.size(); i++){
+        indexes[i] = i;
+        scores[i] = this->predict(rl.get(i));
+    }
+    std::sort(indexes.begin(), indexes.end(),
+        [&](const int& a, const int& b) {
+            return (scores[a] > scores[b]);
+        }
+    );
 
+    rl.permute(indexes);
+}
 
-#include "LtrError.hpp"
-
-#endif //LTR_HPP_
+void Learner::rank(DataSet& ds){
+    for(RankList& rl : ds)
+        rank(rl);
+}

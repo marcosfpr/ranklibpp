@@ -7,6 +7,7 @@ add_executable(
   unit/learning/RankListTest.cpp
   unit/learning/RankerTest.cpp
   unit/metric/MAPScorerTest.cpp
+  unit/utils/KeyValueTest.cpp
 )
 
 target_link_libraries(test_ltrpp ltr pthread gtest gtest_main)

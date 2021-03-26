@@ -23,7 +23,6 @@
 #include <vector>
 #include <string>
 #include <memory>
-#include <iostream>
 
 using std::shared_ptr;
 

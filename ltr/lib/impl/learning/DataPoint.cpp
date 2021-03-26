@@ -61,6 +61,8 @@ public:
 
     string toString()
     {
+        // Returns a SVM-Light string
+
         string output = std::to_string((int)label) + " " + id_ + " ";
         for (int i = 1; i < feature_values.size(); i++)
         {

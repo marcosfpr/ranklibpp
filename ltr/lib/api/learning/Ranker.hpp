@@ -23,16 +23,17 @@
 
 #include <list>
 #include <vector>
+#include <map>
 #include <string>
 #include <memory>
 
-#include "DataSet.hpp"
-#include "RankList.hpp"
+#include "Learner.hpp"
 
 using std::unique_ptr;
 using std::string;
 using std::list;
 using std::vector;
+using std::map;
 
 namespace ltr {
 
@@ -43,8 +44,24 @@ namespace ltr {
      * @brief Generic Ranker class
      * 
      */
-    class Ranker{
+    class Ranker : public Learner{
         public:
+
+            /**
+             * @brief Construct a new Ranker object
+             * 
+             * @param dataset 
+             * @param features 
+             * @param scorer 
+             * @param validationSet
+             */
+            Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features={}, DataSet validationSet={});
+
+            /**
+             * @brief Destroy the Ranker object
+             * 
+             */
+            ~Ranker();
 
             /**
              * @brief Learn method for some learning algorithm.
@@ -61,70 +78,19 @@ namespace ltr {
             virtual double predict(ReadableDataPoint dp);
 
             /**
-             * @brief String representation of ranker
+             * @brief map of parameters
              * 
-             * @return string 
+             * @return map <name of parameter, value> 
              */
-            virtual string toString();
+            virtual map<string, double> getParameters();
 
             /**
-             * @brief String representation of model
+             * @brief Return the name of the LTR Method.
              * 
-             * @return string 
+             * @return const string 
              */
-            virtual string model();
-
-            /**
-             * @brief Load model from string
-             * 
-             * @param model 
-             */
-            virtual void loadString(string model);
-
-            /**
-             * @brief Perform ranking in samples
-             * 
-             * @param l 
-             */
-            void rank(DataSet& l);
-
-            /**
-             * @brief Perform ranking in one sample
-             * 
-             * @param l 
-             */
-            void rank(RankList& rl);
-
-            /**
-             * @brief Construct a new Ranker object
-             * 
-             * @param dataset 
-             * @param features 
-             * @param scorer 
-             */
-            Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features={});
-
-            /**
-             * @brief Destroy the Ranker object
-             * 
-             */
-            ~Ranker();
-
-            /**
-             * @brief Construct a new Ranker object
-             * 
-             * @param rk 
-             */
-            Ranker(const Ranker& rk);
-
-            /**
-             * @brief Assign operator for Rankers
-             * 
-             * @param rk other ranker
-             * @return Ranker& 
-             */
-            Ranker& operator=(const Ranker& rk);
-
+            virtual const string name() const;
+            
             /**
              * @brief Set the Training Set of Ranker
              * 
@@ -180,11 +146,31 @@ namespace ltr {
              * @param fileToSave 
              */
             void save(string fileToSave);
-        
-        private:
-            
-            RankerImpl* p_impl;
 
+            /**
+             * @brief Lodel model from file
+             * 
+             * @param fileToLoad 
+             */
+            void load(string fileToLoad);
+
+        protected:
+
+            DataSet training_samples, validation_samples;
+
+            vector<int> features;
+            
+            unique_ptr<MetricScorer> scorer;
+
+            double score_training, score_validation;
+
+      private:
+
+            // avoiding operators 
+            
+            Ranker(const Ranker& rk);
+
+            Ranker& operator=(const Ranker& rk);
     };
 
 };

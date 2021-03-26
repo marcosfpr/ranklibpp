@@ -18,22 +18,39 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#ifndef LTR_HPP_
-#define LTR_HPP_
+#include "../../api/utils/KeyValue.hpp"
+#include "boost/algorithm/string.hpp"
 
-#include "learning/DataPoint.hpp"
-#include "learning/RankList.hpp"
-#include "learning/DataSet.hpp"
-#include "learning/Ranker.hpp"
-#include "learning/Learner.hpp"
+#include <vector>
 
-#include "metric/MetricScorer.hpp"
-#include "metric/MAPScorer.hpp"
-
-#include "utils/KeyValue.hpp"
-#include "utils/JsonParser.hpp"
+using std::vector;
+using ltr::KeyValue;
 
 
-#include "LtrError.hpp"
+list<KeyValue> ltr::parseKeyValue(string raw, const string key_value_separator, const string pair_separator){
+    vector<string> rawLines;
+    boost::split(rawLines, raw, boost::is_any_of("\n"));
 
-#endif //LTR_HPP_
+    list<KeyValue> result;
+
+    for(string line : rawLines){
+        boost::trim(line);
+
+        vector<string> tokens;
+        boost::split(tokens, line, boost::is_any_of(pair_separator));
+
+        for(string token : tokens){
+            vector<string> pair;
+
+            boost::split(pair, token, boost::is_any_of(key_value_separator));
+            
+            KeyValue kv;
+            kv.key = pair[0];
+            kv.value = pair[1];
+
+            result.push_back(kv);
+        }
+    }
+
+    return result;
+}

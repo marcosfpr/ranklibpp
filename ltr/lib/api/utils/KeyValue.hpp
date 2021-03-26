@@ -17,23 +17,27 @@
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
+#ifndef LTR_KEY_VALUE_HPP_
+#define LTR_KEY_VALUE_HPP_
 
-#ifndef LTR_HPP_
-#define LTR_HPP_
+#include <list>
+#include <string>
 
-#include "learning/DataPoint.hpp"
-#include "learning/RankList.hpp"
-#include "learning/DataSet.hpp"
-#include "learning/Ranker.hpp"
-#include "learning/Learner.hpp"
+using std::list;
+using std::string;
 
-#include "metric/MetricScorer.hpp"
-#include "metric/MAPScorer.hpp"
+namespace ltr{
 
-#include "utils/KeyValue.hpp"
-#include "utils/JsonParser.hpp"
+/**
+ * @brief Simple representation of key-value pairs handled by learning algorithms.
+ * 
+ */
+typedef struct key_value {
+    string key, value;
+} KeyValue;
 
+list<KeyValue> parseKeyValue(string raw, const string key_value_separator=":", const string pair_separator=" ");
 
-#include "LtrError.hpp"
+};
 
-#endif //LTR_HPP_
+#endif

@@ -6,12 +6,15 @@
 
 #include <ltr.hpp>
 #include <gtest/gtest.h>
+#include <boost/property_tree/ptree.hpp>
+#include <boost/property_tree/json_parser.hpp>
 
 using std::cout;
 using std::unique_ptr;
 using std::shared_ptr;
 using std::vector;
 namespace fs = std::experimental::filesystem;
+namespace pt = boost::property_tree;
 
 using namespace ltr;
 
@@ -20,9 +23,6 @@ class MockRanker : public ltr::Ranker{
 
         MockRanker(DataSet dataset, vector<int> features, unique_ptr<MetricScorer> scorer)
             : Ranker(dataset, move(scorer), features){}
-
-        MockRanker(const MockRanker& rk): Ranker(rk) {}
-
 };
 
 TEST(test_ranker, constructor) { 
@@ -44,22 +44,6 @@ TEST(test_ranker, constructor) {
 
     EXPECT_TRUE(&ranker != nullptr);
     EXPECT_TRUE(ranker.getFeatures() == features);
-
-    MockRanker ranker2(ranker);
-
-    EXPECT_TRUE(&ranker != &ranker2);
-    EXPECT_TRUE(ranker2.getFeatures() == features);
-
-    MockRanker ranker3(ranker2);
-
-    vector<int> new_features = {1,3};
-    ranker.setFeatures(new_features);
-
-    ranker3 = ranker;
-
-    EXPECT_TRUE(ranker3.getFeatures() == new_features);
-
-
 }
 
 TEST(test_ranker, operators) {
@@ -108,22 +92,18 @@ TEST(test_ranker, save) {
 
     MockRanker ranker(dataset, features, scorer->clone());
 
-    string file_path = "./mocked.txt";
+    string file_path = "./mocked.json";
     ranker.save(file_path);
 
     fs::path path = fs::path(file_path.c_str());
 
     ASSERT_TRUE(fs::exists(path));
 
-    std::ifstream file_stream{file_path.c_str()};
-    
-    ASSERT_TRUE(!file_stream.fail());
+    string expected = "Ranker";
+    pt::ptree root;
+    pt::read_json(file_path, root);
 
-    string response;
-    string expected = "Generic Ranker Model";
-
-    std::getline(file_stream, response);
-    ASSERT_STREQ(response.c_str(), expected.c_str());
+    ASSERT_STREQ(root.get<string>("model").c_str(), expected.c_str());
 
     fs::remove(path);
 
@@ -148,8 +128,4 @@ TEST(test_ranker, virtuals) {
 
     ASSERT_ANY_THROW(ranker.fit());
     ASSERT_ANY_THROW(ranker.predict(rl.get(1)));
-    ASSERT_ANY_THROW(ranker.toString());
-    ASSERT_ANY_THROW(ranker.model());
-    ASSERT_ANY_THROW(ranker.loadString("foo"));
-
 }

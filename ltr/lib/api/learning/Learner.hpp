@@ -18,22 +18,43 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#ifndef LTR_HPP_
-#define LTR_HPP_
+#ifndef LEARNER_HPP_
+#define LEARNER_HPP_
 
-#include "learning/DataPoint.hpp"
-#include "learning/RankList.hpp"
-#include "learning/DataSet.hpp"
-#include "learning/Ranker.hpp"
-#include "learning/Learner.hpp"
+#include "RankList.hpp"
+#include "DataSet.hpp"
 
-#include "metric/MetricScorer.hpp"
-#include "metric/MAPScorer.hpp"
+namespace ltr {
 
-#include "utils/KeyValue.hpp"
-#include "utils/JsonParser.hpp"
+    /**
+     * @brief Base Learner Agent interface for LTR algorithms
+     *  The capabilities of a LTR learner is to generate a score for a single DataPoint and to provide an entire rank for 
+     *  a RankList or a DataSet.
+     */
+    class Learner {
+        /**
+         * @brief A Learner need to evaluate a single datapoint
+         * 
+         * @param dp 
+         * @return double score prediction
+         */
+        virtual double predict(ReadableDataPoint dp) = 0;
 
+        /**
+         * @brief Perform ranking in samples
+         * 
+         * @param l 
+         */
+        void rank(DataSet& l);
 
-#include "LtrError.hpp"
+        /**
+         * @brief Perform ranking in one sample
+         * 
+         * @param rl 
+         */
+        void rank(RankList& rl);
 
-#endif //LTR_HPP_
+    };
+
+}
+#endif

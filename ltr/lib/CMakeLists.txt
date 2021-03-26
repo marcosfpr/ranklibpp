@@ -6,6 +6,9 @@ set(SOURCES
     impl/learning/Ranker.cpp
     impl/metric/MetricScorer.cpp
     impl/metric/MAPScorer.cpp
+    impl/utils/KeyValue.cpp
+    impl/utils/JsonParser.cpp
+
 )
 
 add_library(
@@ -17,6 +20,7 @@ target_include_directories(
     ltr PUBLIC api PRIVATE
     ${Boost_INCLUDE_DIRS}
 )
+
 
 set_target_properties(
     ltr PROPERTIES PUBLIC_HEADER
