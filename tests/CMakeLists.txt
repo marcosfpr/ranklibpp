@@ -31,6 +31,6 @@ set_tests_properties(test_ltrpp
 include(FindValgrind)
 
 add_custom_target(valgrind_test_ltrpp
-  COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:test_ltrpp>
-  DEPENDS test_ltrpp
-)
+        COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:test_ltrpp>
+        DEPENDS test_ltrpp
+        )
