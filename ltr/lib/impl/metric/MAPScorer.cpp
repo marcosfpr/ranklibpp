@@ -11,18 +11,14 @@
 
 #include "../../api/metric/MAPScorer.hpp"
 #include "../../api/learning/RankList.hpp"
-#include "../../api/learning/DataPoint.hpp"
 
 using namespace ltr;
 
 MAPScorer::MAPScorer():MetricScorer(){}
 
-MAPScorer::MAPScorer(const MAPScorer& ms):MetricScorer(ms){}
+MAPScorer::MAPScorer(const MAPScorer& ms) = default;
 
-MAPScorer& MAPScorer::operator=(const MAPScorer& ms){
-    MetricScorer::operator=(ms);
-    return *this;
-}
+MAPScorer& MAPScorer::operator=(const MAPScorer& ms)= default;
 
 
 double MAPScorer::score(RankList& rl){
@@ -37,10 +33,10 @@ double MAPScorer::score(RankList& rl){
     return count > 0.0 ? averagePrecision / count : 0.0;
 }
 
-double MAPScorer::score(DataSet& ds){
-    return MetricScorer::score(ds);
-}
-
 unique_ptr<MetricScorer> MAPScorer::clone() const{
     return std::make_unique<MAPScorer>( *this ); 
+}
+
+double MAPScorer::score(DataSet &ds) {
+    return MetricScorer::score(ds);
 }

@@ -34,7 +34,8 @@ TEST(test_ranker, constructor) {
 
     RankList rl(sample);
 
-    DataSet dataset = {sample};
+    DataSet dataset;
+    dataset.push_back(std::move(rl));
 
     vector<int> features = {1,2,3,4};
 
@@ -42,7 +43,6 @@ TEST(test_ranker, constructor) {
 
     MockRanker ranker(dataset, features, scorer->clone());
 
-    EXPECT_TRUE(&ranker != nullptr);
     EXPECT_TRUE(ranker.getFeatures() == features);
 }
 
@@ -55,13 +55,14 @@ TEST(test_ranker, operators) {
 
     RankList rl(sample);
 
-    DataSet dataset = {sample};
+    DataSet dataset;
+    dataset.push_back(std::move(rl));
 
     vector<int> features = {1,2,3,4};
 
     unique_ptr<MetricScorer> scorer = std::make_unique<MAPScorer>();
 
-    MockRanker ranker(dataset, features, scorer->clone());
+    MockRanker ranker(dataset, {}, scorer->clone());
 
 
     ranker.setTrainingSet(dataset);
@@ -84,7 +85,8 @@ TEST(test_ranker, save) {
 
     RankList rl(sample);
 
-    DataSet dataset = {sample};
+    DataSet dataset;
+    dataset.push_back(std::move(rl));
 
     vector<int> features = {1,2,3,4};
 
@@ -105,6 +107,9 @@ TEST(test_ranker, save) {
 
     ASSERT_STREQ(root.get<string>("model").c_str(), expected.c_str());
 
+    ranker.load(file_path);
+    ASSERT_EQ(ranker.getParameters().size(), 0);
+
     fs::remove(path);
 
 }
@@ -118,7 +123,8 @@ TEST(test_ranker, virtuals) {
 
     RankList rl(sample);
 
-    DataSet dataset = {sample};
+    DataSet dataset;
+    dataset.push_back(rl);
 
     vector<int> features = {1,2,3,4};
 

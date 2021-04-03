@@ -28,6 +28,7 @@
 #include <memory>
 
 #include "Learner.hpp"
+#include "../utils/Logging.hpp"
 
 using std::unique_ptr;
 using std::string;
@@ -37,7 +38,6 @@ using std::map;
 
 namespace ltr {
 
-    class RankerImpl;
     class MetricScorer;
     
     /**
@@ -65,7 +65,7 @@ namespace ltr {
 
             /**
              * @brief Learn method for some learning algorithm.
-             * 
+             * @param verbose print steps of learn
              */
             virtual void fit();
 
@@ -85,11 +85,17 @@ namespace ltr {
             virtual map<string, double> getParameters();
 
             /**
+             * @brief map of parameters
+             * @param map <name of parameter, value>
+             */
+            virtual void setParameters(map<string, double> parameters);
+
+            /**
              * @brief Return the name of the LTR Method.
              * 
              * @return const string 
              */
-            virtual const string name() const;
+            virtual string name() const;
             
             /**
              * @brief Set the Training Set of Ranker
@@ -101,9 +107,9 @@ namespace ltr {
             /**
              * @brief Set the Features for Ranker
              * 
-             * @param features 
+             * @param ft  new features vector
              */
-            void setFeatures(vector<int> features);
+            void setFeatures(vector<int> ft);
 
             /**
              * @brief Set the Validation Set for Ranker
@@ -115,23 +121,23 @@ namespace ltr {
             /**
              * @brief Set the Scorer wich will be used for Ranker
              * 
-             * @param scorer 
+             * @param scr
              */
-            void setScorer(unique_ptr<MetricScorer> scorer);
+            void setScorer(unique_ptr<MetricScorer> scr);
 
             /**
              * @brief Get the Training Score
              * 
              * @return double 
              */
-            double getTrainingScore();
+            double getTrainingScore() const;
 
             /**
              * @brief Get the Validation Score
              * 
              * @return double 
              */
-            double getValidationScore();
+            double getValidationScore() const;
 
             /**
              * @brief Get the used Features
@@ -145,16 +151,30 @@ namespace ltr {
              * 
              * @param fileToSave 
              */
-            void save(string fileToSave);
+            void save(const string& fileToSave);
 
             /**
              * @brief Lodel model from file
              * 
              * @param fileToLoad 
              */
-            void load(string fileToLoad);
+            void load(const string& fileToLoad);
 
         protected:
+            /**
+             * @brief Extract all features used on training samples.
+             * 
+             */
+            void extractFeatures();
+
+            /**
+             * @brief Log a set of messages into screen;
+             * 
+             * @param msg 
+             * @param type
+             * @param size
+             */
+            void log(vector<string> msg, log_level type, vector<int> sizes = {}) const;
 
             DataSet training_samples, validation_samples;
 
@@ -163,6 +183,8 @@ namespace ltr {
             unique_ptr<MetricScorer> scorer;
 
             double score_training, score_validation;
+
+            bool verbose;
 
       private:
 
@@ -173,6 +195,6 @@ namespace ltr {
             Ranker& operator=(const Ranker& rk);
     };
 
-};
+}
 
 #endif // !RANKER_HPP_

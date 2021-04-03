@@ -31,7 +31,20 @@ using std::string;
 namespace ltr {
 
     //TODO: insert data. still undefined.
-    void write_json(std::ofstream& file, string model, map<string, double> parameters);
+    /**
+     * Write LTR model to JSON
+     * @param file
+     * @param model
+     * @param parameters
+     */
+    void write_json(std::ofstream& file, const string& model, const map<string, double>& parameters);
+
+    /**
+     * Load LTR model from JSON
+     * @param file
+     * @return
+     */
+    std::pair<string, map<string, double>> load_json(std::ifstream& file);
 
 };
 

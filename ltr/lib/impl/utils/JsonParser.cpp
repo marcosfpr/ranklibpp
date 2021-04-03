@@ -20,15 +20,17 @@
 
 #include "../../api/utils/JsonParser.hpp"
 
+
 #include <iostream>
-#include <fstream>
+#include <map>
+#include <utility> // pair
 
 #include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 
 namespace pt = boost::property_tree;
 
-void ltr::write_json(std::ofstream& file, string model, map<string, double> parameters) {
+void ltr::write_json(std::ofstream& file, const string& model, const map<string, double>& parameters) {
     
     pt::ptree root;
 
@@ -42,4 +44,21 @@ void ltr::write_json(std::ofstream& file, string model, map<string, double> para
 
     pt::write_json(file, root);
 
+}
+
+std::pair<string, map<string, double>> ltr::load_json(std::ifstream& file) {
+    pt::ptree root;
+
+    pt::read_json(file, root);
+
+    map<string, double> params;
+
+    string model = root.get<string>("model");
+
+    auto params_node = root.get_child("parameters");
+    for( const auto& kv : params_node ){
+        params.insert(std::make_pair(kv.first, kv.second.get_value<double>()));
+    }
+
+    return std::make_pair(model, params);
 }

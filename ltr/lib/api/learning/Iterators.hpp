@@ -12,30 +12,45 @@
 
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 //  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#ifndef LTR_HPP_
-#define LTR_HPP_
 
-#include "learning/DataPoint.hpp"
-#include "learning/RankList.hpp"
-#include "learning/DataSet.hpp"
-#include "learning/Ranker.hpp"
-#include "learning/Learner.hpp"
-#include "learning/ensemble/AdaRank.hpp"
+#ifndef ITERATORS_HPP_
+#define ITERATORS_HPP_
 
-#include "metric/MetricScorer.hpp"
-#include "metric/MAPScorer.hpp"
+#include <list>
+#include <vector>
 
-#include "utils/KeyValue.hpp"
-#include "utils/JsonParser.hpp"
-#include "utils/Logging.hpp"
+#include <memory>
 
+using std::list;
+using std::vector;
 
-#include "LtrError.hpp"
+namespace ltr{
+    class DataPoint;
 
-#endif //LTR_HPP_
+    /**
+     * @brief iterator of features datapoint
+     * Values of each input feature of learner.
+     */
+    typedef vector<double> FeaturesContainer; 
+
+    /**
+     * @brief Define a readable datapoint
+     * 
+     */
+    typedef std::shared_ptr<const DataPoint> ReadableDataPoint;
+
+    /**
+     * @brief A vector of readable datapoints is considered one sample
+     *  for ltr algorithms.
+     */
+    typedef vector<ReadableDataPoint> Sample; 
+
+};
+
+#endif // ITERATORS_HPP_

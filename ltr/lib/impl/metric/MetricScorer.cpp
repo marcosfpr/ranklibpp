@@ -20,41 +20,35 @@
 
 #include  "../../api/metric/MetricScorer.hpp"
 #include  "../../api/learning/RankList.hpp"
-#include  "../../api/learning/DataPoint.hpp"
-#include  "../../api/LtrError.hpp"
+
+#include <stdexcept>
 
 using namespace ltr;
 
 MetricScorer::MetricScorer(){this->depth=0;}
 
-MetricScorer::~MetricScorer(){}
+MetricScorer::~MetricScorer()= default;
 
 MetricScorer::MetricScorer(const MetricScorer& ms){
     this->depth = ms.depth;
 }
 
+MetricScorer& MetricScorer::operator=(const MetricScorer& ms)= default;
 
-MetricScorer& MetricScorer::operator=(const MetricScorer& ms){
-    this->depth = ms.depth;
-    return *this;
+void MetricScorer::setDepth(int d){
+    this->depth = d;
 }
 
-
-void MetricScorer::setDepth(int depth){
-    this->depth = depth;
-}
-
-int MetricScorer::getDepth(){
+int MetricScorer::getDepth() const{
     return this->depth;
 }
 
 double MetricScorer::score(DataSet& ds){
     double score = 0.0;
-    for(DataSet::iterator it = ds.begin(); it != ds.end(); it++){
-        RankList singlelist = *it;
-        score += this->score(singlelist);
+    for(auto& singleList : ds){
+        score += this->score(singleList);
     }
-    return score/ds.size(); // average score by ranklists
+    return score/ds.size(); // average score by rankLists
 }
 
 vector<int> MetricScorer::getRelevanceLabels(RankList& rl){
@@ -64,4 +58,17 @@ vector<int> MetricScorer::getRelevanceLabels(RankList& rl){
         rel[i] = rl.get(i)->getLabel();
     }
     return rel;
+}
+
+double MetricScorer::score(RankList& rl){
+    throw std::logic_error("No implementation of 'MetricScorer::score' provided");
+}
+
+unique_ptr<MetricScorer> MetricScorer::clone() const{
+    throw std::logic_error("No implementation of 'MetricScorer::clone' provided");
+}
+
+string MetricScorer::toString(){
+    throw std::logic_error("No implementation of 'MetricScorer::name' provided");
+
 }

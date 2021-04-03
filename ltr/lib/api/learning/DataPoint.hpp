@@ -20,11 +20,10 @@
 
 #ifndef DATA_POINT_HPP_
 #define DATA_POINT_HPP_
-#include <vector>
-#include <string>
-#include <memory>
 
-using std::shared_ptr;
+#include <string>
+
+#include "Iterators.hpp"
 
 namespace ltr{
 
@@ -45,7 +44,7 @@ namespace ltr{
          * 
          * @param raw : SVM-Light string
          */
-        DataPoint(std::string raw = "");
+        explicit DataPoint(std::string raw = "");
 
         /**
          * @brief Copy construct  DataPoint object
@@ -59,7 +58,7 @@ namespace ltr{
          * 
          * @param rhs  other datapoint
          */
-        DataPoint(DataPoint&& rhs);
+        DataPoint(DataPoint&& rhs) noexcept ;
 
         /**
          * @brief Assign operator for DataPoints
@@ -75,7 +74,7 @@ namespace ltr{
          * @param rhs other datapoint
          * @return DataPoint& 
          */
-        DataPoint& operator=(DataPoint&& rhs);
+        DataPoint& operator=(DataPoint&& rhs) noexcept ;
 
         /**
          * @brief Destroy the DataPoint object
@@ -123,7 +122,7 @@ namespace ltr{
          * 
          * @param label new label value
          */
-        void setLabel(float label);
+        void setLabel(float lbl);
 
         /**
          * @brief Get the Description of this DataPointImpl
@@ -138,7 +137,7 @@ namespace ltr{
          * 
          * @param description 
          */
-        void setDescription(std::string description);
+        void setDescription(std::string desc);
 
         /**
          * @brief Get the Feature Value object
@@ -159,28 +158,20 @@ namespace ltr{
         /**
          * @brief Gets the value of all features as a dense array of feature values.
          * 
-         * @return std::vector<float> 
+         * @return container of feature values
          */
-        std::vector<float> getFeatureVector() const;
+        FeaturesContainer getFeatureVector() const;
 
         /**
          * @brief Sets the value of all features with the provided dense array of feature values
          * 
-         * @param featureVector 
+         * @param features container of features values
          */
-        void setFeatureVector(std::vector<float> featureVector);
+        void setFeatureVector(FeaturesContainer features);
 
     private:
         DataPointImpl *p_impl;
     };
-
-
-    /**
-     * @brief Define a readable datapoint
-     * 
-     */
-    typedef shared_ptr<const DataPoint> ReadableDataPoint;
-
 
 };
 

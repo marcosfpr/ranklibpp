@@ -18,27 +18,19 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
+#include "../../api/LtrError.hpp"
 #include "../../api/learning/Ranker.hpp"
-#include "../../api/learning/RankList.hpp"
-#include "../../api/learning/DataPoint.hpp"
-#include "../../api/learning/DataSet.hpp"
-
 #include "../../api/metric/MetricScorer.hpp"
-
 #include "../../api/utils/JsonParser.hpp"
 
-#include "../../api/LtrError.hpp"
 
-#include <map>
-#include <vector>
-#include <string>
-#include <memory>
-#include <iostream>    
-#include <fstream>    
-#include <stdexcept>           
-#include <experimental/filesystem>
-
-
+#include <numeric> // iota
+#include <map> // map
+#include <vector> // vector
+#include <memory> // shared_ptr, unique_ptr
+#include <stdexcept>  // runtime error 
+#include <experimental/filesystem> // filesystem
+#include <iomanip> // setw
 
 using std::map;
 using std::move;
@@ -58,6 +50,11 @@ Ranker::Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> fea
     this->score_training = 0.0;
     this->score_validation = 0.0;
     this->validation_samples = move(validationSet);
+    this->verbose = false;
+
+    if(this->features.empty()) {
+        this->extractFeatures();
+    }
 }
 
 Ranker::~Ranker(){
@@ -70,8 +67,8 @@ void Ranker::setTrainingSet(DataSet ds){
     this->training_samples = move(ds);
 }
 
-void Ranker::setFeatures(vector<int> features){
-    this->features = move(features);
+void Ranker::setFeatures(vector<int> ft){
+    this->features = move(ft);
 }
 
 void Ranker::setValidationSet(DataSet ds){
@@ -79,16 +76,16 @@ void Ranker::setValidationSet(DataSet ds){
 }
 
 
-void Ranker::setScorer(unique_ptr<MetricScorer> scorer){
-    this->scorer = move(scorer);
+void Ranker::setScorer(unique_ptr<MetricScorer> scr){
+    this->scorer = move(scr);
 }
 
-double Ranker::getTrainingScore(){
+double Ranker::getTrainingScore() const{
     return this->score_training;
 }
 
 
-double Ranker::getValidationScore(){
+double Ranker::getValidationScore() const{
     return this->score_validation;
 }
 
@@ -97,7 +94,7 @@ vector<int> Ranker::getFeatures(){
 }
 
 
-void Ranker::save(string fileToSave){
+void Ranker::save(const string& fileToSave){
     fs::path path = fs::path(fileToSave.c_str());
 
     fs::path dir = path.parent_path();
@@ -112,6 +109,25 @@ void Ranker::save(string fileToSave){
     file.close();
 }
 
+void Ranker::load(const string& fileToLoad) {
+    fs::path path = fs::path(fileToLoad.c_str());
+
+    if(! fs::exists(path))
+        throw LtrError("Error in Ranker::load with path="+ fileToLoad);
+
+    std::ifstream file(fileToLoad.c_str());
+
+    auto response = ltr::load_json(file);
+
+    if (response.first != this->name())
+        throw LtrError("Error in Ranker::load : JSON file not corresponds to model ="+ response.first);
+
+    this->setParameters(response.second);
+
+    file.close();
+}
+
+
 void Ranker::fit(){
    	throw std::logic_error("No implementation of 'Ranker::fit' provided");
 }
@@ -124,7 +140,56 @@ map<string, double> Ranker::getParameters(){
     return {};
 }
 
-const string Ranker::name() const {
+void Ranker::setParameters(map<string, double> parameters) {}
+
+string Ranker::name() const {
     return "Ranker";
 }
+
+void Ranker::extractFeatures(){
+    // basic impl. extract the first seen datapoint and use its
+    // featuresCount value to create the feature vector representation
+    auto first = this->training_samples.begin();
+    int maxFeature = first->get(0)->getFeatureCount();
+    this->features.resize(maxFeature);
+    std::iota(this->features.begin(), this->features.end(), 1);
+}
+
+void Ranker::log(vector<string> msg, log_level type, vector<int> sizes) const{
+    if (! verbose) return;
+
+    if (msg.size() != sizes.size()) {
+        auto it = std::max_element(msg.begin(), msg.end(),
+                                    [](const auto& a, const auto& b) {
+                                        return a.size() < b.size();
+                                    });
+        int max = it->size();
+        vector<int> new_sizes(msg.size(), max);
+        sizes = new_sizes;
+    }
+    
+    for (int i = 0; i < msg.size(); i++) {
+        switch(type) {
+            case trace:
+                LOGGING(trace) << std::setw(sizes[i]) << msg[i] << " | ";
+            break;
+            case info:
+                LOGGING(info) << std::setw(sizes[i]) << msg[i] << " | ";
+            break;
+            case debug:
+                LOGGING(debug) << std::setw(sizes[i]) << msg[i] << " | ";
+            break;
+            case warning:
+                LOGGING(warning) << std::setw(sizes[i]) << msg[i] << " | ";
+            break;
+            case error:
+                LOGGING(error) << std::setw(sizes[i]) << msg[i] << " | ";
+            break;
+            case fatal:
+                LOGGING(fatal) << std::setw(sizes[i]) << msg[i] << " | ";
+            break;
+        }
+    }
+}
+
 

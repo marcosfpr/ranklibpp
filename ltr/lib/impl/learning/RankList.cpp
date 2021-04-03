@@ -18,16 +18,13 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#include <numeric>
 #include <cstdlib>
-#include <iostream>
 #include <algorithm>
 #include <utility>
 
 
 #include "../../api/learning/RankList.hpp"
 #include "../../api/LtrError.hpp"
-#include "../../api/learning/DataPoint.hpp"
 
 using std::move;
 using std::string;
@@ -40,7 +37,7 @@ using namespace ltr;
 class ltr::RankListImpl{
 public:
 
-    RankListImpl(Sample data_points) {
+    explicit RankListImpl(Sample data_points) {
         init(move(data_points));
     }
 
@@ -72,7 +69,7 @@ public:
         if(k >= 0 && k < this->data_points.size()){
             return this->data_points[k];
         }
-        throw LtrError("Error in RankList::get with k="+k);
+        throw LtrError("Error in RankList::get with k=" + std::to_string(k));
     }
 
     const DataPoint& operator[](size_t i){
@@ -81,16 +78,16 @@ public:
 
     void set(int k, ReadableDataPoint dp){
         if(k >= 0 && k < this->data_points.size()){
-            this->data_points[k] = dp;
+            this->data_points[k] = std::move(dp);
             return;
         }
-        throw LtrError("Error in RankList::set with k="+k);
+        throw LtrError("Error in RankList::set with k="+ std::to_string(k));
     }
 
 
     void ranking(){
         std::stable_sort(data_points.begin(), data_points.end(),
-                [](ReadableDataPoint dp1, ReadableDataPoint dp2)
+                [](const ReadableDataPoint& dp1, const ReadableDataPoint& dp2)
                 {
                     return dp1->getLabel() > dp2->getLabel();
                 }
@@ -98,9 +95,9 @@ public:
     }
 
 
-    void partialRanking(short fid){
+    void partialRanking(int fid){
         std::stable_sort(data_points.begin(), data_points.end(),
-                [fid](ReadableDataPoint dp1, ReadableDataPoint dp2)
+                [fid](const ReadableDataPoint& dp1, const ReadableDataPoint& dp2)
                 {
                     return dp1->getFeatureValue(fid) > dp2->getFeatureValue(fid);
                 }
@@ -115,8 +112,8 @@ public:
         this->data_points = move(new_datapoints);
     }
 
-    void init(Sample data_points) {
-        this->data_points = data_points;
+    void init(Sample dp) {
+        this->data_points = std::move(dp);
     }
 
     void initFrom(const RankListImpl& rl, std::vector<int> idx, int offset=0){
@@ -157,7 +154,7 @@ RankList::RankList(const RankList& rl){
     this->p_impl = new RankListImpl(*rl.p_impl);
 }
 
-RankList::RankList(RankList&& rl){
+RankList::RankList(RankList&& rl) noexcept{
     this->p_impl = rl.p_impl;
     rl.p_impl = nullptr;
 }
@@ -167,7 +164,7 @@ RankList& RankList::operator=(const RankList& rl){
     return *this;
 }
 
-RankList& RankList::operator=(RankList&& rl){
+RankList& RankList::operator=(RankList&& rl) noexcept{
     if(this != &rl)
     {
         delete p_impl;

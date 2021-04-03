@@ -65,12 +65,12 @@ namespace ltr{
         double score(RankList& rl) override;
 
         /**
-         * @brief  Compute MAP for a list of RankLists
-         * 
-         * @param rls 
-         * @return double 
-         */
-        double score(DataSet& rls);
+        * @brief Return score for multiple RankLists
+        *
+        * @param ds
+        * @return double
+        */
+        double score(DataSet& ds) override;
 
         /**
          * @brief Clone MetricScorer object

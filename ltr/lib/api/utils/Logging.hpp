@@ -12,30 +12,30 @@
 
 //  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 //  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-//  FITNESS FOR A PARTICULAR PURPOSE AND NON INFRINGEMENT. IN NO EVENT SHALL THE
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
 //  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 //  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
+#ifndef LTR_LOGGING_HPP_
+#define LTR_LOGGING_HPP_
 
-#ifndef LTR_HPP_
-#define LTR_HPP_
+#include <boost/log/trivial.hpp>
 
-#include "learning/DataPoint.hpp"
-#include "learning/RankList.hpp"
-#include "learning/DataSet.hpp"
-#include "learning/Ranker.hpp"
-#include "learning/Learner.hpp"
-#include "learning/ensemble/AdaRank.hpp"
+#define LOGGING(lvl) BOOST_LOG_TRIVIAL(lvl)
 
-#include "metric/MetricScorer.hpp"
-#include "metric/MAPScorer.hpp"
+namespace ltr {
 
-#include "utils/KeyValue.hpp"
-#include "utils/JsonParser.hpp"
-#include "utils/Logging.hpp"
+    enum log_level
+    {
+        trace,
+        debug,
+        info,
+        warning,
+        error,
+        fatal
+    };
 
+}; 
 
-#include "LtrError.hpp"
-
-#endif //LTR_HPP_
+#endif

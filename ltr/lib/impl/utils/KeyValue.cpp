@@ -27,7 +27,7 @@ using std::vector;
 using ltr::KeyValue;
 
 
-list<KeyValue> ltr::parseKeyValue(string raw, const string key_value_separator, const string pair_separator){
+list<KeyValue> ltr::parseKeyValue(string raw, const string& key_value_separator, const string& pair_separator){
     vector<string> rawLines;
     boost::split(rawLines, raw, boost::is_any_of("\n"));
 

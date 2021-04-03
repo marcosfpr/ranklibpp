@@ -36,7 +36,7 @@ typedef struct key_value {
     string key, value;
 } KeyValue;
 
-list<KeyValue> parseKeyValue(string raw, const string key_value_separator=":", const string pair_separator=" ");
+list<KeyValue> parseKeyValue(string raw, const string& key_value_separator=":", const string& pair_separator=" ");
 
 };
 

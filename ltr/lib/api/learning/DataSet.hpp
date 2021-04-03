@@ -21,9 +21,10 @@
 #ifndef DATA_SET_HPP_
 #define DATA_SET_HPP_
 
-
+#include <string>
 #include <list>
 
+using std::string;
 using std::list;
 
 namespace ltr{
@@ -34,6 +35,14 @@ namespace ltr{
      * 
      */
     typedef list<RankList> DataSet; 
+
+    /**
+     * @brief Load SVM-Light file to DataSet
+     * 
+     * @param file 
+     * @return DataSet 
+     */
+    DataSet load_svmlight(const string& file);
 };
 
 #endif // DATA_SET_HPP_

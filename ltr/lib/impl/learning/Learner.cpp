@@ -21,7 +21,6 @@
 #include <algorithm>
 
 #include "../../api/learning/Learner.hpp"
-#include "../../api/LtrError.hpp"
 
 using namespace ltr;
 

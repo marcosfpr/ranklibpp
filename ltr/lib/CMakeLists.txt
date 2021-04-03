@@ -1,14 +1,16 @@
-find_package(Boost REQUIRED)
+find_package(Boost COMPONENTS program_options log log_setup REQUIRED)
 
 set(SOURCES
     impl/learning/DataPoint.cpp
     impl/learning/RankList.cpp
+    impl/learning/DataSet.cpp
     impl/learning/Ranker.cpp
+    impl/learning/Learner.cpp
+    impl/learning/ensemble/AdaRank.cpp
     impl/metric/MetricScorer.cpp
     impl/metric/MAPScorer.cpp
     impl/utils/KeyValue.cpp
     impl/utils/JsonParser.cpp
-
 )
 
 add_library(
@@ -21,6 +23,9 @@ target_include_directories(
     ${Boost_INCLUDE_DIRS}
 )
 
+# logging stuff
+target_link_libraries(ltr ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY})
+set(CMAKE_CXX_FLAGS "-DBOOST_LOG_DYN_LINK")
 
 set_target_properties(
     ltr PROPERTIES PUBLIC_HEADER

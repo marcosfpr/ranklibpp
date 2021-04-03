@@ -32,6 +32,7 @@ namespace ltr {
      *  a RankList or a DataSet.
      */
     class Learner {
+    public:
         /**
          * @brief A Learner need to evaluate a single datapoint
          * 
