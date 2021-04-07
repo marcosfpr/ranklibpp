@@ -79,6 +79,12 @@ namespace ltr{
          */
         unique_ptr<MetricScorer> clone() const override;
 
+        /**
+         * @brief Return string representation of model.
+         *
+         * @return string
+         */
+        string toString() override;
     };
 };
 

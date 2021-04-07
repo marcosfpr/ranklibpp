@@ -45,19 +45,10 @@ int MetricScorer::getDepth() const{
 
 double MetricScorer::score(DataSet& ds){
     double score = 0.0;
-    for(auto& singleList : ds){
+    for(RankList& singleList : ds){
         score += this->score(singleList);
     }
     return score/ds.size(); // average score by rankLists
-}
-
-vector<int> MetricScorer::getRelevanceLabels(RankList& rl){
-    vector<int> rel;
-    rel.reserve(rl.size());
-    for(int i = 0; i < rel.size(); i++){
-        rel[i] = rl.get(i)->getLabel();
-    }
-    return rel;
 }
 
 double MetricScorer::score(RankList& rl){

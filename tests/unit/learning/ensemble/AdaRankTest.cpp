@@ -20,7 +20,8 @@ protected:
     virtual ~AdaRankTest() = default;
 
     virtual void SetUp(){
-        DataSet training_samples = ltr::load_svmlight(std::getenv("MOVIES_BENCHMARK_TRAIN"));
+        string base_path = std::getenv("OHSUMED");
+        DataSet training_samples = ltr::load_svmlight(base_path + "/Data/All/OHSUMED.txt");
         ranker = new AdaRank(std::move(training_samples), std::make_unique<MAPScorer>());
     }
 
@@ -36,7 +37,7 @@ TEST_F(AdaRankTest, check_weak_ranker) {
     ltr::ReadableDataPoint rd = std::make_shared<ltr::DataPoint>("0 qid:10 1:0.2 2:1.3 3:9.2 # doc1 2");
 
     ASSERT_FLOAT_EQ(0.2, wk.predict(rd));
-
+    ASSERT_EQ(1, wk.getFeature());
 
 }
 

@@ -31,6 +31,7 @@
 #include <stdexcept>  // runtime error 
 #include <experimental/filesystem> // filesystem
 #include <iomanip> // setw
+#include <sstream> // sstream
 
 using std::map;
 using std::move;
@@ -55,6 +56,8 @@ Ranker::Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> fea
     if(this->features.empty()) {
         this->extractFeatures();
     }
+
+    ltr::init_logging();
 }
 
 Ranker::~Ranker(){
@@ -167,28 +170,56 @@ void Ranker::log(vector<string> msg, log_level type, vector<int> sizes) const{
         vector<int> new_sizes(msg.size(), max);
         sizes = new_sizes;
     }
-    
-    for (int i = 0; i < msg.size(); i++) {
-        switch(type) {
-            case trace:
-                LOGGING(trace) << std::setw(sizes[i]) << msg[i] << " | ";
+
+    std::stringstream stream;
+
+    for (int i = 0; i < msg.size(); i++)
+        stream << std::setw(sizes[i]) << msg[i] << " | ";
+
+    switch(type) {
+        case trace:
+            LOGGING(trace) << stream.str();
             break;
-            case info:
-                LOGGING(info) << std::setw(sizes[i]) << msg[i] << " | ";
+        case info:
+            LOGGING(info) << stream.str();
             break;
-            case debug:
-                LOGGING(debug) << std::setw(sizes[i]) << msg[i] << " | ";
+        case debug:
+            LOGGING(debug) << stream.str();
             break;
-            case warning:
-                LOGGING(warning) << std::setw(sizes[i]) << msg[i] << " | ";
+        case warning:
+            LOGGING(warning) << stream.str();
             break;
-            case error:
-                LOGGING(error) << std::setw(sizes[i]) << msg[i] << " | ";
+        case error:
+            LOGGING(error) << stream.str();
             break;
-            case fatal:
-                LOGGING(fatal) << std::setw(sizes[i]) << msg[i] << " | ";
+        case fatal:
+            LOGGING(fatal) << stream.str();
             break;
-        }
+    }
+}
+
+void Ranker::log(string msg, log_level type, int size) const {
+    if (! verbose) return;
+    if (size == 0) size = msg.size();
+    switch(type) {
+        case trace:
+            LOGGING(trace) << std::setw(size) << msg;
+            break;
+        case info:
+            LOGGING(info) << std::setw(size) << msg;
+            break;
+        case debug:
+            LOGGING(debug) << std::setw(size) << msg;
+            break;
+        case warning:
+            LOGGING(warning) << std::setw(size) << msg;
+            break;
+        case error:
+            LOGGING(error) << std::setw(size) << msg;
+            break;
+        case fatal:
+            LOGGING(fatal) << std::setw(size) << msg;
+            break;
     }
 }
 

@@ -111,16 +111,6 @@ namespace ltr{
          * @return string 
          */
         virtual string toString();
-
-    protected:
-
-        /**
-         * @brief Get the Relevance Labels of a RankList
-         * 
-         * @param rl 
-         * @return vector<int> 
-         */
-        static vector<int> getRelevanceLabels(RankList& rl);
         
         int depth;
     };

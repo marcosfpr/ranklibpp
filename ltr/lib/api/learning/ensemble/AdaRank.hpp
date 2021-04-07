@@ -22,14 +22,14 @@
 #define LTR_ADARANK_HPP_
 
 #include <memory>
-#include <unordered_map>
+#include <unordered_set>
 
 #include "../DataSet.hpp"
 #include "../RankList.hpp"
 #include "../Ranker.hpp"
 
 using std::unique_ptr;
-using std::unordered_map;
+using std::unordered_set;
 
 namespace ltr {
 
@@ -58,7 +58,7 @@ namespace ltr {
              * @param dp 
              * @return double 
              */
-            virtual double predict(ReadableDataPoint dp) override;
+            double predict(ReadableDataPoint dp) override;
 
             /**
              * @brief Get the Feature value
@@ -73,8 +73,6 @@ namespace ltr {
 
     class AdaRank : public Ranker {
     public:
-
-        //TODO: ambiguous constructors
 
         /**
          * Construct a new AdaRank object
@@ -101,27 +99,27 @@ namespace ltr {
          * @param dp 
          * @return double 
          */
-        virtual double predict(ReadableDataPoint dp) override;
+        double predict(ReadableDataPoint dp) override;
 
         /**
          * @brief map of parameters
          * 
          * @return map <name of parameter, value> 
          */
-        virtual map<string, double> getParameters() override;
+        map<string, double> getParameters() override;
 
         /**
          * @brief Load AdaRank parameters map
          * @param parameters
          */
-        virtual void setParameters(map<string, double> parameters) override;
+        void setParameters(map<string, double> parameters) override;
 
         /**
          * @brief Return the name of the LTR Method.
          * 
          * @return string 
          */
-        virtual string name() const override;
+        string name() const override;
         
         /**
          * @brief Set the Iter object
@@ -163,11 +161,6 @@ namespace ltr {
         double getTolerance() const;
 
     protected:
-        /**
-         * @brief Initialize AdaRank method
-         * 
-         */
-        void initialize();
 
         /**
          * @brief Learn the data
@@ -179,9 +172,9 @@ namespace ltr {
         /**
          * @brief Select method of boosting technique
          * 
-         * @return unique_ptr<WeakRanker> 
+         * @return WeakRanker
          */
-        unique_ptr<WeakRanker> selectWeakRanker();
+        WeakRanker selectWeakRanker();
 
         /**
          * @brief Evaluate weak ranker in training samples
@@ -189,24 +182,24 @@ namespace ltr {
          * @param wk 
          * @return double score
          */
-        double evaluateWeakRanker(unique_ptr<WeakRanker>& wk);
+        double evaluateWeakRanker(WeakRanker& wk);
+
+        int iter, max_consecutive_selections, consecutive_selections, previous_feature;
+
+        double tolerance, previous_training_score;
+
+        vector<double> sample_weights;
+
+        list<double> ranker_weights, best_weights;
+
+        list<WeakRanker> rankers, best_rankers;
+
+        unordered_set<int> used_features;
 
     private:
         // avoiding
         AdaRank(const AdaRank& rk);
         AdaRank& operator=(const AdaRank& rk);
-
-        int iter, consecutiveSelections;
-
-        double tolerance;
-        
-        vector<double> sample_weights, best_weights;
-        
-        list<double> ranker_weights;
-        
-        list<unique_ptr<WeakRanker>> rankers, best_rankers;
-
-        unordered_map<int, int> used_features;
     };
 
 }

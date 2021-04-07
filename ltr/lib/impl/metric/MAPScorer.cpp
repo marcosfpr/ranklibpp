@@ -40,3 +40,7 @@ unique_ptr<MetricScorer> MAPScorer::clone() const{
 double MAPScorer::score(DataSet &ds) {
     return MetricScorer::score(ds);
 }
+
+string MAPScorer::toString() {
+    return "MAP";
+}

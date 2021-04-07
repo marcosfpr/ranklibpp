@@ -130,7 +130,7 @@ namespace ltr {
              * 
              * @return double 
              */
-            double getTrainingScore() const;
+            virtual double getTrainingScore() const;
 
             /**
              * @brief Get the Validation Score
@@ -175,6 +175,15 @@ namespace ltr {
              * @param size
              */
             void log(vector<string> msg, log_level type, vector<int> sizes = {}) const;
+
+            /**
+             * @brief Log a set of messages into screen;
+             *
+             * @param msg
+             * @param type
+             * @param size
+             */
+            void log(string msg, log_level type, int size=0) const;
 
             DataSet training_samples, validation_samples;
 

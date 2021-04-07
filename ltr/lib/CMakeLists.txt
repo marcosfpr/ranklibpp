@@ -1,4 +1,5 @@
-find_package(Boost COMPONENTS program_options log log_setup REQUIRED)
+find_package(Boost COMPONENTS log log_setup REQUIRED)
+add_definitions(-DBOOST_LOG_DYN_LINK)
 
 set(SOURCES
     impl/learning/DataPoint.cpp
@@ -11,10 +12,11 @@ set(SOURCES
     impl/metric/MAPScorer.cpp
     impl/utils/KeyValue.cpp
     impl/utils/JsonParser.cpp
+    impl/utils/Logging.cpp
 )
 
 add_library(
-    ltr
+    ltr SHARED
     ${SOURCES}
 )
 
@@ -25,7 +27,6 @@ target_include_directories(
 
 # logging stuff
 target_link_libraries(ltr ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY})
-set(CMAKE_CXX_FLAGS "-DBOOST_LOG_DYN_LINK")
 
 set_target_properties(
     ltr PROPERTIES PUBLIC_HEADER
@@ -40,3 +41,7 @@ install(TARGETS ltr
   ARCHIVE DESTINATION lib
   PUBLIC_HEADER DESTINATION api
 )
+
+# test stuff
+add_executable(rank ${SOURCE} main.cpp)
+target_link_libraries(rank ltr pthread)

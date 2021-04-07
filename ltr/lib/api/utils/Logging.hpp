@@ -26,6 +26,8 @@
 
 namespace ltr {
 
+    void init_logging();
+
     enum log_level
     {
         trace,
