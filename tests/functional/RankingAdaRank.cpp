@@ -41,7 +41,5 @@ TEST_F(RankingAdaRank, adarank_map_ohsumed) {
 
     // in the benchmark, the average MAP is something higher than 44%
 
-    LOGGING(info) << ranker->getTrainingScore();
-
     EXPECT_TRUE(ranker->getTrainingScore() > 0.44);
 }
