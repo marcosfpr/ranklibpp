@@ -18,157 +18,117 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#include "../../api/learning/Ranker.hpp"
-#include "../../api/learning/RankList.hpp"
-#include "../../api/learning/DataPoint.hpp"
-#include "../../api/learning/DataSet.hpp"
-
-#include "../../api/metric/MetricScorer.hpp"
 #include "../../api/LtrError.hpp"
+#include "../../api/learning/Ranker.hpp"
+#include "../../api/metric/MetricScorer.hpp"
+#include "../../api/utils/JsonParser.hpp"
 
-#include <list>
-#include <vector>
-#include <string>
-#include <memory>
-#include <algorithm>
-#include <iostream>    
-#include <fstream>    
-#include <stdexcept>           
-#include <experimental/filesystem>
 
+#include <numeric> // iota
+#include <map> // map
+#include <vector> // vector
+#include <memory> // shared_ptr, unique_ptr
+#include <stdexcept>  // runtime error 
+#include <experimental/filesystem> // filesystem
+#include <iomanip> // setw
+#include <sstream> // sstream
+
+using std::map;
 using std::move;
 using std::unique_ptr;
-using std::shared_ptr;
 using std::string;
-using std::list;
 using std::vector;
 namespace fs = std::experimental::filesystem;
 
 using namespace ltr;
 
-class ltr::RankerImpl {
-public:
-
-        RankerImpl(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features){
-            init(move(dataset), move(features), move(scorer));
-        }
-
-        ~RankerImpl(){
-            freePointers();
-        }
 
 
-        RankerImpl(const RankerImpl& rk){
-            initFrom(rk);
-        }
+Ranker::Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features, DataSet validationSet){
+    this->training_samples = move(dataset);
+    this->features = move(features);
+    this->scorer = move(scorer);
+    this->score_training = 0.0;
+    this->score_validation = 0.0;
+    this->validation_samples = move(validationSet);
+    this->verbose = false;
 
-        void setTrainingSet(DataSet ds){
-            this->training_samples = move(ds);
-        }
+    if(this->features.empty()) {
+        this->extractFeatures();
+    }
 
-        void setFeatures(vector<int> features){
-            this->features = move(features);
-        }
+    ltr::init_logging();
+}
 
-        void setValidationSet(DataSet ds){
-            this->validation_samples = move(ds);
-        }
+Ranker::~Ranker(){
+    this->training_samples.clear();
+    this->validation_samples.clear();
+    this->features.clear();
+}
+
+void Ranker::setTrainingSet(DataSet ds){
+    this->training_samples = move(ds);
+}
+
+void Ranker::setFeatures(vector<int> ft){
+    this->features = move(ft);
+}
+
+void Ranker::setValidationSet(DataSet ds){
+    this->validation_samples = move(ds);
+}
 
 
-        void setScorer(unique_ptr<MetricScorer> scorer){
-            this->scorer = move(scorer);
-        }
+void Ranker::setScorer(unique_ptr<MetricScorer> scr){
+    this->scorer = move(scr);
+}
 
-        double getTrainingScore(){
-            return this->score_training;
-        }
+double Ranker::getTrainingScore() const{
+    return this->score_training;
+}
 
 
-        double getValidationScore(){
-            return this->score_validation;
-        }
+double Ranker::getValidationScore() const{
+    return this->score_validation;
+}
 
-        vector<int> getFeatures(){
-            return this->features;
-        }
+vector<int> Ranker::getFeatures(){
+    return this->features;
+}
 
-        double predict(ReadableDataPoint dp){
-            return 0.0;
-        }
 
-        string model(){ 
-            return "Generic Ranker Model";
-        }
+void Ranker::save(const string& fileToSave){
+    fs::path path = fs::path(fileToSave.c_str());
 
-        void save(string fileToSave){
-            fs::path path = fs::path(fileToSave.c_str());
+    fs::path dir = path.parent_path();
 
-            fs::path dir = path.parent_path();
+    if(! fs::exists(dir))
+        fs::create_directory(dir);
 
-            if(! fs::exists(dir))
-                fs::create_directory(dir);
-            
-            std::ofstream file(fileToSave.c_str());
-            file << model();
-            file.close();
-            
-        }
+    std::ofstream file(fileToSave.c_str());
 
-        void rank(RankList& rl){
-            vector<int> indexes(rl.size());
-            vector<double> scores(rl.size());
-            for(int i = 0; i < rl.size(); i++){
-                indexes[i] = i;
-                scores[i] = this->predict(rl.get(i));
-            }
-            std::sort(indexes.begin(), indexes.end(),
-                [&](const int& a, const int& b) {
-                    return (scores[a] > scores[b]);
-                }
-            );
+    ltr::write_json(file, this->name(), this->getParameters());
 
-            rl.permute(indexes);
-        }
+    file.close();
+}
 
-        void rank(DataSet& ds){
-            for(RankList& rl : ds)
-                rank(rl);
-        }
+void Ranker::load(const string& fileToLoad) {
+    fs::path path = fs::path(fileToLoad.c_str());
 
-        void init(DataSet dataset, vector<int> features, unique_ptr<MetricScorer> scorer){
-            this->training_samples = move(dataset);
-            this->features = move(features);
-            this->scorer = move(scorer);
-            this->score_training = 0.0;
-            this->score_validation = 0.0;
-        }
+    if(! fs::exists(path))
+        throw LtrError("Error in Ranker::load with path="+ fileToLoad);
 
-        void initFrom(const RankerImpl& rk){
-            this->features = rk.features;
-            this->scorer = rk.scorer->clone();
-            this->training_samples.clear();
-            for(RankList rl : rk.training_samples) {
-                this->training_samples.push_back(RankList(rl));
-            }
-            this->validation_samples.clear();
-            for(RankList rl : rk.validation_samples) {
-                this->validation_samples.push_back(RankList(rl));
-            }
-        }
+    std::ifstream file(fileToLoad.c_str());
 
-        void freePointers() {
-            this->training_samples.clear();
-            this->validation_samples.clear();
-            this->features.clear();
-        }
+    auto response = ltr::load_json(file);
 
-protected:
-    DataSet training_samples, validation_samples;
-    vector<int> features;
-    unique_ptr<MetricScorer> scorer;
-    double score_training, score_validation;
+    if (response.first != this->name())
+        throw LtrError("Error in Ranker::load : JSON file not corresponds to model ="+ response.first);
 
-};
+    this->setParameters(response.second);
+
+    file.close();
+}
 
 
 void Ranker::fit(){
@@ -179,75 +139,88 @@ double Ranker::predict(ReadableDataPoint dp){
     throw std::logic_error("No implementation of 'Ranker::predict' provided");
 }
 
+map<string, double> Ranker::getParameters(){
+    return {};
+}
 
-string Ranker::toString(){
-    throw std::logic_error("No implementation of 'Ranker::toString' provided");
+void Ranker::setParameters(map<string, double> parameters) {}
+
+string Ranker::name() const {
+    return "Ranker";
+}
+
+void Ranker::extractFeatures(){
+    // basic impl. extract the first seen datapoint and use its
+    // featuresCount value to create the feature vector representation
+    auto first = this->training_samples.begin();
+    int maxFeature = first->get(0)->getFeatureCount();
+    this->features.resize(maxFeature);
+    std::iota(this->features.begin(), this->features.end(), 1);
+}
+
+void Ranker::log(vector<string> msg, log_level type, vector<int> sizes) const{
+    if (! verbose) return;
+
+    if (msg.size() != sizes.size()) {
+        auto it = std::max_element(msg.begin(), msg.end(),
+                                    [](const auto& a, const auto& b) {
+                                        return a.size() < b.size();
+                                    });
+        int max = it->size();
+        vector<int> new_sizes(msg.size(), max);
+        sizes = new_sizes;
+    }
+
+    std::stringstream stream;
+
+    for (int i = 0; i < msg.size(); i++)
+        stream << std::setw(sizes[i]) << msg[i] << " | ";
+
+    switch(type) {
+        case trace:
+            LOGGING(trace) << stream.str();
+            break;
+        case info:
+            LOGGING(info) << stream.str();
+            break;
+        case debug:
+            LOGGING(debug) << stream.str();
+            break;
+        case warning:
+            LOGGING(warning) << stream.str();
+            break;
+        case error:
+            LOGGING(error) << stream.str();
+            break;
+        case fatal:
+            LOGGING(fatal) << stream.str();
+            break;
+    }
+}
+
+void Ranker::log(string msg, log_level type, int size) const {
+    if (! verbose) return;
+    if (size == 0) size = msg.size();
+    switch(type) {
+        case trace:
+            LOGGING(trace) << std::setw(size) << msg;
+            break;
+        case info:
+            LOGGING(info) << std::setw(size) << msg;
+            break;
+        case debug:
+            LOGGING(debug) << std::setw(size) << msg;
+            break;
+        case warning:
+            LOGGING(warning) << std::setw(size) << msg;
+            break;
+        case error:
+            LOGGING(error) << std::setw(size) << msg;
+            break;
+        case fatal:
+            LOGGING(fatal) << std::setw(size) << msg;
+            break;
+    }
 }
 
 
-string Ranker::model(){
-    throw std::logic_error("No implementation of 'Ranker::model' provided");
-}
-
-
-void Ranker::loadString(string model){
-    throw std::logic_error("No implementation of 'Ranker::loadString' provided");
-}
-
-
-Ranker::Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features){
-    this->p_impl = new RankerImpl(move(dataset), move(scorer), move(features));
-}
-
-Ranker::Ranker(const Ranker& rk){
-    this->p_impl = new RankerImpl(*rk.p_impl);
-}
-
-Ranker& Ranker::operator=(const Ranker& rk){
-    p_impl->initFrom(*rk.p_impl);
-    return *this;
-}
-
-Ranker::~Ranker(){
-    delete p_impl;
-}
-
-void Ranker::setTrainingSet(DataSet dataset){
-    this->p_impl->setTrainingSet(move(dataset));
-}
-
-void Ranker::setFeatures(vector<int> features){
-    this->p_impl->setFeatures(move(features));
-}
-
-void Ranker::setValidationSet(DataSet dataset){
-    this->p_impl->setValidationSet(move(dataset));
-}
-
-void Ranker::setScorer(unique_ptr<MetricScorer> scorer){
-    this->p_impl->setScorer(move(scorer));
-}
-
-double Ranker::getTrainingScore(){
-    return this->p_impl->getTrainingScore();
-}
-
-double Ranker::getValidationScore(){
-    return this->p_impl->getValidationScore();
-}
-
-vector<int> Ranker::getFeatures(){
-    return this->p_impl->getFeatures();
-}
-
-void Ranker::rank(DataSet& l){
-    this->p_impl->rank(l);
-}
-
-void Ranker::rank(RankList& rl){
-    this->p_impl->rank(rl);
-}
-
-void Ranker::save(string fileToSave){
-    this->p_impl->save(fileToSave);
-}

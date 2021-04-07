@@ -41,7 +41,7 @@ TEST(test_datapoints, operators) {
 
 TEST(test_datapoints, getters_and_setters) {
     DataPoint dp;
-    std::vector<float> features = {0, 21, 2.3, 4.5};
+    FeaturesContainer features = {0, 21, 2.3, 4.5};
 
     dp.setDescription("desc");
     dp.setFeatureVector(features);
@@ -58,7 +58,9 @@ TEST(test_datapoints, getters_and_setters) {
     ASSERT_STREQ(dp.toString().c_str(),"1 qid:10 1:21.00 2:2.30 3:4.50 # desc");
 
     EXPECT_TRUE(dp.getFeatureCount() == 3);
-
+    ASSERT_FLOAT_EQ(dp.getFeatureValue(1), 21.0);
+    ASSERT_FLOAT_EQ(dp.getFeatureValue(2), 2.30);
+    ASSERT_FLOAT_EQ(dp.getFeatureValue(3), 4.50);
 }
 
 TEST(test_datapoints, parse) {
@@ -69,7 +71,8 @@ TEST(test_datapoints, parse) {
     EXPECT_TRUE(dp.getID() == "qid:9");
     ASSERT_STREQ(dp.getDescription().c_str(), "doc1");
 
-    ASSERT_ANY_THROW(new DataPoint("-1 qid:9 1:10 # doc1"));
+    ASSERT_ANY_THROW(new DataPoint("-1 qid:9 1:10 # doc1")); // negative label
+    ASSERT_ANY_THROW(new DataPoint("0 1:10 # doc1")); // query not specified
 
     
 }

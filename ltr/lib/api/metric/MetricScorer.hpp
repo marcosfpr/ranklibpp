@@ -70,16 +70,16 @@ namespace ltr{
         /**
          * @brief Set the Depth value
          * 
-         * @param depth 
+         * @param d depth
          */
-        void setDepth(int depth);
+        void setDepth(int d);
 
         /**
          * @brief Get the Depth value
          * 
          * @return int 
          */
-        int getDepth();
+        int getDepth() const;
 
 
         /**
@@ -88,7 +88,7 @@ namespace ltr{
          * @param ds 
          * @return double 
          */
-        double score(DataSet& ds);
+        virtual double score(DataSet& ds);
 
         /**
          * @brief Return score for a single RankList
@@ -96,24 +96,21 @@ namespace ltr{
          * @param rl
          * @return double 
          */
-        virtual double score(RankList& rl) = 0;
+        virtual double score(RankList& rl); 
 
         /**
          * @brief Clone a MetricScorer pointer
          * 
          * @return std::unique_ptr<Material> 
          */
-        virtual unique_ptr<MetricScorer> clone() const = 0;
-
-    protected:
+        virtual unique_ptr<MetricScorer> clone() const;
 
         /**
-         * @brief Get the Relevance Labels of a RankList
+         * @brief Return string representation of model.
          * 
-         * @param rl 
-         * @return vector<int> 
+         * @return string 
          */
-        vector<int> getRelevanceLabels(RankList& rl);
+        virtual string toString();
         
         int depth;
     };

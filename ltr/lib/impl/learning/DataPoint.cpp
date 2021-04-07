@@ -18,14 +18,13 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#include <cstdlib>
 #include <iostream>
 #include <algorithm>
 #include <utility>
-#include <sstream>
 #include <iomanip>
 
 #include "../../api/learning/DataPoint.hpp"
+
 #include "../../api/LtrError.hpp"
 
 #include "boost/algorithm/string.hpp"
@@ -34,7 +33,6 @@
 
 using std::move;
 using std::string;
-using std::vector;
 
 using namespace ltr;
 
@@ -44,7 +42,7 @@ using namespace ltr;
 class ltr::DataPointImpl
 {
 public:
-    DataPointImpl(string raw = "")
+    explicit DataPointImpl(string raw = "")
     {
         init(move(raw));
     }
@@ -61,6 +59,8 @@ public:
 
     string toString()
     {
+        // Returns a SVM-Light string
+
         string output = std::to_string((int)label) + " " + id_ + " ";
         for (int i = 1; i < feature_values.size(); i++)
         {
@@ -78,7 +78,7 @@ public:
 
     void setID(string id)
     {
-        this->id_ = id;
+        this->id_ = std::move(id);
     }
 
     string getID()
@@ -86,19 +86,19 @@ public:
         return this->id_;
     }
 
-    int getFeatureCount()
+    int getFeatureCount() const
     {
         return feature_count;
     }
 
-    float getLabel()
+    float getLabel() const
     {
         return this->label;
     }
 
-    void setLabel(float label)
+    void setLabel(float lbl)
     {
-        this->label = label;
+        label = lbl;
     }
 
     string getDescription()
@@ -106,33 +106,33 @@ public:
         return this->description;
     }
 
-    void setDescription(string description)
+    void setDescription(string desc)
     {
-        this->description = description;
+        description = std::move(desc);
     }
 
     float getFeatureValue(int featureID)
     {
         if (featureID <= 0 || featureID > this->feature_values.size())
-            throw new LtrError("Error in DataPoint::getFeatureValue(): requesting unspecified feature, fid=" + std::to_string(featureID));
+            throw LtrError("Error in DataPoint::getFeatureValue(): requesting unspecified feature, fid=" + std::to_string(featureID));
         return this->feature_values[featureID];
     }
 
     void setFeatureValue(int featureID, float featureValue)
     {
         if (featureID <= 0 || featureID > this->feature_values.size())
-            throw new LtrError("Error in DataPoint::setFeatureValue(): requesting unspecified feature, fid=" + std::to_string(featureID));
+            throw LtrError("Error in DataPoint::setFeatureValue(): requesting unspecified feature, fid=" + std::to_string(featureID));
         this->feature_values[featureID] = featureValue;
     }
 
-    vector<float> getFeatureVector()
+    FeaturesContainer getFeatureVector()
     {
         return this->feature_values;
     }
 
-    void setFeatureVector(vector<float> featureVector)
+    void setFeatureVector(FeaturesContainer featureVector)
     {
-        this->feature_count = featureVector.size() - 1;
+        feature_count = (int) featureVector.size() - 1;
         this->feature_values = move(featureVector);
     }
 
@@ -140,6 +140,7 @@ public:
     {
         this->label = 0.0;
         this->known_features = 0;
+        this->feature_count = 0;
         this->feature_values.resize(max_feature, NaN);
         if (!raw.empty())
             parse(move(raw));
@@ -152,6 +153,7 @@ public:
         this->id_ = dp.id_;
         this->known_features = dp.known_features;
         this->feature_values = dp.feature_values;
+        this->feature_count = dp.feature_count;
     }
 
     void freePointers() {}
@@ -160,7 +162,7 @@ public:
     static int feature_increase;
 
 protected:
-    void getKeyValueFeaturePair(std::pair<string, string> &keyValue, string feature)
+    static void getKeyValueFeaturePair(std::pair<string, string> &keyValue, string feature)
     {
         vector<string> tokens;
         boost::split(tokens, feature, boost::is_any_of(":"));
@@ -173,7 +175,7 @@ protected:
         int last_feature = -1;
         try
         {
-            std::size_t idx = raw.find("#");
+            std::size_t idx = raw.find('#');
             if (idx != string::npos)
             {
                 this->description = raw.substr(idx+1);
@@ -188,9 +190,12 @@ protected:
             this->label = std::stof(tokens[0]);
 
             if (label < 0)
-                throw new LtrError("Relevance label cannot be negative.");
+                throw LtrError("Error in DataPoint::parse() : Relevance label cannot be negative.");
 
-            this->id_ = tokens[1];
+            if (tokens[1].find("qid") != std::string::npos)
+                this->id_ = tokens[1];
+            else
+                throw LtrError("Error in DataPoint::parse() : Query ID must be defined.");
 
             std::pair<string, string> key_value;
             for (int i = 2; i < tokens.size(); i++)
@@ -200,7 +205,7 @@ protected:
 
                 int fid = std::stoi(key_value.first);
                 if (fid <= 0)
-                    throw new LtrError("Cannot use feature numbering less than or equal to zero. Start your features at 1.");
+                    throw LtrError("Error in DataPoint::parse() : Cannot use feature numbering less than or equal to zero. Start your features at 1.");
                 if (fid >= max_feature)
                 {
                     while (fid >= max_feature)
@@ -220,22 +225,21 @@ protected:
                 }
             }
         }
-        catch (std::exception e)
+        catch (std::exception& e)
         {
-            throw new LtrError("Error in DataPoint::parse()");
+            throw LtrError("Error in DataPoint::parse()");
         }
     }
 
-    static int feature_count;
+    int feature_count;
     int known_features;
     float label;
     string id_, description;
-    vector<float> feature_values;
+    FeaturesContainer feature_values;
 };
 
 int DataPointImpl::max_feature = MAX_FEATURES;
 int DataPointImpl::feature_increase = FEATURE_RESIZE_STEP;
-int DataPointImpl::feature_count = 0;
 
 DataPoint::DataPoint(string raw)
 {
@@ -247,7 +251,7 @@ DataPoint::DataPoint(const DataPoint &dp)
     this->p_impl = new DataPointImpl(*dp.p_impl);
 }
 
-DataPoint::DataPoint(DataPoint &&rhs)
+DataPoint::DataPoint(DataPoint &&rhs) noexcept
 {
     this->p_impl = rhs.p_impl;
     rhs.p_impl = nullptr;
@@ -259,7 +263,7 @@ DataPoint &DataPoint::operator=(const DataPoint &dp)
     return *this;
 }
 
-DataPoint &DataPoint::operator=(DataPoint &&rhs)
+DataPoint &DataPoint::operator=(DataPoint &&rhs) noexcept
 {
     if (this != &rhs)
     {
@@ -277,7 +281,7 @@ DataPoint::~DataPoint()
 
 void DataPoint::setID(string id)
 {
-    p_impl->setID(id);
+    p_impl->setID(std::move(id));
 }
 
 string DataPoint::getID() const
@@ -307,7 +311,7 @@ string DataPoint::getDescription() const
 
 void DataPoint::setDescription(string description)
 {
-    p_impl->setDescription(description);
+    p_impl->setDescription(std::move(description));
 }
 
 float DataPoint::getFeatureValue(int featureID) const
@@ -320,12 +324,12 @@ void DataPoint::setFeatureValue(int featureID, float featureValue)
     p_impl->setFeatureValue(featureID, featureValue);
 }
 
-vector<float> DataPoint::getFeatureVector() const
+FeaturesContainer DataPoint::getFeatureVector() const
 {
     return p_impl->getFeatureVector();
 }
 
-void DataPoint::setFeatureVector(vector<float> featureVector)
+void DataPoint::setFeatureVector(FeaturesContainer featureVector)
 {
     p_impl->setFeatureVector(move(featureVector));
 }

@@ -25,18 +25,11 @@
 
 #include <string>
 #include <vector>
-#include <list>
-#include <memory>
 
-using std::shared_ptr;
-using std::unique_ptr;
 using std::vector;
-using std::list;
 
 namespace ltr{
     class RankListImpl;
-
-    typedef vector<ReadableDataPoint> Sample; 
 
     /**
      * @brief A RankList is the object to be ranked by models.
@@ -51,7 +44,7 @@ namespace ltr{
          * 
          * @param data_points Vector of datapoints corresponding to all datapoints for a single queryID.
          */
-        RankList(Sample data_points);
+        explicit RankList(Sample data_points);
 
         /**
          * @brief Construct a new RankList object
@@ -74,7 +67,7 @@ namespace ltr{
          * 
          * @param rl 
          */
-        RankList(RankList&& rl);
+        RankList(RankList&& rl) noexcept ;
 
             /**
          * @brief Assign operator for RankLists
@@ -90,7 +83,7 @@ namespace ltr{
          * @param rl 
          * @return RankList& 
          */
-        RankList& operator=(RankList&& rl);
+        RankList& operator=(RankList&& rl) noexcept ;
 
         /**
          * @brief Destroy the RankList object
