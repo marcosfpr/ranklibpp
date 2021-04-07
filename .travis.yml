@@ -4,6 +4,9 @@ language: c++
 
 sudo: required
 
+env:
+  OHSUMED=$TRAVIS_BUILD_DIR/tests/benchmarks/OHSUMED
+
 branches:
   only:
     - master
