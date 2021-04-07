@@ -11,6 +11,7 @@ add_executable(
   unit/learning/DataSetTest.cpp
   unit/learning/RankerTest.cpp
   unit/metric/MAPScorerTest.cpp
+  unit/metric/PrecisionScorerTest.cpp
   unit/utils/KeyValueTest.cpp
 
   unit/learning/ensemble/AdaRankTest.cpp
