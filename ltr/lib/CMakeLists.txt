@@ -12,7 +12,6 @@ set(SOURCES
     impl/metric/MAPScorer.cpp
     impl/metric/PrecisionScorer.cpp
     impl/utils/KeyValue.cpp
-    impl/utils/JsonParser.cpp
     impl/utils/Logging.cpp
 )
 

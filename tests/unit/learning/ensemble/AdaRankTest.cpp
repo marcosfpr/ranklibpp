@@ -1,14 +1,13 @@
 #include <ltr.hpp>
 
 #include <gtest/gtest.h>
+#include <experimental/filesystem>
 
 #include <memory>
 #include <cstdlib>
 
-using ltr::Ranker;
-using ltr::DataSet;
-using ltr::MAPScorer;
-using ltr::AdaRank;
+using namespace ltr;
+namespace fs = std::experimental::filesystem;
 
 class AdaRankTest : public ::testing::Test {
 
@@ -50,16 +49,33 @@ TEST_F(AdaRankTest, get_set) {
     ASSERT_EQ(10, ranker->getIter());
     ASSERT_EQ(2, ranker->getConsecutiveSelections());
     ASSERT_FLOAT_EQ(0.001, ranker->getTolerance());
-    ASSERT_STREQ("AdaRank", ranker->name().c_str());
 
-    map<string, double> params_to_set = {{"iter", 20}, {"consecutiveSelections", 30}, {"tolerance", 0.02}};
-    ranker->setParameters(params_to_set);
-    ASSERT_EQ(20, ranker->getIter());
-    ASSERT_EQ(30, ranker->getConsecutiveSelections());
-    ASSERT_FLOAT_EQ(0.02, ranker->getTolerance());
-
-    auto get_params = ranker->getParameters();
-    ASSERT_EQ(get_params, params_to_set);
 }
 
+TEST_F(AdaRankTest, save) {
+
+    ranker->setTolerance(0.2);
+    ranker->setConsecutiveSelections(100);
+    ranker->setIter(150);
+
+    string file_path = "./adarank.json";
+    ranker->save(file_path);
+
+    fs::path path = fs::path(file_path.c_str());
+
+    ASSERT_TRUE(fs::exists(path));
+
+    string expected = "AdaRank";
+
+    AdaRank other({}, std::make_unique<MAPScorer>(), {});
+
+    other.load("./adarank.json");
+
+    ASSERT_FLOAT_EQ(ranker->getTolerance(), other.getTolerance());
+    ASSERT_EQ(ranker->getIter(), other.getIter());
+    ASSERT_EQ(ranker->getConsecutiveSelections(), other.getConsecutiveSelections());
+
+    fs::remove(path);
+
+}
 

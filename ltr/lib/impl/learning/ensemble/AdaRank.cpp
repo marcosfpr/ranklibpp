@@ -23,12 +23,19 @@
 #include "../../../api/LtrError.hpp"
 
 #include <string>
+#include <utility>
 #include <vector>
 #include <memory>
 #include <cmath>
 
+#include <boost/algorithm/string.hpp>
+#include <boost/property_tree/json_parser.hpp>
+#include <boost/property_tree/ptree.hpp>
+
 using std::unique_ptr;
 using std::vector;
+using std::stringstream;
+namespace pt = boost::property_tree;
 
 using namespace ltr;
 
@@ -55,6 +62,8 @@ AdaRank::AdaRank(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> f
     this->tolerance = tolerance;
     this->max_consecutive_selections = maxConsecutive;
     this->previous_training_score = 0.0;
+    this->previous_validation_score = 0.0;
+
     this->consecutive_selections = 0;
     this->previous_feature = -1;
 
@@ -72,7 +81,7 @@ void AdaRank::setTolerance(double tolerance){
 }
 
 void AdaRank::setConsecutiveSelections(int consecutiveSelections){
-    this->consecutive_selections = consecutiveSelections;
+    this->max_consecutive_selections = consecutiveSelections;
 }
 
 double AdaRank::evaluateWeakRanker(WeakRanker& wk){
@@ -154,16 +163,16 @@ void AdaRank::learn(int start) {
             train_scores_list.push_back(exp_score);
         }
 
-        train_score /=training_samples.size();
+        train_score /= training_samples.size();
         double delta = train_score + tolerance - previous_training_score;
-        string status_train = (delta > 0) ? "Ok" : "Bad";
+        string status_train = (delta > 0) ? "OK" : "BAD";
 
         int selected_feature = best_weak_ranker.getFeature();
 
         if(previous_feature == selected_feature) {
             consecutive_selections++;
             if(consecutive_selections == max_consecutive_selections) {
-                status_train = "Satured";
+                status_train = "SATURED";
                 consecutive_selections = 0;
                 used_features.insert(selected_feature);
             }
@@ -182,8 +191,10 @@ void AdaRank::learn(int start) {
            }
         }
 
-        log({std::to_string(it), std::to_string(selected_feature), std::to_string(train_score),
-             (val_score != 0.0) ? std::to_string(val_score) : "", status_train}, log_level::info, {7, 8, 9, 9, 9});
+        double train_improvement = train_score - previous_training_score;
+        double val_improvement = val_score - previous_validation_score;
+
+        printIter(it, selected_feature, train_score, train_improvement, val_score, val_improvement, status_train);
 
         if (delta <= 0) {
             rankers.pop_back();
@@ -192,6 +203,7 @@ void AdaRank::learn(int start) {
         }
 
         previous_training_score = train_score;
+        previous_validation_score = val_score;
 
         // 5° fase: atualizando a distribuição dos pesos dos exemplos
         auto scores_it = train_scores_list.begin();
@@ -205,10 +217,7 @@ void AdaRank::fit(bool verbose){
 
     this->verbose = verbose;
 
-    log("AdaRank starts.", info);
-    log("********************************************************", info);
-    log({"#Iter", "Feature", this->scorer->toString()+"-T", this->scorer->toString()+"-V", "Status"}, log_level::info, {7, 8, 9, 9, 9});
-    log("********************************************************", info);
+    printHeader();
 
     learn(1);
 
@@ -225,14 +234,10 @@ void AdaRank::fit(bool verbose){
 
     score_training = scorer->score(training_samples);
 
-    log("********************************************************", info);
-    log("AdaRank training finished.", info);
-    log(scorer->toString() + " on training :" + std::to_string(score_training), info);
-    if (! validation_samples.empty()) {
+    if (! validation_samples.empty())
         score_validation = scorer->score(validation_samples);
-        log( scorer->toString() + " on validation :" + std::to_string(score_validation), info);
-    }
-    log("********************************************************", info);
+
+    printResults();
 }
 
 double AdaRank::predict(ReadableDataPoint dp){
@@ -248,27 +253,69 @@ double AdaRank::predict(ReadableDataPoint dp){
     return score;
 }
 
-map<string, double> AdaRank::getParameters(){
-    return  {{"iter", iter}, {"consecutiveSelections", consecutive_selections}, {"tolerance", tolerance}};
+void AdaRank::saveJSON(std::ofstream& file){
+    pt::ptree root;
+
+    root.put("model", "AdaRank");
+
+    pt::ptree subtree;
+
+    subtree.put("iter", iter);
+    subtree.put("consecutiveSelections", max_consecutive_selections);
+    subtree.put("tolerance", tolerance);
+
+    if (!rankers.empty()) {
+        pt::ptree subtree_weights;
+
+        pt::ptree rankers_node;
+        for(WeakRanker& wk : rankers) {
+            pt::ptree child;
+            child.put("", wk.getFeature());
+            rankers_node.push_back(std::make_pair("", child));
+        }
+        subtree_weights.add_child("rankers", rankers_node);
+
+        pt::ptree weights_node;
+        for(double& w : ranker_weights) {
+            pt::ptree child;
+            child.put("", w);
+            weights_node.push_back(std::make_pair("", child));
+        }
+        subtree_weights.add_child("amount_to_say", weights_node);
+
+        subtree.add_child("weights", subtree_weights);
+    }
+
+    root.add_child("parameters", subtree);
+
+    pt::write_json(file, root);
 }
 
-void AdaRank::setParameters(map<string, double> parameters) {
+void AdaRank::loadJSON(std::ifstream& file){
+    pt::ptree root;
+    pt::read_json(file, root);
 
-    if (parameters.find( "iter" ) != parameters.end())
-        this->iter = parameters["iter"];
+    if(std::strcmp(root.get<string>("model").c_str(), "AdaRank") != 0)
+        throw LtrError("Error in AdaRank::loadJSON() : required model it's different of AdaRank.");
 
-    if (parameters.find( "consecutiveSelections" ) != parameters.end())
-        this->consecutive_selections = parameters["consecutiveSelections"];
+    pt::ptree params = root.get_child("parameters");
 
-    if (parameters.find( "tolerance" ) != parameters.end())
-        this->tolerance = parameters["tolerance"];
+    iter = params.get<int>("iter");
+    max_consecutive_selections = params.get<int>("consecutiveSelections");
+    tolerance = params.get<double>("tolerance");
 
-    // TODO: intialize weights
-}
+    if( params.count("weights") != 0 ) {
+        pt::ptree weights = params.get_child("weights");
 
+        rankers.clear();
+        for (auto &kv : weights.get_child("rankers"))
+            rankers.emplace_back(kv.second.get_value<int>());
 
-string AdaRank::name() const {
-    return "AdaRank";
+        ranker_weights.clear();
+        for (auto &kv : weights.get_child("amount_to_say"))
+            rankers.emplace_back(kv.second.get_value<double>());
+    }
+
 }
 
 int AdaRank::getIter() const {
@@ -276,9 +323,37 @@ int AdaRank::getIter() const {
 }
 
 int AdaRank::getConsecutiveSelections() const {
-    return consecutive_selections;
+    return max_consecutive_selections;
 }
 
 double AdaRank::getTolerance() const {
     return tolerance;
+}
+
+void AdaRank::printHeader() {
+    if (! verbose) return;
+    ltr::log("AdaRank starts.", info, BOLDBLACK);
+    ltr::log({"#Iter" , "Feature", this->scorer->toString() + "-T", "Improve-T", this->scorer->toString()+"-V", "Improve-V",
+         "Status"}, true, BOLDBLACK, {7, 8, 9, 9, 9, 9, 9});
+}
+
+void AdaRank::printIter(int it, int feature, double train_score, double train_improve, double val_score, double val_improve, string status){
+    if (! verbose) return;
+    ltr::log({std::to_string(it), std::to_string(feature), std::to_string(train_score), std::to_string(train_improve),
+         (val_score != 0.0) ? std::to_string(val_score) : "", (val_score != 0.0) ? std::to_string(val_improve) : "", status},
+        false, {BLACK, BLACK, ltr::color_score(train_score), ltr::color_delta(train_improve),
+                ltr::color_score(val_score), ltr::color_delta(val_improve), ltr::color_status(status)},{7, 8, 9, 9, 9, 9, 9});
+}
+
+void AdaRank::printResults() {
+
+    log({7, 8, 9, 9, 9, 9, 9}); // finishing iter table
+
+    log("AdaRank training finished.", info);
+    log({scorer->toString()+"-T", scorer->toString()+"-V"}, true, BOLDBLACK, {9,9});
+    log({std::to_string(score_training), (validation_samples.empty()) ? "" : std::to_string(score_validation)},
+        false, {ltr::color_score(score_training), (validation_samples.empty()) ? "" : ltr::color_score(score_validation)},
+        {9,9});
+
+    log({9,9});
 }
