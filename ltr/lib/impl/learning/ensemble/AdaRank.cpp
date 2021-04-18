@@ -332,16 +332,16 @@ double AdaRank::getTolerance() const {
 
 void AdaRank::printHeader() {
     if (! verbose) return;
-    ltr::log("AdaRank starts.", info, BOLDBLACK);
+    ltr::log("AdaRank starts.", info, BOLDCYAN);
     ltr::log({"#Iter" , "Feature", this->scorer->toString() + "-T", "Improve-T", this->scorer->toString()+"-V", "Improve-V",
-         "Status"}, true, BOLDBLACK, {7, 8, 9, 9, 9, 9, 9});
+         "Status"}, true, "", {7, 8, 9, 9, 9, 9, 9});
 }
 
 void AdaRank::printIter(int it, int feature, double train_score, double train_improve, double val_score, double val_improve, string status){
     if (! verbose) return;
     ltr::log({std::to_string(it), std::to_string(feature), std::to_string(train_score), std::to_string(train_improve),
          (val_score != 0.0) ? std::to_string(val_score) : "", (val_score != 0.0) ? std::to_string(val_improve) : "", status},
-        false, {BLACK, BLACK, ltr::color_score(train_score), ltr::color_delta(train_improve),
+        false, {"", "", ltr::color_score(train_score), ltr::color_delta(train_improve),
                 ltr::color_score(val_score), ltr::color_delta(val_improve), ltr::color_status(status)},{7, 8, 9, 9, 9, 9, 9});
 }
 
@@ -349,8 +349,8 @@ void AdaRank::printResults() {
 
     log({7, 8, 9, 9, 9, 9, 9}); // finishing iter table
 
-    log("AdaRank training finished.", info);
-    log({scorer->toString()+"-T", scorer->toString()+"-V"}, true, BOLDBLACK, {9,9});
+    log("AdaRank training finished.", info, CYAN);
+    log({scorer->toString()+"-T", scorer->toString()+"-V"}, true, "", {9,9});
     log({std::to_string(score_training), (validation_samples.empty()) ? "" : std::to_string(score_validation)},
         false, {ltr::color_score(score_training), (validation_samples.empty()) ? "" : ltr::color_score(score_validation)},
         {9,9});

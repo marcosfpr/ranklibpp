@@ -19,6 +19,7 @@
 //  THE SOFTWARE.
 
 #include "../../api/utils/Logging.hpp"
+#include "../../api/LtrError.hpp"
 
 #include <iomanip>
 #include <sstream>
@@ -43,6 +44,9 @@ void ltr::init_logging()
 
 void ltr::log(vector<string> msg, bool header, vector<const char*> colors, vector<int> sizes){
 
+    if (!colors.empty() && colors.size() < msg.size())
+        throw LtrError("Error in ltr::log(): the colors container does not have the same size as the messages container.");
+
     if (msg.size() != sizes.size()) {
         auto it = std::max_element(msg.begin(), msg.end(),
                                    [](const auto& a, const auto& b) {
@@ -54,7 +58,6 @@ void ltr::log(vector<string> msg, bool header, vector<const char*> colors, vecto
     }
 
     string head;
-
     if (header)
         head = log(sizes);
 
@@ -62,12 +65,8 @@ void ltr::log(vector<string> msg, bool header, vector<const char*> colors, vecto
     stream << "| ";
 
     for (int i = 0; i < msg.size(); i++) {
-        string start;
-        string end = RESET;
-        if (colors.empty())
-            end = "";
-        else
-            start = colors[i];
+        string start = colors[i];
+        string end = start.empty() ? "" : RESET;
         stream << start << std::setw(sizes[i]) << msg[i] << end << " | ";
     }
 
@@ -126,7 +125,7 @@ const char* ltr::color_score(double value) {
 
 const char * ltr::color_delta(double value) {
     if (value < 0.0) return RED;
-    if (value == 0.0) return BLACK;
+    if (value == 0.0) return "";
     return GREEN;
 }
 
