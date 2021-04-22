@@ -18,6 +18,7 @@ add_subdirectory(external/googletest)
 
 enable_testing()
 add_subdirectory(tests)
+add_subdirectory(examples)
 
 add_subdirectory(docs)
 

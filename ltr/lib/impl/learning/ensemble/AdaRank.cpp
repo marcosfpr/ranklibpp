@@ -337,7 +337,7 @@ void AdaRank::printHeader() {
          "Status"}, true, "", {7, 8, 9, 9, 9, 9, 9});
 }
 
-void AdaRank::printIter(int it, int feature, double train_score, double train_improve, double val_score, double val_improve, string status){
+void AdaRank::printIter(int it, int feature, double train_score, double train_improve, double val_score, double val_improve, string status){ // NOLINT(performance-unnecessary-value-param)
     if (! verbose) return;
     ltr::log({std::to_string(it), std::to_string(feature), std::to_string(train_score), std::to_string(train_improve),
          (val_score != 0.0) ? std::to_string(val_score) : "", (val_score != 0.0) ? std::to_string(val_improve) : "", status},

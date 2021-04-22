@@ -1,4 +1,5 @@
 find_package(Boost COMPONENTS log log_setup REQUIRED)
+
 add_definitions(-DBOOST_LOG_DYN_LINK)
 
 set(SOURCES
@@ -41,7 +42,3 @@ install(TARGETS ltr
   ARCHIVE DESTINATION lib
   PUBLIC_HEADER DESTINATION api
 )
-
-# test stuff
-add_executable(rank ${SOURCE} main.cpp)
-target_link_libraries(rank ltr pthread)
