@@ -42,11 +42,15 @@ set_tests_properties(func_ltrpp
 
 include(FindValgrind)
 
-add_custom_target(valgrind_test_ltrpp
-        COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:test_ltrpp>
-        DEPENDS test_ltrpp
-        )
-add_custom_target(valgrind_func_ltrpp
-        COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:func_ltrpp>
-        DEPENDS func_ltrpp
-        )
+if(VALGRIND_FOUND)
+
+        add_custom_target(valgrind_test_ltrpp
+                COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:test_ltrpp>
+                DEPENDS test_ltrpp
+                )
+        add_custom_target(valgrind_func_ltrpp
+                COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:func_ltrpp>
+                DEPENDS func_ltrpp
+                )
+                
+endif()
