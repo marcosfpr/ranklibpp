@@ -94,36 +94,38 @@ if (BUILD_TESTS)
                 message(FATAL_ERROR "genhtml not found!")
         endif()
 
-        add_custom_target(gcov
-                COMMAND mkdir -p Coverage
-                DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Testing
-                WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-                )
+        if (GCOV AND LCOV AND GENHTML)
+                add_custom_target(gcov
+                        COMMAND mkdir -p Coverage
+                        DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Testing
+                        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+                        )
 
-        add_custom_command(TARGET gcov POST_BUILD
-                COMMAND find ${CMAKE_BINARY_DIR} -type f -name *.cpp.o -exec ${GCOV} {} "\;"
-                COMMAND echo "Coverage reports generated."
-                COMMAND echo "You can find them on ${CMAKE_BINARY_DIR}/Coverage"
-                WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Coverage
-                COMMENT "Coverage Reports Generated"
-                )
+                add_custom_command(TARGET gcov POST_BUILD
+                        COMMAND find ${CMAKE_BINARY_DIR} -type f -name *.cpp.o -exec ${GCOV} {} "\;"
+                        COMMAND echo "Coverage reports generated."
+                        COMMAND echo "You can find them on ${CMAKE_BINARY_DIR}/Coverage"
+                        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Coverage
+                        COMMENT "Coverage Reports Generated"
+                        )
 
-        add_custom_target(lcov
-                COMMAND mkdir -p Coverage
-                DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Testing
-                WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
-                )
+                add_custom_target(lcov
+                        COMMAND mkdir -p Coverage
+                        DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Testing
+                        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}
+                        )
 
-        add_custom_command(TARGET lcov POST_BUILD
-                COMMAND ${LCOV} --directory .. --capture --output-file lcov.info
-                COMMAND ${GENHTML} -o . lcov.info
-                COMMAND echo "Coverage reports generated."
-                COMMAND echo "You can find them on ${CMAKE_BINARY_DIR}/Coverage"
-                WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Coverage
-                COMMENT "Coverage Reports Generated"
-                )
+                add_custom_command(TARGET lcov POST_BUILD
+                        COMMAND ${LCOV} --directory .. --capture --output-file lcov.info
+                        COMMAND ${GENHTML} -o . lcov.info
+                        COMMAND echo "Coverage reports generated."
+                        COMMAND echo "You can find them on ${CMAKE_BINARY_DIR}/Coverage"
+                        WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Coverage
+                        COMMENT "Coverage Reports Generated"
+                        )
 
-        set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES Coverage)
+                set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES Coverage)
+        endif()
 endif ()
 
 if (BUILD_DOCS)
