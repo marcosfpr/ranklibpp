@@ -24,7 +24,7 @@ jobs:
 
   Build:
     env:
-      OHSUMED:./tests/benchmarks/OHSUMED
+      OHSUMED: ./tests/benchmarks/OHSUMED
 
     name: ${{matrix.config.name}}
     runs-on: ${{matrix.config.os}}
