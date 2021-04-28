@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="structltr_1_1key__value" kind="struct" language="C++" prot="public">
+    <compoundname>ltr::key_value</compoundname>
+    <includes refid="_key_value_8hpp" local="no">KeyValue.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structltr_1_1key__value_1a473ab9eb62dbbfcc550bb16a9f624815" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ltr::key_value::key</definition>
+        <argsstring></argsstring>
+        <name>key</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" line="36" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structltr_1_1key__value_1aaf038cf17972b7e88579cf959360657c" prot="public" static="no" mutable="no">
+        <type>string</type>
+        <definition>string ltr::key_value::value</definition>
+        <argsstring></argsstring>
+        <name>value</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" line="36" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Simple representation of key-value pairs handled by learning algorithms. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="1">
+        <label>ltr::key_value</label>
+        <link refid="structltr_1_1key__value"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>key</edgelabel>
+          <edgelabel>value</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" line="35" column="24" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" bodystart="35" bodyend="37"/>
+    <listofallmembers>
+      <member refid="structltr_1_1key__value_1a473ab9eb62dbbfcc550bb16a9f624815" prot="public" virt="non-virtual"><scope>ltr::key_value</scope><name>key</name></member>
+      <member refid="structltr_1_1key__value_1aaf038cf17972b7e88579cf959360657c" prot="public" virt="non-virtual"><scope>ltr::key_value</scope><name>value</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

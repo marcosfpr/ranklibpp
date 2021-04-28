@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mapscorer_87',['MAPScorer',['../classltr_1_1_m_a_p_scorer.html',1,'ltr']]],
-  ['metricscorer_88',['MetricScorer',['../classltr_1_1_metric_scorer.html',1,'ltr']]]
+  ['learner_74',['Learner',['../classltr_1_1_learner.html',1,'ltr']]],
+  ['ltrerror_75',['LtrError',['../classltr_1_1_ltr_error.html',1,'ltr']]]
 ];

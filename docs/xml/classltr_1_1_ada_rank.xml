@@ -3,44 +3,205 @@
   <compounddef id="classltr_1_1_ada_rank" kind="class" language="C++" prot="public">
     <compoundname>ltr::AdaRank</compoundname>
     <basecompoundref refid="classltr_1_1_ranker" prot="public" virt="non-virtual">ltr::Ranker</basecompoundref>
-    <includes refid="_ada_rank_8hpp" local="no">AdaRank.hpp</includes>
-      <sectiondef kind="private-attrib">
-      <memberdef kind="variable" id="classltr_1_1_ada_rank_1ae30ae550f2c8349aa3d1abc521698051" prot="private" static="no" mutable="no">
-        <type><ref refid="classltr_1_1_ada_rank_impl" kindref="compound">AdaRankImpl</ref> *</type>
-        <definition>AdaRankImpl* ltr::AdaRank::p_impl</definition>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a7e9cfb55213bd5fc68bb6ce1996f3834" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ltr::AdaRank::iter</definition>
         <argsstring></argsstring>
-        <name>p_impl</name>
+        <name>iter</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="170" column="25" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" bodystart="170" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="201" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a8d4c4cec43f4275bf65adcfdb98b1dac" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ltr::AdaRank::max_consecutive_selections</definition>
+        <argsstring></argsstring>
+        <name>max_consecutive_selections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="201" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a611119a99cd07bcdf031ff06ee4bf8fb" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ltr::AdaRank::consecutive_selections</definition>
+        <argsstring></argsstring>
+        <name>consecutive_selections</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="201" column="45" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a065469e66892d8c46b4ec43db3546eb5" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ltr::AdaRank::previous_feature</definition>
+        <argsstring></argsstring>
+        <name>previous_feature</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="201" column="68" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="201" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1ae26827ed459254fcce4456803875033f" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ltr::AdaRank::tolerance</definition>
+        <argsstring></argsstring>
+        <name>tolerance</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a2396d6c5e8256aa98e064c1f20052644" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ltr::AdaRank::previous_training_score</definition>
+        <argsstring></argsstring>
+        <name>previous_training_score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="26" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a4dab54fcac9818f3577ff01476c0cd2c" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double ltr::AdaRank::previous_validation_score</definition>
+        <argsstring></argsstring>
+        <name>previous_validation_score</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="50" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1aea4dc558a51d4370582b18e65541b193" prot="protected" static="no" mutable="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>vector&lt;double&gt; ltr::AdaRank::sample_weights</definition>
+        <argsstring></argsstring>
+        <name>sample_weights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="205" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="205" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a37eb9c19726847206fb787e6cb366874" prot="protected" static="no" mutable="no">
+        <type>list&lt; double &gt;</type>
+        <definition>list&lt;double&gt; ltr::AdaRank::ranker_weights</definition>
+        <argsstring></argsstring>
+        <name>ranker_weights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="207" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a30e9608e41ea7dd7b5afaf47b9693601" prot="protected" static="no" mutable="no">
+        <type>list&lt; double &gt;</type>
+        <definition>list&lt;double&gt; ltr::AdaRank::best_weights</definition>
+        <argsstring></argsstring>
+        <name>best_weights</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="207" column="29" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a6103b16b878f8156778d599b30540658" prot="protected" static="no" mutable="no">
+        <type>list&lt; <ref refid="classltr_1_1_weak_ranker" kindref="compound">WeakRanker</ref> &gt;</type>
+        <definition>list&lt;WeakRanker&gt; ltr::AdaRank::rankers</definition>
+        <argsstring></argsstring>
+        <name>rankers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="209" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1a86c20ed8f4f0ac9850cd8fc1695732b4" prot="protected" static="no" mutable="no">
+        <type>list&lt; <ref refid="classltr_1_1_weak_ranker" kindref="compound">WeakRanker</ref> &gt;</type>
+        <definition>list&lt;WeakRanker&gt; ltr::AdaRank::best_rankers</definition>
+        <argsstring></argsstring>
+        <name>best_rankers</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="209" column="22" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classltr_1_1_ada_rank_1ab448c368def2d5d07d981a16a56c9bb6" prot="protected" static="no" mutable="no">
+        <type>unordered_set&lt; int &gt;</type>
+        <definition>unordered_set&lt;int&gt; ltr::AdaRank::used_features</definition>
+        <argsstring></argsstring>
+        <name>used_features</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="211" column="23" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="211" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a00533e6bfedf6199a642ae739ec31a42" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1ab9a3085f8d009455fcfa241277533bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>AdaRank::AdaRank</definition>
-        <argsstring>(DataSet dataset, vector&lt; int &gt; features, unique_ptr&lt; MetricScorer &gt; scorer, int nIteration=30, double tolerance=0.002, bool enqueue=true, int maxSelCount=5)</argsstring>
+        <argsstring>(DataSet dataset, unique_ptr&lt; MetricScorer &gt; scorer, vector&lt; int &gt; features={}, DataSet validationSet={}, int iter=50, double tolerance=0.002, int maxConsecutive=5)</argsstring>
         <name>AdaRank</name>
         <param>
-          <type><ref refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kindref="member">DataSet</ref></type>
+          <type>DataSet</type>
           <declname>dataset</declname>
-        </param>
-        <param>
-          <type>vector&lt; int &gt;</type>
-          <declname>features</declname>
         </param>
         <param>
           <type>unique_ptr&lt; <ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref> &gt;</type>
           <declname>scorer</declname>
         </param>
         <param>
+          <type>vector&lt; int &gt;</type>
+          <declname>features</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>DataSet</type>
+          <declname>validationSet</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
           <type>int</type>
-          <declname>nIteration</declname>
-          <defval>30</defval>
+          <declname>iter</declname>
+          <defval>50</defval>
         </param>
         <param>
           <type>double</type>
@@ -48,22 +209,24 @@
           <defval>0.002</defval>
         </param>
         <param>
-          <type>bool</type>
-          <declname>enqueue</declname>
-          <defval>true</defval>
-        </param>
-        <param>
           <type>int</type>
-          <declname>maxSelCount</declname>
+          <declname>maxConsecutive</declname>
           <defval>5</defval>
         </param>
         <briefdescription>
-<para>Construct a new <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> object. </para>
         </briefdescription>
         <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
+<para>Construct a new <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> object <parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>dataset</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>scorer</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para>
@@ -79,7 +242,31 @@
 </parameteritem>
 <parameteritem>
 <parameternamelist>
-<parametername>scorer</parametername>
+<parametername>validationSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>iter</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tolerance</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>maxConsecutive</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para>
@@ -90,41 +277,27 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="33" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="33" bodyend="36"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="87" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="55" bodyend="73"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a376f76b6b374de8b674fe982172d3d18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>AdaRank::~AdaRank</definition>
-        <argsstring>()</argsstring>
-        <name>~AdaRank</name>
-        <briefdescription>
-<para>Destroy the <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> object. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="40" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="39" bodyend="41"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a069f54eb1100aa039cb7ca6a8fc9561f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type></type>
-        <definition>AdaRank::AdaRank</definition>
-        <argsstring>(const AdaRank &amp;rk)</argsstring>
-        <name>AdaRank</name>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1aacac7068a5546dd281d872f6bcd6aa62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdaRank::fit</definition>
+        <argsstring>(bool verbose)</argsstring>
+        <name>fit</name>
         <param>
-          <type>const <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> &amp;</type>
-          <declname>rk</declname>
+          <type>bool</type>
+          <declname>verbose</declname>
         </param>
         <briefdescription>
-<para>Construct a new <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> object. </para>
+<para>Learn to rank based on <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>rk</parametername>
+<parametername>verbose</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>indicates to print steps </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -132,80 +305,20 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="47" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="44" bodyend="46"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="94" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="216" bodyend="241"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1acfa96e794371cdacb5518b02dbac0f3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type><ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> &amp;</type>
-        <definition>AdaRank &amp; AdaRank::operator=</definition>
-        <argsstring>(const AdaRank &amp;rk)</argsstring>
-        <name>operator=</name>
-        <param>
-          <type>const <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> &amp;</type>
-          <declname>rk</declname>
-        </param>
-        <briefdescription>
-<para>Assign operator for <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref>. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>rk</parametername>
-</parameternamelist>
-<parameterdescription>
-<para>other ranker </para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-<simplesect kind="return"><para><ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref>&amp; </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="55" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="49" bodyend="51"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a12377c6c46ecfe8af2ccf801e2b97019" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void AdaRank::start</definition>
-        <argsstring>() override</argsstring>
-        <name>start</name>
-        <reimplements refid="classltr_1_1_ranker_1aaa7e4f3b4349cbc510b259959cb62e3e">start</reimplements>
-        <briefdescription>
-<para>Initialization of Ranking algorithm. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="62" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="54" bodyend="56"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1aa339f77d275838bdac0c846f7b860e73" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void AdaRank::learn</definition>
-        <argsstring>() override</argsstring>
-        <name>learn</name>
-        <reimplements refid="classltr_1_1_ranker_1a5240af98d2e6d2b0c1006bade11108e7">learn</reimplements>
-        <briefdescription>
-<para>Learn method for some learning algorithm. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="68" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="59" bodyend="61"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1adb41492ecfc39e77196b059dd6face78" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1addc477120ac720e3c25b0eb9d3618fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>double</type>
-        <definition>double AdaRank::eval</definition>
+        <definition>double AdaRank::predict</definition>
         <argsstring>(ReadableDataPoint dp) override</argsstring>
-        <name>eval</name>
-        <reimplements refid="classltr_1_1_ranker_1a1516810fc4c57e57afa8c265ecb9c46d">eval</reimplements>
+        <name>predict</name>
+        <reimplements refid="classltr_1_1_ranker_1a7a37948dc9fa6641b3952b22944fffce">predict</reimplements>
         <param>
           <type>ReadableDataPoint</type>
           <declname>dp</declname>
         </param>
         <briefdescription>
-<para>Evaluation of a single datapoint object. </para>
+<para><ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> evaluation of a single datapoint object. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -223,122 +336,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="76" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="64" bodyend="66"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="102" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="243" bodyend="254"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a4bc24c0bdfd7563362e88123c6040605" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>string</type>
-        <definition>string AdaRank::toString</definition>
-        <argsstring>() override</argsstring>
-        <name>toString</name>
-        <reimplements refid="classltr_1_1_ranker_1ad1533de97cfb7bc63b6ad77a1d755dcc">toString</reimplements>
-        <briefdescription>
-<para>String representation of ranker. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>string </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="83" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="69" bodyend="71"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a3cc26e5e7378fcbaee68fcf306fefba2" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>string</type>
-        <definition>string AdaRank::model</definition>
-        <argsstring>() override</argsstring>
-        <name>model</name>
-        <reimplements refid="classltr_1_1_ranker_1af4cba93739d84ef26d5c40259e5d6b52">model</reimplements>
-        <briefdescription>
-<para>String representation of model. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>string </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="90" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="73" bodyend="75"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1ac4a88ed483c22e4a70edb23d4a51ded4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a5dff0be5e4505ac0ac815ba698b39e32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void AdaRank::loadString</definition>
-        <argsstring>(string model) override</argsstring>
-        <name>loadString</name>
-        <reimplements refid="classltr_1_1_ranker_1a567ec8aaf3f44fb0dffcd797333f7a79">loadString</reimplements>
-        <param>
-          <type>string</type>
-          <declname>model</declname>
-        </param>
-        <briefdescription>
-<para>Load model from string. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>model</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="97" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="77" bodyend="79"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1acf031a815215fd100a653a58efd7f0fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>string</type>
-        <definition>string AdaRank::name</definition>
-        <argsstring>() override</argsstring>
-        <name>name</name>
-        <reimplements refid="classltr_1_1_ranker_1ad75d03d7a7abc271e81ea7d647299d17">name</reimplements>
-        <briefdescription>
-<para>String name of model. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>string </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="104" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="81" bodyend="83"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a701ae320a3369c240d15dcc264c91323" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
-        <type>void</type>
-        <definition>void AdaRank::print</definition>
-        <argsstring>() override</argsstring>
-        <name>print</name>
-        <reimplements refid="classltr_1_1_ranker_1a38b579c9fe937a99184770bf553244a9">print</reimplements>
-        <briefdescription>
-<para>Logging model stats. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="110" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="85" bodyend="87"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a955077fca9d727a1e6991acdb991b656" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void AdaRank::setIterations</definition>
-        <argsstring>(int nIteration)</argsstring>
-        <name>setIterations</name>
+        <definition>void AdaRank::setIter</definition>
+        <argsstring>(int iter)</argsstring>
+        <name>setIter</name>
         <param>
           <type>int</type>
-          <declname>nIteration</declname>
+          <declname>iter</declname>
         </param>
         <briefdescription>
-<para>Set the number of Iterations. </para>
+<para>Set the Iter object. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>nIteration</parametername>
+<parametername>iter</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para>
@@ -349,24 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="117" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="89" bodyend="91"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1aeed163a1b4c2135d0d27597d640afdbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>int</type>
-        <definition>int AdaRank::getIterations</definition>
-        <argsstring>()</argsstring>
-        <name>getIterations</name>
-        <briefdescription>
-<para>Get the number of Iterations. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>int </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="124" column="17" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="94" bodyend="96"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="109" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="75" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1ab8c0285d8b8b43c1749be4d7504bc572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -378,7 +376,7 @@
           <declname>tolerance</declname>
         </param>
         <briefdescription>
-<para>Set the Tolerance. </para>
+<para>Set the Tolerance object. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -394,88 +392,24 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="131" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="98" bodyend="100"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="116" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="79" bodyend="81"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1acbc552df345bc06e4dad9384e784e5d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>double</type>
-        <definition>double AdaRank::getTolerance</definition>
-        <argsstring>()</argsstring>
-        <name>getTolerance</name>
-        <briefdescription>
-<para>Get the Tolerance. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>double </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="138" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="102" bodyend="104"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a0b0a72dd61c32f6368ac7ebb594c9200" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a64f9d600cc1a9efe69e6f78a7ba17306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
-        <definition>void AdaRank::setEnqueue</definition>
-        <argsstring>(bool enqueue)</argsstring>
-        <name>setEnqueue</name>
-        <param>
-          <type>bool</type>
-          <declname>enqueue</declname>
-        </param>
-        <briefdescription>
-<para>Set if Enqueue. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>enqueue</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="145" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="107" bodyend="109"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1adb9bf4ec936f84fb942797e874cf8571" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bool</type>
-        <definition>bool AdaRank::getEnqueue</definition>
-        <argsstring>()</argsstring>
-        <name>getEnqueue</name>
-        <briefdescription>
-<para>Get the Enqueue value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>true </para>
-</simplesect>
-<simplesect kind="return"><para>false </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="153" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="111" bodyend="113"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1a505cededf0e0758350a668a70523fc53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void AdaRank::setMaxSelCount</definition>
-        <argsstring>(int maxSelCount)</argsstring>
-        <name>setMaxSelCount</name>
+        <definition>void AdaRank::setConsecutiveSelections</definition>
+        <argsstring>(int consecutiveSelections)</argsstring>
+        <name>setConsecutiveSelections</name>
         <param>
           <type>int</type>
-          <declname>maxSelCount</declname>
+          <declname>consecutiveSelections</declname>
         </param>
         <briefdescription>
-<para>Set the the max number of times a feature can be selected consecutively before being removed. </para>
+<para>Set the Consecutive Selections object. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>maxSelCount</parametername>
+<parametername>consecutiveSelections</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para>
@@ -486,28 +420,357 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="160" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="115" bodyend="117"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="123" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="83" bodyend="85"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1af7ad029fa7508b8ea03cd2671c8bb62f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1abf8c0dad49de3ddeebcb6686384b9e0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
-        <definition>int AdaRank::getMaxSelCount</definition>
-        <argsstring>()</argsstring>
-        <name>getMaxSelCount</name>
+        <definition>int AdaRank::getIter</definition>
+        <argsstring>() const</argsstring>
+        <name>getIter</name>
         <briefdescription>
-<para>Get the the max number of times a feature can be selected consecutively before being removed. </para>
+<para>Get the number of iterations used in <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>int </para>
+<para><simplesect kind="return"><para></para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="167" column="17" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/boosting/AdaRank.cpp" bodystart="119" bodyend="121"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="129" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="321" bodyend="323"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a62d51d15bd50824171d84d19660fcc4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int AdaRank::getConsecutiveSelections</definition>
+        <argsstring>() const</argsstring>
+        <name>getConsecutiveSelections</name>
+        <briefdescription>
+<para>Get the number of consecutive selections of ranker in <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="135" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="325" bodyend="327"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a049c9e0e051a19332dc0cdf2e33e9f59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double AdaRank::getTolerance</definition>
+        <argsstring>() const</argsstring>
+        <name>getTolerance</name>
+        <briefdescription>
+<para>Get the tolerance used in <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="141" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="329" bodyend="331"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1aad97b40a99fa1c70a8bffa66fa9a11fe" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AdaRank::saveJSON</definition>
+        <argsstring>(std::ofstream &amp;file) override</argsstring>
+        <name>saveJSON</name>
+        <reimplements refid="classltr_1_1_ranker_1a9eee499b16c0c26b9d761dd753a791ff">saveJSON</reimplements>
+        <param>
+          <type>std::ofstream &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Save json in file <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="149" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="256" bodyend="292"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a6f60500f9b913eaf6b5ef50d41fdc9db" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void AdaRank::loadJSON</definition>
+        <argsstring>(std::ifstream &amp;file) override</argsstring>
+        <name>loadJSON</name>
+        <reimplements refid="classltr_1_1_ranker_1a3cd3b62ffd770b5074779de01632d3fc">loadJSON</reimplements>
+        <param>
+          <type>std::ifstream &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Load json from file <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="155" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="294" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a770b7bad96e6e7423ee0755b3d85d89c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdaRank::learn</definition>
+        <argsstring>(int start)</argsstring>
+        <name>learn</name>
+        <param>
+          <type>int</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+<para>Learn the data. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>start</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>iteration </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="162" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="120" bodyend="214"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a958b9eaa0d4031dc1b8b3d51d2e1a4a9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classltr_1_1_weak_ranker" kindref="compound">WeakRanker</ref></type>
+        <definition>WeakRanker AdaRank::selectWeakRanker</definition>
+        <argsstring>()</argsstring>
+        <name>selectWeakRanker</name>
+        <briefdescription>
+<para>Select method of boosting technique. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="classltr_1_1_weak_ranker" kindref="compound">WeakRanker</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="169" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="97" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a5823949cfd30d5b4fbbed0d506203faa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double AdaRank::evaluateWeakRanker</definition>
+        <argsstring>(WeakRanker &amp;wk)</argsstring>
+        <name>evaluateWeakRanker</name>
+        <param>
+          <type><ref refid="classltr_1_1_weak_ranker" kindref="compound">WeakRanker</ref> &amp;</type>
+          <declname>wk</declname>
+        </param>
+        <briefdescription>
+<para>Evaluate weak ranker in training samples. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>wk</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double score </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="177" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="87" bodyend="95"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a80ce9f75c0d63f2b63d463a459d6dbb7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdaRank::printHeader</definition>
+        <argsstring>()</argsstring>
+        <name>printHeader</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print header table when starts to fit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="182" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="333" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a6280b97b78e53e073d576249569d1825" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdaRank::printIter</definition>
+        <argsstring>(int it, int feature, double train_score, double train_improve, double val_score, double val_improve, string status)</argsstring>
+        <name>printIter</name>
+        <param>
+          <type>int</type>
+          <declname>it</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>feature</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>train_score</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>train_improve</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val_score</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>val_improve</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print each iter step <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>it</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>feature</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>train_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>train_improve</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val_score</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>val_improve</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="194" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="340" bodyend="346"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a4eb2aa48c463ac876e2eb60d6990c26c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void AdaRank::printResults</definition>
+        <argsstring>()</argsstring>
+        <name>printResults</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Print <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> results after fit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="199" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="348" bodyend="359"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a7b71a63f3250e7e82422cb5d468a3a58" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>ltr::AdaRank::AdaRank</definition>
+        <argsstring>(const AdaRank &amp;rk)</argsstring>
+        <name>AdaRank</name>
+        <param>
+          <type>const <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> &amp;</type>
+          <declname>rk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="215" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1ae4f9f50c8b2a8e2cf3edbce9c688d47a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> &amp;</type>
+        <definition>AdaRank&amp; ltr::AdaRank::operator=</definition>
+        <argsstring>(const AdaRank &amp;rk)</argsstring>
+        <name>operator=</name>
+        <param>
+          <type>const <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> &amp;</type>
+          <declname>rk</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="216" column="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Listwise boost algorithm based on AdaBoost. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
@@ -521,56 +784,132 @@
       <node id="2">
         <label>ltr::Ranker</label>
         <link refid="classltr_1_1_ranker"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>ltr::Learner</label>
+        <link refid="classltr_1_1_learner"/>
       </node>
     </inheritancegraph>
     <collaborationgraph>
+      <node id="9">
+        <label>list&lt; ltr::WeakRanker &gt;</label>
+      </node>
       <node id="1">
         <label>ltr::AdaRank</label>
         <link refid="classltr_1_1_ada_rank"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
+        <childnode refid="7" relation="usage">
+          <edgelabel>best_weights</edgelabel>
+          <edgelabel>ranker_weights</edgelabel>
+        </childnode>
+        <childnode refid="8" relation="usage">
+          <edgelabel>used_features</edgelabel>
+        </childnode>
+        <childnode refid="9" relation="usage">
+          <edgelabel>rankers</edgelabel>
+          <edgelabel>best_rankers</edgelabel>
+        </childnode>
+        <childnode refid="10" relation="usage">
+          <edgelabel>sample_weights</edgelabel>
+        </childnode>
+      </node>
+      <node id="7">
+        <label>list&lt; double &gt;</label>
+      </node>
+      <node id="10">
+        <label>vector&lt; double &gt;</label>
+      </node>
+      <node id="8">
+        <label>unordered_set&lt; int &gt;</label>
       </node>
       <node id="2">
         <label>ltr::Ranker</label>
         <link refid="classltr_1_1_ranker"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>scorer</edgelabel>
+        </childnode>
+        <childnode refid="5" relation="usage">
+          <edgelabel>features</edgelabel>
+        </childnode>
+        <childnode refid="6" relation="usage">
+          <edgelabel>validation_samples</edgelabel>
+          <edgelabel>training_samples</edgelabel>
+        </childnode>
+      </node>
+      <node id="5">
+        <label>vector&lt; int &gt;</label>
+      </node>
+      <node id="3">
+        <label>ltr::Learner</label>
+        <link refid="classltr_1_1_learner"/>
+      </node>
+      <node id="6">
+        <label>list&lt; RankList &gt;</label>
+      </node>
+      <node id="4">
+        <label>unique_ptr&lt; ltr::MetricScorer &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="24" column="32" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" bodystart="24" bodyend="171"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="74" column="32" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="74" bodyend="217"/>
     <listofallmembers>
-      <member refid="classltr_1_1_ada_rank_1a00533e6bfedf6199a642ae739ec31a42" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>AdaRank</name></member>
-      <member refid="classltr_1_1_ada_rank_1a069f54eb1100aa039cb7ca6a8fc9561f" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>AdaRank</name></member>
-      <member refid="classltr_1_1_ada_rank_1adb41492ecfc39e77196b059dd6face78" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>eval</name></member>
-      <member refid="classltr_1_1_ada_rank_1adb9bf4ec936f84fb942797e874cf8571" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getEnqueue</name></member>
+      <member refid="classltr_1_1_ada_rank_1ab9a3085f8d009455fcfa241277533bfa" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>AdaRank</name></member>
+      <member refid="classltr_1_1_ada_rank_1a7b71a63f3250e7e82422cb5d468a3a58" prot="private" virt="non-virtual"><scope>ltr::AdaRank</scope><name>AdaRank</name></member>
+      <member refid="classltr_1_1_ada_rank_1a86c20ed8f4f0ac9850cd8fc1695732b4" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>best_rankers</name></member>
+      <member refid="classltr_1_1_ada_rank_1a30e9608e41ea7dd7b5afaf47b9693601" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>best_weights</name></member>
+      <member refid="classltr_1_1_ada_rank_1a611119a99cd07bcdf031ff06ee4bf8fb" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>consecutive_selections</name></member>
+      <member refid="classltr_1_1_ada_rank_1a5823949cfd30d5b4fbbed0d506203faa" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>evaluateWeakRanker</name></member>
+      <member refid="classltr_1_1_ranker_1a017be4905d31b7fcf3e070711e439b45" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>extractFeatures</name></member>
+      <member refid="classltr_1_1_ranker_1aacddf21fc1ab2c2b9c71498dfba1351b" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>features</name></member>
+      <member refid="classltr_1_1_ada_rank_1aacac7068a5546dd281d872f6bcd6aa62" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>fit</name></member>
+      <member refid="classltr_1_1_ranker_1ab613fb21ed03dbe10fcabb77b29f89d8" prot="public" virt="virtual" ambiguityscope="ltr::Ranker::"><scope>ltr::AdaRank</scope><name>fit</name></member>
+      <member refid="classltr_1_1_ada_rank_1a62d51d15bd50824171d84d19660fcc4a" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getConsecutiveSelections</name></member>
       <member refid="classltr_1_1_ranker_1a584b627bf90240d0004e2d7cd09294c1" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getFeatures</name></member>
-      <member refid="classltr_1_1_ada_rank_1aeed163a1b4c2135d0d27597d640afdbe" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getIterations</name></member>
-      <member refid="classltr_1_1_ada_rank_1af7ad029fa7508b8ea03cd2671c8bb62f" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getMaxSelCount</name></member>
-      <member refid="classltr_1_1_ada_rank_1acbc552df345bc06e4dad9384e784e5d0" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getTolerance</name></member>
-      <member refid="classltr_1_1_ranker_1ac5b782501ae5f4543141655454af75b8" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getTrainingScore</name></member>
-      <member refid="classltr_1_1_ranker_1ab9051e82a25fd91ff0a0e1a15834775e" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getValidationScore</name></member>
-      <member refid="classltr_1_1_ada_rank_1aa339f77d275838bdac0c846f7b860e73" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>learn</name></member>
-      <member refid="classltr_1_1_ada_rank_1ac4a88ed483c22e4a70edb23d4a51ded4" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>loadString</name></member>
-      <member refid="classltr_1_1_ada_rank_1a3cc26e5e7378fcbaee68fcf306fefba2" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>model</name></member>
-      <member refid="classltr_1_1_ada_rank_1acf031a815215fd100a653a58efd7f0fd" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>name</name></member>
-      <member refid="classltr_1_1_ada_rank_1acfa96e794371cdacb5518b02dbac0f3b" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>operator=</name></member>
-      <member refid="classltr_1_1_ranker_1a036571337f575241f661f452faf870b8" prot="public" virt="non-virtual" ambiguityscope="ltr::Ranker::"><scope>ltr::AdaRank</scope><name>operator=</name></member>
-      <member refid="classltr_1_1_ada_rank_1ae30ae550f2c8349aa3d1abc521698051" prot="private" virt="non-virtual"><scope>ltr::AdaRank</scope><name>p_impl</name></member>
-      <member refid="classltr_1_1_ada_rank_1a701ae320a3369c240d15dcc264c91323" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>print</name></member>
-      <member refid="classltr_1_1_ranker_1a51882650994d54f692b8715e379ab4dd" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>rank</name></member>
-      <member refid="classltr_1_1_ranker_1ad314913beb5d2ccbcf19ed06a9b60faf" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>rank</name></member>
-      <member refid="classltr_1_1_ranker_1a2e68024d42f548eb46c31fa463d6025f" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>Ranker</name></member>
-      <member refid="classltr_1_1_ranker_1a4e67022d26ca959c71bdd20b93388e60" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>Ranker</name></member>
-      <member refid="classltr_1_1_ranker_1a9f53df9271fa870744b9e891d652c4f5" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>save</name></member>
-      <member refid="classltr_1_1_ada_rank_1a0b0a72dd61c32f6368ac7ebb594c9200" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setEnqueue</name></member>
-      <member refid="classltr_1_1_ranker_1aa6d964305fa87c7f6cae57a18ee13c2b" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setFeatures</name></member>
-      <member refid="classltr_1_1_ada_rank_1a955077fca9d727a1e6991acdb991b656" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setIterations</name></member>
-      <member refid="classltr_1_1_ada_rank_1a505cededf0e0758350a668a70523fc53" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setMaxSelCount</name></member>
-      <member refid="classltr_1_1_ranker_1a3a8ca56cac6338257b3af3008653098f" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setScorer</name></member>
+      <member refid="classltr_1_1_ada_rank_1abf8c0dad49de3ddeebcb6686384b9e0c" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getIter</name></member>
+      <member refid="classltr_1_1_ada_rank_1a049c9e0e051a19332dc0cdf2e33e9f59" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getTolerance</name></member>
+      <member refid="classltr_1_1_ranker_1ae5e97bcb0d9c8240eb79b7f1b6dee67b" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>getTrainingScore</name></member>
+      <member refid="classltr_1_1_ranker_1aa91b80e2d2964e052168d92c6428a234" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>getValidationScore</name></member>
+      <member refid="classltr_1_1_ada_rank_1a7e9cfb55213bd5fc68bb6ce1996f3834" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>iter</name></member>
+      <member refid="classltr_1_1_ada_rank_1a770b7bad96e6e7423ee0755b3d85d89c" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>learn</name></member>
+      <member refid="classltr_1_1_ranker_1a3061f589c024bd3d7c6cd7ea8b663c1a" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>load</name></member>
+      <member refid="classltr_1_1_ada_rank_1a6f60500f9b913eaf6b5ef50d41fdc9db" prot="protected" virt="virtual"><scope>ltr::AdaRank</scope><name>loadJSON</name></member>
+      <member refid="classltr_1_1_ada_rank_1a8d4c4cec43f4275bf65adcfdb98b1dac" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>max_consecutive_selections</name></member>
+      <member refid="classltr_1_1_ada_rank_1ae4f9f50c8b2a8e2cf3edbce9c688d47a" prot="private" virt="non-virtual"><scope>ltr::AdaRank</scope><name>operator=</name></member>
+      <member refid="classltr_1_1_ada_rank_1addc477120ac720e3c25b0eb9d3618fb8" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>predict</name></member>
+      <member refid="classltr_1_1_ada_rank_1a065469e66892d8c46b4ec43db3546eb5" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>previous_feature</name></member>
+      <member refid="classltr_1_1_ada_rank_1a2396d6c5e8256aa98e064c1f20052644" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>previous_training_score</name></member>
+      <member refid="classltr_1_1_ada_rank_1a4dab54fcac9818f3577ff01476c0cd2c" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>previous_validation_score</name></member>
+      <member refid="classltr_1_1_ada_rank_1a80ce9f75c0d63f2b63d463a459d6dbb7" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>printHeader</name></member>
+      <member refid="classltr_1_1_ada_rank_1a6280b97b78e53e073d576249569d1825" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>printIter</name></member>
+      <member refid="classltr_1_1_ada_rank_1a4eb2aa48c463ac876e2eb60d6990c26c" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>printResults</name></member>
+      <member refid="classltr_1_1_learner_1a8606e514b58a7e0caf51cfff1e247e44" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>rank</name></member>
+      <member refid="classltr_1_1_learner_1a5f32be74efa7fd80679d688def13c58e" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>rank</name></member>
+      <member refid="classltr_1_1_ranker_1ab8288ded6770388b10235f002a08dddc" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>Ranker</name></member>
+      <member refid="classltr_1_1_ada_rank_1a37eb9c19726847206fb787e6cb366874" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>ranker_weights</name></member>
+      <member refid="classltr_1_1_ada_rank_1a6103b16b878f8156778d599b30540658" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>rankers</name></member>
+      <member refid="classltr_1_1_ada_rank_1aea4dc558a51d4370582b18e65541b193" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>sample_weights</name></member>
+      <member refid="classltr_1_1_ranker_1a74f4aeca4387a60a1e8608c7efa71c5a" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>save</name></member>
+      <member refid="classltr_1_1_ada_rank_1aad97b40a99fa1c70a8bffa66fa9a11fe" prot="protected" virt="virtual"><scope>ltr::AdaRank</scope><name>saveJSON</name></member>
+      <member refid="classltr_1_1_ranker_1ad7e00be5a0f73626e8a2fec615e212df" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>score_training</name></member>
+      <member refid="classltr_1_1_ranker_1a906c6adc01f500312bd4a65682fa7bf5" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>score_validation</name></member>
+      <member refid="classltr_1_1_ranker_1a9a065766696a7e11451167fc736444a9" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>scorer</name></member>
+      <member refid="classltr_1_1_ada_rank_1a958b9eaa0d4031dc1b8b3d51d2e1a4a9" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>selectWeakRanker</name></member>
+      <member refid="classltr_1_1_ada_rank_1a64f9d600cc1a9efe69e6f78a7ba17306" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setConsecutiveSelections</name></member>
+      <member refid="classltr_1_1_ranker_1a9d702d1f3e458a71fd511e6594c671d0" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setFeatures</name></member>
+      <member refid="classltr_1_1_ada_rank_1a5dff0be5e4505ac0ac815ba698b39e32" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setIter</name></member>
+      <member refid="classltr_1_1_ranker_1a548f135d7bc17adcf98ce2e2181dc2cb" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setScorer</name></member>
       <member refid="classltr_1_1_ada_rank_1ab8c0285d8b8b43c1749be4d7504bc572" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setTolerance</name></member>
       <member refid="classltr_1_1_ranker_1abc1372c4de267531fef282da26300744" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setTrainingSet</name></member>
       <member refid="classltr_1_1_ranker_1a1e1f6a229ac7771342218361b07b071a" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>setValidationSet</name></member>
-      <member refid="classltr_1_1_ada_rank_1a12377c6c46ecfe8af2ccf801e2b97019" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>start</name></member>
-      <member refid="classltr_1_1_ada_rank_1a4bc24c0bdfd7563362e88123c6040605" prot="public" virt="virtual"><scope>ltr::AdaRank</scope><name>toString</name></member>
-      <member refid="classltr_1_1_ada_rank_1a376f76b6b374de8b674fe982172d3d18" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>~AdaRank</name></member>
+      <member refid="classltr_1_1_ada_rank_1ae26827ed459254fcce4456803875033f" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>tolerance</name></member>
+      <member refid="classltr_1_1_ranker_1a5e179960d11ea34cd9e4415661243102" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>training_samples</name></member>
+      <member refid="classltr_1_1_ada_rank_1ab448c368def2d5d07d981a16a56c9bb6" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>used_features</name></member>
+      <member refid="classltr_1_1_ranker_1a6773d8c83041f8c46d3b16020732d13e" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>validation_samples</name></member>
+      <member refid="classltr_1_1_ranker_1ab5ad64e7d1ca0fc49e50d7c322135bbf" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>verbose</name></member>
       <member refid="classltr_1_1_ranker_1aa24c1f390119dcb7bf1520d99d09dd52" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>~Ranker</name></member>
     </listofallmembers>
   </compounddef>

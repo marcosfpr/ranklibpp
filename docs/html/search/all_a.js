@@ -1,13 +1,9 @@
 var searchData=
 [
-  ['rank_46',['rank',['../classltr_1_1_ranker.html#a51882650994d54f692b8715e379ab4dd',1,'ltr::Ranker::rank(DataSet &amp;l)'],['../classltr_1_1_ranker.html#ad314913beb5d2ccbcf19ed06a9b60faf',1,'ltr::Ranker::rank(RankList &amp;rl)']]],
-  ['ranker_47',['Ranker',['../classltr_1_1_ranker.html',1,'ltr::Ranker'],['../classltr_1_1_ranker.html#a2e68024d42f548eb46c31fa463d6025f',1,'ltr::Ranker::Ranker(DataSet dataset, unique_ptr&lt; MetricScorer &gt; scorer, vector&lt; int &gt; features={})'],['../classltr_1_1_ranker.html#a4e67022d26ca959c71bdd20b93388e60',1,'ltr::Ranker::Ranker(const Ranker &amp;rk)']]],
-  ['ranker_2ecpp_48',['Ranker.cpp',['../_ranker_8cpp.html',1,'']]],
-  ['ranker_2ehpp_49',['Ranker.hpp',['../_ranker_8hpp.html',1,'']]],
-  ['rankerimpl_50',['RankerImpl',['../classltr_1_1_ranker_impl.html',1,'ltr']]],
-  ['ranklist_51',['RankList',['../classltr_1_1_rank_list.html',1,'ltr::RankList'],['../classltr_1_1_rank_list.html#a8ba9c6076cb67897d1cb0ff66336e4f3',1,'ltr::RankList::RankList(Sample data_points)'],['../classltr_1_1_rank_list.html#a7328669b281ef0836e63109bf0b9b066',1,'ltr::RankList::RankList(const RankList &amp;rl, vector&lt; int &gt; idx, int offset=0)'],['../classltr_1_1_rank_list.html#ac4201f553630131084076b8ba856eeea',1,'ltr::RankList::RankList(const RankList &amp;rl)'],['../classltr_1_1_rank_list.html#a67541798cf45331b2be2ce0356331749',1,'ltr::RankList::RankList(RankList &amp;&amp;rl)']]],
-  ['ranklist_2ecpp_52',['RankList.cpp',['../_rank_list_8cpp.html',1,'']]],
-  ['ranklist_2ehpp_53',['RankList.hpp',['../_rank_list_8hpp.html',1,'']]],
-  ['ranklistimpl_54',['RankListImpl',['../classltr_1_1_rank_list_impl.html',1,'ltr']]],
-  ['resetcached_55',['resetCached',['../classltr_1_1_data_point.html#a9ed9b710f37c1a2d7b5489b49f9e5b25',1,'ltr::DataPoint']]]
+  ['permute_34',['permute',['../classltr_1_1_rank_list.html#a93e6b593b766811a5cd77d9ac1b13c1f',1,'ltr::RankList']]],
+  ['precisionscorer_35',['PrecisionScorer',['../classltr_1_1_precision_scorer.html',1,'ltr::PrecisionScorer'],['../classltr_1_1_precision_scorer.html#a2321d69c0c74f0a7cc3a984aec991eb5',1,'ltr::PrecisionScorer::PrecisionScorer(int k=5)'],['../classltr_1_1_precision_scorer.html#aec4bebec6a17259b69c2f9b21836dc91',1,'ltr::PrecisionScorer::PrecisionScorer(const PrecisionScorer &amp;ms)']]],
+  ['predict_36',['predict',['../classltr_1_1_weak_ranker.html#a10cd60e3aa7955a9cb44816e3523a3d1',1,'ltr::WeakRanker::predict()'],['../classltr_1_1_ada_rank.html#addc477120ac720e3c25b0eb9d3618fb8',1,'ltr::AdaRank::predict()'],['../classltr_1_1_learner.html#acf85ea361fa758668779249d77ce2ee5',1,'ltr::Learner::predict()'],['../classltr_1_1_ranker.html#a7a37948dc9fa6641b3952b22944fffce',1,'ltr::Ranker::predict()']]],
+  ['printheader_37',['printHeader',['../classltr_1_1_ada_rank.html#a80ce9f75c0d63f2b63d463a459d6dbb7',1,'ltr::AdaRank']]],
+  ['printiter_38',['printIter',['../classltr_1_1_ada_rank.html#a6280b97b78e53e073d576249569d1825',1,'ltr::AdaRank']]],
+  ['printresults_39',['printResults',['../classltr_1_1_ada_rank.html#a4eb2aa48c463ac876e2eb60d6990c26c',1,'ltr::AdaRank']]]
 ];

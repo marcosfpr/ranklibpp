@@ -1,44 +1,104 @@
+
+#######################################################
+### Source                                          ###
+#######################################################
+
 find_package(Boost COMPONENTS log log_setup REQUIRED)
+if (NOT Boost_FOUND)
+    CPMFindPackage(
+        NAME Boost
+        GITHUB_REPOSITORY Orphis/boost-cmake
+        VERSION 1.71.0
+        # setting FIND_PACKAGE_ARGUMENTS allow usage with `CPM_USE_LOCAL_PACKAGES`
+        FIND_PACKAGE_ARGUMENTS "COMPONENTS log log_setup REQUIRED"
+    )
+endif()
 
 add_definitions(-DBOOST_LOG_DYN_LINK)
 
-set(SOURCES
+set(
+    SOURCES
+
+
     impl/learning/DataPoint.cpp
     impl/learning/RankList.cpp
     impl/learning/DataSet.cpp
     impl/learning/Ranker.cpp
     impl/learning/Learner.cpp
     impl/learning/ensemble/AdaRank.cpp
+
     impl/metric/MetricScorer.cpp
     impl/metric/MAPScorer.cpp
     impl/metric/PrecisionScorer.cpp
     impl/utils/KeyValue.cpp
     impl/utils/Logging.cpp
+
 )
 
 add_library(
-    ltr SHARED
+    ltr 
     ${SOURCES}
 )
 
 target_include_directories(
-    ltr PUBLIC api PRIVATE
-    ${Boost_INCLUDE_DIRS}
+    ltr
+    PUBLIC api
+    PRIVATE
+        ${Boost_INCLUDE_DIRS}
 )
 
 # logging stuff
-target_link_libraries(ltr ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY})
+target_link_libraries(ltr ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY} stdc++fs)
 
-set_target_properties(
-    ltr PROPERTIES PUBLIC_HEADER
-    /api/ltr.hpp
-)
+target_compile_features(ltr PUBLIC cxx_std_14)
 
-set_target_properties(ltr PROPERTIES SOVERSION 1)
+include(CheckSymbolExists)
 
-install(TARGETS ltr
-  RUNTIME DESTINATION bin
-  LIBRARY DESTINATION lib
-  ARCHIVE DESTINATION lib
-  PUBLIC_HEADER DESTINATION api
-)
+# Some hack to not depend on FILE* internals
+# https://github.com/alandefreitas/matplotplusplus/issues/4
+check_symbol_exists(__fbufsize "stdio_ext.h" HAVE_FBUFSIZE)
+if (HAVE_FBUFSIZE)
+    target_compile_definitions(ltr PRIVATE LTR_HAS_FBUFSIZE)
+endif()
+
+# Another hack to check for min in Windows.h
+# http://www.suodenjoki.dk/us/archive/2010/min-max.htm
+check_symbol_exists(min "Windows.h" HAVE_WINDOWS_MINMAX)
+if (HAVE_WINDOWS_MINMAX)
+    target_compile_definitions(ltr PUBLIC NOMINMAX)
+endif()
+
+if (BUILD_WITH_PEDANTIC_WARNINGS)
+    if (MSVC)
+        target_compile_options(ltr PRIVATE /W4 /WX)
+    else ()
+        target_compile_options(ltr PRIVATE -Wall -Wextra -pedantic -Werror)
+        # Allow the warnings related to the bundled CImg
+        if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+            target_compile_options(ltr PRIVATE -Wno-null-pointer-arithmetic -Wno-char-subscripts)
+        elseif (CMAKE_CXX_COMPILER_ID STREQUAL "GNU")
+            target_compile_options(ltr PRIVATE -Wno-error=class-memaccess -Wno-class-memaccess)
+        else ()
+            message(ERROR "Cannot disable the relevant warnings for ${CMAKE_CXX_COMPILER_ID}")
+        endif ()
+    endif ()
+endif ()
+
+# Setting public header
+set_target_properties(ltr PROPERTIES PUBLIC_HEADER /api/ltr.hpp)
+
+# Install
+if (BUILD_INSTALLER)
+    # Install targets
+    install(TARGETS ltr
+            EXPORT ltrTargets
+            LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+            ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+            )
+
+    # Install headers
+    install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
+            DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+            FILES_MATCHING PATTERN "*.hpp"
+            )
+endif()

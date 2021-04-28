@@ -69,93 +69,130 @@ $(function() {
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="classltr_1_1_ranker-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">ltr::Ranker Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
+<div class="title">ltr::Ranker Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Generic <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a> class.  
+ <a href="classltr_1_1_ranker.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="_ranker_8hpp_source.html">Ranker.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ltr::Ranker:</div>
 <div class="dyncontent">
 <div class="center"><img src="classltr_1_1_ranker__inherit__graph.png" border="0" usemap="#ltr_1_1_ranker_inherit__map" alt="Inheritance graph"/></div>
 <map name="ltr_1_1_ranker_inherit__map" id="ltr_1_1_ranker_inherit__map">
-<area shape="rect" title=" " alt="" coords="12,5,101,32"/>
-<area shape="rect" href="classltr_1_1_ada_rank.html" title="Listwise boost algorithm based on AdaBoost." alt="" coords="5,80,108,107"/>
+<area shape="rect" title="Generic Ranker class." alt="" coords="12,80,101,107"/>
+<area shape="rect" href="classltr_1_1_ada_rank.html" title=" " alt="" coords="5,155,108,181"/>
+<area shape="rect" href="classltr_1_1_learner.html" title="Base Learner Agent interface for LTR algorithms The capabilities of a LTR learner is to generate a sc..." alt="" coords="10,5,103,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for ltr::Ranker:</div>
+<div class="dyncontent">
+<div class="center"><img src="classltr_1_1_ranker__coll__graph.png" border="0" usemap="#ltr_1_1_ranker_coll__map" alt="Collaboration graph"/></div>
+<map name="ltr_1_1_ranker_coll__map" id="ltr_1_1_ranker_coll__map">
+<area shape="rect" title="Generic Ranker class." alt="" coords="287,109,377,136"/>
+<area shape="rect" href="classltr_1_1_learner.html" title="Base Learner Agent interface for LTR algorithms The capabilities of a LTR learner is to generate a sc..." alt="" coords="5,5,99,32"/>
+<area shape="rect" title=" " alt="" coords="123,5,349,32"/>
+<area shape="rect" title=" " alt="" coords="373,5,483,32"/>
+<area shape="rect" title=" " alt="" coords="508,5,636,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aaa7e4f3b4349cbc510b259959cb62e3e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#aaa7e4f3b4349cbc510b259959cb62e3e">start</a> ()=0</td></tr>
-<tr class="memdesc:aaa7e4f3b4349cbc510b259959cb62e3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialization of Ranking algorithm.  <a href="classltr_1_1_ranker.html#aaa7e4f3b4349cbc510b259959cb62e3e">More...</a><br /></td></tr>
-<tr class="separator:aaa7e4f3b4349cbc510b259959cb62e3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5240af98d2e6d2b0c1006bade11108e7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a5240af98d2e6d2b0c1006bade11108e7">learn</a> ()=0</td></tr>
-<tr class="memdesc:a5240af98d2e6d2b0c1006bade11108e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Learn method for some learning algorithm.  <a href="classltr_1_1_ranker.html#a5240af98d2e6d2b0c1006bade11108e7">More...</a><br /></td></tr>
-<tr class="separator:a5240af98d2e6d2b0c1006bade11108e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1516810fc4c57e57afa8c265ecb9c46d"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a1516810fc4c57e57afa8c265ecb9c46d">eval</a> (ReadableDataPoint dp)=0</td></tr>
-<tr class="memdesc:a1516810fc4c57e57afa8c265ecb9c46d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluation of a single datapoint object.  <a href="classltr_1_1_ranker.html#a1516810fc4c57e57afa8c265ecb9c46d">More...</a><br /></td></tr>
-<tr class="separator:a1516810fc4c57e57afa8c265ecb9c46d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad1533de97cfb7bc63b6ad77a1d755dcc"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#ad1533de97cfb7bc63b6ad77a1d755dcc">toString</a> ()=0</td></tr>
-<tr class="memdesc:ad1533de97cfb7bc63b6ad77a1d755dcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">String representation of ranker.  <a href="classltr_1_1_ranker.html#ad1533de97cfb7bc63b6ad77a1d755dcc">More...</a><br /></td></tr>
-<tr class="separator:ad1533de97cfb7bc63b6ad77a1d755dcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af4cba93739d84ef26d5c40259e5d6b52"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#af4cba93739d84ef26d5c40259e5d6b52">model</a> ()=0</td></tr>
-<tr class="memdesc:af4cba93739d84ef26d5c40259e5d6b52"><td class="mdescLeft">&#160;</td><td class="mdescRight">String representation of model.  <a href="classltr_1_1_ranker.html#af4cba93739d84ef26d5c40259e5d6b52">More...</a><br /></td></tr>
-<tr class="separator:af4cba93739d84ef26d5c40259e5d6b52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a567ec8aaf3f44fb0dffcd797333f7a79"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a567ec8aaf3f44fb0dffcd797333f7a79">loadString</a> (string <a class="el" href="classltr_1_1_ranker.html#af4cba93739d84ef26d5c40259e5d6b52">model</a>)=0</td></tr>
-<tr class="memdesc:a567ec8aaf3f44fb0dffcd797333f7a79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load model from string.  <a href="classltr_1_1_ranker.html#a567ec8aaf3f44fb0dffcd797333f7a79">More...</a><br /></td></tr>
-<tr class="separator:a567ec8aaf3f44fb0dffcd797333f7a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad75d03d7a7abc271e81ea7d647299d17"><td class="memItemLeft" align="right" valign="top">virtual string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#ad75d03d7a7abc271e81ea7d647299d17">name</a> ()=0</td></tr>
-<tr class="memdesc:ad75d03d7a7abc271e81ea7d647299d17"><td class="mdescLeft">&#160;</td><td class="mdescRight">String name of model.  <a href="classltr_1_1_ranker.html#ad75d03d7a7abc271e81ea7d647299d17">More...</a><br /></td></tr>
-<tr class="separator:ad75d03d7a7abc271e81ea7d647299d17"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38b579c9fe937a99184770bf553244a9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a38b579c9fe937a99184770bf553244a9">print</a> ()=0</td></tr>
-<tr class="memdesc:a38b579c9fe937a99184770bf553244a9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging model stats.  <a href="classltr_1_1_ranker.html#a38b579c9fe937a99184770bf553244a9">More...</a><br /></td></tr>
-<tr class="separator:a38b579c9fe937a99184770bf553244a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2e68024d42f548eb46c31fa463d6025f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a2e68024d42f548eb46c31fa463d6025f">Ranker</a> (<a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a> dataset, unique_ptr&lt; <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &gt; scorer, vector&lt; int &gt; features={})</td></tr>
-<tr class="memdesc:a2e68024d42f548eb46c31fa463d6025f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classltr_1_1_ranker.html">Ranker</a> object.  <a href="classltr_1_1_ranker.html#a2e68024d42f548eb46c31fa463d6025f">More...</a><br /></td></tr>
-<tr class="separator:a2e68024d42f548eb46c31fa463d6025f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8288ded6770388b10235f002a08dddc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#ab8288ded6770388b10235f002a08dddc">Ranker</a> (DataSet dataset, unique_ptr&lt; <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &gt; scorer, vector&lt; int &gt; features={}, DataSet validationSet={})</td></tr>
+<tr class="memdesc:ab8288ded6770388b10235f002a08dddc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a> object.  <a href="classltr_1_1_ranker.html#ab8288ded6770388b10235f002a08dddc">More...</a><br /></td></tr>
+<tr class="separator:ab8288ded6770388b10235f002a08dddc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa24c1f390119dcb7bf1520d99d09dd52"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#aa24c1f390119dcb7bf1520d99d09dd52">~Ranker</a> ()</td></tr>
-<tr class="memdesc:aa24c1f390119dcb7bf1520d99d09dd52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classltr_1_1_ranker.html">Ranker</a> object.  <a href="classltr_1_1_ranker.html#aa24c1f390119dcb7bf1520d99d09dd52">More...</a><br /></td></tr>
+<tr class="memdesc:aa24c1f390119dcb7bf1520d99d09dd52"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destroy the <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a> object.  <a href="classltr_1_1_ranker.html#aa24c1f390119dcb7bf1520d99d09dd52">More...</a><br /></td></tr>
 <tr class="separator:aa24c1f390119dcb7bf1520d99d09dd52"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e67022d26ca959c71bdd20b93388e60"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a4e67022d26ca959c71bdd20b93388e60">Ranker</a> (const <a class="el" href="classltr_1_1_ranker.html">Ranker</a> &amp;rk)</td></tr>
-<tr class="memdesc:a4e67022d26ca959c71bdd20b93388e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new <a class="el" href="classltr_1_1_ranker.html">Ranker</a> object.  <a href="classltr_1_1_ranker.html#a4e67022d26ca959c71bdd20b93388e60">More...</a><br /></td></tr>
-<tr class="separator:a4e67022d26ca959c71bdd20b93388e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a036571337f575241f661f452faf870b8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classltr_1_1_ranker.html">Ranker</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a036571337f575241f661f452faf870b8">operator=</a> (const <a class="el" href="classltr_1_1_ranker.html">Ranker</a> &amp;rk)</td></tr>
-<tr class="memdesc:a036571337f575241f661f452faf870b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign operator for Rankers.  <a href="classltr_1_1_ranker.html#a036571337f575241f661f452faf870b8">More...</a><br /></td></tr>
-<tr class="separator:a036571337f575241f661f452faf870b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc1372c4de267531fef282da26300744"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#abc1372c4de267531fef282da26300744">setTrainingSet</a> (<a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a> dataset)</td></tr>
-<tr class="memdesc:abc1372c4de267531fef282da26300744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Training Set of <a class="el" href="classltr_1_1_ranker.html">Ranker</a>.  <a href="classltr_1_1_ranker.html#abc1372c4de267531fef282da26300744">More...</a><br /></td></tr>
+<tr class="memitem:ab613fb21ed03dbe10fcabb77b29f89d8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#ab613fb21ed03dbe10fcabb77b29f89d8">fit</a> ()</td></tr>
+<tr class="memdesc:ab613fb21ed03dbe10fcabb77b29f89d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Learn method for some learning algorithm.  <a href="classltr_1_1_ranker.html#ab613fb21ed03dbe10fcabb77b29f89d8">More...</a><br /></td></tr>
+<tr class="separator:ab613fb21ed03dbe10fcabb77b29f89d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a37948dc9fa6641b3952b22944fffce"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a7a37948dc9fa6641b3952b22944fffce">predict</a> (ReadableDataPoint dp)</td></tr>
+<tr class="memdesc:a7a37948dc9fa6641b3952b22944fffce"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluation of a single datapoint object.  <a href="classltr_1_1_ranker.html#a7a37948dc9fa6641b3952b22944fffce">More...</a><br /></td></tr>
+<tr class="separator:a7a37948dc9fa6641b3952b22944fffce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1372c4de267531fef282da26300744"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#abc1372c4de267531fef282da26300744">setTrainingSet</a> (DataSet dataset)</td></tr>
+<tr class="memdesc:abc1372c4de267531fef282da26300744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Training Set of <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a>.  <a href="classltr_1_1_ranker.html#abc1372c4de267531fef282da26300744">More...</a><br /></td></tr>
 <tr class="separator:abc1372c4de267531fef282da26300744"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6d964305fa87c7f6cae57a18ee13c2b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#aa6d964305fa87c7f6cae57a18ee13c2b">setFeatures</a> (vector&lt; int &gt; features)</td></tr>
-<tr class="memdesc:aa6d964305fa87c7f6cae57a18ee13c2b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Features for <a class="el" href="classltr_1_1_ranker.html">Ranker</a>.  <a href="classltr_1_1_ranker.html#aa6d964305fa87c7f6cae57a18ee13c2b">More...</a><br /></td></tr>
-<tr class="separator:aa6d964305fa87c7f6cae57a18ee13c2b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e1f6a229ac7771342218361b07b071a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a1e1f6a229ac7771342218361b07b071a">setValidationSet</a> (<a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a> dataset)</td></tr>
-<tr class="memdesc:a1e1f6a229ac7771342218361b07b071a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Validation Set for <a class="el" href="classltr_1_1_ranker.html">Ranker</a>.  <a href="classltr_1_1_ranker.html#a1e1f6a229ac7771342218361b07b071a">More...</a><br /></td></tr>
+<tr class="memitem:a9d702d1f3e458a71fd511e6594c671d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a9d702d1f3e458a71fd511e6594c671d0">setFeatures</a> (vector&lt; int &gt; ft)</td></tr>
+<tr class="memdesc:a9d702d1f3e458a71fd511e6594c671d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Features for <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a>.  <a href="classltr_1_1_ranker.html#a9d702d1f3e458a71fd511e6594c671d0">More...</a><br /></td></tr>
+<tr class="separator:a9d702d1f3e458a71fd511e6594c671d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e1f6a229ac7771342218361b07b071a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a1e1f6a229ac7771342218361b07b071a">setValidationSet</a> (DataSet dataset)</td></tr>
+<tr class="memdesc:a1e1f6a229ac7771342218361b07b071a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Validation Set for <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a>.  <a href="classltr_1_1_ranker.html#a1e1f6a229ac7771342218361b07b071a">More...</a><br /></td></tr>
 <tr class="separator:a1e1f6a229ac7771342218361b07b071a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3a8ca56cac6338257b3af3008653098f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a3a8ca56cac6338257b3af3008653098f">setScorer</a> (unique_ptr&lt; <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &gt; scorer)</td></tr>
-<tr class="memdesc:a3a8ca56cac6338257b3af3008653098f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Scorer wich will be used for <a class="el" href="classltr_1_1_ranker.html">Ranker</a>.  <a href="classltr_1_1_ranker.html#a3a8ca56cac6338257b3af3008653098f">More...</a><br /></td></tr>
-<tr class="separator:a3a8ca56cac6338257b3af3008653098f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac5b782501ae5f4543141655454af75b8"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#ac5b782501ae5f4543141655454af75b8">getTrainingScore</a> ()</td></tr>
-<tr class="memdesc:ac5b782501ae5f4543141655454af75b8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Training Score.  <a href="classltr_1_1_ranker.html#ac5b782501ae5f4543141655454af75b8">More...</a><br /></td></tr>
-<tr class="separator:ac5b782501ae5f4543141655454af75b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab9051e82a25fd91ff0a0e1a15834775e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#ab9051e82a25fd91ff0a0e1a15834775e">getValidationScore</a> ()</td></tr>
-<tr class="memdesc:ab9051e82a25fd91ff0a0e1a15834775e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Validation Score.  <a href="classltr_1_1_ranker.html#ab9051e82a25fd91ff0a0e1a15834775e">More...</a><br /></td></tr>
-<tr class="separator:ab9051e82a25fd91ff0a0e1a15834775e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a548f135d7bc17adcf98ce2e2181dc2cb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a548f135d7bc17adcf98ce2e2181dc2cb">setScorer</a> (unique_ptr&lt; <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &gt; scr)</td></tr>
+<tr class="memdesc:a548f135d7bc17adcf98ce2e2181dc2cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Scorer wich will be used for <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a>.  <a href="classltr_1_1_ranker.html#a548f135d7bc17adcf98ce2e2181dc2cb">More...</a><br /></td></tr>
+<tr class="separator:a548f135d7bc17adcf98ce2e2181dc2cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5e97bcb0d9c8240eb79b7f1b6dee67b"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#ae5e97bcb0d9c8240eb79b7f1b6dee67b">getTrainingScore</a> () const</td></tr>
+<tr class="memdesc:ae5e97bcb0d9c8240eb79b7f1b6dee67b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Training Score.  <a href="classltr_1_1_ranker.html#ae5e97bcb0d9c8240eb79b7f1b6dee67b">More...</a><br /></td></tr>
+<tr class="separator:ae5e97bcb0d9c8240eb79b7f1b6dee67b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa91b80e2d2964e052168d92c6428a234"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#aa91b80e2d2964e052168d92c6428a234">getValidationScore</a> () const</td></tr>
+<tr class="memdesc:aa91b80e2d2964e052168d92c6428a234"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Validation Score.  <a href="classltr_1_1_ranker.html#aa91b80e2d2964e052168d92c6428a234">More...</a><br /></td></tr>
+<tr class="separator:aa91b80e2d2964e052168d92c6428a234"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a584b627bf90240d0004e2d7cd09294c1"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a584b627bf90240d0004e2d7cd09294c1">getFeatures</a> ()</td></tr>
 <tr class="memdesc:a584b627bf90240d0004e2d7cd09294c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the used Features.  <a href="classltr_1_1_ranker.html#a584b627bf90240d0004e2d7cd09294c1">More...</a><br /></td></tr>
 <tr class="separator:a584b627bf90240d0004e2d7cd09294c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a51882650994d54f692b8715e379ab4dd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a51882650994d54f692b8715e379ab4dd">rank</a> (<a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a> &amp;l)</td></tr>
-<tr class="memdesc:a51882650994d54f692b8715e379ab4dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform ranking in samples.  <a href="classltr_1_1_ranker.html#a51882650994d54f692b8715e379ab4dd">More...</a><br /></td></tr>
-<tr class="separator:a51882650994d54f692b8715e379ab4dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad314913beb5d2ccbcf19ed06a9b60faf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#ad314913beb5d2ccbcf19ed06a9b60faf">rank</a> (<a class="el" href="classltr_1_1_rank_list.html">RankList</a> &amp;rl)</td></tr>
-<tr class="memdesc:ad314913beb5d2ccbcf19ed06a9b60faf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform ranking in one sample.  <a href="classltr_1_1_ranker.html#ad314913beb5d2ccbcf19ed06a9b60faf">More...</a><br /></td></tr>
-<tr class="separator:ad314913beb5d2ccbcf19ed06a9b60faf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f53df9271fa870744b9e891d652c4f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a9f53df9271fa870744b9e891d652c4f5">save</a> (string fileToSave)</td></tr>
-<tr class="memdesc:a9f53df9271fa870744b9e891d652c4f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save model in file.  <a href="classltr_1_1_ranker.html#a9f53df9271fa870744b9e891d652c4f5">More...</a><br /></td></tr>
-<tr class="separator:a9f53df9271fa870744b9e891d652c4f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a74f4aeca4387a60a1e8608c7efa71c5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a74f4aeca4387a60a1e8608c7efa71c5a">save</a> (const string &amp;fileToSave)</td></tr>
+<tr class="memdesc:a74f4aeca4387a60a1e8608c7efa71c5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Save model in file.  <a href="classltr_1_1_ranker.html#a74f4aeca4387a60a1e8608c7efa71c5a">More...</a><br /></td></tr>
+<tr class="separator:a74f4aeca4387a60a1e8608c7efa71c5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3061f589c024bd3d7c6cd7ea8b663c1a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a3061f589c024bd3d7c6cd7ea8b663c1a">load</a> (const string &amp;fileToLoad)</td></tr>
+<tr class="memdesc:a3061f589c024bd3d7c6cd7ea8b663c1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Lodel model from file.  <a href="classltr_1_1_ranker.html#a3061f589c024bd3d7c6cd7ea8b663c1a">More...</a><br /></td></tr>
+<tr class="separator:a3061f589c024bd3d7c6cd7ea8b663c1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classltr_1_1_learner"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classltr_1_1_learner')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classltr_1_1_learner.html">ltr::Learner</a></td></tr>
+<tr class="memitem:a8606e514b58a7e0caf51cfff1e247e44 inherit pub_methods_classltr_1_1_learner"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_learner.html#a8606e514b58a7e0caf51cfff1e247e44">rank</a> (DataSet &amp;l)</td></tr>
+<tr class="memdesc:a8606e514b58a7e0caf51cfff1e247e44 inherit pub_methods_classltr_1_1_learner"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform ranking in samples.  <a href="classltr_1_1_learner.html#a8606e514b58a7e0caf51cfff1e247e44">More...</a><br /></td></tr>
+<tr class="separator:a8606e514b58a7e0caf51cfff1e247e44 inherit pub_methods_classltr_1_1_learner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f32be74efa7fd80679d688def13c58e inherit pub_methods_classltr_1_1_learner"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_learner.html#a5f32be74efa7fd80679d688def13c58e">rank</a> (<a class="el" href="classltr_1_1_rank_list.html">RankList</a> &amp;rl)</td></tr>
+<tr class="memdesc:a5f32be74efa7fd80679d688def13c58e inherit pub_methods_classltr_1_1_learner"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform ranking in one sample.  <a href="classltr_1_1_learner.html#a5f32be74efa7fd80679d688def13c58e">More...</a><br /></td></tr>
+<tr class="separator:a5f32be74efa7fd80679d688def13c58e inherit pub_methods_classltr_1_1_learner"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a017be4905d31b7fcf3e070711e439b45"><td class="memItemLeft" align="right" valign="top"><a id="a017be4905d31b7fcf3e070711e439b45"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a017be4905d31b7fcf3e070711e439b45">extractFeatures</a> ()</td></tr>
+<tr class="memdesc:a017be4905d31b7fcf3e070711e439b45"><td class="mdescLeft">&#160;</td><td class="mdescRight">Extract all features used on training samples. <br /></td></tr>
+<tr class="separator:a017be4905d31b7fcf3e070711e439b45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9eee499b16c0c26b9d761dd753a791ff"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a9eee499b16c0c26b9d761dd753a791ff">saveJSON</a> (std::ofstream &amp;file)</td></tr>
+<tr class="separator:a9eee499b16c0c26b9d761dd753a791ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cd3b62ffd770b5074779de01632d3fc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ranker.html#a3cd3b62ffd770b5074779de01632d3fc">loadJSON</a> (std::ifstream &amp;file)</td></tr>
+<tr class="separator:a3cd3b62ffd770b5074779de01632d3fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a5e179960d11ea34cd9e4415661243102"><td class="memItemLeft" align="right" valign="top"><a id="a5e179960d11ea34cd9e4415661243102"></a>
+DataSet&#160;</td><td class="memItemRight" valign="bottom"><b>training_samples</b></td></tr>
+<tr class="separator:a5e179960d11ea34cd9e4415661243102"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6773d8c83041f8c46d3b16020732d13e"><td class="memItemLeft" align="right" valign="top"><a id="a6773d8c83041f8c46d3b16020732d13e"></a>
+DataSet&#160;</td><td class="memItemRight" valign="bottom"><b>validation_samples</b></td></tr>
+<tr class="separator:a6773d8c83041f8c46d3b16020732d13e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacddf21fc1ab2c2b9c71498dfba1351b"><td class="memItemLeft" align="right" valign="top"><a id="aacddf21fc1ab2c2b9c71498dfba1351b"></a>
+vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>features</b></td></tr>
+<tr class="separator:aacddf21fc1ab2c2b9c71498dfba1351b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9a065766696a7e11451167fc736444a9"><td class="memItemLeft" align="right" valign="top"><a id="a9a065766696a7e11451167fc736444a9"></a>
+unique_ptr&lt; <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>scorer</b></td></tr>
+<tr class="separator:a9a065766696a7e11451167fc736444a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7e00be5a0f73626e8a2fec615e212df"><td class="memItemLeft" align="right" valign="top"><a id="ad7e00be5a0f73626e8a2fec615e212df"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>score_training</b></td></tr>
+<tr class="separator:ad7e00be5a0f73626e8a2fec615e212df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a906c6adc01f500312bd4a65682fa7bf5"><td class="memItemLeft" align="right" valign="top"><a id="a906c6adc01f500312bd4a65682fa7bf5"></a>
+double&#160;</td><td class="memItemRight" valign="bottom"><b>score_validation</b></td></tr>
+<tr class="separator:a906c6adc01f500312bd4a65682fa7bf5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5ad64e7d1ca0fc49e50d7c322135bbf"><td class="memItemLeft" align="right" valign="top"><a id="ab5ad64e7d1ca0fc49e50d7c322135bbf"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>verbose</b></td></tr>
+<tr class="separator:ab5ad64e7d1ca0fc49e50d7c322135bbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2e68024d42f548eb46c31fa463d6025f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2e68024d42f548eb46c31fa463d6025f">&#9670;&nbsp;</a></span>Ranker() <span class="overload">[1/2]</span></h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Generic <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a> class. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ab8288ded6770388b10235f002a08dddc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8288ded6770388b10235f002a08dddc">&#9670;&nbsp;</a></span>Ranker()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -163,7 +200,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">Ranker::Ranker </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a>&#160;</td>
+          <td class="paramtype">DataSet&#160;</td>
           <td class="paramname"><em>dataset</em>, </td>
         </tr>
         <tr>
@@ -176,7 +213,13 @@ Public Member Functions</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">vector&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>features</em> = <code>{}</code>&#160;</td>
+          <td class="paramname"><em>features</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DataSet&#160;</td>
+          <td class="paramname"><em>validationSet</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -186,12 +229,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Construct a new <a class="el" href="classltr_1_1_ranker.html">Ranker</a> object. </p>
+<p>Construct a new <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a> object. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dataset</td><td></td></tr>
     <tr><td class="paramname">features</td><td></td></tr>
     <tr><td class="paramname">scorer</td><td></td></tr>
+    <tr><td class="paramname">validationSet</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -213,39 +257,13 @@ Public Member Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Destroy the <a class="el" href="classltr_1_1_ranker.html">Ranker</a> object. </p>
-
-</div>
-</div>
-<a id="a4e67022d26ca959c71bdd20b93388e60"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e67022d26ca959c71bdd20b93388e60">&#9670;&nbsp;</a></span>Ranker() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">Ranker::Ranker </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classltr_1_1_ranker.html">Ranker</a> &amp;&#160;</td>
-          <td class="paramname"><em>rk</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Construct a new <a class="el" href="classltr_1_1_ranker.html">Ranker</a> object. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rk</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Destroy the <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a> object. </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a1516810fc4c57e57afa8c265ecb9c46d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1516810fc4c57e57afa8c265ecb9c46d">&#9670;&nbsp;</a></span>eval()</h2>
+<a id="ab613fb21ed03dbe10fcabb77b29f89d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab613fb21ed03dbe10fcabb77b29f89d8">&#9670;&nbsp;</a></span>fit()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,30 +272,26 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual double ltr::Ranker::eval </td>
+          <td class="memname">void Ranker::fit </td>
           <td>(</td>
-          <td class="paramtype">ReadableDataPoint&#160;</td>
-          <td class="paramname"><em>dp</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Evaluation of a single datapoint object. </p>
+<p>Learn method for some learning algorithm. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">dp</td><td></td></tr>
+    <tr><td class="paramname">verbose</td><td>print steps of learn </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
-
-<p>Implemented in <a class="el" href="classltr_1_1_ada_rank.html#adb41492ecfc39e77196b059dd6face78">ltr::AdaRank</a>.</p>
 
 </div>
 </div>
@@ -301,19 +315,27 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ac5b782501ae5f4543141655454af75b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac5b782501ae5f4543141655454af75b8">&#9670;&nbsp;</a></span>getTrainingScore()</h2>
+<a id="ae5e97bcb0d9c8240eb79b7f1b6dee67b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5e97bcb0d9c8240eb79b7f1b6dee67b">&#9670;&nbsp;</a></span>getTrainingScore()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double Ranker::getTrainingScore </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Get the Training Score. </p>
@@ -321,8 +343,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ab9051e82a25fd91ff0a0e1a15834775e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9051e82a25fd91ff0a0e1a15834775e">&#9670;&nbsp;</a></span>getValidationScore()</h2>
+<a id="aa91b80e2d2964e052168d92c6428a234"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa91b80e2d2964e052168d92c6428a234">&#9670;&nbsp;</a></span>getValidationScore()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -331,7 +353,7 @@ Public Member Functions</h2></td></tr>
           <td class="memname">double Ranker::getValidationScore </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -341,241 +363,107 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a5240af98d2e6d2b0c1006bade11108e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5240af98d2e6d2b0c1006bade11108e7">&#9670;&nbsp;</a></span>learn()</h2>
+<a id="a3061f589c024bd3d7c6cd7ea8b663c1a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3061f589c024bd3d7c6cd7ea8b663c1a">&#9670;&nbsp;</a></span>load()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void ltr::Ranker::learn </td>
+          <td class="memname">void Ranker::load </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">const string &amp;&#160;</td>
+          <td class="paramname"><em>fileToLoad</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
-<p>Learn method for some learning algorithm. </p>
-
-<p>Implemented in <a class="el" href="classltr_1_1_ada_rank.html#aa339f77d275838bdac0c846f7b860e73">ltr::AdaRank</a>.</p>
-
-</div>
-</div>
-<a id="a567ec8aaf3f44fb0dffcd797333f7a79"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a567ec8aaf3f44fb0dffcd797333f7a79">&#9670;&nbsp;</a></span>loadString()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ltr::Ranker::loadString </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>model</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Load model from string. </p>
+<p>Lodel model from file. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">model</td><td></td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p>Implemented in <a class="el" href="classltr_1_1_ada_rank.html#ac4a88ed483c22e4a70edb23d4a51ded4">ltr::AdaRank</a>.</p>
-
-</div>
-</div>
-<a id="af4cba93739d84ef26d5c40259e5d6b52"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af4cba93739d84ef26d5c40259e5d6b52">&#9670;&nbsp;</a></span>model()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual string ltr::Ranker::model </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>String representation of model. </p>
-<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
-
-<p>Implemented in <a class="el" href="classltr_1_1_ada_rank.html#a3cc26e5e7378fcbaee68fcf306fefba2">ltr::AdaRank</a>.</p>
-
-</div>
-</div>
-<a id="ad75d03d7a7abc271e81ea7d647299d17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad75d03d7a7abc271e81ea7d647299d17">&#9670;&nbsp;</a></span>name()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual string ltr::Ranker::name </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>String name of model. </p>
-<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
-
-<p>Implemented in <a class="el" href="classltr_1_1_ada_rank.html#acf031a815215fd100a653a58efd7f0fd">ltr::AdaRank</a>.</p>
-
-</div>
-</div>
-<a id="a036571337f575241f661f452faf870b8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a036571337f575241f661f452faf870b8">&#9670;&nbsp;</a></span>operator=()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="classltr_1_1_ranker.html">Ranker</a> &amp; Ranker::operator= </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classltr_1_1_ranker.html">Ranker</a> &amp;&#160;</td>
-          <td class="paramname"><em>rk</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Assign operator for Rankers. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">rk</td><td>other ranker </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classltr_1_1_ranker.html">Ranker</a>&amp; </dd></dl>
-
-</div>
-</div>
-<a id="a38b579c9fe937a99184770bf553244a9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a38b579c9fe937a99184770bf553244a9">&#9670;&nbsp;</a></span>print()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ltr::Ranker::print </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Logging model stats. </p>
-
-<p>Implemented in <a class="el" href="classltr_1_1_ada_rank.html#a701ae320a3369c240d15dcc264c91323">ltr::AdaRank</a>.</p>
-
-</div>
-</div>
-<a id="a51882650994d54f692b8715e379ab4dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a51882650994d54f692b8715e379ab4dd">&#9670;&nbsp;</a></span>rank() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Ranker::rank </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a> &amp;&#160;</td>
-          <td class="paramname"><em>l</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Perform ranking in samples. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">l</td><td></td></tr>
+    <tr><td class="paramname">fileToLoad</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="ad314913beb5d2ccbcf19ed06a9b60faf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad314913beb5d2ccbcf19ed06a9b60faf">&#9670;&nbsp;</a></span>rank() <span class="overload">[2/2]</span></h2>
+<a id="a3cd3b62ffd770b5074779de01632d3fc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3cd3b62ffd770b5074779de01632d3fc">&#9670;&nbsp;</a></span>loadJSON()</h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Ranker::rank </td>
+          <td class="memname">void Ranker::loadJSON </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="classltr_1_1_rank_list.html">RankList</a> &amp;&#160;</td>
-          <td class="paramname"><em>rl</em></td><td>)</td>
+          <td class="paramtype">std::ifstream &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
-
-<p>Perform ranking in one sample. </p>
-<dl class="params"><dt>Parameters</dt><dd>
+<p>Load json from file </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">l</td><td></td></tr>
+    <tr><td class="paramname">file</td><td></td></tr>
   </table>
   </dd>
 </dl>
 
+<p>Reimplemented in <a class="el" href="classltr_1_1_ada_rank.html#a6f60500f9b913eaf6b5ef50d41fdc9db">ltr::AdaRank</a>.</p>
+
 </div>
 </div>
-<a id="a9f53df9271fa870744b9e891d652c4f5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9f53df9271fa870744b9e891d652c4f5">&#9670;&nbsp;</a></span>save()</h2>
+<a id="a7a37948dc9fa6641b3952b22944fffce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a37948dc9fa6641b3952b22944fffce">&#9670;&nbsp;</a></span>predict()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">double Ranker::predict </td>
+          <td>(</td>
+          <td class="paramtype">ReadableDataPoint&#160;</td>
+          <td class="paramname"><em>dp</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluation of a single datapoint object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">dp</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p>Implements <a class="el" href="classltr_1_1_learner.html#acf85ea361fa758668779249d77ce2ee5">ltr::Learner</a>.</p>
+
+<p>Reimplemented in <a class="el" href="classltr_1_1_ada_rank.html#addc477120ac720e3c25b0eb9d3618fb8">ltr::AdaRank</a>.</p>
+
+</div>
+</div>
+<a id="a74f4aeca4387a60a1e8608c7efa71c5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a74f4aeca4387a60a1e8608c7efa71c5a">&#9670;&nbsp;</a></span>save()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -583,7 +471,7 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Ranker::save </td>
           <td>(</td>
-          <td class="paramtype">string&#160;</td>
+          <td class="paramtype">const string &amp;&#160;</td>
           <td class="paramname"><em>fileToSave</em></td><td>)</td>
           <td></td>
         </tr>
@@ -600,8 +488,42 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aa6d964305fa87c7f6cae57a18ee13c2b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa6d964305fa87c7f6cae57a18ee13c2b">&#9670;&nbsp;</a></span>setFeatures()</h2>
+<a id="a9eee499b16c0c26b9d761dd753a791ff"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9eee499b16c0c26b9d761dd753a791ff">&#9670;&nbsp;</a></span>saveJSON()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Ranker::saveJSON </td>
+          <td>(</td>
+          <td class="paramtype">std::ofstream &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Save json in file </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">file</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Reimplemented in <a class="el" href="classltr_1_1_ada_rank.html#aad97b40a99fa1c70a8bffa66fa9a11fe">ltr::AdaRank</a>.</p>
+
+</div>
+</div>
+<a id="a9d702d1f3e458a71fd511e6594c671d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d702d1f3e458a71fd511e6594c671d0">&#9670;&nbsp;</a></span>setFeatures()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -610,24 +532,24 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Ranker::setFeatures </td>
           <td>(</td>
           <td class="paramtype">vector&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>features</em></td><td>)</td>
+          <td class="paramname"><em>ft</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the Features for <a class="el" href="classltr_1_1_ranker.html">Ranker</a>. </p>
+<p>Set the Features for <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">features</td><td></td></tr>
+    <tr><td class="paramname">ft</td><td>new features vector </td></tr>
   </table>
   </dd>
 </dl>
 
 </div>
 </div>
-<a id="a3a8ca56cac6338257b3af3008653098f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3a8ca56cac6338257b3af3008653098f">&#9670;&nbsp;</a></span>setScorer()</h2>
+<a id="a548f135d7bc17adcf98ce2e2181dc2cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a548f135d7bc17adcf98ce2e2181dc2cb">&#9670;&nbsp;</a></span>setScorer()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -636,16 +558,16 @@ Public Member Functions</h2></td></tr>
           <td class="memname">void Ranker::setScorer </td>
           <td>(</td>
           <td class="paramtype">unique_ptr&lt; <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &gt;&#160;</td>
-          <td class="paramname"><em>scorer</em></td><td>)</td>
+          <td class="paramname"><em>scr</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the Scorer wich will be used for <a class="el" href="classltr_1_1_ranker.html">Ranker</a>. </p>
+<p>Set the Scorer wich will be used for <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">scorer</td><td></td></tr>
+    <tr><td class="paramname">scr</td><td></td></tr>
   </table>
   </dd>
 </dl>
@@ -661,14 +583,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Ranker::setTrainingSet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a>&#160;</td>
+          <td class="paramtype">DataSet&#160;</td>
           <td class="paramname"><em>dataset</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the Training Set of <a class="el" href="classltr_1_1_ranker.html">Ranker</a>. </p>
+<p>Set the Training Set of <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">dataset</td><td></td></tr>
@@ -687,14 +609,14 @@ Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">void Ranker::setValidationSet </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a>&#160;</td>
+          <td class="paramtype">DataSet&#160;</td>
           <td class="paramname"><em>dataset</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Set the Validation Set for <a class="el" href="classltr_1_1_ranker.html">Ranker</a>. </p>
+<p>Set the Validation Set for <a class="el" href="classltr_1_1_ranker.html" title="Generic Ranker class.">Ranker</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">samples</td><td></td></tr>
@@ -704,68 +626,9 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aaa7e4f3b4349cbc510b259959cb62e3e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aaa7e4f3b4349cbc510b259959cb62e3e">&#9670;&nbsp;</a></span>start()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual void ltr::Ranker::start </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Initialization of Ranking algorithm. </p>
-
-<p>Implemented in <a class="el" href="classltr_1_1_ada_rank.html#a12377c6c46ecfe8af2ccf801e2b97019">ltr::AdaRank</a>.</p>
-
-</div>
-</div>
-<a id="ad1533de97cfb7bc63b6ad77a1d755dcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad1533de97cfb7bc63b6ad77a1d755dcc">&#9670;&nbsp;</a></span>toString()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual string ltr::Ranker::toString </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>String representation of ranker. </p>
-<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
-
-<p>Implemented in <a class="el" href="classltr_1_1_ada_rank.html#a4bc24c0bdfd7563362e88123c6040605">ltr::AdaRank</a>.</p>
-
-</div>
-</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/<a class="el" href="_ranker_8hpp_source.html">Ranker.hpp</a></li>
-<li>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/<a class="el" href="_ranker_8cpp.html">Ranker.cpp</a></li>
+<li>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

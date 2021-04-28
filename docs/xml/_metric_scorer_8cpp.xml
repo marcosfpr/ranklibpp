@@ -4,47 +4,38 @@
     <compoundname>MetricScorer.cpp</compoundname>
     <includes refid="_metric_scorer_8hpp" local="yes">../../api/metric/MetricScorer.hpp</includes>
     <includes refid="_rank_list_8hpp" local="yes">../../api/learning/RankList.hpp</includes>
-    <includes refid="_data_point_8hpp" local="yes">../../api/learning/DataPoint.hpp</includes>
-    <includes refid="_ltr_error_8hpp" local="yes">../../api/LtrError.hpp</includes>
+    <includes local="no">stdexcept</includes>
     <incdepgraph>
-      <node id="6">
+      <node id="7">
         <label>list</label>
       </node>
       <node id="11">
-        <label>../../api/LtrError.hpp</label>
-        <link refid="_ltr_error_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-      </node>
-      <node id="12">
         <label>stdexcept</label>
       </node>
-      <node id="8">
+      <node id="6">
         <label>string</label>
       </node>
-      <node id="7">
+      <node id="8">
         <label>../../api/learning/RankList.hpp</label>
-        <link refid="_rank_list_8hpp"/>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="3" relation="include">
+        <link refid="_rank_list_8hpp_source"/>
+        <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="6" relation="include">
         </childnode>
-        <childnode refid="4" relation="include">
+        <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="5">
         <label>../learning/DataSet.hpp</label>
-        <link refid="_data_set_8hpp"/>
+        <link refid="_data_set_8hpp_source"/>
         <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>../../api/metric/MetricScorer.hpp</label>
-        <link refid="_metric_scorer_8hpp"/>
+        <link refid="_metric_scorer_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="4" relation="include">
@@ -57,9 +48,7 @@
         <link refid="_metric_scorer_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
+        <childnode refid="8" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
@@ -68,14 +57,19 @@
         <label>vector</label>
       </node>
       <node id="10">
-        <label>iostream</label>
-      </node>
-      <node id="9">
-        <label>../../api/learning/DataPoint.hpp</label>
-        <link refid="_data_point_8hpp"/>
+        <label>Iterators.hpp</label>
+        <link refid="_iterators_8hpp_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="8" relation="include">
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>DataPoint.hpp</label>
+        <link refid="_data_point_8hpp_source"/>
+        <childnode refid="6" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
@@ -87,65 +81,73 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><simplesect kind="author"><para>Marcos Pontes </para>
-</simplesect>
-<simplesect kind="version"><para>0.1 </para>
-</simplesect>
-<simplesect kind="date"><para>2021-02-25</para>
-</simplesect>
-<simplesect kind="copyright"><para>Copyright (c) 2021 </para>
-</simplesect>
-</para>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"></codeline>
-<codeline lineno="12"><highlight class="preprocessor">#include<sp/><sp/>&quot;../../api/metric/MetricScorer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/>&quot;../../api/learning/RankList.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/>&quot;../../api/learning/DataPoint.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/>&quot;../../api/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="16"><highlight class="normal"></highlight></codeline>
-<codeline lineno="17"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">ltr;</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><ref refid="classltr_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb" kindref="member">MetricScorer::MetricScorer</ref>(){this-&gt;depth=0;}</highlight></codeline>
+<codeline lineno="1"><highlight class="comment">//<sp/>Copyright<sp/>(c)<sp/>2021<sp/>LTR++<sp/>Project<sp/>(Marcos<sp/>Pontes)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>Permission<sp/>is<sp/>hereby<sp/>granted,<sp/>free<sp/>of<sp/>charge,<sp/>to<sp/>any<sp/>person<sp/>obtaining<sp/>a<sp/>copy</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>of<sp/>this<sp/>software<sp/>and<sp/>associated<sp/>documentation<sp/>files<sp/>(the<sp/>&quot;Software&quot;),<sp/>to<sp/>deal</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>in<sp/>the<sp/>Software<sp/>without<sp/>restriction,<sp/>including<sp/>without<sp/>limitation<sp/>the<sp/>rights</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>to<sp/>use,<sp/>copy,<sp/>modify,<sp/>merge,<sp/>publish,<sp/>distribute,<sp/>sublicense,<sp/>and/or<sp/>sell</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>copies<sp/>of<sp/>the<sp/>Software,<sp/>and<sp/>to<sp/>permit<sp/>persons<sp/>to<sp/>whom<sp/>the<sp/>Software<sp/>is</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>furnished<sp/>to<sp/>do<sp/>so,<sp/>subject<sp/>to<sp/>the<sp/>following<sp/>conditions:</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>The<sp/>above<sp/>copyright<sp/>notice<sp/>and<sp/>this<sp/>permission<sp/>notice<sp/>shall<sp/>be<sp/>included<sp/>in</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>all<sp/>copies<sp/>or<sp/>substantial<sp/>portions<sp/>of<sp/>the<sp/>Software.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THE<sp/>SOFTWARE<sp/>IS<sp/>PROVIDED<sp/>&quot;AS<sp/>IS&quot;,<sp/>WITHOUT<sp/>WARRANTY<sp/>OF<sp/>ANY<sp/>KIND,<sp/>EXPRESS<sp/>OR</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>IMPLIED,<sp/>INCLUDING<sp/>BUT<sp/>NOT<sp/>LIMITED<sp/>TO<sp/>THE<sp/>WARRANTIES<sp/>OF<sp/>MERCHANTABILITY,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>FITNESS<sp/>FOR<sp/>A<sp/>PARTICULAR<sp/>PURPOSE<sp/>AND<sp/>NONINFRINGEMENT.<sp/>IN<sp/>NO<sp/>EVENT<sp/>SHALL<sp/>THE</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>AUTHORS<sp/>OR<sp/>COPYRIGHT<sp/>HOLDERS<sp/>BE<sp/>LIABLE<sp/>FOR<sp/>ANY<sp/>CLAIM,<sp/>DAMAGES<sp/>OR<sp/>OTHER</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>LIABILITY,<sp/>WHETHER<sp/>IN<sp/>AN<sp/>ACTION<sp/>OF<sp/>CONTRACT,<sp/>TORT<sp/>OR<sp/>OTHERWISE,<sp/>ARISING<sp/>FROM,</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>OUT<sp/>OF<sp/>OR<sp/>IN<sp/>CONNECTION<sp/>WITH<sp/>THE<sp/>SOFTWARE<sp/>OR<sp/>THE<sp/>USE<sp/>OR<sp/>OTHER<sp/>DEALINGS<sp/>IN</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THE<sp/>SOFTWARE.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"><ref refid="classltr_1_1_metric_scorer_1a6dc1a9c79e6ef48ec9272d5379e4c337" kindref="member">MetricScorer::~MetricScorer</ref>(){}</highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"><ref refid="classltr_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb" kindref="member">MetricScorer::MetricScorer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref>&amp;<sp/>ms){</highlight></codeline>
-<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;depth<sp/>=<sp/>ms.depth;</highlight></codeline>
-<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/>&quot;../../api/metric/MetricScorer.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/><sp/>&quot;../../api/learning/RankList.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;stdexcept&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">ltr;</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref>&amp;<sp/><ref refid="classltr_1_1_metric_scorer_1a1b3757c0012820a8a842e4d54f422c45" kindref="member">MetricScorer::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref>&amp;<sp/>ms){</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;depth<sp/>=<sp/>ms.depth;</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>*</highlight><highlight class="keyword">this</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="31"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a37576d07e18405c4195bf3ed60643126" kindref="member">MetricScorer::setDepth</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>depth){</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;depth<sp/>=<sp/>depth;</highlight></codeline>
-<codeline lineno="36"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><ref refid="classltr_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb" kindref="member">MetricScorer::MetricScorer</ref>(){this-&gt;depth=0;}</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><ref refid="classltr_1_1_metric_scorer_1a6dc1a9c79e6ef48ec9272d5379e4c337" kindref="member">MetricScorer::~MetricScorer</ref>()=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><ref refid="classltr_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb" kindref="member">MetricScorer::MetricScorer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref>&amp;<sp/>ms){</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;depth<sp/>=<sp/>ms.depth;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref>&amp;<sp/><ref refid="classltr_1_1_metric_scorer_1a1b3757c0012820a8a842e4d54f422c45" kindref="member">MetricScorer::operator=</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref>&amp;<sp/>ms)=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a8347d53c4d39a69db8110e53d757a6e4" kindref="member">MetricScorer::getDepth</ref>(){</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;depth;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a3d482b9057fb4e83987382898414739a" kindref="member">MetricScorer::setDepth</ref>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>d){</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;depth<sp/>=<sp/>d;</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
-<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">MetricScorer::score</ref>(<ref refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kindref="member">DataSet</ref>&amp;<sp/>ds){</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">score</ref><sp/>=<sp/>0.0;</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(DataSet::iterator<sp/>it<sp/>=<sp/>ds.begin();<sp/>it<sp/>!=<sp/>ds.end();<sp/>it++){</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref><sp/>singlelist<sp/>=<sp/>*it;</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">score</ref><sp/>+=<sp/>this-&gt;<ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">score</ref>(singlelist);</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">score</ref>/ds.size();<sp/></highlight><highlight class="comment">//<sp/>average<sp/>score<sp/>by<sp/>ranklists</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="49"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal">vector&lt;int&gt;<sp/><ref refid="classltr_1_1_metric_scorer_1ab9ddb58509a8ee09d8ec8b8b12a18c1c" kindref="member">MetricScorer::getRelevanceLabels</ref>(<ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl){</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;int&gt;<sp/>rel;</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>rel.reserve(rl.<ref refid="classltr_1_1_rank_list_1ab032e0dd950aacc8086a465e173a8a80" kindref="member">size</ref>());</highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>rel.size();<sp/>i++){</highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rel[i]<sp/>=<sp/>rl.<ref refid="classltr_1_1_rank_list_1a51b857a46d0b1afa9c87724ba26ec384" kindref="member">get</ref>(i)-&gt;getLabel();</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>rel;</highlight></codeline>
-<codeline lineno="58"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1accaa818dab2eb2c3debeeb67d2ed5468" kindref="member">MetricScorer::getDepth</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>this-&gt;depth;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">MetricScorer::score</ref>(DataSet&amp;<sp/>ds){</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">score</ref><sp/>=<sp/>0.0;</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>singleList<sp/>:<sp/>ds){</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">score</ref><sp/>+=<sp/>this-&gt;<ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">score</ref>(singleList);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">score</ref>/ds.size();<sp/></highlight><highlight class="comment">//<sp/>average<sp/>score<sp/>by<sp/>rankLists</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="52"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight><highlight class="keywordtype">double</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237" kindref="member">MetricScorer::score</ref>(<ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref>&amp;<sp/>rl){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;No<sp/>implementation<sp/>of<sp/>&apos;MetricScorer::score&apos;<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"></highlight></codeline>
+<codeline lineno="58"><highlight class="normal">unique_ptr&lt;MetricScorer&gt;<sp/><ref refid="classltr_1_1_metric_scorer_1a8e6f6dfc87c7c15f2a3ad6b255472f4f" kindref="member">MetricScorer::clone</ref>()</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;No<sp/>implementation<sp/>of<sp/>&apos;MetricScorer::clone&apos;<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="classltr_1_1_metric_scorer_1ad49ccec2df5162fe80a5396921b6907a" kindref="member">MetricScorer::toString</ref>(){</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">throw</highlight><highlight class="normal"><sp/>std::logic_error(</highlight><highlight class="stringliteral">&quot;No<sp/>implementation<sp/>of<sp/>&apos;MetricScorer::name&apos;<sp/>provided&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MetricScorer.cpp"/>
   </compounddef>
