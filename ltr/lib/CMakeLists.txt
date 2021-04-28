@@ -93,6 +93,7 @@ if (BUILD_INSTALLER)
             EXPORT ltrTargets
             LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
             ARCHIVE DESTINATION ${CMAKE_INSTALL_LIBDIR}
+            PUBLIC_HEADER DESTINATION ${CMAKE_INSTALL_LIBDIR}
             )
 
     # Install headers
