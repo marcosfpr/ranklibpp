@@ -102,7 +102,7 @@ jobs:
   
   Coverage:
     env:
-      OHSUMED:./tests/benchmarks/OHSUMED
+      OHSUMED: ./tests/benchmarks/OHSUMED
 
     name: Test coverage
     runs-on: ubuntu-latest
