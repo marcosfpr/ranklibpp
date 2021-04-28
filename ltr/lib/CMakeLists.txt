@@ -1,4 +1,3 @@
-
 #######################################################
 ### Source                                          ###
 #######################################################
@@ -11,7 +10,6 @@ CPMFindPackage(
     # setting FIND_PACKAGE_ARGUMENTS allow usage with `CPM_USE_LOCAL_PACKAGES`
     FIND_PACKAGE_ARGUMENTS "COMPONENTS log log_setup"
 )
-
 
 add_definitions(-DBOOST_LOG_DYN_LINK)
 
@@ -47,7 +45,7 @@ target_include_directories(
 )
 
 # logging stuff
-target_link_libraries(ltr ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY} stdc++fs)
+target_link_libraries(ltr PRIVATE Boost::log Boost::log_setup stdc++fs pthread)
 
 target_compile_features(ltr PUBLIC cxx_std_14)
 
