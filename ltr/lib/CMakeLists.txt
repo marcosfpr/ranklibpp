@@ -47,7 +47,7 @@ target_include_directories(
 )
 
 # logging stuff
-target_link_libraries(ltr PRIVATE Boost::log Boost::log_setup Boost:: stdc++fs)
+target_link_libraries(ltr ${Boost_LOG_LIBRARY} ${Boost_LOG_SETUP_LIBRARY} stdc++fs)
 
 target_compile_features(ltr PUBLIC cxx_std_14)
 
