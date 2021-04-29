@@ -47,8 +47,14 @@ target_include_directories(
     PUBLIC api
 )
 
+if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
+    set(FILE_SYSTEM_LIB c++experimental)
+else()
+    set(FILE_SYSTEM_LIB stdc++fs)
+endif()
+
 # Linking
-target_link_libraries(ltr PRIVATE Boost::system spdlog stdc++fs Threads::Threads)
+target_link_libraries(ltr PRIVATE Boost::system spdlog ${FILE_SYSTEM_LIB} Threads::Threads)
 
 target_compile_features(ltr PUBLIC cxx_std_17)
 

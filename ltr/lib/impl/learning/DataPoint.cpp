@@ -22,6 +22,7 @@
 #include <algorithm>
 #include <utility>
 #include <iomanip>
+#include <sstream>
 
 #include "../../api/learning/DataPoint.hpp"
 
