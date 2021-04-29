@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_f633b869c91607fd79e93e0151dd3e87" kind="dir">
+    <compoundname>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble</compoundname>
+    <innerfile refid="_ada_rank_8hpp">AdaRank.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/"/>
+  </compounddef>
+</doxygen>

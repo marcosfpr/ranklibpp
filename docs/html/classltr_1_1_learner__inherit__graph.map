@@ -1,0 +1,6 @@
+<map id="ltr::Learner" name="ltr::Learner">
+<area shape="rect" id="node1" title="Base Learner Agent interface for LTR algorithms The capabilities of a LTR learner is to generate a sc..." alt="" coords="75,5,169,32"/>
+<area shape="rect" id="node2" href="$classltr_1_1_ranker.html" title="Generic Ranker class." alt="" coords="12,80,101,107"/>
+<area shape="rect" id="node4" href="$classltr_1_1_weak_ranker.html" title="Weak Ranker used in AdaRank boost algorithm Order items by a single feature." alt="" coords="126,80,251,107"/>
+<area shape="rect" id="node3" href="$classltr_1_1_ada_rank.html" title=" " alt="" coords="5,155,108,181"/>
+</map>

@@ -85,7 +85,7 @@ Inheritance diagram for ltr::MAPScorer:</div>
 <div class="center"><img src="classltr_1_1_m_a_p_scorer__inherit__graph.png" border="0" usemap="#ltr_1_1_m_a_p_scorer_inherit__map" alt="Inheritance graph"/></div>
 <map name="ltr_1_1_m_a_p_scorer_inherit__map" id="ltr_1_1_m_a_p_scorer_inherit__map">
 <area shape="rect" title="This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib)." alt="" coords="11,80,126,107"/>
-<area shape="rect" href="classltr_1_1_metric_scorer.html" title="A generic retrieval measure computation interface." alt="" coords="5,5,132,32"/>
+<area shape="rect" href="classltr_1_1_metric_scorer.html" title="A abstract retrieval measure computation interface." alt="" coords="5,5,132,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -94,7 +94,7 @@ Collaboration diagram for ltr::MAPScorer:</div>
 <div class="center"><img src="classltr_1_1_m_a_p_scorer__coll__graph.png" border="0" usemap="#ltr_1_1_m_a_p_scorer_coll__map" alt="Collaboration graph"/></div>
 <map name="ltr_1_1_m_a_p_scorer_coll__map" id="ltr_1_1_m_a_p_scorer_coll__map">
 <area shape="rect" title="This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib)." alt="" coords="11,80,126,107"/>
-<area shape="rect" href="classltr_1_1_metric_scorer.html" title="A generic retrieval measure computation interface." alt="" coords="5,5,132,32"/>
+<area shape="rect" href="classltr_1_1_metric_scorer.html" title="A abstract retrieval measure computation interface." alt="" coords="5,5,132,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -110,14 +110,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a79321cabcd75fa6575156beea8b1c548"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assignment operator for <a class="el" href="classltr_1_1_m_a_p_scorer.html" title="This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib).">MAPScorer</a> object.  <a href="classltr_1_1_m_a_p_scorer.html#a79321cabcd75fa6575156beea8b1c548">More...</a><br /></td></tr>
 <tr class="separator:a79321cabcd75fa6575156beea8b1c548"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49e7a9b42c2b75f971124695bcc6e368"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">score</a> (<a class="el" href="classltr_1_1_rank_list.html">RankList</a> &amp;rl) override</td></tr>
-<tr class="memdesc:a49e7a9b42c2b75f971124695bcc6e368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute MAP for a single <a class="el" href="classltr_1_1_rank_list.html" title="This class implement the list of objects (each of which is a DataPoint) to be ranked.">RankList</a>.  <a href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">More...</a><br /></td></tr>
+<tr class="memdesc:a49e7a9b42c2b75f971124695bcc6e368"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute MAP for a single <a class="el" href="classltr_1_1_rank_list.html" title="A RankList is the object to be ranked by models.">RankList</a>.  <a href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">More...</a><br /></td></tr>
 <tr class="separator:a49e7a9b42c2b75f971124695bcc6e368"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a880a754ea6f91c9ea77b5ec1fa8ae990"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_m_a_p_scorer.html#a880a754ea6f91c9ea77b5ec1fa8ae990">score</a> (<a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a> &amp;rls)</td></tr>
-<tr class="memdesc:a880a754ea6f91c9ea77b5ec1fa8ae990"><td class="mdescLeft">&#160;</td><td class="mdescRight">Compute MAP for a list of RankLists.  <a href="classltr_1_1_m_a_p_scorer.html#a880a754ea6f91c9ea77b5ec1fa8ae990">More...</a><br /></td></tr>
-<tr class="separator:a880a754ea6f91c9ea77b5ec1fa8ae990"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b9e49d9962838c659a2ee75a21b1c0e"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_m_a_p_scorer.html#a7b9e49d9962838c659a2ee75a21b1c0e">score</a> (DataSet &amp;ds) override</td></tr>
+<tr class="memdesc:a7b9e49d9962838c659a2ee75a21b1c0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return score for multiple RankLists.  <a href="classltr_1_1_m_a_p_scorer.html#a7b9e49d9962838c659a2ee75a21b1c0e">More...</a><br /></td></tr>
+<tr class="separator:a7b9e49d9962838c659a2ee75a21b1c0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a86c043d27c1a55b80b25fcedf67b8d79"><td class="memItemLeft" align="right" valign="top">unique_ptr&lt; <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_m_a_p_scorer.html#a86c043d27c1a55b80b25fcedf67b8d79">clone</a> () const override</td></tr>
-<tr class="memdesc:a86c043d27c1a55b80b25fcedf67b8d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone <a class="el" href="classltr_1_1_metric_scorer.html" title="A generic retrieval measure computation interface.">MetricScorer</a> object.  <a href="classltr_1_1_m_a_p_scorer.html#a86c043d27c1a55b80b25fcedf67b8d79">More...</a><br /></td></tr>
+<tr class="memdesc:a86c043d27c1a55b80b25fcedf67b8d79"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clone <a class="el" href="classltr_1_1_metric_scorer.html" title="A abstract retrieval measure computation interface.">MetricScorer</a> object.  <a href="classltr_1_1_m_a_p_scorer.html#a86c043d27c1a55b80b25fcedf67b8d79">More...</a><br /></td></tr>
 <tr class="separator:a86c043d27c1a55b80b25fcedf67b8d79"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a47187ce2733056d01c7b3fee8955fe4a"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_m_a_p_scorer.html#a47187ce2733056d01c7b3fee8955fe4a">toString</a> () override</td></tr>
+<tr class="memdesc:a47187ce2733056d01c7b3fee8955fe4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return string representation of model.  <a href="classltr_1_1_m_a_p_scorer.html#a47187ce2733056d01c7b3fee8955fe4a">More...</a><br /></td></tr>
+<tr class="separator:a47187ce2733056d01c7b3fee8955fe4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classltr_1_1_metric_scorer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classltr_1_1_metric_scorer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></td></tr>
 <tr class="memitem:a0286ba0f66b080365b3f3682ca6d09cb inherit pub_methods_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_metric_scorer.html#a0286ba0f66b080365b3f3682ca6d09cb">MetricScorer</a> ()</td></tr>
 <tr class="memdesc:a0286ba0f66b080365b3f3682ca6d09cb inherit pub_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new Metric Scorer object.  <a href="classltr_1_1_metric_scorer.html#a0286ba0f66b080365b3f3682ca6d09cb">More...</a><br /></td></tr>
@@ -129,28 +132,21 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:aa19a5430103a9215ba855bad2b5aeba4 inherit pub_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a new MetricScorert object.  <a href="classltr_1_1_metric_scorer.html#aa19a5430103a9215ba855bad2b5aeba4">More...</a><br /></td></tr>
 <tr class="separator:aa19a5430103a9215ba855bad2b5aeba4 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b3757c0012820a8a842e4d54f422c45 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_metric_scorer.html#a1b3757c0012820a8a842e4d54f422c45">operator=</a> (const <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &amp;ms)</td></tr>
-<tr class="memdesc:a1b3757c0012820a8a842e4d54f422c45 inherit pub_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign operator for <a class="el" href="classltr_1_1_metric_scorer.html" title="A generic retrieval measure computation interface.">MetricScorer</a>.  <a href="classltr_1_1_metric_scorer.html#a1b3757c0012820a8a842e4d54f422c45">More...</a><br /></td></tr>
+<tr class="memdesc:a1b3757c0012820a8a842e4d54f422c45 inherit pub_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Assign operator for <a class="el" href="classltr_1_1_metric_scorer.html" title="A abstract retrieval measure computation interface.">MetricScorer</a>.  <a href="classltr_1_1_metric_scorer.html#a1b3757c0012820a8a842e4d54f422c45">More...</a><br /></td></tr>
 <tr class="separator:a1b3757c0012820a8a842e4d54f422c45 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37576d07e18405c4195bf3ed60643126 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_metric_scorer.html#a37576d07e18405c4195bf3ed60643126">setDepth</a> (int depth)</td></tr>
-<tr class="memdesc:a37576d07e18405c4195bf3ed60643126 inherit pub_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Depth value.  <a href="classltr_1_1_metric_scorer.html#a37576d07e18405c4195bf3ed60643126">More...</a><br /></td></tr>
-<tr class="separator:a37576d07e18405c4195bf3ed60643126 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8347d53c4d39a69db8110e53d757a6e4 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_metric_scorer.html#a8347d53c4d39a69db8110e53d757a6e4">getDepth</a> ()</td></tr>
-<tr class="memdesc:a8347d53c4d39a69db8110e53d757a6e4 inherit pub_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Depth value.  <a href="classltr_1_1_metric_scorer.html#a8347d53c4d39a69db8110e53d757a6e4">More...</a><br /></td></tr>
-<tr class="separator:a8347d53c4d39a69db8110e53d757a6e4 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a089b79830be7462487dfdf7060d87237 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237">score</a> (<a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a> &amp;ds)</td></tr>
-<tr class="memdesc:a089b79830be7462487dfdf7060d87237 inherit pub_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return score for multiple RankLists.  <a href="classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237">More...</a><br /></td></tr>
-<tr class="separator:a089b79830be7462487dfdf7060d87237 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d482b9057fb4e83987382898414739a inherit pub_methods_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_metric_scorer.html#a3d482b9057fb4e83987382898414739a">setDepth</a> (int d)</td></tr>
+<tr class="memdesc:a3d482b9057fb4e83987382898414739a inherit pub_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Depth value.  <a href="classltr_1_1_metric_scorer.html#a3d482b9057fb4e83987382898414739a">More...</a><br /></td></tr>
+<tr class="separator:a3d482b9057fb4e83987382898414739a inherit pub_methods_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:accaa818dab2eb2c3debeeb67d2ed5468 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_metric_scorer.html#accaa818dab2eb2c3debeeb67d2ed5468">getDepth</a> () const</td></tr>
+<tr class="memdesc:accaa818dab2eb2c3debeeb67d2ed5468 inherit pub_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Depth value.  <a href="classltr_1_1_metric_scorer.html#accaa818dab2eb2c3debeeb67d2ed5468">More...</a><br /></td></tr>
+<tr class="separator:accaa818dab2eb2c3debeeb67d2ed5468 inherit pub_methods_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
-<tr class="inherit_header pro_methods_classltr_1_1_metric_scorer"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classltr_1_1_metric_scorer')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></td></tr>
-<tr class="memitem:ab9ddb58509a8ee09d8ec8b8b12a18c1c inherit pro_methods_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_metric_scorer.html#ab9ddb58509a8ee09d8ec8b8b12a18c1c">getRelevanceLabels</a> (<a class="el" href="classltr_1_1_rank_list.html">RankList</a> &amp;rl)</td></tr>
-<tr class="memdesc:ab9ddb58509a8ee09d8ec8b8b12a18c1c inherit pro_methods_classltr_1_1_metric_scorer"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Relevance Labels of a <a class="el" href="classltr_1_1_rank_list.html" title="This class implement the list of objects (each of which is a DataPoint) to be ranked.">RankList</a>.  <a href="classltr_1_1_metric_scorer.html#ab9ddb58509a8ee09d8ec8b8b12a18c1c">More...</a><br /></td></tr>
-<tr class="separator:ab9ddb58509a8ee09d8ec8b8b12a18c1c inherit pro_methods_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_attribs_classltr_1_1_metric_scorer"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classltr_1_1_metric_scorer')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></td></tr>
-<tr class="memitem:a123f9aba73472a6a5f6e3301019f9ac1 inherit pro_attribs_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top"><a id="a123f9aba73472a6a5f6e3301019f9ac1"></a>
+<tr class="inherit_header pub_attribs_classltr_1_1_metric_scorer"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classltr_1_1_metric_scorer')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></td></tr>
+<tr class="memitem:a123f9aba73472a6a5f6e3301019f9ac1 inherit pub_attribs_classltr_1_1_metric_scorer"><td class="memItemLeft" align="right" valign="top"><a id="a123f9aba73472a6a5f6e3301019f9ac1"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
-<tr class="separator:a123f9aba73472a6a5f6e3301019f9ac1 inherit pro_attribs_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a123f9aba73472a6a5f6e3301019f9ac1 inherit pub_attribs_classltr_1_1_metric_scorer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib). </p>
@@ -179,6 +175,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">MAPScorer::MAPScorer </td>
@@ -188,6 +187,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Construct a new <a class="el" href="classltr_1_1_m_a_p_scorer.html" title="This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib).">MAPScorer</a> object. </p>
@@ -224,10 +228,10 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Clone <a class="el" href="classltr_1_1_metric_scorer.html" title="A generic retrieval measure computation interface.">MetricScorer</a> object. </p>
+<p>Clone <a class="el" href="classltr_1_1_metric_scorer.html" title="A abstract retrieval measure computation interface.">MetricScorer</a> object. </p>
 <dl class="section return"><dt>Returns</dt><dd>unique_ptr&lt;MetricScorer&gt; </dd></dl>
 
-<p>Implements <a class="el" href="classltr_1_1_metric_scorer.html#a62c1e00993aa9d07266e600413629dd2">ltr::MetricScorer</a>.</p>
+<p>Reimplemented from <a class="el" href="classltr_1_1_metric_scorer.html#a8e6f6dfc87c7c15f2a3ad6b255472f4f">ltr::MetricScorer</a>.</p>
 
 </div>
 </div>
@@ -236,6 +240,9 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a> &amp; MAPScorer::operator= </td>
@@ -245,6 +252,11 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Assignment operator for <a class="el" href="classltr_1_1_m_a_p_scorer.html" title="This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib).">MAPScorer</a> object. </p>
@@ -258,30 +270,40 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
 
 </div>
 </div>
-<a id="a880a754ea6f91c9ea77b5ec1fa8ae990"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a880a754ea6f91c9ea77b5ec1fa8ae990">&#9670;&nbsp;</a></span>score() <span class="overload">[1/2]</span></h2>
+<a id="a7b9e49d9962838c659a2ee75a21b1c0e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b9e49d9962838c659a2ee75a21b1c0e">&#9670;&nbsp;</a></span>score() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">double MAPScorer::score </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a> &amp;&#160;</td>
-          <td class="paramname"><em>rls</em></td><td>)</td>
+          <td class="paramtype">DataSet &amp;&#160;</td>
+          <td class="paramname"><em>ds</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
-<p>Compute MAP for a list of RankLists. </p>
+<p>Return score for multiple RankLists. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">rls</td><td></td></tr>
+    <tr><td class="paramname">ds</td><td></td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237">ltr::MetricScorer</a>.</p>
 
 </div>
 </div>
@@ -309,7 +331,7 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Compute MAP for a single <a class="el" href="classltr_1_1_rank_list.html" title="This class implement the list of objects (each of which is a DataPoint) to be ranked.">RankList</a>. </p>
+<p>Compute MAP for a single <a class="el" href="classltr_1_1_rank_list.html" title="A RankList is the object to be ranked by models.">RankList</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rl</td><td></td></tr>
@@ -318,13 +340,43 @@ int&#160;</td><td class="memItemRight" valign="bottom"><b>depth</b></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>double </dd></dl>
 
-<p>Implements <a class="el" href="classltr_1_1_metric_scorer.html#ac191873cb029c29d8d018e62d2db75bb">ltr::MetricScorer</a>.</p>
+<p>Reimplemented from <a class="el" href="classltr_1_1_metric_scorer.html#a44a294a84d0ad73363da62f6fb3cf403">ltr::MetricScorer</a>.</p>
+
+</div>
+</div>
+<a id="a47187ce2733056d01c7b3fee8955fe4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a47187ce2733056d01c7b3fee8955fe4a">&#9670;&nbsp;</a></span>toString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string MAPScorer::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return string representation of model. </p>
+<dl class="section return"><dt>Returns</dt><dd>string </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classltr_1_1_metric_scorer.html#ad49ccec2df5162fe80a5396921b6907a">ltr::MetricScorer</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/<a class="el" href="_m_a_p_scorer_8hpp_source.html">MAPScorer.hpp</a></li>
-<li>/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/<a class="el" href="_m_a_p_scorer_8cpp.html">MAPScorer.cpp</a></li>
+<li>/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

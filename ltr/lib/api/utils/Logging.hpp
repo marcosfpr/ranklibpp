@@ -22,12 +22,9 @@
 
 #include <vector>
 #include <string>
-#include <boost/log/trivial.hpp>
 
 using std::string;
 using std::vector;
-
-#define LOGGING(lvl) BOOST_LOG_TRIVIAL(lvl)
 
 #define RESET   "\033[0m"
 #define BLACK   "\033[30m"      /* Black */
@@ -53,12 +50,11 @@ namespace ltr {
 
     enum log_level
     {
-        trace,
-        debug,
         info,
+        debug,
         warning,
         error,
-        fatal
+        critical
     };
 
     /**

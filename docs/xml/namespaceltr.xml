@@ -3,16 +3,66 @@
   <compounddef id="namespaceltr" kind="namespace" language="C++">
     <compoundname>ltr</compoundname>
     <innerclass refid="classltr_1_1_ada_rank" prot="public">ltr::AdaRank</innerclass>
-    <innerclass refid="classltr_1_1_ada_rank_impl" prot="public">ltr::AdaRankImpl</innerclass>
     <innerclass refid="classltr_1_1_data_point" prot="public">ltr::DataPoint</innerclass>
     <innerclass refid="classltr_1_1_data_point_impl" prot="public">ltr::DataPointImpl</innerclass>
+    <innerclass refid="structltr_1_1key__value" prot="public">ltr::key_value</innerclass>
+    <innerclass refid="classltr_1_1_learner" prot="public">ltr::Learner</innerclass>
     <innerclass refid="classltr_1_1_ltr_error" prot="public">ltr::LtrError</innerclass>
     <innerclass refid="classltr_1_1_m_a_p_scorer" prot="public">ltr::MAPScorer</innerclass>
     <innerclass refid="classltr_1_1_metric_scorer" prot="public">ltr::MetricScorer</innerclass>
+    <innerclass refid="classltr_1_1_precision_scorer" prot="public">ltr::PrecisionScorer</innerclass>
     <innerclass refid="classltr_1_1_ranker" prot="public">ltr::Ranker</innerclass>
-    <innerclass refid="classltr_1_1_ranker_impl" prot="public">ltr::RankerImpl</innerclass>
     <innerclass refid="classltr_1_1_rank_list" prot="public">ltr::RankList</innerclass>
     <innerclass refid="classltr_1_1_rank_list_impl" prot="public">ltr::RankListImpl</innerclass>
+    <innerclass refid="classltr_1_1_weak_ranker" prot="public">ltr::WeakRanker</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfd" prot="public" static="no" strong="no">
+        <type></type>
+        <name>log_level</name>
+        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2337aaf86e0664e7e043c1437d08d792" prot="public">
+          <name>info</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2c7abc01c264790dff77a1328260d70d" prot="public">
+          <name>debug</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfdaaa71669889745bd1ea6acca575222344" prot="public">
+          <name>warning</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda631752d28c4258d9bf00410916219839" prot="public">
+          <name>error</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda4e1fec08e374336b192380827e1b35ea" prot="public">
+          <name>critical</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="52" column="1" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" bodystart="51" bodyend="58"/>
+      </memberdef>
+      </sectiondef>
       <sectiondef kind="typedef">
       <memberdef kind="typedef" id="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" prot="public" static="no">
         <type>list&lt; <ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &gt;</type>
@@ -26,39 +76,455 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataSet.hpp" line="27" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataSet.hpp" bodystart="21" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataSet.hpp" line="37" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataSet.hpp" bodystart="31" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="_rank_list_8hpp_1a20ddcf0e5318cfcfa87f0fd5821d1c8b" prot="public" static="no">
-        <type>shared_ptr&lt; const <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> &gt;</type>
-        <definition>typedef shared_ptr&lt;const DataPoint&gt; ltr::ReadableDataPoint</definition>
+      <memberdef kind="typedef" id="_iterators_8hpp_1a093773d4a757c2d26b4db423544f129f" prot="public" static="no">
+        <type>vector&lt; double &gt;</type>
+        <definition>typedef vector&lt;double&gt; ltr::FeaturesContainer</definition>
         <argsstring></argsstring>
-        <name>ReadableDataPoint</name>
+        <name>FeaturesContainer</name>
         <briefdescription>
+<para>iterator of features datapoint Values of each input feature of learner. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="29" column="24" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" bodystart="27" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Iterators.hpp" line="40" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Iterators.hpp" bodystart="34" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="typedef" id="_rank_list_8hpp_1a2027db64d94276e4824691bced873c6b" prot="public" static="no">
+      <memberdef kind="typedef" id="_iterators_8hpp_1a2bf554721a2837e450a54db357b900fe" prot="public" static="no">
+        <type>std::shared_ptr&lt; const <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> &gt;</type>
+        <definition>typedef std::shared_ptr&lt;const DataPoint&gt; ltr::ReadableDataPoint</definition>
+        <argsstring></argsstring>
+        <name>ReadableDataPoint</name>
+        <briefdescription>
+<para>Define a readable datapoint. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Iterators.hpp" line="46" column="29" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Iterators.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_iterators_8hpp_1a2027db64d94276e4824691bced873c6b" prot="public" static="no">
         <type>vector&lt; ReadableDataPoint &gt;</type>
         <definition>typedef vector&lt;ReadableDataPoint&gt; ltr::Sample</definition>
         <argsstring></argsstring>
         <name>Sample</name>
         <briefdescription>
+<para>A vector of readable datapoints is considered one sample for ltr algorithms. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" line="30" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/RankList.hpp" bodystart="30" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Iterators.hpp" line="52" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Iterators.hpp" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="_key_value_8hpp_1a0dcd7f5fa3513580fc8216eef1a0eec3" prot="public" static="no">
+        <type>struct <ref refid="structltr_1_1key__value" kindref="compound">ltr::key_value</ref></type>
+        <definition>typedef struct ltr::key_value ltr::KeyValue</definition>
+        <argsstring></argsstring>
+        <name>KeyValue</name>
+        <briefdescription>
+<para>Simple representation of key-value pairs handled by learning algorithms. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" line="37" column="10"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_data_set_8hpp_1a191fcde2ec8b1eb7b9680800747f1aa8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>DataSet</type>
+        <definition>DataSet ltr::load_svmlight</definition>
+        <argsstring>(const string &amp;file)</argsstring>
+        <name>load_svmlight</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>file</declname>
+        </param>
+        <briefdescription>
+<para>Load SVM-Light file to DataSet. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>DataSet </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataSet.hpp" line="45" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataSet.cpp" bodystart="36" bodyend="72" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataSet.hpp" declline="45" declcolumn="13"/>
+      </memberdef>
+      <memberdef kind="function" id="_key_value_8hpp_1ad356abd0228c3def76ff192ade5d3ccf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>list&lt; <ref refid="structltr_1_1key__value" kindref="compound">KeyValue</ref> &gt;</type>
+        <definition>list&lt; KeyValue &gt; ltr::parseKeyValue</definition>
+        <argsstring>(string raw, const string &amp;key_value_separator=&quot;:&quot;, const string &amp;pair_separator=&quot; &quot;)</argsstring>
+        <name>parseKeyValue</name>
+        <param>
+          <type>string</type>
+          <declname>raw</declname>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>key_value_separator</declname>
+          <defval>&quot;:&quot;</defval>
+        </param>
+        <param>
+          <type>const string &amp;</type>
+          <declname>pair_separator</declname>
+          <defval>&quot; &quot;</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" line="39" column="6" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/KeyValue.cpp" bodystart="30" bodyend="56" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/KeyValue.hpp" declline="39" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="_logging_8hpp_1a5049a4c91c1d15e10b12f52b76b6745c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ltr::init_logging</definition>
+        <argsstring>()</argsstring>
+        <name>init_logging</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="49" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="31" bodyend="34" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="49" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_logging_8hpp_1a1660183056e30b25a527d08ee8a8210c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * ltr::color_score</definition>
+        <argsstring>(double value)</argsstring>
+        <name>color_score</name>
+        <param>
+          <type>double</type>
+          <declname>value</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Color of score in range 0-1 <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>value</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="65" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="112" bodyend="116" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="65" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_logging_8hpp_1affa6925341f1c67fc0ac2e8f492cd94a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * ltr::color_delta</definition>
+        <argsstring>(double delta)</argsstring>
+        <name>color_delta</name>
+        <param>
+          <type>double</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Color of delta score <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="72" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="118" bodyend="122" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="72" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_logging_8hpp_1aa5b201561a9f4188c8610cbd23f2aa4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const char *</type>
+        <definition>const char * ltr::color_status</definition>
+        <argsstring>(const string &amp;status)</argsstring>
+        <name>color_status</name>
+        <param>
+          <type>const string &amp;</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Color of status string <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>status</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="79" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="124" bodyend="127" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="79" declcolumn="16"/>
+      </memberdef>
+      <memberdef kind="function" id="_logging_8hpp_1afd0b55b197205e174da96108bd2a51ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ltr::log</definition>
+        <argsstring>(vector&lt; string &gt; msg, bool header=false, vector&lt; const char * &gt; colors={}, vector&lt; int &gt; sizes={})</argsstring>
+        <name>log</name>
+        <param>
+          <type>vector&lt; string &gt;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>header</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>vector&lt; const char * &gt;</type>
+          <declname>colors</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>vector&lt; int &gt;</type>
+          <declname>sizes</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Log a set of messages into screen; <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>colors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="88" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="37" bodyend="68" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="88" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_logging_8hpp_1a02680bdc96ec899628b33ce6b2e70893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ltr::log</definition>
+        <argsstring>(vector&lt; string &gt; msg, bool header=false, const char *color=&quot;&quot;, vector&lt; int &gt; sizes={})</argsstring>
+        <name>log</name>
+        <param>
+          <type>vector&lt; string &gt;</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>header</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>color</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>vector&lt; int &gt;</type>
+          <declname>sizes</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Log a set of messages with single color <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>header</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="97" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="70" bodyend="73" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="97" declcolumn="10"/>
+      </memberdef>
+      <memberdef kind="function" id="_logging_8hpp_1aa7bb902b4e9dc50f01c53aca094c26d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>string</type>
+        <definition>string ltr::log</definition>
+        <argsstring>(vector&lt; int &gt; sizes)</argsstring>
+        <name>log</name>
+        <param>
+          <type>vector&lt; int &gt;</type>
+          <declname>sizes</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Log footer of table <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>color</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>sizes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>string footer line </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="105" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="103" bodyend="110" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="105" declcolumn="12"/>
+      </memberdef>
+      <memberdef kind="function" id="_logging_8hpp_1a402821d151f76a4b1794bb88e7ff6686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ltr::log</definition>
+        <argsstring>(string msg, log_level type, const char *color=&quot;&quot;, int size=0)</argsstring>
+        <name>log</name>
+        <param>
+          <type>string</type>
+          <declname>msg</declname>
+        </param>
+        <param>
+          <type>log_level</type>
+          <declname>type</declname>
+        </param>
+        <param>
+          <type>const char *</type>
+          <declname>color</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>size</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Log a set of messages into screen;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msg</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>type</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>size</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="114" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="75" bodyend="101" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="114" declcolumn="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting/AdaRank.hpp" line="16" column="13"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="28" column="13"/>
   </compounddef>
 </doxygen>

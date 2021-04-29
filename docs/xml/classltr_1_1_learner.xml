@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classltr_1_1_learner" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>ltr::Learner</compoundname>
+    <derivedcompoundref refid="classltr_1_1_ranker" prot="public" virt="non-virtual">ltr::Ranker</derivedcompoundref>
+    <derivedcompoundref refid="classltr_1_1_weak_ranker" prot="public" virt="non-virtual">ltr::WeakRanker</derivedcompoundref>
+    <includes refid="_learner_8hpp" local="no">Learner.hpp</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classltr_1_1_learner_1acf85ea361fa758668779249d77ce2ee5" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>double</type>
+        <definition>virtual double ltr::Learner::predict</definition>
+        <argsstring>(ReadableDataPoint dp)=0</argsstring>
+        <name>predict</name>
+        <reimplementedby refid="classltr_1_1_ranker_1a7a37948dc9fa6641b3952b22944fffce">predict</reimplementedby>
+        <reimplementedby refid="classltr_1_1_weak_ranker_1a10cd60e3aa7955a9cb44816e3523a3d1">predict</reimplementedby>
+        <reimplementedby refid="classltr_1_1_ada_rank_1addc477120ac720e3c25b0eb9d3618fb8">predict</reimplementedby>
+        <param>
+          <type>ReadableDataPoint</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+<para>A <ref refid="classltr_1_1_learner" kindref="compound">Learner</ref> need to evaluate a single datapoint. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double score prediction </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Learner.hpp" line="42" column="24"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_learner_1a8606e514b58a7e0caf51cfff1e247e44" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Learner::rank</definition>
+        <argsstring>(DataSet &amp;l)</argsstring>
+        <name>rank</name>
+        <param>
+          <type>DataSet &amp;</type>
+          <declname>l</declname>
+        </param>
+        <briefdescription>
+<para>Perform ranking in samples. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>l</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Learner.hpp" line="49" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Learner.cpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_learner_1a5f32be74efa7fd80679d688def13c58e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Learner::rank</definition>
+        <argsstring>(RankList &amp;rl)</argsstring>
+        <name>rank</name>
+        <param>
+          <type><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;</type>
+          <declname>rl</declname>
+        </param>
+        <briefdescription>
+<para>Perform ranking in one sample. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>rl</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Learner.hpp" line="56" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Learner.cpp" bodystart="27" bodyend="41"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Base <ref refid="classltr_1_1_learner" kindref="compound">Learner</ref> Agent interface for LTR algorithms The capabilities of a LTR learner is to generate a score for a single <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> and to provide an entire rank for a <ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> or a DataSet. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="3">
+        <label>ltr::AdaRank</label>
+        <link refid="classltr_1_1_ada_rank"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>ltr::Ranker</label>
+        <link refid="classltr_1_1_ranker"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>ltr::Learner</label>
+        <link refid="classltr_1_1_learner"/>
+      </node>
+      <node id="4">
+        <label>ltr::WeakRanker</label>
+        <link refid="classltr_1_1_weak_ranker"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Learner.hpp" line="34" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Learner.hpp" bodystart="34" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classltr_1_1_learner_1acf85ea361fa758668779249d77ce2ee5" prot="public" virt="pure-virtual"><scope>ltr::Learner</scope><name>predict</name></member>
+      <member refid="classltr_1_1_learner_1a8606e514b58a7e0caf51cfff1e247e44" prot="public" virt="non-virtual"><scope>ltr::Learner</scope><name>rank</name></member>
+      <member refid="classltr_1_1_learner_1a5f32be74efa7fd80679d688def13c58e" prot="public" virt="non-virtual"><scope>ltr::Learner</scope><name>rank</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

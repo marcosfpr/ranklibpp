@@ -15,11 +15,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="179" column="23" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" bodystart="179" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="173" column="23" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" bodystart="173" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classltr_1_1_data_point_1a750f6bd50dba3dfc024073a08e508d45" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_data_point_1a750f6bd50dba3dfc024073a08e508d45" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
         <type></type>
         <definition>ltr::DataPoint::DataPoint</definition>
         <argsstring>(std::string raw=&quot;&quot;)</argsstring>
@@ -30,7 +30,7 @@
           <defval>&quot;&quot;</defval>
         </param>
         <briefdescription>
-<para>Construct a new Data Point object. </para>
+<para>Construct a new <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> object based on SVM-Light format string. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -38,7 +38,7 @@
 <parametername>raw</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>raw text that represents all features </para>
+<para>: SVM-Light string </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="34" column="9"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="47" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a405c4f74a458bbd3ee3189969c984291" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -58,7 +58,7 @@
           <declname>dp</declname>
         </param>
         <briefdescription>
-<para>Construct a new Data Point object. </para>
+<para>Copy construct <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> object. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -74,19 +74,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="41" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="253" bodyend="256"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="54" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="249" bodyend="252"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_data_point_1a1e2a03c42c6f5d02155e5c26535b0cac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_data_point_1a354ca3184971f7b0fcffe7f46ef58bfd" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type></type>
         <definition>DataPoint::DataPoint</definition>
-        <argsstring>(DataPoint &amp;&amp;rhs)</argsstring>
+        <argsstring>(DataPoint &amp;&amp;rhs) noexcept</argsstring>
         <name>DataPoint</name>
         <param>
           <type><ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> &amp;&amp;</type>
           <declname>rhs</declname>
         </param>
         <briefdescription>
-<para>Construct a new Data Point object. </para>
+<para>Move operator for <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> object. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -94,7 +94,7 @@
 <parametername>rhs</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>other datapoint </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="48" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="258" bodyend="262"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="61" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="254" bodyend="258"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a25aec10e66a39b588237268eaac966c7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> &amp;</type>
@@ -132,12 +132,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="56" column="19" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="264" bodyend="268"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="69" column="19" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="260" bodyend="264"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_data_point_1a1119de2abb699b8820a46854aad2d837" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_data_point_1a3045b015466d84cbbc371c4e82181407" prot="public" static="no" const="no" explicit="no" inline="no" noexcept="yes" virt="non-virtual">
         <type><ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> &amp;</type>
         <definition>DataPoint &amp; DataPoint::operator=</definition>
-        <argsstring>(DataPoint &amp;&amp;rhs)</argsstring>
+        <argsstring>(DataPoint &amp;&amp;rhs) noexcept</argsstring>
         <name>operator=</name>
         <param>
           <type><ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> &amp;&amp;</type>
@@ -152,7 +152,7 @@
 <parametername>rhs</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>other datapoint </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -162,7 +162,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="64" column="19" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="270" bodyend="279"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="77" column="19" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="266" bodyend="275"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a69770421a98781a4b34cfff206a24a79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -176,7 +176,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="70" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="281" bodyend="284"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="83" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="277" bodyend="280"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a90e00f6f8d0669457e676c15954c78b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -184,7 +184,7 @@
         <argsstring>() const</argsstring>
         <name>toString</name>
         <briefdescription>
-<para>Return string representation of a datapoint. </para>
+<para>Return string representation of a <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> in SVM-Light format. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>std::string </para>
@@ -193,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="77" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="356" bodyend="359"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="90" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="337" bodyend="340"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a9f6dec9849f8844694c1da64b056231e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -205,7 +205,7 @@
           <declname>id</declname>
         </param>
         <briefdescription>
-<para>Update the id value. </para>
+<para>Update the id of <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -213,7 +213,7 @@
 <parametername>id</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>new item id </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -221,7 +221,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="84" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="286" bodyend="289"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="97" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="282" bodyend="285"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a26a198c90449dab21eaa32d788a37bf1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -229,7 +229,7 @@
         <argsstring>() const</argsstring>
         <name>getID</name>
         <briefdescription>
-<para>Get the id value. </para>
+<para>Get the id of <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>std::string </para>
@@ -238,7 +238,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="91" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="291" bodyend="294"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="104" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="287" bodyend="290"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1afa99d3b2af98c6e4decc5bf3196fc499" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -246,7 +246,7 @@
         <argsstring>() const</argsstring>
         <name>getFeatureCount</name>
         <briefdescription>
-<para>Get the Feature Count. </para>
+<para>Get the number of features used. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>int </para>
@@ -255,7 +255,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="98" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="296" bodyend="299"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="111" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="292" bodyend="295"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a0088094057c56b88b8dee2bd19f7b222" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -263,7 +263,7 @@
         <argsstring>() const</argsstring>
         <name>getLabel</name>
         <briefdescription>
-<para>Get the Label. </para>
+<para>Get the Label of this <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><simplesect kind="return"><para>float </para>
@@ -272,19 +272,19 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="105" column="15" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="301" bodyend="304"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="118" column="15" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="297" bodyend="300"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_data_point_1af569565aa8d16e7187f30f1a211e4492" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_data_point_1a11741b0c8085af78251d7cb8ba3b04e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DataPoint::setLabel</definition>
-        <argsstring>(float label)</argsstring>
+        <argsstring>(float lbl)</argsstring>
         <name>setLabel</name>
         <param>
           <type>float</type>
-          <declname>label</declname>
+          <declname>lbl</declname>
         </param>
         <briefdescription>
-<para>Set the Label. </para>
+<para>Set the Label value for this <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -292,7 +292,7 @@
 <parametername>label</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>new label value </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -300,7 +300,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="112" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="306" bodyend="309"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="125" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="302" bodyend="305"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a8ad3aea20be5cbd61f87a2d437e5fb2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>std::string</type>
@@ -308,28 +308,30 @@
         <argsstring>() const</argsstring>
         <name>getDescription</name>
         <briefdescription>
-<para>Get the Description. </para>
+<para>Get the Description of this <ref refid="classltr_1_1_data_point_impl" kindref="compound">DataPointImpl</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>std::string </para>
+<para><simplesect kind="note"><para>In SVM-Light, description is started with &quot;#&quot; keyword</para>
+</simplesect>
+<simplesect kind="return"><para>std::string </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="119" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="311" bodyend="314"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="133" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="307" bodyend="310"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_data_point_1a52990ef0644da2f94865bcab52830246" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_data_point_1a7e86a8c80d15fb2a575abb92c4240c0c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DataPoint::setDescription</definition>
-        <argsstring>(std::string description)</argsstring>
+        <argsstring>(std::string desc)</argsstring>
         <name>setDescription</name>
         <param>
           <type>std::string</type>
-          <declname>description</declname>
+          <declname>desc</declname>
         </param>
         <briefdescription>
-<para>Set the Description. </para>
+<para>Set the Description value (sometimes indicates the document name) </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -345,66 +347,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="126" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="316" bodyend="319"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_data_point_1a94cc352cd262add926cc8d0ddd1bcea2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void DataPoint::setCached</definition>
-        <argsstring>(double c)</argsstring>
-        <name>setCached</name>
-        <param>
-          <type>double</type>
-          <declname>c</declname>
-        </param>
-        <briefdescription>
-<para>Set the Cached value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><parameterlist kind="param"><parameteritem>
-<parameternamelist>
-<parametername>c</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-</parameterlist>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="133" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="321" bodyend="324"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_data_point_1aad6f93104ca44609dbecfb6834ff193e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>double</type>
-        <definition>double DataPoint::getCached</definition>
-        <argsstring>() const</argsstring>
-        <name>getCached</name>
-        <briefdescription>
-<para>Get the Cached value. </para>
-        </briefdescription>
-        <detaileddescription>
-<para><simplesect kind="return"><para>double </para>
-</simplesect>
-</para>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="140" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="326" bodyend="329"/>
-      </memberdef>
-      <memberdef kind="function" id="classltr_1_1_data_point_1a9ed9b710f37c1a2d7b5489b49f9e5b25" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>void</type>
-        <definition>void DataPoint::resetCached</definition>
-        <argsstring>()</argsstring>
-        <name>resetCached</name>
-        <briefdescription>
-<para>Reset cached value. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="146" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="331" bodyend="334"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="140" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="312" bodyend="315"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a92f1ecb8817784d47bdf20684f000c1a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -434,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="154" column="15" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="336" bodyend="339"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="148" column="15" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="317" bodyend="320"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_1a26a6a7c22f97026d45e7b6b8aa0e041d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -474,33 +417,33 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="162" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="341" bodyend="344"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="156" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="322" bodyend="325"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_data_point_1a29cbf20c9e21eed09af3f1c65e9eb1b7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
-        <type>std::vector&lt; float &gt;</type>
-        <definition>vector&lt; float &gt; DataPoint::getFeatureVector</definition>
+      <memberdef kind="function" id="classltr_1_1_data_point_1aed0c45faab6f30d98f9f54175998ff25" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>FeaturesContainer</type>
+        <definition>FeaturesContainer DataPoint::getFeatureVector</definition>
         <argsstring>() const</argsstring>
         <name>getFeatureVector</name>
         <briefdescription>
 <para>Gets the value of all features as a dense array of feature values. </para>
         </briefdescription>
         <detaileddescription>
-<para><simplesect kind="return"><para>std::vector&lt;float&gt; </para>
+<para><simplesect kind="return"><para>container of feature values </para>
 </simplesect>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="169" column="21" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="346" bodyend="349"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="163" column="27" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="327" bodyend="330"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_data_point_1ac2bff67dc480edae347a55b72834bb87" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_data_point_1aa34f46f5c47995aba3a6c4ec277c80f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
         <definition>void DataPoint::setFeatureVector</definition>
-        <argsstring>(std::vector&lt; float &gt; featureVector)</argsstring>
+        <argsstring>(FeaturesContainer features)</argsstring>
         <name>setFeatureVector</name>
         <param>
-          <type>std::vector&lt; float &gt;</type>
-          <declname>featureVector</declname>
+          <type>FeaturesContainer</type>
+          <declname>features</declname>
         </param>
         <briefdescription>
 <para>Sets the value of all features with the provided dense array of feature values. </para>
@@ -508,10 +451,10 @@
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>featureVector</parametername>
+<parametername>features</parametername>
 </parameternamelist>
 <parameterdescription>
-<para></para>
+<para>container of features values </para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -519,36 +462,35 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="176" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="351" bodyend="354"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="170" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="332" bodyend="335"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
 <para>A <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> is an object to be ranked (Like in RankLib) </para>
     </briefdescription>
     <detaileddescription>
+<para>A <ref refid="classltr_1_1_data_point" kindref="compound">DataPoint</ref> represent a pair [item, query] extracted in svm-light format for learning to rank tasks: <programlisting><codeline><highlight class="normal">&quot;&lt;LABEL&gt;<sp/>qid:&lt;QUERY_ID&gt;<sp/>[&lt;FEATURE_ID:<sp/>FEATURE_VALUE&gt;]&quot;</highlight></codeline>
+</programlisting> </para>
     </detaileddescription>
-    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="27" column="1" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" bodystart="26" bodyend="180"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" line="40" column="1" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/DataPoint.hpp" bodystart="39" bodyend="174"/>
     <listofallmembers>
       <member refid="classltr_1_1_data_point_1a750f6bd50dba3dfc024073a08e508d45" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>DataPoint</name></member>
       <member refid="classltr_1_1_data_point_1a405c4f74a458bbd3ee3189969c984291" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>DataPoint</name></member>
-      <member refid="classltr_1_1_data_point_1a1e2a03c42c6f5d02155e5c26535b0cac" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>DataPoint</name></member>
-      <member refid="classltr_1_1_data_point_1aad6f93104ca44609dbecfb6834ff193e" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>getCached</name></member>
+      <member refid="classltr_1_1_data_point_1a354ca3184971f7b0fcffe7f46ef58bfd" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>DataPoint</name></member>
       <member refid="classltr_1_1_data_point_1a8ad3aea20be5cbd61f87a2d437e5fb2f" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>getDescription</name></member>
       <member refid="classltr_1_1_data_point_1afa99d3b2af98c6e4decc5bf3196fc499" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>getFeatureCount</name></member>
       <member refid="classltr_1_1_data_point_1a92f1ecb8817784d47bdf20684f000c1a" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>getFeatureValue</name></member>
-      <member refid="classltr_1_1_data_point_1a29cbf20c9e21eed09af3f1c65e9eb1b7" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>getFeatureVector</name></member>
+      <member refid="classltr_1_1_data_point_1aed0c45faab6f30d98f9f54175998ff25" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>getFeatureVector</name></member>
       <member refid="classltr_1_1_data_point_1a26a198c90449dab21eaa32d788a37bf1" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>getID</name></member>
       <member refid="classltr_1_1_data_point_1a0088094057c56b88b8dee2bd19f7b222" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>getLabel</name></member>
       <member refid="classltr_1_1_data_point_1a25aec10e66a39b588237268eaac966c7" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>operator=</name></member>
-      <member refid="classltr_1_1_data_point_1a1119de2abb699b8820a46854aad2d837" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>operator=</name></member>
+      <member refid="classltr_1_1_data_point_1a3045b015466d84cbbc371c4e82181407" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>operator=</name></member>
       <member refid="classltr_1_1_data_point_1abdf056fcb3df0997c499567739212be2" prot="private" virt="non-virtual"><scope>ltr::DataPoint</scope><name>p_impl</name></member>
-      <member refid="classltr_1_1_data_point_1a9ed9b710f37c1a2d7b5489b49f9e5b25" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>resetCached</name></member>
-      <member refid="classltr_1_1_data_point_1a94cc352cd262add926cc8d0ddd1bcea2" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>setCached</name></member>
-      <member refid="classltr_1_1_data_point_1a52990ef0644da2f94865bcab52830246" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>setDescription</name></member>
+      <member refid="classltr_1_1_data_point_1a7e86a8c80d15fb2a575abb92c4240c0c" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>setDescription</name></member>
       <member refid="classltr_1_1_data_point_1a26a6a7c22f97026d45e7b6b8aa0e041d" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>setFeatureValue</name></member>
-      <member refid="classltr_1_1_data_point_1ac2bff67dc480edae347a55b72834bb87" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>setFeatureVector</name></member>
+      <member refid="classltr_1_1_data_point_1aa34f46f5c47995aba3a6c4ec277c80f1" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>setFeatureVector</name></member>
       <member refid="classltr_1_1_data_point_1a9f6dec9849f8844694c1da64b056231e" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>setID</name></member>
-      <member refid="classltr_1_1_data_point_1af569565aa8d16e7187f30f1a211e4492" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>setLabel</name></member>
+      <member refid="classltr_1_1_data_point_1a11741b0c8085af78251d7cb8ba3b04e9" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>setLabel</name></member>
       <member refid="classltr_1_1_data_point_1a90e00f6f8d0669457e676c15954c78b3" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>toString</name></member>
       <member refid="classltr_1_1_data_point_1a69770421a98781a4b34cfff206a24a79" prot="public" virt="non-virtual"><scope>ltr::DataPoint</scope><name>~DataPoint</name></member>
     </listofallmembers>

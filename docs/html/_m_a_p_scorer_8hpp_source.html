@@ -71,46 +71,65 @@ $(function() {
 <div class="title">MAPScorer.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_m_a_p_scorer_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef MAP_SCORER_HPP_</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define MAP_SCORER_HPP_</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="_metric_scorer_8hpp.html">MetricScorer.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span>ltr{</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">class </span>RankList;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classltr_1_1_m_a_p_scorer.html">   24</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a> : <span class="keyword">public</span> <a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a>{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <a class="code" href="classltr_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">MAPScorer</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classltr_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">MAPScorer</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; ms);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; <a class="code" href="classltr_1_1_m_a_p_scorer.html#a79321cabcd75fa6575156beea8b1c548">operator=</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; ms);</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2021 LTR++ Project (Marcos Pontes)</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//  of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//  furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//  The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//  all copies or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//  THE SOFTWARE.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#ifndef MAP_SCORER_HPP_</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#define MAP_SCORER_HPP_</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &quot;MetricScorer.hpp&quot;</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span>ltr{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keyword">class </span>RankList;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classltr_1_1_m_a_p_scorer.html">   33</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a> : <span class="keyword">public</span> <a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a>{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <a class="code" href="classltr_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">MAPScorer</a>();</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classltr_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">MAPScorer</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; ms);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">score</a>(<a class="code" href="classltr_1_1_rank_list.html">RankList</a>&amp; rl) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; <a class="code" href="classltr_1_1_m_a_p_scorer.html#a79321cabcd75fa6575156beea8b1c548">operator=</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html">MAPScorer</a>&amp; ms);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">score</a>(<a class="code" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a>&amp; rls);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        unique_ptr&lt;MetricScorer&gt; <a class="code" href="classltr_1_1_m_a_p_scorer.html#a86c043d27c1a55b80b25fcedf67b8d79">clone</a>() <span class="keyword">const override</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // MAP_SCORER_HPP_</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">score</a>(<a class="code" href="classltr_1_1_rank_list.html">RankList</a>&amp; rl) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">score</a>(DataSet&amp; ds) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        unique_ptr&lt;MetricScorer&gt; <a class="code" href="classltr_1_1_m_a_p_scorer.html#a86c043d27c1a55b80b25fcedf67b8d79">clone</a>() <span class="keyword">const override</span>;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">string</span> <a class="code" href="classltr_1_1_m_a_p_scorer.html#a47187ce2733056d01c7b3fee8955fe4a">toString</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    };</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;};</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;<span class="preprocessor">#endif // MAP_SCORER_HPP_</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="a_metric_scorer_8hpp_html"><div class="ttname"><a href="_metric_scorer_8hpp.html">MetricScorer.hpp</a></div><div class="ttdoc">Generic retrieval measure computation interface (like Ranklib)</div></div>
-<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a79321cabcd75fa6575156beea8b1c548"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a79321cabcd75fa6575156beea8b1c548">ltr::MAPScorer::operator=</a></div><div class="ttdeci">MAPScorer &amp; operator=(const MAPScorer &amp;ms)</div><div class="ttdoc">Assignment operator for MAPScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:22</div></div>
-<div class="ttc" id="a_data_set_8hpp_html_ac1f8c5fc3e425c5fc38401d07c1c4747"><div class="ttname"><a href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">ltr::DataSet</a></div><div class="ttdeci">list&lt; RankList &gt; DataSet</div><div class="ttdoc">Initially, a dataset is represented as a linkedlist of RankList objects.</div><div class="ttdef"><b>Definition:</b> DataSet.hpp:21</div></div>
-<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html">ltr::MAPScorer</a></div><div class="ttdoc">This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib).</div><div class="ttdef"><b>Definition:</b> MAPScorer.hpp:24</div></div>
-<div class="ttc" id="aclassltr_1_1_rank_list_html"><div class="ttname"><a href="classltr_1_1_rank_list.html">ltr::RankList</a></div><div class="ttdoc">This class implement the list of objects (each of which is a DataPoint) to be ranked.</div><div class="ttdef"><b>Definition:</b> RankList.hpp:36</div></div>
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html"><div class="ttname"><a href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></div><div class="ttdoc">A generic retrieval measure computation interface.</div><div class="ttdef"><b>Definition:</b> MetricScorer.hpp:31</div></div>
-<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_aa5a1f733d769e0b0b615a12e6e8f4c51"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">ltr::MAPScorer::MAPScorer</a></div><div class="ttdeci">MAPScorer()</div><div class="ttdoc">Construct a new MAPScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:18</div></div>
-<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a49e7a9b42c2b75f971124695bcc6e368"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">ltr::MAPScorer::score</a></div><div class="ttdeci">double score(RankList &amp;rl) override</div><div class="ttdoc">Compute MAP for a single RankList.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:27</div></div>
-<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a86c043d27c1a55b80b25fcedf67b8d79"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a86c043d27c1a55b80b25fcedf67b8d79">ltr::MAPScorer::clone</a></div><div class="ttdeci">unique_ptr&lt; MetricScorer &gt; clone() const override</div><div class="ttdoc">Clone MetricScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:43</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a47187ce2733056d01c7b3fee8955fe4a"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a47187ce2733056d01c7b3fee8955fe4a">ltr::MAPScorer::toString</a></div><div class="ttdeci">string toString() override</div><div class="ttdoc">Return string representation of model.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:53</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a79321cabcd75fa6575156beea8b1c548"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a79321cabcd75fa6575156beea8b1c548">ltr::MAPScorer::operator=</a></div><div class="ttdeci">MAPScorer &amp; operator=(const MAPScorer &amp;ms)</div><div class="ttdoc">Assignment operator for MAPScorer object.</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html">ltr::MAPScorer</a></div><div class="ttdoc">This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib).</div><div class="ttdef"><b>Definition:</b> MAPScorer.hpp:33</div></div>
+<div class="ttc" id="aclassltr_1_1_rank_list_html"><div class="ttname"><a href="classltr_1_1_rank_list.html">ltr::RankList</a></div><div class="ttdoc">A RankList is the object to be ranked by models.</div><div class="ttdef"><b>Definition:</b> RankList.hpp:39</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html"><div class="ttname"><a href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></div><div class="ttdoc">A abstract retrieval measure computation interface.</div><div class="ttdef"><b>Definition:</b> MetricScorer.hpp:40</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_aa5a1f733d769e0b0b615a12e6e8f4c51"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#aa5a1f733d769e0b0b615a12e6e8f4c51">ltr::MAPScorer::MAPScorer</a></div><div class="ttdeci">MAPScorer()</div><div class="ttdoc">Construct a new MAPScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:26</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a49e7a9b42c2b75f971124695bcc6e368"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a49e7a9b42c2b75f971124695bcc6e368">ltr::MAPScorer::score</a></div><div class="ttdeci">double score(RankList &amp;rl) override</div><div class="ttdoc">Compute MAP for a single RankList.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:33</div></div>
+<div class="ttc" id="aclassltr_1_1_m_a_p_scorer_html_a86c043d27c1a55b80b25fcedf67b8d79"><div class="ttname"><a href="classltr_1_1_m_a_p_scorer.html#a86c043d27c1a55b80b25fcedf67b8d79">ltr::MAPScorer::clone</a></div><div class="ttdeci">unique_ptr&lt; MetricScorer &gt; clone() const override</div><div class="ttdoc">Clone MetricScorer object.</div><div class="ttdef"><b>Definition:</b> MAPScorer.cpp:45</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

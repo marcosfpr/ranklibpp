@@ -1,0 +1,4 @@
+<map id="ltr::PrecisionScorer" name="ltr::PrecisionScorer">
+<area shape="rect" id="node1" title="This class computes MAP (Mean Average Precision) from the whole ranked list (like in RankLib)." alt="" coords="5,80,149,107"/>
+<area shape="rect" id="node2" href="$classltr_1_1_metric_scorer.html" title="A abstract retrieval measure computation interface." alt="" coords="14,5,141,32"/>
+</map>

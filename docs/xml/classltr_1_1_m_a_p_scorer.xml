@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="31" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="18" bodyend="18"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="40" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="26" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_m_a_p_scorer_1a661dfa171b19ed4bfc8207042674104c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -45,7 +45,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="38" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="20" bodyend="20"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="47" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classltr_1_1_m_a_p_scorer" kindref="compound">MAPScorer</ref> &amp;</type>
@@ -75,14 +75,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="47" column="19" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="22" bodyend="25"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="56" column="19"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_m_a_p_scorer_1a49e7a9b42c2b75f971124695bcc6e368" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>double</type>
         <definition>double MAPScorer::score</definition>
         <argsstring>(RankList &amp;rl) override</argsstring>
         <name>score</name>
-        <reimplements refid="classltr_1_1_metric_scorer_1ac191873cb029c29d8d018e62d2db75bb">score</reimplements>
+        <reimplements refid="classltr_1_1_metric_scorer_1a44a294a84d0ad73363da62f6fb3cf403">score</reimplements>
         <param>
           <type><ref refid="classltr_1_1_rank_list" kindref="compound">RankList</ref> &amp;</type>
           <declname>rl</declname>
@@ -106,24 +106,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="56" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="27" bodyend="37"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="65" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="33" bodyend="43"/>
       </memberdef>
-      <memberdef kind="function" id="classltr_1_1_m_a_p_scorer_1a880a754ea6f91c9ea77b5ec1fa8ae990" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_m_a_p_scorer_1a7b9e49d9962838c659a2ee75a21b1c0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>double</type>
         <definition>double MAPScorer::score</definition>
-        <argsstring>(DataSet &amp;rls)</argsstring>
+        <argsstring>(DataSet &amp;ds) override</argsstring>
         <name>score</name>
+        <reimplements refid="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237">score</reimplements>
         <param>
-          <type><ref refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kindref="member">DataSet</ref> &amp;</type>
-          <declname>rls</declname>
+          <type>DataSet &amp;</type>
+          <declname>ds</declname>
         </param>
         <briefdescription>
-<para>Compute MAP for a list of RankLists. </para>
+<para>Return score for multiple RankLists. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
-<parametername>rls</parametername>
+<parametername>ds</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para>
@@ -136,14 +137,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="64" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="39" bodyend="41"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="73" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="49" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_m_a_p_scorer_1a86c043d27c1a55b80b25fcedf67b8d79" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>unique_ptr&lt; <ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref> &gt;</type>
         <definition>unique_ptr&lt; MetricScorer &gt; MAPScorer::clone</definition>
         <argsstring>() const override</argsstring>
         <name>clone</name>
-        <reimplements refid="classltr_1_1_metric_scorer_1a62c1e00993aa9d07266e600413629dd2">clone</reimplements>
+        <reimplements refid="classltr_1_1_metric_scorer_1a8e6f6dfc87c7c15f2a3ad6b255472f4f">clone</reimplements>
         <briefdescription>
 <para>Clone <ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref> object. </para>
         </briefdescription>
@@ -154,7 +155,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="71" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="43" bodyend="45"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="80" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_m_a_p_scorer_1a47187ce2733056d01c7b3fee8955fe4a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>string</type>
+        <definition>string MAPScorer::toString</definition>
+        <argsstring>() override</argsstring>
+        <name>toString</name>
+        <reimplements refid="classltr_1_1_metric_scorer_1ad49ccec2df5162fe80a5396921b6907a">toString</reimplements>
+        <briefdescription>
+<para>Return string representation of model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="87" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/metric/MAPScorer.cpp" bodystart="53" bodyend="55"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -186,12 +205,11 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="24" column="40" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" bodystart="24" bodyend="73"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" line="33" column="40" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/metric/MAPScorer.hpp" bodystart="33" bodyend="88"/>
     <listofallmembers>
       <member refid="classltr_1_1_m_a_p_scorer_1a86c043d27c1a55b80b25fcedf67b8d79" prot="public" virt="virtual"><scope>ltr::MAPScorer</scope><name>clone</name></member>
-      <member refid="classltr_1_1_metric_scorer_1a123f9aba73472a6a5f6e3301019f9ac1" prot="protected" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>depth</name></member>
-      <member refid="classltr_1_1_metric_scorer_1a8347d53c4d39a69db8110e53d757a6e4" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>getDepth</name></member>
-      <member refid="classltr_1_1_metric_scorer_1ab9ddb58509a8ee09d8ec8b8b12a18c1c" prot="protected" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>getRelevanceLabels</name></member>
+      <member refid="classltr_1_1_metric_scorer_1a123f9aba73472a6a5f6e3301019f9ac1" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>depth</name></member>
+      <member refid="classltr_1_1_metric_scorer_1accaa818dab2eb2c3debeeb67d2ed5468" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>getDepth</name></member>
       <member refid="classltr_1_1_m_a_p_scorer_1aa5a1f733d769e0b0b615a12e6e8f4c51" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>MAPScorer</name></member>
       <member refid="classltr_1_1_m_a_p_scorer_1a661dfa171b19ed4bfc8207042674104c" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>MAPScorer</name></member>
       <member refid="classltr_1_1_metric_scorer_1a0286ba0f66b080365b3f3682ca6d09cb" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>MetricScorer</name></member>
@@ -199,8 +217,9 @@
       <member refid="classltr_1_1_m_a_p_scorer_1a79321cabcd75fa6575156beea8b1c548" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>operator=</name></member>
       <member refid="classltr_1_1_metric_scorer_1a1b3757c0012820a8a842e4d54f422c45" prot="public" virt="non-virtual" ambiguityscope="ltr::MetricScorer::"><scope>ltr::MAPScorer</scope><name>operator=</name></member>
       <member refid="classltr_1_1_m_a_p_scorer_1a49e7a9b42c2b75f971124695bcc6e368" prot="public" virt="virtual"><scope>ltr::MAPScorer</scope><name>score</name></member>
-      <member refid="classltr_1_1_m_a_p_scorer_1a880a754ea6f91c9ea77b5ec1fa8ae990" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>score</name></member>
-      <member refid="classltr_1_1_metric_scorer_1a37576d07e18405c4195bf3ed60643126" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>setDepth</name></member>
+      <member refid="classltr_1_1_m_a_p_scorer_1a7b9e49d9962838c659a2ee75a21b1c0e" prot="public" virt="virtual"><scope>ltr::MAPScorer</scope><name>score</name></member>
+      <member refid="classltr_1_1_metric_scorer_1a3d482b9057fb4e83987382898414739a" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>setDepth</name></member>
+      <member refid="classltr_1_1_m_a_p_scorer_1a47187ce2733056d01c7b3fee8955fe4a" prot="public" virt="virtual"><scope>ltr::MAPScorer</scope><name>toString</name></member>
       <member refid="classltr_1_1_metric_scorer_1a6dc1a9c79e6ef48ec9272d5379e4c337" prot="public" virt="non-virtual"><scope>ltr::MAPScorer</scope><name>~MetricScorer</name></member>
     </listofallmembers>
   </compounddef>

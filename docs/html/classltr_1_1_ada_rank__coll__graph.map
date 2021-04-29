@@ -1,4 +1,12 @@
 <map id="ltr::AdaRank" name="ltr::AdaRank">
-<area shape="rect" id="node1" title="Listwise boost algorithm based on AdaBoost." alt="" coords="5,80,108,107"/>
-<area shape="rect" id="node2" href="$classltr_1_1_ranker.html" title=" " alt="" coords="12,5,101,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="744,179,847,205"/>
+<area shape="rect" id="node2" href="$classltr_1_1_ranker.html" title="Generic Ranker class." alt="" coords="453,80,543,107"/>
+<area shape="rect" id="node3" href="$classltr_1_1_learner.html" title="Base Learner Agent interface for LTR algorithms The capabilities of a LTR learner is to generate a sc..." alt="" coords="71,5,165,32"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,56,231,83"/>
+<area shape="rect" id="node5" title=" " alt="" coords="63,107,173,133"/>
+<area shape="rect" id="node6" title=" " alt="" coords="54,164,182,191"/>
+<area shape="rect" id="node7" title=" " alt="" coords="440,131,556,157"/>
+<area shape="rect" id="node8" title=" " alt="" coords="417,181,579,208"/>
+<area shape="rect" id="node9" title=" " alt="" coords="411,239,585,265"/>
+<area shape="rect" id="node10" title=" " alt="" coords="429,289,567,316"/>
 </map>

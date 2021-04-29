@@ -3,6 +3,17 @@ set(OHSUMED "${CMAKE_CURRENT_SOURCE_DIR}/benchmarks/OHSUMED")
 
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
+# GTest library
+CPMAddPackage(
+  NAME googletest
+  GITHUB_REPOSITORY google/googletest
+  GIT_TAG release-1.10.0
+  VERSION 1.10.0
+  OPTIONS "INSTALL_GTEST OFF" "gtest_force_shared_crt"
+)
+
+find_package(Threads REQUIRED)
+
 add_executable(
   test_ltrpp
   main.cpp
@@ -22,8 +33,8 @@ add_executable(
         functional/RankingAdaRank.cpp
 )
 
-target_link_libraries(test_ltrpp ltr pthread gtest gtest_main)
-target_link_libraries(func_ltrpp ltr pthread gtest gtest_main)
+target_link_libraries(test_ltrpp ltr Threads::Threads gtest gtest_main)
+target_link_libraries(func_ltrpp ltr Threads::Threads gtest gtest_main)
 
 # Create testing target and redirect its output to `Testing` folder
 add_test(NAME test_ltrpp COMMAND test_ltrpp WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Testing)
@@ -42,11 +53,15 @@ set_tests_properties(func_ltrpp
 
 include(FindValgrind)
 
-add_custom_target(valgrind_test_ltrpp
-        COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:test_ltrpp>
-        DEPENDS test_ltrpp
-        )
-add_custom_target(valgrind_func_ltrpp
-        COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:func_ltrpp>
-        DEPENDS func_ltrpp
-        )
+if(VALGRIND_FOUND)
+
+        add_custom_target(valgrind_test_ltrpp
+                COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:test_ltrpp>
+                DEPENDS test_ltrpp
+                )
+        add_custom_target(valgrind_func_ltrpp
+                COMMAND ${VALGRIND_PROGRAM} --leak-check=full $<TARGET_FILE:func_ltrpp>
+                DEPENDS func_ltrpp
+                )
+                
+endif()

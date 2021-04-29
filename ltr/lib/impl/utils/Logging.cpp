@@ -26,19 +26,11 @@
 #include <utility>
 
 #include <boost/algorithm/string.hpp>
-#include <boost/log/expressions.hpp>
-#include <boost/log/utility/setup/console.hpp>
-#include <boost/log/utility/setup/common_attributes.hpp>
-
-namespace logging = boost::log;
+#include <spdlog/spdlog.h>
 
 void ltr::init_logging()
 {
-//        Possibility: persist log messages
-//        logging::add_file_log("sample.log");
-    logging::add_common_attributes();
-    logging::add_console_log(std::cout,
-                             boost::log::keywords::format = ">> [%TimeStamp%] [%Severity%] %Message%");
+    spdlog::set_pattern("[%H:%M:%S %z] [%^---%L---%$] [thread %t] %v");
 }
 
 
@@ -70,9 +62,9 @@ void ltr::log(vector<string> msg, bool header, vector<const char*> colors, vecto
         stream << start << std::setw(sizes[i]) << msg[i] << end << " | ";
     }
 
-    LOGGING(info) << stream.str();
+    spdlog::info(stream.str());
 
-    if (header) LOGGING(info) << head;
+    if (header) spdlog::info(head);
 }
 
 void ltr::log(vector<string> msg, bool header, const char* color, vector<int> sizes) {
@@ -86,24 +78,24 @@ void ltr::log(string msg, log_level type, const char* color, int size) {
     if (start.empty()) end = "";
 
     if (size == 0) size = msg.size();
+    std::stringstream stream;
+    stream << start << std::setw(size) << msg << end;
+
     switch(type) {
-        case trace:
-            LOGGING(trace) << start << std::setw(size) << msg << end;
-            break;
         case info:
-            LOGGING(info) << start << std::setw(size) << msg << end;
+            spdlog::info(stream.str());
             break;
         case debug:
-            LOGGING(debug) << start << std::setw(size) << msg << end;
+            spdlog::debug(stream.str());
             break;
         case warning:
-            LOGGING(warning) << start << std::setw(size) << msg << end;
+            spdlog::warn(stream.str());
             break;
         case error:
-            LOGGING(error) << start << std::setw(size) << msg << end;
+            spdlog::error(stream.str());
             break;
-        case fatal:
-            LOGGING(fatal) << start << std::setw(size) << msg << end;
+        case critical:
+            spdlog::critical(stream.str());
             break;
     }
 }
@@ -113,7 +105,7 @@ string ltr::log(vector<int> sizes){
     for(const int& size : sizes)
         stream << "+" << string(size+2, '-');
     stream << "+";
-    LOGGING(info) << stream.str();
+    spdlog::info(stream.str());
     return stream.str();
 }
 

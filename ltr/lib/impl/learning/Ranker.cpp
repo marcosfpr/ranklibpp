@@ -26,8 +26,7 @@
 #include <vector> // vector
 #include <memory> // shared_ptr, unique_ptr
 #include <stdexcept>  // runtime error 
-#include <experimental/filesystem> // filesystem
-#include <fstream> // ifstream, ofstream
+#include <filesystem>
 
 using std::map;
 using std::move;
@@ -35,7 +34,7 @@ using std::unique_ptr;
 using std::string;
 using std::vector;
 using std::stringstream;
-namespace fs = std::experimental::filesystem;
+namespace fs = std::filesystem;
 
 using namespace ltr;
 

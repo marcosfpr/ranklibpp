@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_387df1618943ef4f834c1ddbcb730069" kind="dir">
+    <compoundname>/home/marcos/Projetos/ltrpp/ltr/lib/api/utils</compoundname>
+    <innerfile refid="_key_value_8hpp">KeyValue.hpp</innerfile>
+    <innerfile refid="_logging_8hpp">Logging.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/"/>
+  </compounddef>
+</doxygen>

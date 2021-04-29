@@ -4,6 +4,7 @@
     <compoundname>/home/marcos/Projetos/ltrpp/ltr/lib/api/metric</compoundname>
     <innerfile refid="_m_a_p_scorer_8hpp">MAPScorer.hpp</innerfile>
     <innerfile refid="_metric_scorer_8hpp">MetricScorer.hpp</innerfile>
+    <innerfile refid="_precision_scorer_8hpp">PrecisionScorer.hpp</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

@@ -162,15 +162,19 @@
 <dt id="_CPPv4N3ltr9DataPointE">
 <span id="_CPPv3N3ltr9DataPointE"></span><span id="_CPPv2N3ltr9DataPointE"></span><span id="ltr::DataPoint"></span><span class="target" id="classltr_1_1_data_point"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ltr</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">DataPoint</span></code><a class="headerlink" href="#_CPPv4N3ltr9DataPointE" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>A <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a> is an object to be ranked (Like in RankLib) </p>
+<p>A <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a> represent a pair [item, query] extracted in svm-light format for learning to rank tasks: <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;&lt;LABEL&gt; qid:&lt;QUERY_ID&gt; [&lt;FEATURE_ID: FEATURE_VALUE&gt;]&quot;</span>
+</pre></div>
+</div>
+ </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr9DataPoint9DataPointENSt6stringE">
-<span id="_CPPv3N3ltr9DataPoint9DataPointENSt6stringE"></span><span id="_CPPv2N3ltr9DataPoint9DataPointENSt6stringE"></span><span id="ltr::DataPoint::DataPoint__ss"></span><span class="target" id="classltr_1_1_data_point_1a750f6bd50dba3dfc024073a08e508d45"></span><code class="sig-name descname"><span class="pre">DataPoint</span></code><span class="sig-paren">(</span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <em><span class="pre">raw</span></em> <span class="pre">=</span> <span class="pre">&quot;&quot;</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint9DataPointENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct a new Data Point object. </p>
+<span id="_CPPv3N3ltr9DataPoint9DataPointENSt6stringE"></span><span id="_CPPv2N3ltr9DataPoint9DataPointENSt6stringE"></span><span id="ltr::DataPoint::DataPoint__ss"></span><span class="target" id="classltr_1_1_data_point_1a750f6bd50dba3dfc024073a08e508d45"></span><em class="property"><span class="pre">explicit</span></em> <code class="sig-name descname"><span class="pre">DataPoint</span></code><span class="sig-paren">(</span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <em><span class="pre">raw</span></em> <span class="pre">=</span> <span class="pre">&quot;&quot;</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint9DataPointENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a> object based on SVM-Light format string. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">raw</span></code>: raw text that represents all features </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">raw</span></code>: : SVM-Light string </p></li>
 </ul>
 </dd>
 </dl>
@@ -180,7 +184,7 @@
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr9DataPoint9DataPointERK9DataPoint">
 <span id="_CPPv3N3ltr9DataPoint9DataPointERK9DataPoint"></span><span id="_CPPv2N3ltr9DataPoint9DataPointERK9DataPoint"></span><span id="ltr::DataPoint::DataPoint__DataPointCR"></span><span class="target" id="classltr_1_1_data_point_1a405c4f74a458bbd3ee3189969c984291"></span><code class="sig-name descname"><span class="pre">DataPoint</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N3ltr9DataPoint9DataPointERK9DataPoint" title="ltr::DataPoint::DataPoint"><span class="pre">DataPoint</span></a> <span class="pre">&amp;</span><em><span class="pre">dp</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint9DataPointERK9DataPoint" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct a new Data Point object. </p>
+<dd><p>Copy construct <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">dp</span></code>: other datapoint </p></li>
@@ -192,11 +196,11 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr9DataPoint9DataPointERR9DataPoint">
-<span id="_CPPv3N3ltr9DataPoint9DataPointERR9DataPoint"></span><span id="_CPPv2N3ltr9DataPoint9DataPointERR9DataPoint"></span><span id="ltr::DataPoint::DataPoint__DataPointRR"></span><span class="target" id="classltr_1_1_data_point_1a1e2a03c42c6f5d02155e5c26535b0cac"></span><code class="sig-name descname"><span class="pre">DataPoint</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr9DataPoint9DataPointERR9DataPoint" title="ltr::DataPoint::DataPoint"><span class="pre">DataPoint</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rhs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint9DataPointERR9DataPoint" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct a new Data Point object. </p>
+<span id="_CPPv3N3ltr9DataPoint9DataPointERR9DataPoint"></span><span id="_CPPv2N3ltr9DataPoint9DataPointERR9DataPoint"></span><span id="ltr::DataPoint::DataPoint__DataPointRR"></span><span class="target" id="classltr_1_1_data_point_1a354ca3184971f7b0fcffe7f46ef58bfd"></span><code class="sig-name descname"><span class="pre">DataPoint</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr9DataPoint9DataPointERR9DataPoint" title="ltr::DataPoint::DataPoint"><span class="pre">DataPoint</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rhs</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">noexcept</span></em><a class="headerlink" href="#_CPPv4N3ltr9DataPoint9DataPointERR9DataPoint" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Move operator for <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rhs</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rhs</span></code>: other datapoint </p></li>
 </ul>
 </dd>
 </dl>
@@ -220,13 +224,13 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr9DataPointaSERR9DataPoint">
-<span id="_CPPv3N3ltr9DataPointaSERR9DataPoint"></span><span id="_CPPv2N3ltr9DataPointaSERR9DataPoint"></span><span id="ltr::DataPoint::assign-operator__DataPointRR"></span><span class="target" id="classltr_1_1_data_point_1a1119de2abb699b8820a46854aad2d837"></span><a class="reference internal" href="#_CPPv4N3ltr9DataPointE" title="ltr::DataPoint"><span class="pre">DataPoint</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr9DataPointE" title="ltr::DataPoint"><span class="pre">DataPoint</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rhs</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPointaSERR9DataPoint" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3ltr9DataPointaSERR9DataPoint"></span><span id="_CPPv2N3ltr9DataPointaSERR9DataPoint"></span><span id="ltr::DataPoint::assign-operator__DataPointRR"></span><span class="target" id="classltr_1_1_data_point_1a3045b015466d84cbbc371c4e82181407"></span><a class="reference internal" href="#_CPPv4N3ltr9DataPointE" title="ltr::DataPoint"><span class="pre">DataPoint</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr9DataPointE" title="ltr::DataPoint"><span class="pre">DataPoint</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rhs</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">noexcept</span></em><a class="headerlink" href="#_CPPv4N3ltr9DataPointaSERR9DataPoint" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Move operator for DataPoints. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a>&amp; </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rhs</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rhs</span></code>: other datapoint </p></li>
 </ul>
 </dd>
 </dl>
@@ -242,7 +246,7 @@
 <dl class="cpp function">
 <dt id="_CPPv4NK3ltr9DataPoint8toStringEv">
 <span id="_CPPv3NK3ltr9DataPoint8toStringEv"></span><span id="_CPPv2NK3ltr9DataPoint8toStringEv"></span><span id="ltr::DataPoint::toStringC"></span><span class="target" id="classltr_1_1_data_point_1a90e00f6f8d0669457e676c15954c78b3"></span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <code class="sig-name descname"><span class="pre">toString</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr9DataPoint8toStringEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Return string representation of a datapoint. </p>
+<dd><p>Return string representation of a <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a> in SVM-Light format. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>std::string </p>
 </dd>
@@ -253,10 +257,10 @@
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr9DataPoint5setIDENSt6stringE">
 <span id="_CPPv3N3ltr9DataPoint5setIDENSt6stringE"></span><span id="_CPPv2N3ltr9DataPoint5setIDENSt6stringE"></span><span id="ltr::DataPoint::setID__ss"></span><span class="target" id="classltr_1_1_data_point_1a9f6dec9849f8844694c1da64b056231e"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setID</span></code><span class="sig-paren">(</span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <em><span class="pre">id</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint5setIDENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Update the id value. </p>
+<dd><p>Update the id of <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a>. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code>: new item id </p></li>
 </ul>
 </dd>
 </dl>
@@ -266,7 +270,7 @@
 <dl class="cpp function">
 <dt id="_CPPv4NK3ltr9DataPoint5getIDEv">
 <span id="_CPPv3NK3ltr9DataPoint5getIDEv"></span><span id="_CPPv2NK3ltr9DataPoint5getIDEv"></span><span id="ltr::DataPoint::getIDC"></span><span class="target" id="classltr_1_1_data_point_1a26a198c90449dab21eaa32d788a37bf1"></span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <code class="sig-name descname"><span class="pre">getID</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr9DataPoint5getIDEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the id value. </p>
+<dd><p>Get the id of <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a>. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>std::string </p>
 </dd>
@@ -277,7 +281,7 @@
 <dl class="cpp function">
 <dt id="_CPPv4NK3ltr9DataPoint15getFeatureCountEv">
 <span id="_CPPv3NK3ltr9DataPoint15getFeatureCountEv"></span><span id="_CPPv2NK3ltr9DataPoint15getFeatureCountEv"></span><span id="ltr::DataPoint::getFeatureCountC"></span><span class="target" id="classltr_1_1_data_point_1afa99d3b2af98c6e4decc5bf3196fc499"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">getFeatureCount</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr9DataPoint15getFeatureCountEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the Feature Count. </p>
+<dd><p>Get the number of features used. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>int </p>
 </dd>
@@ -288,7 +292,7 @@
 <dl class="cpp function">
 <dt id="_CPPv4NK3ltr9DataPoint8getLabelEv">
 <span id="_CPPv3NK3ltr9DataPoint8getLabelEv"></span><span id="_CPPv2NK3ltr9DataPoint8getLabelEv"></span><span id="ltr::DataPoint::getLabelC"></span><span class="target" id="classltr_1_1_data_point_1a0088094057c56b88b8dee2bd19f7b222"></span><span class="pre">float</span> <code class="sig-name descname"><span class="pre">getLabel</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr9DataPoint8getLabelEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the Label. </p>
+<dd><p>Get the Label of this <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a>. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>float </p>
 </dd>
@@ -298,11 +302,11 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr9DataPoint8setLabelEf">
-<span id="_CPPv3N3ltr9DataPoint8setLabelEf"></span><span id="_CPPv2N3ltr9DataPoint8setLabelEf"></span><span id="ltr::DataPoint::setLabel__float"></span><span class="target" id="classltr_1_1_data_point_1af569565aa8d16e7187f30f1a211e4492"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setLabel</span></code><span class="sig-paren">(</span><span class="pre">float</span> <em><span class="pre">label</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint8setLabelEf" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Set the Label. </p>
+<span id="_CPPv3N3ltr9DataPoint8setLabelEf"></span><span id="_CPPv2N3ltr9DataPoint8setLabelEf"></span><span id="ltr::DataPoint::setLabel__float"></span><span class="target" id="classltr_1_1_data_point_1a11741b0c8085af78251d7cb8ba3b04e9"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setLabel</span></code><span class="sig-paren">(</span><span class="pre">float</span> <em><span class="pre">lbl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint8setLabelEf" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the Label value for this <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a>. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">label</span></code>: new label value </p></li>
 </ul>
 </dd>
 </dl>
@@ -312,8 +316,10 @@
 <dl class="cpp function">
 <dt id="_CPPv4NK3ltr9DataPoint14getDescriptionEv">
 <span id="_CPPv3NK3ltr9DataPoint14getDescriptionEv"></span><span id="_CPPv2NK3ltr9DataPoint14getDescriptionEv"></span><span id="ltr::DataPoint::getDescriptionC"></span><span class="target" id="classltr_1_1_data_point_1a8ad3aea20be5cbd61f87a2d437e5fb2f"></span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <code class="sig-name descname"><span class="pre">getDescription</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr9DataPoint14getDescriptionEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the Description. </p>
+<dd><p>Get the Description of this DataPointImpl. </p>
 <p><dl class="simple">
+<dt><strong>Note</strong></dt><dd><p>In SVM-Light, description is started with “#” keyword</p>
+</dd>
 <dt><strong>Return</strong></dt><dd><p>std::string </p>
 </dd>
 </dl>
@@ -322,8 +328,8 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr9DataPoint14setDescriptionENSt6stringE">
-<span id="_CPPv3N3ltr9DataPoint14setDescriptionENSt6stringE"></span><span id="_CPPv2N3ltr9DataPoint14setDescriptionENSt6stringE"></span><span id="ltr::DataPoint::setDescription__ss"></span><span class="target" id="classltr_1_1_data_point_1a52990ef0644da2f94865bcab52830246"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setDescription</span></code><span class="sig-paren">(</span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <em><span class="pre">description</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint14setDescriptionENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Set the Description. </p>
+<span id="_CPPv3N3ltr9DataPoint14setDescriptionENSt6stringE"></span><span id="_CPPv2N3ltr9DataPoint14setDescriptionENSt6stringE"></span><span id="ltr::DataPoint::setDescription__ss"></span><span class="target" id="classltr_1_1_data_point_1a7e86a8c80d15fb2a575abb92c4240c0c"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setDescription</span></code><span class="sig-paren">(</span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <em><span class="pre">desc</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint14setDescriptionENSt6stringE" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Set the Description value (sometimes indicates the document name) </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">description</span></code>: </p></li>
@@ -331,36 +337,6 @@
 </dd>
 </dl>
 </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4N3ltr9DataPoint9setCachedEd">
-<span id="_CPPv3N3ltr9DataPoint9setCachedEd"></span><span id="_CPPv2N3ltr9DataPoint9setCachedEd"></span><span id="ltr::DataPoint::setCached__double"></span><span class="target" id="classltr_1_1_data_point_1a94cc352cd262add926cc8d0ddd1bcea2"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setCached</span></code><span class="sig-paren">(</span><span class="pre">double</span> <em><span class="pre">c</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint9setCachedEd" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Set the Cached value. </p>
-<p><dl class="simple">
-<dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">c</span></code>: </p></li>
-</ul>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4NK3ltr9DataPoint9getCachedEv">
-<span id="_CPPv3NK3ltr9DataPoint9getCachedEv"></span><span id="_CPPv2NK3ltr9DataPoint9getCachedEv"></span><span id="ltr::DataPoint::getCachedC"></span><span class="target" id="classltr_1_1_data_point_1aad6f93104ca44609dbecfb6834ff193e"></span><span class="pre">double</span> <code class="sig-name descname"><span class="pre">getCached</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr9DataPoint9getCachedEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Get the Cached value. </p>
-<p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>double </p>
-</dd>
-</dl>
-</p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt id="_CPPv4N3ltr9DataPoint11resetCachedEv">
-<span id="_CPPv3N3ltr9DataPoint11resetCachedEv"></span><span id="_CPPv2N3ltr9DataPoint11resetCachedEv"></span><span id="ltr::DataPoint::resetCached"></span><span class="target" id="classltr_1_1_data_point_1a9ed9b710f37c1a2d7b5489b49f9e5b25"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">resetCached</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint11resetCachedEv" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Reset cached value. </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -394,22 +370,22 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK3ltr9DataPoint16getFeatureVectorEv">
-<span id="_CPPv3NK3ltr9DataPoint16getFeatureVectorEv"></span><span id="_CPPv2NK3ltr9DataPoint16getFeatureVectorEv"></span><span id="ltr::DataPoint::getFeatureVectorC"></span><span class="target" id="classltr_1_1_data_point_1a29cbf20c9e21eed09af3f1c65e9eb1b7"></span><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">float</span><span class="pre">&gt;</span> <code class="sig-name descname"><span class="pre">getFeatureVector</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr9DataPoint16getFeatureVectorEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK3ltr9DataPoint16getFeatureVectorEv"></span><span id="_CPPv2NK3ltr9DataPoint16getFeatureVectorEv"></span><span id="ltr::DataPoint::getFeatureVectorC"></span><span class="target" id="classltr_1_1_data_point_1aed0c45faab6f30d98f9f54175998ff25"></span><span class="pre">FeaturesContainer</span> <code class="sig-name descname"><span class="pre">getFeatureVector</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr9DataPoint16getFeatureVectorEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Gets the value of all features as a dense array of feature values. </p>
 <p><dl class="simple">
-<dt><strong>Return</strong></dt><dd><p>std::vector&lt;float&gt; </p>
+<dt><strong>Return</strong></dt><dd><p>container of feature values </p>
 </dd>
 </dl>
 </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3ltr9DataPoint16setFeatureVectorENSt6vectorIfEE">
-<span id="_CPPv3N3ltr9DataPoint16setFeatureVectorENSt6vectorIfEE"></span><span id="_CPPv2N3ltr9DataPoint16setFeatureVectorENSt6vectorIfEE"></span><span id="ltr::DataPoint::setFeatureVector__std::vector:float:"></span><span class="target" id="classltr_1_1_data_point_1ac2bff67dc480edae347a55b72834bb87"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setFeatureVector</span></code><span class="sig-paren">(</span><span class="pre">std</span><span class="pre">::</span><span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">float</span><span class="pre">&gt;</span> <em><span class="pre">featureVector</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint16setFeatureVectorENSt6vectorIfEE" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4N3ltr9DataPoint16setFeatureVectorE17FeaturesContainer">
+<span id="_CPPv3N3ltr9DataPoint16setFeatureVectorE17FeaturesContainer"></span><span id="_CPPv2N3ltr9DataPoint16setFeatureVectorE17FeaturesContainer"></span><span id="ltr::DataPoint::setFeatureVector__FeaturesContainer"></span><span class="target" id="classltr_1_1_data_point_1aa34f46f5c47995aba3a6c4ec277c80f1"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setFeatureVector</span></code><span class="sig-paren">(</span><span class="pre">FeaturesContainer</span> <em><span class="pre">features</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9DataPoint16setFeatureVectorE17FeaturesContainer" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Sets the value of all features with the provided dense array of feature values. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">featureVector</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">features</span></code>: container of features values </p></li>
 </ul>
 </dd>
 </dl>
@@ -422,16 +398,17 @@
 <dl class="cpp class">
 <dt id="_CPPv4N3ltr8RankListE">
 <span id="_CPPv3N3ltr8RankListE"></span><span id="_CPPv2N3ltr8RankListE"></span><span id="ltr::RankList"></span><span class="target" id="classltr_1_1_rank_list"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ltr</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">RankList</span></code><a class="headerlink" href="#_CPPv4N3ltr8RankListE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>This class implement the list of objects (each of which is a <a class="reference internal" href="#classltr_1_1_data_point"><span class="std std-ref">DataPoint</span></a>) to be ranked. </p>
+<dd><p>A <a class="reference internal" href="#classltr_1_1_rank_list"><span class="std std-ref">RankList</span></a> is the object to be ranked by models. </p>
+<p>A single <a class="reference internal" href="#classltr_1_1_rank_list"><span class="std std-ref">RankList</span></a> corresponds to one sample to train or predict. </p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr8RankList8RankListE6Sample">
-<span id="_CPPv3N3ltr8RankList8RankListE6Sample"></span><span id="_CPPv2N3ltr8RankList8RankListE6Sample"></span><span id="ltr::RankList::RankList__Sample"></span><span class="target" id="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3"></span><code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><span class="pre">Sample</span> <em><span class="pre">data_points</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr8RankList8RankListE6Sample" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct a new Rank List object. </p>
+<span id="_CPPv3N3ltr8RankList8RankListE6Sample"></span><span id="_CPPv2N3ltr8RankList8RankListE6Sample"></span><span id="ltr::RankList::RankList__Sample"></span><span class="target" id="classltr_1_1_rank_list_1a8ba9c6076cb67897d1cb0ff66336e4f3"></span><em class="property"><span class="pre">explicit</span></em> <code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><span class="pre">Sample</span> <em><span class="pre">data_points</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr8RankList8RankListE6Sample" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classltr_1_1_rank_list"><span class="std std-ref">RankList</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">data_points</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">data_points</span></code>: Vector of datapoints corresponding to all datapoints for a single queryID. </p></li>
 </ul>
 </dd>
 </dl>
@@ -441,7 +418,7 @@
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr8RankList8RankListERK8RankList6vectorIiEi">
 <span id="_CPPv3N3ltr8RankList8RankListERK8RankList6vectorIiEi"></span><span id="_CPPv2N3ltr8RankList8RankListERK8RankList6vectorIiEi"></span><span id="ltr::RankList::RankList__RankListCR.vector:i:.i"></span><span class="target" id="classltr_1_1_rank_list_1a7328669b281ef0836e63109bf0b9b066"></span><code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N3ltr8RankList8RankListERK8RankList6vectorIiEi" title="ltr::RankList::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><em><span class="pre">rl</span></em>, <span class="pre">vector</span><span class="pre">&lt;</span><span class="pre">int</span><span class="pre">&gt;</span> <em><span class="pre">idx</span></em>, <span class="pre">int</span> <em><span class="pre">offset</span></em> <span class="pre">=</span> <span class="pre">0</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr8RankList8RankListERK8RankList6vectorIiEi" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct a new Rank List object. </p>
+<dd><p>Construct a new <a class="reference internal" href="#classltr_1_1_rank_list"><span class="std std-ref">RankList</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: </p></li>
@@ -456,7 +433,7 @@
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr8RankList8RankListERK8RankList">
 <span id="_CPPv3N3ltr8RankList8RankListERK8RankList"></span><span id="_CPPv2N3ltr8RankList8RankListERK8RankList"></span><span id="ltr::RankList::RankList__RankListCR"></span><span class="target" id="classltr_1_1_rank_list_1ac4201f553630131084076b8ba856eeea"></span><code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N3ltr8RankList8RankListERK8RankList" title="ltr::RankList::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr8RankList8RankListERK8RankList" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct a new Rank List object. </p>
+<dd><p>Construct a new <a class="reference internal" href="#classltr_1_1_rank_list"><span class="std std-ref">RankList</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: other ranklist </p></li>
@@ -468,8 +445,8 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr8RankList8RankListERR8RankList">
-<span id="_CPPv3N3ltr8RankList8RankListERR8RankList"></span><span id="_CPPv2N3ltr8RankList8RankListERR8RankList"></span><span id="ltr::RankList::RankList__RankListRR"></span><span class="target" id="classltr_1_1_rank_list_1a67541798cf45331b2be2ce0356331749"></span><code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr8RankList8RankListERR8RankList" title="ltr::RankList::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr8RankList8RankListERR8RankList" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Construct a new Rank List object. </p>
+<span id="_CPPv3N3ltr8RankList8RankListERR8RankList"></span><span id="_CPPv2N3ltr8RankList8RankListERR8RankList"></span><span id="ltr::RankList::RankList__RankListRR"></span><span class="target" id="classltr_1_1_rank_list_1a34c66cf6d08f28fd6dd7068bfdb4dddb"></span><code class="sig-name descname"><span class="pre">RankList</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr8RankList8RankListERR8RankList" title="ltr::RankList::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">noexcept</span></em><a class="headerlink" href="#_CPPv4N3ltr8RankList8RankListERR8RankList" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Construct a new <a class="reference internal" href="#classltr_1_1_rank_list"><span class="std std-ref">RankList</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">rl</span></code>: </p></li>
@@ -496,7 +473,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr8RankListaSERR8RankList">
-<span id="_CPPv3N3ltr8RankListaSERR8RankList"></span><span id="_CPPv2N3ltr8RankListaSERR8RankList"></span><span id="ltr::RankList::assign-operator__RankListRR"></span><span class="target" id="classltr_1_1_rank_list_1a50cef171525b4aca632b407ac113acc3"></span><a class="reference internal" href="#_CPPv4N3ltr8RankListE" title="ltr::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr8RankListE" title="ltr::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr8RankListaSERR8RankList" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3ltr8RankListaSERR8RankList"></span><span id="_CPPv2N3ltr8RankListaSERR8RankList"></span><span id="ltr::RankList::assign-operator__RankListRR"></span><span class="target" id="classltr_1_1_rank_list_1ac1b2cded6ce0aac53e76eb0b3ba68ecd"></span><a class="reference internal" href="#_CPPv4N3ltr8RankListE" title="ltr::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr8RankListE" title="ltr::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">noexcept</span></em><a class="headerlink" href="#_CPPv4N3ltr8RankListaSERR8RankList" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Move operator for ranklists. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p><a class="reference internal" href="#classltr_1_1_rank_list"><span class="std std-ref">RankList</span></a>&amp; </p>
@@ -626,13 +603,8 @@
 <dl class="cpp class">
 <dt id="_CPPv4N3ltr12MetricScorerE">
 <span id="_CPPv3N3ltr12MetricScorerE"></span><span id="_CPPv2N3ltr12MetricScorerE"></span><span id="ltr::MetricScorer"></span><span class="target" id="classltr_1_1_metric_scorer"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">ltr</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">MetricScorer</span></code><a class="headerlink" href="#_CPPv4N3ltr12MetricScorerE" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>A generic retrieval measure computation interface. </p>
-<p><dl class="simple">
-<dt><strong>Author</strong></dt><dd><p>Marcos Pontes and vdang </p>
-</dd>
-</dl>
-</p>
-<p>Subclassed by <a class="reference internal" href="#classltr_1_1_m_a_p_scorer"><span class="std std-ref">ltr::MAPScorer</span></a></p>
+<dd><p>A abstract retrieval measure computation interface. </p>
+<p>Subclassed by <a class="reference internal" href="#classltr_1_1_m_a_p_scorer"><span class="std std-ref">ltr::MAPScorer</span></a>, ltr::PrecisionScorer</p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric">Public Functions</p>
 <dl class="cpp function">
@@ -677,11 +649,11 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr12MetricScorer8setDepthEi">
-<span id="_CPPv3N3ltr12MetricScorer8setDepthEi"></span><span id="_CPPv2N3ltr12MetricScorer8setDepthEi"></span><span id="ltr::MetricScorer::setDepth__i"></span><span class="target" id="classltr_1_1_metric_scorer_1a37576d07e18405c4195bf3ed60643126"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setDepth</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">depth</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr12MetricScorer8setDepthEi" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3ltr12MetricScorer8setDepthEi"></span><span id="_CPPv2N3ltr12MetricScorer8setDepthEi"></span><span id="ltr::MetricScorer::setDepth__i"></span><span class="target" id="classltr_1_1_metric_scorer_1a3d482b9057fb4e83987382898414739a"></span><span class="pre">void</span> <code class="sig-name descname"><span class="pre">setDepth</span></code><span class="sig-paren">(</span><span class="pre">int</span> <em><span class="pre">d</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr12MetricScorer8setDepthEi" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Set the Depth value. </p>
 <p><dl class="simple">
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">depth</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">d</span></code>: depth </p></li>
 </ul>
 </dd>
 </dl>
@@ -689,8 +661,8 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt id="_CPPv4N3ltr12MetricScorer8getDepthEv">
-<span id="_CPPv3N3ltr12MetricScorer8getDepthEv"></span><span id="_CPPv2N3ltr12MetricScorer8getDepthEv"></span><span id="ltr::MetricScorer::getDepth"></span><span class="target" id="classltr_1_1_metric_scorer_1a8347d53c4d39a69db8110e53d757a6e4"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">getDepth</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr12MetricScorer8getDepthEv" title="Permalink to this definition">¶</a><br /></dt>
+<dt id="_CPPv4NK3ltr12MetricScorer8getDepthEv">
+<span id="_CPPv3NK3ltr12MetricScorer8getDepthEv"></span><span id="_CPPv2NK3ltr12MetricScorer8getDepthEv"></span><span id="ltr::MetricScorer::getDepthC"></span><span class="target" id="classltr_1_1_metric_scorer_1accaa818dab2eb2c3debeeb67d2ed5468"></span><span class="pre">int</span> <code class="sig-name descname"><span class="pre">getDepth</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr12MetricScorer8getDepthEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Get the Depth value. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>int </p>
@@ -701,7 +673,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr12MetricScorer5scoreER7DataSet">
-<span id="_CPPv3N3ltr12MetricScorer5scoreER7DataSet"></span><span id="_CPPv2N3ltr12MetricScorer5scoreER7DataSet"></span><span id="ltr::MetricScorer::score__DataSetR"></span><span class="target" id="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237"></span><span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><span class="pre">DataSet</span> <span class="pre">&amp;</span><em><span class="pre">ds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr12MetricScorer5scoreER7DataSet" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3ltr12MetricScorer5scoreER7DataSet"></span><span id="_CPPv2N3ltr12MetricScorer5scoreER7DataSet"></span><span id="ltr::MetricScorer::score__DataSetR"></span><span class="target" id="classltr_1_1_metric_scorer_1a089b79830be7462487dfdf7060d87237"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><span class="pre">DataSet</span> <span class="pre">&amp;</span><em><span class="pre">ds</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr12MetricScorer5scoreER7DataSet" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return score for multiple RankLists. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>double </p>
@@ -716,7 +688,7 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr12MetricScorer5scoreER8RankList">
-<span id="_CPPv3N3ltr12MetricScorer5scoreER8RankList"></span><span id="_CPPv2N3ltr12MetricScorer5scoreER8RankList"></span><span id="ltr::MetricScorer::score__RankListR"></span><span class="target" id="classltr_1_1_metric_scorer_1ac191873cb029c29d8d018e62d2db75bb"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr8RankListE" title="ltr::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span> <span class="pre">=</span> <span class="pre">0</span><a class="headerlink" href="#_CPPv4N3ltr12MetricScorer5scoreER8RankList" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3N3ltr12MetricScorer5scoreER8RankList"></span><span id="_CPPv2N3ltr12MetricScorer5scoreER8RankList"></span><span id="ltr::MetricScorer::score__RankListR"></span><span class="target" id="classltr_1_1_metric_scorer_1a44a294a84d0ad73363da62f6fb3cf403"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3ltr8RankListE" title="ltr::RankList"><span class="pre">RankList</span></a> <span class="pre">&amp;</span><em><span class="pre">rl</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr12MetricScorer5scoreER8RankList" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Return score for a single <a class="reference internal" href="#classltr_1_1_rank_list"><span class="std std-ref">RankList</span></a>. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>double </p>
@@ -731,10 +703,21 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4NK3ltr12MetricScorer5cloneEv">
-<span id="_CPPv3NK3ltr12MetricScorer5cloneEv"></span><span id="_CPPv2NK3ltr12MetricScorer5cloneEv"></span><span id="ltr::MetricScorer::cloneC"></span><span class="target" id="classltr_1_1_metric_scorer_1a62c1e00993aa9d07266e600413629dd2"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">unique_ptr</span><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4N3ltr12MetricScorerE" title="ltr::MetricScorer"><span class="pre">MetricScorer</span></a><span class="pre">&gt;</span> <code class="sig-name descname"><span class="pre">clone</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em> <span class="pre">=</span> <span class="pre">0</span><a class="headerlink" href="#_CPPv4NK3ltr12MetricScorer5cloneEv" title="Permalink to this definition">¶</a><br /></dt>
+<span id="_CPPv3NK3ltr12MetricScorer5cloneEv"></span><span id="_CPPv2NK3ltr12MetricScorer5cloneEv"></span><span id="ltr::MetricScorer::cloneC"></span><span class="target" id="classltr_1_1_metric_scorer_1a8e6f6dfc87c7c15f2a3ad6b255472f4f"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">unique_ptr</span><span class="pre">&lt;</span><a class="reference internal" href="#_CPPv4N3ltr12MetricScorerE" title="ltr::MetricScorer"><span class="pre">MetricScorer</span></a><span class="pre">&gt;</span> <code class="sig-name descname"><span class="pre">clone</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3ltr12MetricScorer5cloneEv" title="Permalink to this definition">¶</a><br /></dt>
 <dd><p>Clone a <a class="reference internal" href="#classltr_1_1_metric_scorer"><span class="std std-ref">MetricScorer</span></a> pointer. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>std::unique_ptr&lt;Material&gt; </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3ltr12MetricScorer8toStringEv">
+<span id="_CPPv3N3ltr12MetricScorer8toStringEv"></span><span id="_CPPv2N3ltr12MetricScorer8toStringEv"></span><span id="ltr::MetricScorer::toString"></span><span class="target" id="classltr_1_1_metric_scorer_1ad49ccec2df5162fe80a5396921b6907a"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">string</span> <code class="sig-name descname"><span class="pre">toString</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr12MetricScorer8toStringEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return string representation of model. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string </p>
 </dd>
 </dl>
 </p>
@@ -800,13 +783,13 @@
 
 <dl class="cpp function">
 <dt id="_CPPv4N3ltr9MAPScorer5scoreER7DataSet">
-<span id="_CPPv3N3ltr9MAPScorer5scoreER7DataSet"></span><span id="_CPPv2N3ltr9MAPScorer5scoreER7DataSet"></span><span id="ltr::MAPScorer::score__DataSetR"></span><span class="target" id="classltr_1_1_m_a_p_scorer_1a880a754ea6f91c9ea77b5ec1fa8ae990"></span><span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><span class="pre">DataSet</span> <span class="pre">&amp;</span><em><span class="pre">rls</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3ltr9MAPScorer5scoreER7DataSet" title="Permalink to this definition">¶</a><br /></dt>
-<dd><p>Compute MAP for a list of RankLists. </p>
+<span id="_CPPv3N3ltr9MAPScorer5scoreER7DataSet"></span><span id="_CPPv2N3ltr9MAPScorer5scoreER7DataSet"></span><span id="ltr::MAPScorer::score__DataSetR"></span><span class="target" id="classltr_1_1_m_a_p_scorer_1a7b9e49d9962838c659a2ee75a21b1c0e"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">double</span> <code class="sig-name descname"><span class="pre">score</span></code><span class="sig-paren">(</span><span class="pre">DataSet</span> <span class="pre">&amp;</span><em><span class="pre">ds</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4N3ltr9MAPScorer5scoreER7DataSet" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return score for multiple RankLists. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>double </p>
 </dd>
 <dt><strong>Parameters</strong></dt><dd><ul class="breatheparameterlist simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">rls</span></code>: </p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ds</span></code>: </p></li>
 </ul>
 </dd>
 </dl>
@@ -819,6 +802,17 @@
 <dd><p>Clone <a class="reference internal" href="#classltr_1_1_metric_scorer"><span class="std std-ref">MetricScorer</span></a> object. </p>
 <p><dl class="simple">
 <dt><strong>Return</strong></dt><dd><p>unique_ptr&lt;MetricScorer&gt; </p>
+</dd>
+</dl>
+</p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt id="_CPPv4N3ltr9MAPScorer8toStringEv">
+<span id="_CPPv3N3ltr9MAPScorer8toStringEv"></span><span id="_CPPv2N3ltr9MAPScorer8toStringEv"></span><span id="ltr::MAPScorer::toString"></span><span class="target" id="classltr_1_1_m_a_p_scorer_1a47187ce2733056d01c7b3fee8955fe4a"></span><em class="property"><span class="pre">virtual</span></em> <span class="pre">string</span> <code class="sig-name descname"><span class="pre">toString</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">override</span></em><a class="headerlink" href="#_CPPv4N3ltr9MAPScorer8toStringEv" title="Permalink to this definition">¶</a><br /></dt>
+<dd><p>Return string representation of model. </p>
+<p><dl class="simple">
+<dt><strong>Return</strong></dt><dd><p>string </p>
 </dd>
 </dl>
 </p>

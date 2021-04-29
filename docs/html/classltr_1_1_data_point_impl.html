@@ -71,8 +71,8 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
-<a href="#pro-static-attribs">Static Protected Attributes</a> &#124;
 <a href="classltr_1_1_data_point_impl-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">ltr::DataPointImpl Class Reference</div>  </div>
@@ -83,9 +83,9 @@ Collaboration diagram for ltr::DataPointImpl:</div>
 <div class="dyncontent">
 <div class="center"><img src="classltr_1_1_data_point_impl__coll__graph.png" border="0" usemap="#ltr_1_1_data_point_impl_coll__map" alt="Collaboration graph"/></div>
 <map name="ltr_1_1_data_point_impl_coll__map" id="ltr_1_1_data_point_impl_coll__map">
-<area shape="rect" title=" " alt="" coords="23,109,161,136"/>
+<area shape="rect" title=" " alt="" coords="27,109,165,136"/>
 <area shape="rect" title=" " alt="" coords="5,5,64,32"/>
-<area shape="rect" title=" " alt="" coords="88,5,211,32"/>
+<area shape="rect" title=" " alt="" coords="89,5,226,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -106,42 +106,33 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>setID</b> (string id)
 <tr class="memitem:a26f13482ed4efeb4e865444d03ed5268"><td class="memItemLeft" align="right" valign="top"><a id="a26f13482ed4efeb4e865444d03ed5268"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>getID</b> ()</td></tr>
 <tr class="separator:a26f13482ed4efeb4e865444d03ed5268"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad6c825d2d5e0295c1573476ef9153e1a"><td class="memItemLeft" align="right" valign="top"><a id="ad6c825d2d5e0295c1573476ef9153e1a"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>getFeatureCount</b> ()</td></tr>
-<tr class="separator:ad6c825d2d5e0295c1573476ef9153e1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5584b44817cdff118c28fc71ebfd033e"><td class="memItemLeft" align="right" valign="top"><a id="a5584b44817cdff118c28fc71ebfd033e"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>getLabel</b> ()</td></tr>
-<tr class="separator:a5584b44817cdff118c28fc71ebfd033e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1548f0b5a755f2c254226486e936241c"><td class="memItemLeft" align="right" valign="top"><a id="a1548f0b5a755f2c254226486e936241c"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setLabel</b> (float label)</td></tr>
-<tr class="separator:a1548f0b5a755f2c254226486e936241c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adea235176a63523a06546c83a642eda3"><td class="memItemLeft" align="right" valign="top"><a id="adea235176a63523a06546c83a642eda3"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>getFeatureCount</b> () const</td></tr>
+<tr class="separator:adea235176a63523a06546c83a642eda3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a727625dbbc03669e44df7c0eed779a9d"><td class="memItemLeft" align="right" valign="top"><a id="a727625dbbc03669e44df7c0eed779a9d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>getLabel</b> () const</td></tr>
+<tr class="separator:a727625dbbc03669e44df7c0eed779a9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43908968fdce684b501336e7e993fe76"><td class="memItemLeft" align="right" valign="top"><a id="a43908968fdce684b501336e7e993fe76"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setLabel</b> (float lbl)</td></tr>
+<tr class="separator:a43908968fdce684b501336e7e993fe76"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a271534cbc967f23b0978fd3085423504"><td class="memItemLeft" align="right" valign="top"><a id="a271534cbc967f23b0978fd3085423504"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>getDescription</b> ()</td></tr>
 <tr class="separator:a271534cbc967f23b0978fd3085423504"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a696c86c53b384ccd7969d4c10abbd2e5"><td class="memItemLeft" align="right" valign="top"><a id="a696c86c53b384ccd7969d4c10abbd2e5"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setDescription</b> (string description)</td></tr>
-<tr class="separator:a696c86c53b384ccd7969d4c10abbd2e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a681f3d677b3718cd7719046a489028fe"><td class="memItemLeft" align="right" valign="top"><a id="a681f3d677b3718cd7719046a489028fe"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setCached</b> (double c)</td></tr>
-<tr class="separator:a681f3d677b3718cd7719046a489028fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae96f390a115fb7d86cfc843cb0ae47fc"><td class="memItemLeft" align="right" valign="top"><a id="ae96f390a115fb7d86cfc843cb0ae47fc"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>getCached</b> ()</td></tr>
-<tr class="separator:ae96f390a115fb7d86cfc843cb0ae47fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a38296d925d757c1c305a9e377528f7f0"><td class="memItemLeft" align="right" valign="top"><a id="a38296d925d757c1c305a9e377528f7f0"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>resetCached</b> ()</td></tr>
-<tr class="separator:a38296d925d757c1c305a9e377528f7f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5250337f9eabb2b4f22e6f141f3dd823"><td class="memItemLeft" align="right" valign="top"><a id="a5250337f9eabb2b4f22e6f141f3dd823"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setDescription</b> (string desc)</td></tr>
+<tr class="separator:a5250337f9eabb2b4f22e6f141f3dd823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9af7f66b290e5115a8e1d59f4e6bc1c0"><td class="memItemLeft" align="right" valign="top"><a id="a9af7f66b290e5115a8e1d59f4e6bc1c0"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>getFeatureValue</b> (int featureID)</td></tr>
 <tr class="separator:a9af7f66b290e5115a8e1d59f4e6bc1c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a684fc26f1ec3d66dab03c921c0b60bcf"><td class="memItemLeft" align="right" valign="top"><a id="a684fc26f1ec3d66dab03c921c0b60bcf"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>setFeatureValue</b> (int featureID, float featureValue)</td></tr>
 <tr class="separator:a684fc26f1ec3d66dab03c921c0b60bcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a82f9dd8a4f7d6b88b9a403b018f76aec"><td class="memItemLeft" align="right" valign="top"><a id="a82f9dd8a4f7d6b88b9a403b018f76aec"></a>
-vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>getFeatureVector</b> ()</td></tr>
-<tr class="separator:a82f9dd8a4f7d6b88b9a403b018f76aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa1b873f7cd17424b34e8a14206273fb8"><td class="memItemLeft" align="right" valign="top"><a id="aa1b873f7cd17424b34e8a14206273fb8"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>setFeatureVector</b> (vector&lt; float &gt; featureVector)</td></tr>
-<tr class="separator:aa1b873f7cd17424b34e8a14206273fb8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d111d838e373ebbbe2c26bc4d3aa947"><td class="memItemLeft" align="right" valign="top"><a id="a3d111d838e373ebbbe2c26bc4d3aa947"></a>
+FeaturesContainer&#160;</td><td class="memItemRight" valign="bottom"><b>getFeatureVector</b> ()</td></tr>
+<tr class="separator:a3d111d838e373ebbbe2c26bc4d3aa947"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4197aec8b976e5551953266255420b61"><td class="memItemLeft" align="right" valign="top"><a id="a4197aec8b976e5551953266255420b61"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setFeatureVector</b> (FeaturesContainer featureVector)</td></tr>
+<tr class="separator:a4197aec8b976e5551953266255420b61"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae79273938700be381991644d76631fc"><td class="memItemLeft" align="right" valign="top"><a id="aae79273938700be381991644d76631fc"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>init</b> (string raw=&quot;&quot;)</td></tr>
 <tr class="separator:aae79273938700be381991644d76631fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,42 +154,39 @@ static int&#160;</td><td class="memItemRight" valign="bottom"><b>feature_increas
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a067eeaec4db4e47463c6662351701a55"><td class="memItemLeft" align="right" valign="top"><a id="a067eeaec4db4e47463c6662351701a55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyValueFeaturePair</b> (std::pair&lt; string, string &gt; &amp;keyValue, string feature)</td></tr>
-<tr class="separator:a067eeaec4db4e47463c6662351701a55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a88fa8f4d62d7d1a3652385db7aa1f2a6"><td class="memItemLeft" align="right" valign="top"><a id="a88fa8f4d62d7d1a3652385db7aa1f2a6"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>parse</b> (string raw)</td></tr>
 <tr class="separator:a88fa8f4d62d7d1a3652385db7aa1f2a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-methods"></a>
+Static Protected Member Functions</h2></td></tr>
+<tr class="memitem:afe36649c378984728015a13da5456b87"><td class="memItemLeft" align="right" valign="top"><a id="afe36649c378984728015a13da5456b87"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>getKeyValueFeaturePair</b> (std::pair&lt; string, string &gt; &amp;keyValue, string feature)</td></tr>
+<tr class="separator:afe36649c378984728015a13da5456b87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:a2a578ec1c2210cb9e9d8f6f15d7f55d7"><td class="memItemLeft" align="right" valign="top"><a id="a2a578ec1c2210cb9e9d8f6f15d7f55d7"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>feature_count</b></td></tr>
+<tr class="separator:a2a578ec1c2210cb9e9d8f6f15d7f55d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a743ab81445170c99b9e65bec9ae12e66"><td class="memItemLeft" align="right" valign="top"><a id="a743ab81445170c99b9e65bec9ae12e66"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>known_features</b></td></tr>
 <tr class="separator:a743ab81445170c99b9e65bec9ae12e66"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa2c27f356f457edbb135fa4bc79274ff"><td class="memItemLeft" align="right" valign="top"><a id="aa2c27f356f457edbb135fa4bc79274ff"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>label</b></td></tr>
 <tr class="separator:aa2c27f356f457edbb135fa4bc79274ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0ce59ed593543b60c4ec35975cfda351"><td class="memItemLeft" align="right" valign="top"><a id="a0ce59ed593543b60c4ec35975cfda351"></a>
-double&#160;</td><td class="memItemRight" valign="bottom"><b>cached</b></td></tr>
-<tr class="separator:a0ce59ed593543b60c4ec35975cfda351"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a14538028c58bb8bfbf693853f841705f"><td class="memItemLeft" align="right" valign="top"><a id="a14538028c58bb8bfbf693853f841705f"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>id_</b></td></tr>
 <tr class="separator:a14538028c58bb8bfbf693853f841705f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2caca4cdbfe0e70fc8764b1fa647431c"><td class="memItemLeft" align="right" valign="top"><a id="a2caca4cdbfe0e70fc8764b1fa647431c"></a>
 string&#160;</td><td class="memItemRight" valign="bottom"><b>description</b></td></tr>
 <tr class="separator:a2caca4cdbfe0e70fc8764b1fa647431c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad34327edc224f2e48fc476adf2b31b0"><td class="memItemLeft" align="right" valign="top"><a id="aad34327edc224f2e48fc476adf2b31b0"></a>
-vector&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>feature_values</b></td></tr>
-<tr class="separator:aad34327edc224f2e48fc476adf2b31b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-static-attribs"></a>
-Static Protected Attributes</h2></td></tr>
-<tr class="memitem:aaa1338ea3ac6df10c2a45e003257104e"><td class="memItemLeft" align="right" valign="top"><a id="aaa1338ea3ac6df10c2a45e003257104e"></a>
-static int&#160;</td><td class="memItemRight" valign="bottom"><b>feature_count</b> = 0</td></tr>
-<tr class="separator:aaa1338ea3ac6df10c2a45e003257104e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7e22a4c8101544f8ea6e0d225d0c563c"><td class="memItemLeft" align="right" valign="top"><a id="a7e22a4c8101544f8ea6e0d225d0c563c"></a>
+FeaturesContainer&#160;</td><td class="memItemRight" valign="bottom"><b>feature_values</b></td></tr>
+<tr class="separator:a7e22a4c8101544f8ea6e0d225d0c563c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/<a class="el" href="_data_point_8cpp.html">DataPoint.cpp</a></li>
+<li>/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
