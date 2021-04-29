@@ -86,10 +86,6 @@ jobs:
         working-directory: ./build
         run: cmake --build . --parallel ${{matrix.config.cores}} --config ${{matrix.config.config}}
 
-      - name: Test
-        working-directory: ./build
-        run: make test
-
       - name: Install
         working-directory: ./build
         run: ${{matrix.config.sudocmd}} cmake --install .
@@ -108,7 +104,7 @@ jobs:
     env:
       OHSUMED: ${{ github.workspace }}/tests/benchmarks/OHSUMED
 
-    name: Test coverage
+    name: Tests andCoverage
     runs-on: ubuntu-latest
     steps:
 

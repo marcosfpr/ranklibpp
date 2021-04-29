@@ -72,7 +72,7 @@ endif()
 
 if (BUILD_WITH_PEDANTIC_WARNINGS)
     if (MSVC)
-        target_compile_options(ltr PRIVATE /W4 /WX)
+        target_compile_options(ltr PRIVATE /W4 /WX /EHsc)
     else ()
         target_compile_options(ltr PRIVATE -Wall -Wextra -pedantic -Werror)
         # Allow the warnings related to the bundled CImg
