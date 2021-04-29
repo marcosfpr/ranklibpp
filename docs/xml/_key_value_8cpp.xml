@@ -3,7 +3,7 @@
   <compounddef id="_key_value_8cpp" kind="file" language="C++">
     <compoundname>KeyValue.cpp</compoundname>
     <includes refid="_key_value_8hpp" local="yes">../../api/utils/KeyValue.hpp</includes>
-    <includes local="yes">boost/algorithm/string.hpp</includes>
+    <includes local="no">boost/algorithm/string.hpp</includes>
     <includes local="no">vector</includes>
     <incdepgraph>
       <node id="3">
@@ -63,7 +63,7 @@
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/>THE<sp/>SOFTWARE.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/utils/KeyValue.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/algorithm/string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/algorithm/string.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>

@@ -19,8 +19,8 @@
       <memberdef kind="enum" id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfd" prot="public" static="no" strong="no">
         <type></type>
         <name>log_level</name>
-        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfdaf2203b5006aa0750b13a4f847f8ceeac" prot="public">
-          <name>trace</name>
+        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2337aaf86e0664e7e043c1437d08d792" prot="public">
+          <name>info</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -28,13 +28,6 @@
         </enumvalue>
         <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2c7abc01c264790dff77a1328260d70d" prot="public">
           <name>debug</name>
-          <briefdescription>
-          </briefdescription>
-          <detaileddescription>
-          </detaileddescription>
-        </enumvalue>
-        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2337aaf86e0664e7e043c1437d08d792" prot="public">
-          <name>info</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -54,8 +47,8 @@
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
-        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2a690d568709edfd263c2b3c3429705c" prot="public">
-          <name>fatal</name>
+        <enumvalue id="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda4e1fec08e374336b192380827e1b35ea" prot="public">
+          <name>critical</name>
           <briefdescription>
           </briefdescription>
           <detaileddescription>
@@ -67,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="55" column="1" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" bodystart="54" bodyend="62"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="52" column="1" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" bodystart="51" bodyend="58"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="typedef">
@@ -211,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="52" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="35" bodyend="42" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="52" declcolumn="10"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="49" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="31" bodyend="34" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="49" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1a1660183056e30b25a527d08ee8a8210c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -240,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="69" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="120" bodyend="124" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="69" declcolumn="16"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="65" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="112" bodyend="116" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="65" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1affa6925341f1c67fc0ac2e8f492cd94a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -269,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="76" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="126" bodyend="130" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="76" declcolumn="16"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="72" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="118" bodyend="122" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="72" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1aa5b201561a9f4188c8610cbd23f2aa4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>const char *</type>
@@ -298,7 +291,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="83" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="132" bodyend="135" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="83" declcolumn="16"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="79" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="124" bodyend="127" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="79" declcolumn="16"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1afd0b55b197205e174da96108bd2a51ba" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -364,7 +357,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="92" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="45" bodyend="76" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="92" declcolumn="10"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="88" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="37" bodyend="68" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="88" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1a02680bdc96ec899628b33ce6b2e70893" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -430,7 +423,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="101" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="78" bodyend="81" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="101" declcolumn="10"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="97" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="70" bodyend="73" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="97" declcolumn="10"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1aa7bb902b4e9dc50f01c53aca094c26d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>string</type>
@@ -467,7 +460,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="109" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="111" bodyend="118" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="109" declcolumn="12"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="105" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="103" bodyend="110" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="105" declcolumn="12"/>
       </memberdef>
       <memberdef kind="function" id="_logging_8hpp_1a402821d151f76a4b1794bb88e7ff6686" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -525,7 +518,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="118" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="83" bodyend="109" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="118" declcolumn="10"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" line="114" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/utils/Logging.cpp" bodystart="75" bodyend="101" declfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/utils/Logging.hpp" declline="114" declcolumn="10"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

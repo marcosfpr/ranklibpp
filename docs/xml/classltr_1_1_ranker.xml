@@ -163,7 +163,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="60" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="42" bodyend="56"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="60" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="41" bodyend="55"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1aa24c1f390119dcb7bf1520d99d09dd52" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -177,7 +177,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="66" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="58" bodyend="62"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="66" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="57" bodyend="61"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1ab613fb21ed03dbe10fcabb77b29f89d8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -201,7 +201,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="72" column="26" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="129" bodyend="131"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="72" column="26" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="128" bodyend="130"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1a7a37948dc9fa6641b3952b22944fffce" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>double</type>
@@ -233,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="80" column="28" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="133" bodyend="135"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="80" column="28" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="132" bodyend="134"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1abc1372c4de267531fef282da26300744" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -261,7 +261,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="87" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="64" bodyend="66"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="87" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="63" bodyend="65"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1a9d702d1f3e458a71fd511e6594c671d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -289,7 +289,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="94" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="68" bodyend="70"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="94" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="67" bodyend="69"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1a1e1f6a229ac7771342218361b07b071a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -317,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="101" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="72" bodyend="74"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="101" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="71" bodyend="73"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1a548f135d7bc17adcf98ce2e2181dc2cb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -345,7 +345,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="108" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="77" bodyend="79"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="108" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="76" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1ae5e97bcb0d9c8240eb79b7f1b6dee67b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>double</type>
@@ -362,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="115" column="28" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="81" bodyend="83"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="115" column="28" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="80" bodyend="82"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1aa91b80e2d2964e052168d92c6428a234" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -379,7 +379,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="122" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="86" bodyend="88"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="122" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="85" bodyend="87"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1a584b627bf90240d0004e2d7cd09294c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>vector&lt; int &gt;</type>
@@ -396,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="129" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="90" bodyend="92"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="129" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="89" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1a74f4aeca4387a60a1e8608c7efa71c5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -424,7 +424,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="136" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="95" bodyend="114"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="136" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="94" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1a3061f589c024bd3d7c6cd7ea8b663c1a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -452,7 +452,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="143" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="116" bodyend="127"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="143" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="115" bodyend="126"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -468,7 +468,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="150" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="145" bodyend="154"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="150" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="144" bodyend="153"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1a9eee499b16c0c26b9d761dd753a791ff" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -496,7 +496,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="156" column="26" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="141" bodyend="143"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="156" column="26" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="140" bodyend="142"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ranker_1a3cd3b62ffd770b5074779de01632d3fc" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -524,7 +524,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="162" column="26" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="137" bodyend="139"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/Ranker.hpp" line="162" column="26" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/Ranker.cpp" bodystart="136" bodyend="138"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">

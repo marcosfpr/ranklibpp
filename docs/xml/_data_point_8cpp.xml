@@ -8,7 +8,7 @@
     <includes local="no">iomanip</includes>
     <includes refid="_data_point_8hpp" local="yes">../../api/learning/DataPoint.hpp</includes>
     <includes refid="_ltr_error_8hpp" local="yes">../../api/LtrError.hpp</includes>
-    <includes local="yes">boost/algorithm/string.hpp</includes>
+    <includes local="no">boost/algorithm/string.hpp</includes>
     <incdepgraph>
       <node id="9">
         <label>list</label>
@@ -155,7 +155,7 @@
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../../api/LtrError.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
-<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;boost/algorithm/string.hpp&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;boost/algorithm/string.hpp&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>NaN<sp/>-1000.00</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>

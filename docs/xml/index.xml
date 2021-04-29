@@ -202,12 +202,11 @@
   </compound>
   <compound refid="namespaceltr" kind="namespace"><name>ltr</name>
     <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfd" kind="enum"><name>log_level</name></member>
-    <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfdaf2203b5006aa0750b13a4f847f8ceeac" kind="enumvalue"><name>trace</name></member>
-    <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2c7abc01c264790dff77a1328260d70d" kind="enumvalue"><name>debug</name></member>
     <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2337aaf86e0664e7e043c1437d08d792" kind="enumvalue"><name>info</name></member>
+    <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2c7abc01c264790dff77a1328260d70d" kind="enumvalue"><name>debug</name></member>
     <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfdaaa71669889745bd1ea6acca575222344" kind="enumvalue"><name>warning</name></member>
     <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda631752d28c4258d9bf00410916219839" kind="enumvalue"><name>error</name></member>
-    <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2a690d568709edfd263c2b3c3429705c" kind="enumvalue"><name>fatal</name></member>
+    <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda4e1fec08e374336b192380827e1b35ea" kind="enumvalue"><name>critical</name></member>
     <member refid="_data_set_8hpp_1ac1f8c5fc3e425c5fc38401d07c1c4747" kind="typedef"><name>DataSet</name></member>
     <member refid="_iterators_8hpp_1a093773d4a757c2d26b4db423544f129f" kind="typedef"><name>FeaturesContainer</name></member>
     <member refid="_iterators_8hpp_1a2bf554721a2837e450a54db357b900fe" kind="typedef"><name>ReadableDataPoint</name></member>
@@ -251,7 +250,6 @@
   <compound refid="_key_value_8hpp" kind="file"><name>KeyValue.hpp</name>
   </compound>
   <compound refid="_logging_8hpp" kind="file"><name>Logging.hpp</name>
-    <member refid="_logging_8hpp_1ae56795402e59746f0822e7b9b49312ef" kind="define"><name>LOGGING</name></member>
     <member refid="_logging_8hpp_1ab702106cf3b3e96750b6845ded4e0299" kind="define"><name>RESET</name></member>
     <member refid="_logging_8hpp_1a7b3b25cba33b07c303f3060fe41887f6" kind="define"><name>BLACK</name></member>
     <member refid="_logging_8hpp_1a8d23feea868a983c8c2b661e1e16972f" kind="define"><name>RED</name></member>
@@ -271,8 +269,7 @@
     <member refid="_logging_8hpp_1aa4ef051614aa0bd503b0a18ee158c5d7" kind="define"><name>BOLDWHITE</name></member>
   </compound>
   <compound refid="_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
-    <member refid="_c_make_lists_8txt_1a99df873d130dc9ce5c05d72a035d8a01" kind="function"><name>find_package</name></member>
-    <member refid="_c_make_lists_8txt_1a04c0c6f28c73913cec40cbed5199ea32" kind="function"><name>target_include_directories</name></member>
+    <member refid="_c_make_lists_8txt_1ac9af5fc709c56e84ae6600e6ad5eea68" kind="function"><name>find_package</name></member>
   </compound>
   <compound refid="_data_point_8cpp" kind="file"><name>DataPoint.cpp</name>
     <member refid="_data_point_8cpp_1a953f667fb27fb68dd74a487d002b19b5" kind="define"><name>NaN</name></member>

@@ -26,21 +26,21 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="23">
+      <node id="22">
         <label>LtrError.hpp</label>
         <link refid="_ltr_error_8hpp_source"/>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="24" relation="include">
+        <childnode refid="23" relation="include">
         </childnode>
       </node>
-      <node id="24">
+      <node id="23">
         <label>stdexcept</label>
       </node>
-      <node id="21">
+      <node id="20">
         <label>metric/PrecisionScorer.hpp</label>
         <link refid="_precision_scorer_8hpp_source"/>
-        <childnode refid="19" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="3">
@@ -49,11 +49,8 @@
       <node id="11">
         <label>map</label>
       </node>
-      <node id="18">
+      <node id="17">
         <label>unordered_set</label>
-      </node>
-      <node id="16">
-        <label>boost/log/trivial.hpp</label>
       </node>
       <node id="13">
         <label>fstream</label>
@@ -89,7 +86,9 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
-        <childnode refid="17" relation="include">
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="19" relation="include">
         </childnode>
@@ -97,14 +96,12 @@
         </childnode>
         <childnode refid="21" relation="include">
         </childnode>
-        <childnode refid="22" relation="include">
-        </childnode>
         <childnode refid="15" relation="include">
         </childnode>
-        <childnode refid="23" relation="include">
+        <childnode refid="22" relation="include">
         </childnode>
       </node>
-      <node id="19">
+      <node id="18">
         <label>metric/MetricScorer.hpp</label>
         <link refid="_metric_scorer_8hpp_source"/>
         <childnode refid="6" relation="include">
@@ -121,10 +118,8 @@
         </childnode>
         <childnode refid="3" relation="include">
         </childnode>
-        <childnode refid="16" relation="include">
-        </childnode>
       </node>
-      <node id="22">
+      <node id="21">
         <label>utils/KeyValue.hpp</label>
         <link refid="_key_value_8hpp_source"/>
         <childnode refid="5" relation="include">
@@ -178,12 +173,12 @@
         <childnode refid="4" relation="include">
         </childnode>
       </node>
-      <node id="17">
+      <node id="16">
         <label>learning/ensemble/AdaRank.hpp</label>
         <link refid="_ada_rank_8hpp_source"/>
         <childnode refid="7" relation="include">
         </childnode>
-        <childnode refid="18" relation="include">
+        <childnode refid="17" relation="include">
         </childnode>
         <childnode refid="9" relation="include">
         </childnode>
@@ -192,10 +187,10 @@
         <childnode refid="10" relation="include">
         </childnode>
       </node>
-      <node id="20">
+      <node id="19">
         <label>metric/MAPScorer.hpp</label>
         <link refid="_m_a_p_scorer_8hpp_source"/>
-        <childnode refid="19" relation="include">
+        <childnode refid="18" relation="include">
         </childnode>
       </node>
       <node id="7">

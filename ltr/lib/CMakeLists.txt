@@ -2,16 +2,23 @@
 ### Source                                          ###
 #######################################################
 
+find_package(Boost)
+if(NOT Boost_FOUND)
+    CPMFindPackage(
+        NAME Boost
+        GITHUB_REPOSITORY Orphis/boost-cmake
+        VERSION 1.67.0
+        # setting FIND_PACKAGE_ARGUMENTS allow usage with `CPM_USE_LOCAL_PACKAGES`
+        FIND_PACKAGE_ARGUMENTS "COMPONENTS boost"
+    )
+endif()
 
 CPMFindPackage(
-    NAME Boost
-    GITHUB_REPOSITORY hunter-packages/boost
-    VERSION 1.70.0
-    # setting FIND_PACKAGE_ARGUMENTS allow usage with `CPM_USE_LOCAL_PACKAGES`
-    FIND_PACKAGE_ARGUMENTS "COMPONENTS log log_setup"
+    NAME spdlog
+    GITHUB_REPOSITORY gabime/spdlog
+    VERSION 1.8.2
+    FIND_PACKAGE_ARGUMENTS ""
 )
-
-add_definitions(-DBOOST_LOG_DYN_LINK)
 
 set(
     SOURCES
@@ -45,9 +52,9 @@ target_include_directories(
 )
 
 # logging stuff
-target_link_libraries(ltr PRIVATE Boost::log Boost::log_setup stdc++fs pthread)
+target_link_libraries(ltr PRIVATE spdlog stdc++fs pthread)
 
-target_compile_features(ltr PUBLIC cxx_std_14)
+target_compile_features(ltr PUBLIC cxx_std_17)
 
 include(CheckSymbolExists)
 
