@@ -7,7 +7,6 @@ CPMFindPackage(
     NAME Boost
     GITHUB_REPOSITORY Orphis/boost-cmake
     VERSION 1.67.0
-    # setting FIND_PACKAGE_ARGUMENTS allow usage with `CPM_USE_LOCAL_PACKAGES`
     FIND_PACKAGE_ARGUMENTS ""
 )
 
@@ -20,7 +19,6 @@ CPMFindPackage(
 
 set(
     SOURCES
-
 
     impl/learning/DataPoint.cpp
     impl/learning/RankList.cpp
@@ -48,7 +46,7 @@ target_include_directories(
 )
 
 # logging stuff
-target_link_libraries(ltr PRIVATE spdlog stdc++fs pthread)
+target_link_libraries(ltr PRIVATE spdlog ${Boost_LIBRARIES} stdc++fs pthread)
 
 target_compile_features(ltr PUBLIC cxx_std_17)
 
