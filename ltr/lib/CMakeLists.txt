@@ -7,7 +7,7 @@ CPMFindPackage(
     NAME Boost
     GITHUB_REPOSITORY Orphis/boost-cmake
     VERSION 1.67.0
-    FIND_PACKAGE_ARGUMENTS "COMPONENTS system"
+    FIND_PACKAGE_ARGUMENTS "COMPONENTS boost"
 )
 
 add_definitions(-DBOOST_ALL_DYN_LINK)
@@ -52,7 +52,7 @@ target_include_directories(
 )
 
 # Linking
-target_link_libraries(ltr PRIVATE Boost::system spdlog ${FILE_SYSTEM_LIB} Threads::Threads)
+target_link_libraries(ltr PRIVATE Boost::boost spdlog ${FILE_SYSTEM_LIB} Threads::Threads)
 
 target_compile_features(ltr PUBLIC cxx_std_17)
 
