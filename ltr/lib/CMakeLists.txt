@@ -2,16 +2,14 @@
 ### Source                                          ###
 #######################################################
 
-find_package(Boost)
-if(NOT Boost_FOUND)
-    CPMFindPackage(
-        NAME Boost
-        GITHUB_REPOSITORY Orphis/boost-cmake
-        VERSION 1.67.0
-        # setting FIND_PACKAGE_ARGUMENTS allow usage with `CPM_USE_LOCAL_PACKAGES`
-        FIND_PACKAGE_ARGUMENTS "COMPONENTS boost"
-    )
-endif()
+
+CPMFindPackage(
+    NAME Boost
+    GITHUB_REPOSITORY Orphis/boost-cmake
+    VERSION 1.67.0
+    # setting FIND_PACKAGE_ARGUMENTS allow usage with `CPM_USE_LOCAL_PACKAGES`
+    FIND_PACKAGE_ARGUMENTS ""
+)
 
 CPMFindPackage(
     NAME spdlog
@@ -47,8 +45,6 @@ add_library(
 target_include_directories(
     ltr
     PUBLIC api
-    PRIVATE
-        ${Boost_INCLUDE_DIRS}
 )
 
 # logging stuff
