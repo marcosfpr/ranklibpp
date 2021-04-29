@@ -24,7 +24,7 @@ jobs:
 
   Build:
     env:
-      OHSUMED: ${{ env.GITHUB_WORKSPACE }}/tests/benchmarks/OHSUMED
+      OHSUMED: ${{ github.workspace }}/tests/benchmarks/OHSUMED
 
     name: ${{matrix.config.name}}
     runs-on: ${{matrix.config.os}}
@@ -106,8 +106,8 @@ jobs:
   
   Coverage:
     env:
-      OHSUMED: ${{ env.GITHUB_WORKSPACE }}/tests/benchmarks/OHSUMED
-      
+      OHSUMED: ${{ github.workspace }}/tests/benchmarks/OHSUMED
+
     name: Test coverage
     runs-on: ubuntu-latest
     steps:
