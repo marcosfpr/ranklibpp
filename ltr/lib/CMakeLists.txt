@@ -91,7 +91,7 @@ if (BUILD_WITH_PEDANTIC_WARNINGS)
 endif ()
 
 # Setting public header
-set_target_properties(ltr PROPERTIES PUBLIC_HEADER /api/ltr.hpp)
+ set_target_properties(ltr PROPERTIES PUBLIC_HEADER "${CMAKE_CURRENT_SOURCE_DIR}/api/ltr.hpp")
 
 # Install
 if (BUILD_INSTALLER)
