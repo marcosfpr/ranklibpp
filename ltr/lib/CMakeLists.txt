@@ -7,7 +7,7 @@ CPMFindPackage(
     NAME Boost
     GITHUB_REPOSITORY Orphis/boost-cmake
     VERSION 1.67.0
-    FIND_PACKAGE_ARGUMENTS ""
+    FIND_PACKAGE_ARGUMENTS "COMPONENTS system"
 )
 
 CPMFindPackage(
@@ -45,8 +45,8 @@ target_include_directories(
     PUBLIC api
 )
 
-# logging stuff
-target_link_libraries(ltr PRIVATE spdlog ${Boost_LIBRARIES} stdc++fs pthread)
+# Linking
+target_link_libraries(ltr PRIVATE Boost::system spdlog stdc++fs pthread)
 
 target_compile_features(ltr PUBLIC cxx_std_17)
 
