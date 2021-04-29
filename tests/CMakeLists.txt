@@ -12,6 +12,8 @@ CPMAddPackage(
   OPTIONS "INSTALL_GTEST OFF" "gtest_force_shared_crt"
 )
 
+find_package(Threads REQUIRED)
+
 add_executable(
   test_ltrpp
   main.cpp
@@ -31,8 +33,8 @@ add_executable(
         functional/RankingAdaRank.cpp
 )
 
-target_link_libraries(test_ltrpp ltr pthread gtest gtest_main)
-target_link_libraries(func_ltrpp ltr pthread gtest gtest_main)
+target_link_libraries(test_ltrpp ltr Threads::Threads gtest gtest_main)
+target_link_libraries(func_ltrpp ltr Threads::Threads gtest gtest_main)
 
 # Create testing target and redirect its output to `Testing` folder
 add_test(NAME test_ltrpp COMMAND test_ltrpp WORKING_DIRECTORY ${CMAKE_BINARY_DIR}/Testing)

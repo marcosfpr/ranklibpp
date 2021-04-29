@@ -5,4 +5,6 @@ add_executable(
         ohsumed/main.cpp
 )
 
-target_link_libraries(ohsumed ltr spdlog pthread)
+find_package(Threads REQUIRED)
+
+target_link_libraries(ohsumed ltr spdlog Threads::Threads)

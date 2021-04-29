@@ -54,12 +54,6 @@ option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 option(BUILD_WITH_PEDANTIC_WARNINGS "Use pedantic warnings. This is useful for developers because many of these warnings will be in continuous integration anyway." ${DEBUG_MODE})
 option(BUILD_WITH_UTF8 "Accept utf-8 in MSVC by default." ON)
 
-# Setting coverage report flags
-# Generate coverage reports
-if(BUILD_TESTS AND GCOV AND LCOV AND GENHTML)
-    set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage -O0")
-endif()
-
 #######################################################
 ### Libraries                                       ###
 #######################################################
@@ -74,10 +68,6 @@ if (BUILD_EXAMPLES)
 endif ()
 
 if (BUILD_TESTS)
-        
-        enable_testing()
-        add_subdirectory(tests)
-
 
         find_program(GCOV gcov)
         find_program(LCOV lcov)
@@ -94,6 +84,8 @@ if (BUILD_TESTS)
         endif()
 
         if (GCOV AND LCOV AND GENHTML)
+                set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage -O0")
+
                 add_custom_target(gcov
                         COMMAND mkdir -p Coverage
                         DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Testing
@@ -125,6 +117,11 @@ if (BUILD_TESTS)
 
                 set_property(DIRECTORY APPEND PROPERTY ADDITIONAL_MAKE_CLEAN_FILES Coverage)
         endif()
+
+                
+        enable_testing()
+        add_subdirectory(tests)
+        
 endif ()
 
 if (BUILD_DOCS)

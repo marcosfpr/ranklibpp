@@ -10,14 +10,16 @@ CPMFindPackage(
     FIND_PACKAGE_ARGUMENTS "COMPONENTS system"
 )
 
-find_package(Threads REQUIRED)
-
 CPMFindPackage(
     NAME spdlog
     GITHUB_REPOSITORY gabime/spdlog
     VERSION 1.8.2
     FIND_PACKAGE_ARGUMENTS ""
 )
+
+
+find_package(Threads REQUIRED)
+
 
 set(
     SOURCES
@@ -46,12 +48,6 @@ target_include_directories(
     ltr
     PUBLIC api
 )
-
-if (CMAKE_CXX_COMPILER_ID STREQUAL "Clang" OR CMAKE_CXX_COMPILER_ID STREQUAL "AppleClang")
-    set(FILE_SYSTEM_LIB c++experimental)
-else()
-    set(FILE_SYSTEM_LIB stdc++fs)
-endif()
 
 # Linking
 target_link_libraries(ltr PRIVATE Boost::system spdlog ${FILE_SYSTEM_LIB} Threads::Threads)
