@@ -10,6 +10,8 @@ CPMFindPackage(
     FIND_PACKAGE_ARGUMENTS "COMPONENTS system"
 )
 
+add_definitions(-DBOOST_ALL_DYN_LINK)
+
 CPMFindPackage(
     NAME spdlog
     GITHUB_REPOSITORY gabime/spdlog

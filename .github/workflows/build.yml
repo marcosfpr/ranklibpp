@@ -104,7 +104,7 @@ jobs:
     env:
       OHSUMED: ${{ github.workspace }}/tests/benchmarks/OHSUMED
 
-    name: Tests andCoverage
+    name: Tests and Coverage
     runs-on: ubuntu-latest
     steps:
 
