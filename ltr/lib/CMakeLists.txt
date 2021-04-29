@@ -58,6 +58,11 @@ target_compile_features(ltr PUBLIC cxx_std_17)
 
 include(CheckSymbolExists)
 
+# Some hack to MSVC and boost
+if(MSVC)
+    add_definitions("/EHsc")
+endif() 
+
 # Some hack to not depend on FILE* internals
 # https://github.com/alandefreitas/matplotplusplus/issues/4
 check_symbol_exists(__fbufsize "stdio_ext.h" HAVE_FBUFSIZE)
@@ -74,7 +79,7 @@ endif()
 
 if (BUILD_WITH_PEDANTIC_WARNINGS)
     if (MSVC)
-        target_compile_options(ltr PRIVATE /W4 /WX /EHsc)
+        target_compile_options(ltr PRIVATE /W4 /WX)
     else ()
         target_compile_options(ltr PRIVATE -Wall -Wextra -pedantic -Werror)
         # Allow the warnings related to the bundled CImg

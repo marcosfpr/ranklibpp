@@ -37,4 +37,14 @@ namespace ltr{
     };
 };
 
+namespace boost
+{
+#ifdef BOOST_NO_EXCEPTIONS
+void throw_exception( std::exception const & e ){
+    throw LtrError("Error in ltr: boost exception=" + e.what());
+};
+#endif
+}// namespace boost
+
+
 #endif

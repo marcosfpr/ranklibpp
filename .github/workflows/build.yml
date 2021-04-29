@@ -10,6 +10,9 @@ on:
       - '**.cmake'
       - '**/CMakeLists.txt'
       - '.github/workflows/build.yml'
+    branches:
+      - master
+
   pull_request:
     paths:
       - '**.c'
@@ -19,6 +22,9 @@ on:
       - '**.cmake'
       - '**/CMakeLists.txt'
       - '.github/workflows/build.yml'
+    branches:
+      - dev
+      - master
 
 jobs:
 
