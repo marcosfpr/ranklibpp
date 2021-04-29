@@ -5,7 +5,7 @@
 
 CPMFindPackage(
     NAME Boost
-    GITHUB_REPOSITORY Orphis/boost-cmake
+    GITHUB_REPOSITORY hunter-packages/boost
     VERSION 1.70.0
     # setting FIND_PACKAGE_ARGUMENTS allow usage with `CPM_USE_LOCAL_PACKAGES`
     FIND_PACKAGE_ARGUMENTS "COMPONENTS log log_setup"
