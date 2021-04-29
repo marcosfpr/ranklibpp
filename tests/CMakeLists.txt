@@ -3,6 +3,15 @@ set(OHSUMED "${CMAKE_CURRENT_SOURCE_DIR}/benchmarks/OHSUMED")
 
 include_directories(${gtest_SOURCE_DIR}/include ${gtest_SOURCE_DIR})
 
+# GTest library
+CPMAddPackage(
+  NAME googletest
+  GITHUB_REPOSITORY google/googletest
+  GIT_TAG release-1.10.0
+  VERSION 1.10.0
+  OPTIONS "INSTALL_GTEST OFF" "gtest_force_shared_crt"
+)
+
 add_executable(
   test_ltrpp
   main.cpp

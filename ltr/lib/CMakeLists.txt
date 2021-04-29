@@ -10,6 +10,8 @@ CPMFindPackage(
     FIND_PACKAGE_ARGUMENTS "COMPONENTS system"
 )
 
+find_package(Threads REQUIRED)
+
 CPMFindPackage(
     NAME spdlog
     GITHUB_REPOSITORY gabime/spdlog
@@ -46,7 +48,7 @@ target_include_directories(
 )
 
 # Linking
-target_link_libraries(ltr PRIVATE Boost::system spdlog stdc++fs pthread)
+target_link_libraries(ltr PRIVATE Boost::system spdlog stdc++fs Threads::Threads)
 
 target_compile_features(ltr PUBLIC cxx_std_17)
 
