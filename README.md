@@ -66,7 +66,7 @@
 |       System       | 1.0.0 |
 |:------------------:|:-----:|
 |     Windows x86    |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
-|     Windows x64    |  [![ltrpp-w64](https://img.shields.io/badge/build-failed-red)](https://github.com/marcosfpr/ltrpp)|
+|     Windows x64    |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp)|
 |     MacOSX x64     |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
 | Linux (ubuntu) x64 |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
 
