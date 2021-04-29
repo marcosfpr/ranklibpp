@@ -55,6 +55,18 @@ option(BUILD_WITH_PEDANTIC_WARNINGS "Use pedantic warnings. This is useful for d
 option(BUILD_WITH_UTF8 "Accept utf-8 in MSVC by default." ON)
 
 #######################################################
+### Additional flags                                ###
+#######################################################
+find_program(GCOV gcov)
+find_program(LCOV lcov)
+find_program(GENHTML genhtml)
+
+if(GCOV AND LCOV AND GENHTML)
+        set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage -O0")
+endif()
+
+
+#######################################################
 ### Libraries                                       ###
 #######################################################
 add_subdirectory(ltr)
@@ -69,10 +81,6 @@ endif ()
 
 if (BUILD_TESTS)
 
-        find_program(GCOV gcov)
-        find_program(LCOV lcov)
-        find_program(GENHTML genhtml)
-
         if(NOT GCOV)
                 message("gcov not found!")
         endif()
@@ -84,7 +92,6 @@ if (BUILD_TESTS)
         endif()
 
         if (GCOV AND LCOV AND GENHTML)
-                set(CMAKE_CXX_FLAGS "${CMAKE_C_FLAGS} -fprofile-arcs -ftest-coverage -O0")
 
                 add_custom_target(gcov
                         COMMAND mkdir -p Coverage
