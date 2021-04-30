@@ -78,14 +78,16 @@ namespace ltr {
          * Construct a new AdaRank object
          * @param dataset
          * @param scorer
-         * @param features
-         * @param validationSet
          * @param iter
          * @param tolerance
          * @param maxConsecutive
+         * @param features
+         * @param validationSet
          */
-        AdaRank(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features={}, DataSet validationSet={},
-                int iter=50, double tolerance=0.002, int maxConsecutive = 5);
+        AdaRank(DataSet dataset, unique_ptr<MetricScorer> scorer, int iter=50, double tolerance=0.002, int maxConsecutive = 5,
+                vector<int> features={}, DataSet validationSet={});
+
+        ~AdaRank();
 
         /**
          * @brief Learn to rank based on AdaRank.

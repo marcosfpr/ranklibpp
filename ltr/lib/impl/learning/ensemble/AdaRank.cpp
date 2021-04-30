@@ -52,9 +52,8 @@ int WeakRanker::getFeature() const{
     return this->featureID;
 }
 
-AdaRank::AdaRank(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features, DataSet validationSet,
-                 int iter, double tolerance, int maxConsecutive)
-
+AdaRank::AdaRank(DataSet dataset, unique_ptr<MetricScorer> scorer, int iter, double tolerance, int maxConsecutive,
+                vector<int> features, DataSet validationSet)
         : Ranker(move(dataset), move(scorer), move(features), move(validationSet))
 {
 
@@ -71,6 +70,16 @@ AdaRank::AdaRank(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> f
     double initial_weights = 1.0 / training_samples.size();
     std::fill(sample_weights.begin(), sample_weights.end(), initial_weights);
 }
+
+AdaRank::~AdaRank(){
+    sample_weights.clear();
+    ranker_weights.clear();
+    best_weights.clear();
+    rankers.clear();
+    best_rankers.clear();
+    used_features.clear();
+}
+
 
 void AdaRank::setIter(int iter){
     this->iter = iter;

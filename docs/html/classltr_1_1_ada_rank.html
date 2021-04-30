@@ -106,8 +106,8 @@ Collaboration diagram for ltr::AdaRank:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ab9a3085f8d009455fcfa241277533bfa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ada_rank.html#ab9a3085f8d009455fcfa241277533bfa">AdaRank</a> (DataSet dataset, unique_ptr&lt; <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &gt; scorer, vector&lt; int &gt; features={}, DataSet validationSet={}, int iter=50, double tolerance=0.002, int maxConsecutive=5)</td></tr>
-<tr class="separator:ab9a3085f8d009455fcfa241277533bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab287d566afa1c49ea943c78f9d4a4016"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ada_rank.html#ab287d566afa1c49ea943c78f9d4a4016">AdaRank</a> (DataSet dataset, unique_ptr&lt; <a class="el" href="classltr_1_1_metric_scorer.html">MetricScorer</a> &gt; scorer, int iter=50, double tolerance=0.002, int maxConsecutive=5, vector&lt; int &gt; features={}, DataSet validationSet={})</td></tr>
+<tr class="separator:ab287d566afa1c49ea943c78f9d4a4016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacac7068a5546dd281d872f6bcd6aa62"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classltr_1_1_ada_rank.html#aacac7068a5546dd281d872f6bcd6aa62">fit</a> (bool verbose)</td></tr>
 <tr class="memdesc:aacac7068a5546dd281d872f6bcd6aa62"><td class="mdescLeft">&#160;</td><td class="mdescRight">Learn to rank based on <a class="el" href="classltr_1_1_ada_rank.html">AdaRank</a>.  <a href="classltr_1_1_ada_rank.html#aacac7068a5546dd281d872f6bcd6aa62">More...</a><br /></td></tr>
 <tr class="separator:aacac7068a5546dd281d872f6bcd6aa62"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -269,8 +269,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>verbose</b></td></tr>
 <tr class="separator:ab5ad64e7d1ca0fc49e50d7c322135bbf inherit pro_attribs_classltr_1_1_ranker"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="ab9a3085f8d009455fcfa241277533bfa"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab9a3085f8d009455fcfa241277533bfa">&#9670;&nbsp;</a></span>AdaRank()</h2>
+<a id="ab287d566afa1c49ea943c78f9d4a4016"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab287d566afa1c49ea943c78f9d4a4016">&#9670;&nbsp;</a></span>AdaRank()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -290,18 +290,6 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>verbose</b></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vector&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>features</em> = <code>{}</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">DataSet&#160;</td>
-          <td class="paramname"><em>validationSet</em> = <code>{}</code>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>iter</em> = <code>50</code>, </td>
         </tr>
@@ -315,7 +303,19 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>verbose</b></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>maxConsecutive</em> = <code>5</code>&#160;</td>
+          <td class="paramname"><em>maxConsecutive</em> = <code>5</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">vector&lt; int &gt;&#160;</td>
+          <td class="paramname"><em>features</em> = <code>{}</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">DataSet&#160;</td>
+          <td class="paramname"><em>validationSet</em> = <code>{}</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -328,11 +328,11 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>verbose</b></td></tr>
   <table class="params">
     <tr><td class="paramname">dataset</td><td></td></tr>
     <tr><td class="paramname">scorer</td><td></td></tr>
-    <tr><td class="paramname">features</td><td></td></tr>
-    <tr><td class="paramname">validationSet</td><td></td></tr>
     <tr><td class="paramname">iter</td><td></td></tr>
     <tr><td class="paramname">tolerance</td><td></td></tr>
     <tr><td class="paramname">maxConsecutive</td><td></td></tr>
+    <tr><td class="paramname">features</td><td></td></tr>
+    <tr><td class="paramname">validationSet</td><td></td></tr>
   </table>
   </dd>
 </dl>

@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="161" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="161" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="162" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="162" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_data_point_impl_1adc931c4fb051ee8b267a0e74c0cd8284" prot="public" static="yes" mutable="no">
         <type>int</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="162" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="162" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="163" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="163" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-attrib">
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="234" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="234" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="235" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="235" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_data_point_impl_1a743ab81445170c99b9e65bec9ae12e66" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="235" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="235" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="236" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="236" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_data_point_impl_1aa2c27f356f457edbb135fa4bc79274ff" prot="protected" static="no" mutable="no">
         <type>float</type>
@@ -70,7 +70,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="236" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="236" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="237" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="237" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_data_point_impl_1a14538028c58bb8bfbf693853f841705f" prot="protected" static="no" mutable="no">
         <type>string</type>
@@ -83,7 +83,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="237" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="237" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="238" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="238" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_data_point_impl_1a2caca4cdbfe0e70fc8764b1fa647431c" prot="protected" static="no" mutable="no">
         <type>string</type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="237" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="237" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="238" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="238" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_data_point_impl_1a7e22a4c8101544f8ea6e0d225d0c563c" prot="protected" static="no" mutable="no">
         <type>FeaturesContainer</type>
@@ -109,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="238" column="23" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="238" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="239" column="23" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="239" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="45" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="45" bodyend="48"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="46" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="46" bodyend="49"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a0337369b501fb457083fd85300896d7f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -146,7 +146,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="50" column="5" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="50" bodyend="53"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="51" column="5" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="51" bodyend="54"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1ae5daec7d2447ae1dfb0c27ba277fb604" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -159,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="55" column="5" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="55" bodyend="58"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="56" column="5" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="56" bodyend="59"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1ab984b796415fc35b4a509c1e2a3bae82" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="60" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="60" bodyend="77"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="61" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="61" bodyend="78"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a49a03aff3d6225225f57af06e848d6db" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -189,7 +189,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="79" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="79" bodyend="82"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="80" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="80" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a26f13482ed4efeb4e865444d03ed5268" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -202,7 +202,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="84" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="84" bodyend="87"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="85" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="85" bodyend="88"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1adea235176a63523a06546c83a642eda3" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -215,7 +215,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="89" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="89" bodyend="92"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="90" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="90" bodyend="93"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a727625dbbc03669e44df7c0eed779a9d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -228,7 +228,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="94" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="94" bodyend="97"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="95" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="95" bodyend="98"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a43908968fdce684b501336e7e993fe76" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -245,7 +245,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="99" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="99" bodyend="102"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="100" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="100" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a271534cbc967f23b0978fd3085423504" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -258,7 +258,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="104" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="104" bodyend="107"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="105" column="12" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="105" bodyend="108"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a5250337f9eabb2b4f22e6f141f3dd823" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -275,7 +275,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="109" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="109" bodyend="112"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="110" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="110" bodyend="113"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a9af7f66b290e5115a8e1d59f4e6bc1c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -292,7 +292,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="114" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="114" bodyend="119"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="115" column="11" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="115" bodyend="120"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a684fc26f1ec3d66dab03c921c0b60bcf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -313,7 +313,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="121" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="121" bodyend="126"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="122" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="122" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a3d111d838e373ebbbe2c26bc4d3aa947" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>FeaturesContainer</type>
@@ -326,7 +326,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="128" column="23" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="128" bodyend="131"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="129" column="23" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="129" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a4197aec8b976e5551953266255420b61" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -343,7 +343,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="133" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="133" bodyend="137"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="134" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="134" bodyend="138"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1aae79273938700be381991644d76631fc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -361,7 +361,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="139" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="139" bodyend="147"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="140" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="140" bodyend="148"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1a1fbe63c41a7fd65daa4e5824cac4bbea" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -378,7 +378,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="149" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="149" bodyend="157"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="150" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="150" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_data_point_impl_1aaea0ac663a64052315b841042eee49a4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -391,7 +391,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="159" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="159" bodyend="159"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="160" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="160" bodyend="160"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-static-func">
@@ -414,7 +414,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="165" column="17" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="165" bodyend="170"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="166" column="17" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="166" bodyend="171"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -433,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="172" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="172" bodyend="232"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="173" column="10" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="173" bodyend="233"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -459,7 +459,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="43" column="1" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="42" bodyend="239"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" line="44" column="1" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/DataPoint.cpp" bodystart="43" bodyend="240"/>
     <listofallmembers>
       <member refid="classltr_1_1_data_point_impl_1a767641caad40ca12f0026310495be2bb" prot="public" virt="non-virtual"><scope>ltr::DataPointImpl</scope><name>DataPointImpl</name></member>
       <member refid="classltr_1_1_data_point_impl_1a0337369b501fb457083fd85300896d7f" prot="public" virt="non-virtual"><scope>ltr::DataPointImpl</scope><name>DataPointImpl</name></member>

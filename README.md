@@ -45,7 +45,7 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
+        <li><a href="#integration">Integration</a></li>
       </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
@@ -53,7 +53,6 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -76,50 +75,144 @@ The development of ltr++ are using almost only C++17 language features. Addition
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Initially, we will understand all prerequisites and compatibilities of ltr++ and also how to install the project. To get a local copy up and running, follow these simple example steps. 
 
 ### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
+The main prerequisite for installing ltr++ is CMake (> 3.15). Other external libraries will be downloaded automatically, if you don't have they. So that make sure you have CMake installed.
+
+Also, make sure that your operating system is compatible with any build that is working: 
+
+
+|       System       |                                                        1.0.0                                                |
+|:------------------:|:-----------------------------------------------------------------------------------------------------------:|
+|     Windows x86    |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
+|     Windows x64    |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
+|     MacOSX x64     |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
+| Linux (ubuntu) x64 |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
+
+
+### Integration
+
+Using CMake and certifying that all prerequisites are ok, let's understand how to build and install ltr.
+
+### 1. C++
+
+##### Embed as header-only
+
+Copy the files from the `source` directory of this project to your `include` directory.
+
+  ```c++
+  #include <ltr.hpp>
   ```
 
-### Installation
+[**Warning**] Make sure you have C++17 (>) installed
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```JS
-   const API_KEY = 'ENTER YOUR API';
-   ```
+##### Embed as CMake subdirectory
+
+You can use ltr++ directly in CMake projects as a subproject.
+
+Clone the whole project inside your own project:
+
+```bash
+git clone https://github.com/marcosfpr/ltrpp/
+```
+
+and add the subdirectory to your CMake script:
+
+```cmake
+add_subdirectory(ltrpp)
+```
+
+When creating your executable, link the library to the targets you want:
+
+```cmake
+add_executable(my_target main.cpp)
+target_link_libraries(my_target PRIVATE ltr)
+```
+
+Your target will be able to see the ltr++ headers now.
+
+##### Embed with CPM.cmake
+
+[CPM.cmake](https://github.com/TheLartians/CPM.cmake) is a nice wrapper around the CMake FetchContent function.
+Install [CPM.cmake](https://github.com/TheLartians/CPM.cmake) and then use this command to add ltr++ to your build
+script:
+
+```cmake
+CPMAddPackage(
+        NAME ltr
+        GITHUB_REPOSITORY marcosfpr/ltrpp
+        GIT_TAG origin/master # or whatever tag you want
+)
+# ...
+target_link_libraries(my_target PUBLIC ltr)
+```
+
+Your target will be able to see the ltr++ headers now.
+
+##### Find as CMake package
+
+If you are using CMake and have the library installed on your system, you can then find ltr++ with the
+usual `find_package` command:
+
+```cmake
+find_package(ltr REQUIRED)
+# ...
+target_link_libraries(my_target PUBLIC ltr)
+```
+
+Your target will be able to see the ltr++ headers now.
+
+[**Warning**] "find_package on windows"
+There is no easy default directory for find_package on windows. You have
+to [set it](https://stackoverflow.com/questions/21314893/what-is-the-default-search-path-for-find-package-in-windows-using-cmake)
+yourself.
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+In this section, I'll show you a toy example of ltr++. Don't get stuck with this example: see another examples and the official documentation! 
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+The main goal in this case is to import the `OHSUMED` training file, fit a LTR model using AdaRank and save parameters:
 
+* Loss: P@2 (Precision)
+* Iterations: 50
+* Tolerance: 0.003
+* Consecutive Selections: 3
+
+```c++
+#include <ltr.hpp>
+
+// .. other imports
+
+using namespace ltr;
+
+int main() {
+    string base_path = std::getenv("OHSUMED");
+
+    DataSet training_samples = ltr::load_svmlight(base_path + "/Data/All/OHSUMED.txt");
+
+    AdaRank ranker(training_samples, std::make_unique<PrecisionScorer>(2), 50, 0.003, 3);
+
+    ranker.fit();
+
+    return 0;
+}
+
+```
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+The project is in the early stages of development. Thus, feel free to contribute and help ltr++ to grow up!
 
+See the [open issues](https://github.com/marcosfpr/ltrpp/issues) for a list of proposed features (and known issues).
 
+**OBS**: To propose new features or report bugs, check out the correct templates.
 
 <!-- CONTRIBUTING -->
 ## Contributing
@@ -132,40 +225,17 @@ Contributions are what make the open source community such an amazing place to b
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-
-
 <!-- LICENSE -->
 ## License
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+Marcos Pontes - mfprezende@gmail.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
-
-
-
+Project Link: [https://github.com/marcosfpr/ltrpp](https://github.com/marcosfpr/ltrpp)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->

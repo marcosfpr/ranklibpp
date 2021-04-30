@@ -14,7 +14,8 @@
     <member refid="classltr_1_1_ada_rank_1a6103b16b878f8156778d599b30540658" kind="variable"><name>rankers</name></member>
     <member refid="classltr_1_1_ada_rank_1a86c20ed8f4f0ac9850cd8fc1695732b4" kind="variable"><name>best_rankers</name></member>
     <member refid="classltr_1_1_ada_rank_1ab448c368def2d5d07d981a16a56c9bb6" kind="variable"><name>used_features</name></member>
-    <member refid="classltr_1_1_ada_rank_1ab9a3085f8d009455fcfa241277533bfa" kind="function"><name>AdaRank</name></member>
+    <member refid="classltr_1_1_ada_rank_1ab287d566afa1c49ea943c78f9d4a4016" kind="function"><name>AdaRank</name></member>
+    <member refid="classltr_1_1_ada_rank_1a376f76b6b374de8b674fe982172d3d18" kind="function"><name>~AdaRank</name></member>
     <member refid="classltr_1_1_ada_rank_1aacac7068a5546dd281d872f6bcd6aa62" kind="function"><name>fit</name></member>
     <member refid="classltr_1_1_ada_rank_1addc477120ac720e3c25b0eb9d3618fb8" kind="function"><name>predict</name></member>
     <member refid="classltr_1_1_ada_rank_1a5dff0be5e4505ac0ac815ba698b39e32" kind="function"><name>setIter</name></member>
@@ -200,6 +201,8 @@
     <member refid="classltr_1_1_weak_ranker_1a10cd60e3aa7955a9cb44816e3523a3d1" kind="function"><name>predict</name></member>
     <member refid="classltr_1_1_weak_ranker_1a1ad3bd87936013a73c34e79bab8c92c7" kind="function"><name>getFeature</name></member>
   </compound>
+  <compound refid="namespaceboost" kind="namespace"><name>boost</name>
+  </compound>
   <compound refid="namespaceltr" kind="namespace"><name>ltr</name>
     <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfd" kind="enum"><name>log_level</name></member>
     <member refid="_logging_8hpp_1a0cb2182dc2e865634c775d9ed163cbfda2337aaf86e0664e7e043c1437d08d792" kind="enumvalue"><name>info</name></member>
@@ -269,7 +272,8 @@
     <member refid="_logging_8hpp_1aa4ef051614aa0bd503b0a18ee158c5d7" kind="define"><name>BOLDWHITE</name></member>
   </compound>
   <compound refid="_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
-    <member refid="_c_make_lists_8txt_1ac9af5fc709c56e84ae6600e6ad5eea68" kind="function"><name>find_package</name></member>
+    <member refid="_c_make_lists_8txt_1a3ba5f1ebbf3cd0190d6f21ef9b32174f" kind="function"><name>CPMFindPackage</name></member>
+    <member refid="_c_make_lists_8txt_1aa88c7e2aab701a04ff1e96ca7d5337e8" kind="function"><name>target_include_directories</name></member>
   </compound>
   <compound refid="_data_point_8cpp" kind="file"><name>DataPoint.cpp</name>
     <member refid="_data_point_8cpp_1a953f667fb27fb68dd74a487d002b19b5" kind="define"><name>NaN</name></member>

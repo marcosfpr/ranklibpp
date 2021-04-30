@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="201" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="201" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1a8d4c4cec43f4275bf65adcfdb98b1dac" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -28,7 +28,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="201" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="201" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="18" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1a611119a99cd07bcdf031ff06ee4bf8fb" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -41,7 +41,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="201" column="45" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="201" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="45" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1a065469e66892d8c46b4ec43db3546eb5" prot="protected" static="no" mutable="no">
         <type>int</type>
@@ -54,7 +54,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="201" column="68" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="201" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="68" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1ae26827ed459254fcce4456803875033f" prot="protected" static="no" mutable="no">
         <type>double</type>
@@ -67,7 +67,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="205" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="205" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1a2396d6c5e8256aa98e064c1f20052644" prot="protected" static="no" mutable="no">
         <type>double</type>
@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="26" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="205" column="26" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="205" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1a4dab54fcac9818f3577ff01476c0cd2c" prot="protected" static="no" mutable="no">
         <type>double</type>
@@ -93,7 +93,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="203" column="50" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="203" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="205" column="50" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="205" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1aea4dc558a51d4370582b18e65541b193" prot="protected" static="no" mutable="no">
         <type>vector&lt; double &gt;</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="205" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="205" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="207" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="207" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1a37eb9c19726847206fb787e6cb366874" prot="protected" static="no" mutable="no">
         <type>list&lt; double &gt;</type>
@@ -119,7 +119,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="207" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="207" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="209" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="209" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1a30e9608e41ea7dd7b5afaf47b9693601" prot="protected" static="no" mutable="no">
         <type>list&lt; double &gt;</type>
@@ -132,7 +132,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="207" column="29" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="207" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="209" column="29" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="209" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1a6103b16b878f8156778d599b30540658" prot="protected" static="no" mutable="no">
         <type>list&lt; <ref refid="classltr_1_1_weak_ranker" kindref="compound">WeakRanker</ref> &gt;</type>
@@ -145,7 +145,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="209" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="209" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="211" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="211" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1a86c20ed8f4f0ac9850cd8fc1695732b4" prot="protected" static="no" mutable="no">
         <type>list&lt; <ref refid="classltr_1_1_weak_ranker" kindref="compound">WeakRanker</ref> &gt;</type>
@@ -158,7 +158,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="209" column="22" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="209" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="211" column="22" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="211" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classltr_1_1_ada_rank_1ab448c368def2d5d07d981a16a56c9bb6" prot="protected" static="no" mutable="no">
         <type>unordered_set&lt; int &gt;</type>
@@ -171,14 +171,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="211" column="23" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="211" bodyend="-1"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="213" column="23" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="213" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
-      <memberdef kind="function" id="classltr_1_1_ada_rank_1ab9a3085f8d009455fcfa241277533bfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1ab287d566afa1c49ea943c78f9d4a4016" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
         <definition>AdaRank::AdaRank</definition>
-        <argsstring>(DataSet dataset, unique_ptr&lt; MetricScorer &gt; scorer, vector&lt; int &gt; features={}, DataSet validationSet={}, int iter=50, double tolerance=0.002, int maxConsecutive=5)</argsstring>
+        <argsstring>(DataSet dataset, unique_ptr&lt; MetricScorer &gt; scorer, int iter=50, double tolerance=0.002, int maxConsecutive=5, vector&lt; int &gt; features={}, DataSet validationSet={})</argsstring>
         <name>AdaRank</name>
         <param>
           <type>DataSet</type>
@@ -187,16 +187,6 @@
         <param>
           <type>unique_ptr&lt; <ref refid="classltr_1_1_metric_scorer" kindref="compound">MetricScorer</ref> &gt;</type>
           <declname>scorer</declname>
-        </param>
-        <param>
-          <type>vector&lt; int &gt;</type>
-          <declname>features</declname>
-          <defval>{}</defval>
-        </param>
-        <param>
-          <type>DataSet</type>
-          <declname>validationSet</declname>
-          <defval>{}</defval>
         </param>
         <param>
           <type>int</type>
@@ -213,6 +203,16 @@
           <declname>maxConsecutive</declname>
           <defval>5</defval>
         </param>
+        <param>
+          <type>vector&lt; int &gt;</type>
+          <declname>features</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>DataSet</type>
+          <declname>validationSet</declname>
+          <defval>{}</defval>
+        </param>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -227,22 +227,6 @@
 <parameteritem>
 <parameternamelist>
 <parametername>scorer</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>features</parametername>
-</parameternamelist>
-<parameterdescription>
-<para></para>
-</parameterdescription>
-</parameteritem>
-<parameteritem>
-<parameternamelist>
-<parametername>validationSet</parametername>
 </parameternamelist>
 <parameterdescription>
 <para></para>
@@ -272,12 +256,41 @@
 <para></para>
 </parameterdescription>
 </parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>features</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>validationSet</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
 </parameterlist>
 </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="87" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="55" bodyend="73"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="87" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="55" bodyend="72"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_ada_rank_1a376f76b6b374de8b674fe982172d3d18" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>AdaRank::~AdaRank</definition>
+        <argsstring>()</argsstring>
+        <name>~AdaRank</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="90" column="9" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="74" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1aacac7068a5546dd281d872f6bcd6aa62" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -305,7 +318,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="94" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="216" bodyend="241"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="96" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="225" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1addc477120ac720e3c25b0eb9d3618fb8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>double</type>
@@ -336,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="102" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="243" bodyend="254"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="104" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="252" bodyend="263"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a5dff0be5e4505ac0ac815ba698b39e32" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -364,7 +377,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="109" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="75" bodyend="77"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="111" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="84" bodyend="86"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1ab8c0285d8b8b43c1749be4d7504bc572" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -392,7 +405,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="116" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="79" bodyend="81"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="118" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="88" bodyend="90"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a64f9d600cc1a9efe69e6f78a7ba17306" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -420,7 +433,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="123" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="83" bodyend="85"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="125" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="92" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1abf8c0dad49de3ddeebcb6686384b9e0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -437,7 +450,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="129" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="321" bodyend="323"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="131" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="330" bodyend="332"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a62d51d15bd50824171d84d19660fcc4a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -454,7 +467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="135" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="325" bodyend="327"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="137" column="13" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="334" bodyend="336"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a049c9e0e051a19332dc0cdf2e33e9f59" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -471,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="141" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="329" bodyend="331"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="143" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="338" bodyend="340"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -501,7 +514,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="149" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="256" bodyend="292"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="151" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="265" bodyend="301"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a6f60500f9b913eaf6b5ef50d41fdc9db" prot="protected" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -529,7 +542,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="155" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="294" bodyend="319"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="157" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="303" bodyend="328"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a770b7bad96e6e7423ee0755b3d85d89c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -557,7 +570,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="162" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="120" bodyend="214"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="164" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="129" bodyend="223"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a958b9eaa0d4031dc1b8b3d51d2e1a4a9" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classltr_1_1_weak_ranker" kindref="compound">WeakRanker</ref></type>
@@ -574,7 +587,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="169" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="97" bodyend="118"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="171" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="106" bodyend="127"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a5823949cfd30d5b4fbbed0d506203faa" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>double</type>
@@ -604,7 +617,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="177" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="87" bodyend="95"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="179" column="16" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="96" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a80ce9f75c0d63f2b63d463a459d6dbb7" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -618,7 +631,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="182" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="333" bodyend="338"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="184" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="342" bodyend="347"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a6280b97b78e53e073d576249569d1825" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -717,7 +730,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="194" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="340" bodyend="346"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="196" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="349" bodyend="355"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1a4eb2aa48c463ac876e2eb60d6990c26c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -731,7 +744,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="199" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="348" bodyend="359"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="201" column="14" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="357" bodyend="368"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -750,7 +763,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="215" column="9"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="217" column="9"/>
       </memberdef>
       <memberdef kind="function" id="classltr_1_1_ada_rank_1ae4f9f50c8b2a8e2cf3edbce9c688d47a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> &amp;</type>
@@ -767,7 +780,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="216" column="17"/>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="218" column="17"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -855,9 +868,9 @@
         <label>unique_ptr&lt; ltr::MetricScorer &gt;</label>
       </node>
     </collaborationgraph>
-    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="74" column="32" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="74" bodyend="217"/>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="74" column="32" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="74" bodyend="219"/>
     <listofallmembers>
-      <member refid="classltr_1_1_ada_rank_1ab9a3085f8d009455fcfa241277533bfa" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>AdaRank</name></member>
+      <member refid="classltr_1_1_ada_rank_1ab287d566afa1c49ea943c78f9d4a4016" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>AdaRank</name></member>
       <member refid="classltr_1_1_ada_rank_1a7b71a63f3250e7e82422cb5d468a3a58" prot="private" virt="non-virtual"><scope>ltr::AdaRank</scope><name>AdaRank</name></member>
       <member refid="classltr_1_1_ada_rank_1a86c20ed8f4f0ac9850cd8fc1695732b4" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>best_rankers</name></member>
       <member refid="classltr_1_1_ada_rank_1a30e9608e41ea7dd7b5afaf47b9693601" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>best_weights</name></member>
@@ -910,6 +923,7 @@
       <member refid="classltr_1_1_ada_rank_1ab448c368def2d5d07d981a16a56c9bb6" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>used_features</name></member>
       <member refid="classltr_1_1_ranker_1a6773d8c83041f8c46d3b16020732d13e" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>validation_samples</name></member>
       <member refid="classltr_1_1_ranker_1ab5ad64e7d1ca0fc49e50d7c322135bbf" prot="protected" virt="non-virtual"><scope>ltr::AdaRank</scope><name>verbose</name></member>
+      <member refid="classltr_1_1_ada_rank_1a376f76b6b374de8b674fe982172d3d18" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>~AdaRank</name></member>
       <member refid="classltr_1_1_ranker_1aa24c1f390119dcb7bf1520d99d09dd52" prot="public" virt="non-virtual"><scope>ltr::AdaRank</scope><name>~Ranker</name></member>
     </listofallmembers>
   </compounddef>
