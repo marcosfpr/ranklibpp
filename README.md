@@ -3,6 +3,7 @@
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
+[![codecov][codecov-shield]][codecov-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -19,11 +20,9 @@
   <p align="center">
     A fast Learning to Rank library based on RankLib
     <br />
-    <a href="https://github.com/marcosfpr/ltrpp"><strong>Explore the docs »</strong></a>
+    <a href="https://ltr.readthedocs.io/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/marcosfpr/ltrpp">View Demo</a>
-    ·
     <a href="https://github.com/marcosfpr/ltrpp/issues">Report Bug</a>
     ·
     <a href="https://github.com/marcosfpr/ltrpp/issues">Request Feature</a>
@@ -63,21 +62,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-|       System       | 1.0.0 |
-|:------------------:|:-----:|
-|     Windows x86    |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
-|     Windows x64    |  [![ltrpp-w64](https://img.shields.io/badge/build-failed-red)](https://github.com/marcosfpr/ltrpp)|
-|     MacOSX x64     |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
-| Linux (ubuntu) x64 |  [![ltrpp-w64](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/marcosfpr/ltrpp) |
+LTR++ is a Learning to Rank library written in C++ and based on the famous [RankLib](https://sourceforge.net/p/lemur/wiki/RankLib%20How%20to%20use/) library. The main goal of this project is to provide a simple, fast and memory safe wich implements a wide variety of LTR models. 
 
 ### Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
+The development of ltr++ are using almost only C++17 language features. Additionally, some external libraries were used, as shown below: 
 
-
+* [Boost Libraries](https://www.boost.org): Boost is a set of libraries for the C++ programming language that provides support for tasks and structures such as linear algebra and regular expressions.
+* [Google Test](https://github.com/google/googletest): Google Testing and Mocking Framework.
+* [Spdlog](https://github.com/gabime/spdlog): Fast C++ logging library. 
+* [CMake](https://cmake.org): Tools designed to build, test and package software.
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -185,7 +179,9 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 [issues-shield]: https://img.shields.io/github/issues/marcosfpr/ltrpp.svg?style=for-the-badge
 [issues-url]: https://github.com/marcosfpr/ltrpp/issues
 [license-shield]: https://img.shields.io/github/license/marcosfpr/ltrpp.svg?style=for-the-badge
-[license-url]: https://github.com/marcosfpr/ltrpp/blob/master/LICENSE.txt
+[license-url]: https://github.com/marcosfpr/ltrpp/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/marcosfpr
 [product-screenshot]: images/logo.png
+[codecov-shield]: https://img.shields.io/codecov/c/github/marcosfpr/ltrpp?style=for-the-badge
+[codecov-url]: https://codecov.io/gh/marcosfpr/ltrp
