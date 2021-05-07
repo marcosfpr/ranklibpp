@@ -6,23 +6,31 @@
 Welcome to ltr++'s documentation!
 =====================================
 
-ltr++ is a C++ library based on `RankLib`_ project.
+Learning to Rank (LTR) is one of the methods that can be effectively applied to solve the task
+of creating a ranking model in Information Retrieval. It helps solving IR problems such as document retrieval,
+collaborative filtering, sentiment analysis, computational advertising etc. LTR method aims at learning a model
+that given a query and a set of candidate documents finds the appropriate ranking of documents according to their relevancy.
+LTR method aims at learning a model that given a query and a set of candidate documents finds the appropriate ranking
+of documents according to their relevancy.
+**LTR++** is a Learning to Rank open-source library based on `RankLib`_ project. Currently two popular algorithms have been implemented
+and it also implements many retrieval metrics. 
+
+.. image:: ./img/ltr_flow.png
+  :width: 800
+  :alt: Simple Learning to Rank workflow diagram.
 
 .. _RankLib: https://sourceforge.net/p/lemur/wiki/RankLib/
 
-Currently in development.
+The LTR++ project is in early steps of development. Feel free to contribute or suggest features!
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
-   overview
+   quickstart
+   integration
+   components
    license
    help
 
-
-Indices and tables
-==================
-
-* :ref:`genindex`
 

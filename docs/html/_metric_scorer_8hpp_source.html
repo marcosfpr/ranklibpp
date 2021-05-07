@@ -71,65 +71,82 @@ $(function() {
 <div class="title">MetricScorer.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="_metric_scorer_8hpp.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef METRIC_SCORER_HPP_</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define METRIC_SCORER_HPP_</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &quot;../learning/DataSet.hpp&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">using</span> std::vector;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">using</span> std::unique_ptr;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">namespace </span>ltr{</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">class </span>RankList;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classltr_1_1_metric_scorer.html">   31</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a> {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <a class="code" href="classltr_1_1_metric_scorer.html#a0286ba0f66b080365b3f3682ca6d09cb">MetricScorer</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <a class="code" href="classltr_1_1_metric_scorer.html#a6dc1a9c79e6ef48ec9272d5379e4c337">~MetricScorer</a>();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <a class="code" href="classltr_1_1_metric_scorer.html#a0286ba0f66b080365b3f3682ca6d09cb">MetricScorer</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a>&amp; ms);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a>&amp; <a class="code" href="classltr_1_1_metric_scorer.html#a1b3757c0012820a8a842e4d54f422c45">operator=</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a>&amp; ms);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_metric_scorer.html#a37576d07e18405c4195bf3ed60643126">setDepth</a>(<span class="keywordtype">int</span> depth);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classltr_1_1_metric_scorer.html#a8347d53c4d39a69db8110e53d757a6e4">getDepth</a>();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237">score</a>(<a class="code" href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">DataSet</a>&amp; ds);</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// Copyright (c) 2021 LTR++ Project (Marcos Pontes)</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">//  Permission is hereby granted, free of charge, to any person obtaining a copy</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">//  of this software and associated documentation files (the &quot;Software&quot;), to deal</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">//  in the Software without restriction, including without limitation the rights</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment">//  copies of the Software, and to permit persons to whom the Software is</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">//  furnished to do so, subject to the following conditions:</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment">//  The above copyright notice and this permission notice shall be included in</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment">//  all copies or substantial portions of the Software.</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment">//  THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment">//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment">//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment">//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment">//  THE SOFTWARE.</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef METRIC_SCORER_HPP_</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#define METRIC_SCORER_HPP_</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &quot;../learning/DataSet.hpp&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">using</span> std::vector;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">using</span> std::unique_ptr;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">namespace </span>ltr{</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">class </span>RankList;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classltr_1_1_metric_scorer.html">   40</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a> {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <a class="code" href="classltr_1_1_metric_scorer.html#a0286ba0f66b080365b3f3682ca6d09cb">MetricScorer</a>();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <a class="code" href="classltr_1_1_metric_scorer.html#a6dc1a9c79e6ef48ec9272d5379e4c337">~MetricScorer</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <a class="code" href="classltr_1_1_metric_scorer.html#a0286ba0f66b080365b3f3682ca6d09cb">MetricScorer</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a>&amp; ms);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a>&amp; <a class="code" href="classltr_1_1_metric_scorer.html#a1b3757c0012820a8a842e4d54f422c45">operator=</a>(<span class="keyword">const</span> <a class="code" href="classltr_1_1_metric_scorer.html">MetricScorer</a>&amp; ms);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="classltr_1_1_metric_scorer.html#a3d482b9057fb4e83987382898414739a">setDepth</a>(<span class="keywordtype">int</span> d);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="classltr_1_1_metric_scorer.html#accaa818dab2eb2c3debeeb67d2ed5468">getDepth</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237">score</a>(<a class="code" href="classltr_1_1_rank_list.html">RankList</a>&amp; rl) = 0;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        <span class="keyword">virtual</span> unique_ptr&lt;MetricScorer&gt; <a class="code" href="classltr_1_1_metric_scorer.html#a62c1e00993aa9d07266e600413629dd2">clone</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237">score</a>(DataSet&amp; ds);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">double</span> <a class="code" href="classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237">score</a>(<a class="code" href="classltr_1_1_rank_list.html">RankList</a>&amp; rl); </div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        vector&lt;int&gt; <a class="code" href="classltr_1_1_metric_scorer.html#ab9ddb58509a8ee09d8ec8b8b12a18c1c">getRelevanceLabels</a>(<a class="code" href="classltr_1_1_rank_list.html">RankList</a>&amp; rl);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordtype">int</span> depth;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    };</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;};</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        <span class="keyword">virtual</span> unique_ptr&lt;MetricScorer&gt; <a class="code" href="classltr_1_1_metric_scorer.html#a8e6f6dfc87c7c15f2a3ad6b255472f4f">clone</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        <span class="keyword">virtual</span> <span class="keywordtype">string</span> <a class="code" href="classltr_1_1_metric_scorer.html#ad49ccec2df5162fe80a5396921b6907a">toString</a>();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        <span class="keywordtype">int</span> depth;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    };</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;};</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a0286ba0f66b080365b3f3682ca6d09cb"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a0286ba0f66b080365b3f3682ca6d09cb">ltr::MetricScorer::MetricScorer</a></div><div class="ttdeci">MetricScorer()</div><div class="ttdoc">Construct a new Metric Scorer object.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:19</div></div>
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a8347d53c4d39a69db8110e53d757a6e4"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a8347d53c4d39a69db8110e53d757a6e4">ltr::MetricScorer::getDepth</a></div><div class="ttdeci">int getDepth()</div><div class="ttdoc">Get the Depth value.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:38</div></div>
-<div class="ttc" id="a_data_set_8hpp_html_ac1f8c5fc3e425c5fc38401d07c1c4747"><div class="ttname"><a href="_data_set_8hpp.html#ac1f8c5fc3e425c5fc38401d07c1c4747">ltr::DataSet</a></div><div class="ttdeci">list&lt; RankList &gt; DataSet</div><div class="ttdoc">Initially, a dataset is represented as a linkedlist of RankList objects.</div><div class="ttdef"><b>Definition:</b> DataSet.hpp:21</div></div>
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a089b79830be7462487dfdf7060d87237"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237">ltr::MetricScorer::score</a></div><div class="ttdeci">double score(DataSet &amp;ds)</div><div class="ttdoc">Return score for multiple RankLists.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:42</div></div>
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a62c1e00993aa9d07266e600413629dd2"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a62c1e00993aa9d07266e600413629dd2">ltr::MetricScorer::clone</a></div><div class="ttdeci">virtual unique_ptr&lt; MetricScorer &gt; clone() const =0</div><div class="ttdoc">Clone a MetricScorer pointer.</div></div>
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a37576d07e18405c4195bf3ed60643126"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a37576d07e18405c4195bf3ed60643126">ltr::MetricScorer::setDepth</a></div><div class="ttdeci">void setDepth(int depth)</div><div class="ttdoc">Set the Depth value.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:34</div></div>
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html_ab9ddb58509a8ee09d8ec8b8b12a18c1c"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#ab9ddb58509a8ee09d8ec8b8b12a18c1c">ltr::MetricScorer::getRelevanceLabels</a></div><div class="ttdeci">vector&lt; int &gt; getRelevanceLabels(RankList &amp;rl)</div><div class="ttdoc">Get the Relevance Labels of a RankList.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:51</div></div>
-<div class="ttc" id="aclassltr_1_1_rank_list_html"><div class="ttname"><a href="classltr_1_1_rank_list.html">ltr::RankList</a></div><div class="ttdoc">This class implement the list of objects (each of which is a DataPoint) to be ranked.</div><div class="ttdef"><b>Definition:</b> RankList.hpp:36</div></div>
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html"><div class="ttname"><a href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></div><div class="ttdoc">A generic retrieval measure computation interface.</div><div class="ttdef"><b>Definition:</b> MetricScorer.hpp:31</div></div>
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a6dc1a9c79e6ef48ec9272d5379e4c337"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a6dc1a9c79e6ef48ec9272d5379e4c337">ltr::MetricScorer::~MetricScorer</a></div><div class="ttdeci">~MetricScorer()</div><div class="ttdoc">Destroy the Metric Scorer object.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:21</div></div>
-<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a1b3757c0012820a8a842e4d54f422c45"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a1b3757c0012820a8a842e4d54f422c45">ltr::MetricScorer::operator=</a></div><div class="ttdeci">MetricScorer &amp; operator=(const MetricScorer &amp;ms)</div><div class="ttdoc">Assign operator for MetricScorer.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:28</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a0286ba0f66b080365b3f3682ca6d09cb"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a0286ba0f66b080365b3f3682ca6d09cb">ltr::MetricScorer::MetricScorer</a></div><div class="ttdeci">MetricScorer()</div><div class="ttdoc">Construct a new Metric Scorer object.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:28</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html_ad49ccec2df5162fe80a5396921b6907a"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#ad49ccec2df5162fe80a5396921b6907a">ltr::MetricScorer::toString</a></div><div class="ttdeci">virtual string toString()</div><div class="ttdoc">Return string representation of model.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:62</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a3d482b9057fb4e83987382898414739a"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a3d482b9057fb4e83987382898414739a">ltr::MetricScorer::setDepth</a></div><div class="ttdeci">void setDepth(int d)</div><div class="ttdoc">Set the Depth value.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:38</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html_accaa818dab2eb2c3debeeb67d2ed5468"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#accaa818dab2eb2c3debeeb67d2ed5468">ltr::MetricScorer::getDepth</a></div><div class="ttdeci">int getDepth() const</div><div class="ttdoc">Get the Depth value.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:42</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a089b79830be7462487dfdf7060d87237"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a089b79830be7462487dfdf7060d87237">ltr::MetricScorer::score</a></div><div class="ttdeci">virtual double score(DataSet &amp;ds)</div><div class="ttdoc">Return score for multiple RankLists.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:46</div></div>
+<div class="ttc" id="aclassltr_1_1_rank_list_html"><div class="ttname"><a href="classltr_1_1_rank_list.html">ltr::RankList</a></div><div class="ttdoc">A RankList is the object to be ranked by models.</div><div class="ttdef"><b>Definition:</b> RankList.hpp:39</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html"><div class="ttname"><a href="classltr_1_1_metric_scorer.html">ltr::MetricScorer</a></div><div class="ttdoc">A abstract retrieval measure computation interface.</div><div class="ttdef"><b>Definition:</b> MetricScorer.hpp:40</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a8e6f6dfc87c7c15f2a3ad6b255472f4f"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a8e6f6dfc87c7c15f2a3ad6b255472f4f">ltr::MetricScorer::clone</a></div><div class="ttdeci">virtual unique_ptr&lt; MetricScorer &gt; clone() const</div><div class="ttdoc">Clone a MetricScorer pointer.</div><div class="ttdef"><b>Definition:</b> MetricScorer.cpp:58</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a6dc1a9c79e6ef48ec9272d5379e4c337"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a6dc1a9c79e6ef48ec9272d5379e4c337">ltr::MetricScorer::~MetricScorer</a></div><div class="ttdeci">~MetricScorer()</div><div class="ttdoc">Destroy the Metric Scorer object.</div></div>
+<div class="ttc" id="aclassltr_1_1_metric_scorer_html_a1b3757c0012820a8a842e4d54f422c45"><div class="ttname"><a href="classltr_1_1_metric_scorer.html#a1b3757c0012820a8a842e4d54f422c45">ltr::MetricScorer::operator=</a></div><div class="ttdeci">MetricScorer &amp; operator=(const MetricScorer &amp;ms)</div><div class="ttdoc">Assign operator for MetricScorer.</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

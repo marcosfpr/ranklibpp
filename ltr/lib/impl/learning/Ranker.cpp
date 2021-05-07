@@ -21,28 +21,22 @@
 #include "../../api/LtrError.hpp"
 #include "../../api/learning/Ranker.hpp"
 #include "../../api/metric/MetricScorer.hpp"
-#include "../../api/utils/JsonParser.hpp"
-
 
 #include <numeric> // iota
-#include <map> // map
 #include <vector> // vector
 #include <memory> // shared_ptr, unique_ptr
 #include <stdexcept>  // runtime error 
-#include <experimental/filesystem> // filesystem
-#include <iomanip> // setw
-#include <sstream> // sstream
+#include <filesystem>
 
 using std::map;
 using std::move;
 using std::unique_ptr;
 using std::string;
 using std::vector;
-namespace fs = std::experimental::filesystem;
+using std::stringstream;
+namespace fs = std::filesystem;
 
 using namespace ltr;
-
-
 
 Ranker::Ranker(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features, DataSet validationSet){
     this->training_samples = move(dataset);
@@ -107,9 +101,15 @@ void Ranker::save(const string& fileToSave){
 
     std::ofstream file(fileToSave.c_str());
 
-    ltr::write_json(file, this->name(), this->getParameters());
-
-    file.close();
+    try {
+        this->saveJSON(file);
+        file.close();
+    }
+    catch (std::logic_error& e) {
+        file.close();
+        fs::remove(path);
+        throw e;
+    }
 }
 
 void Ranker::load(const string& fileToLoad) {
@@ -120,16 +120,10 @@ void Ranker::load(const string& fileToLoad) {
 
     std::ifstream file(fileToLoad.c_str());
 
-    auto response = ltr::load_json(file);
-
-    if (response.first != this->name())
-        throw LtrError("Error in Ranker::load : JSON file not corresponds to model ="+ response.first);
-
-    this->setParameters(response.second);
+    this->loadJSON(file);
 
     file.close();
 }
-
 
 void Ranker::fit(){
    	throw std::logic_error("No implementation of 'Ranker::fit' provided");
@@ -139,88 +133,21 @@ double Ranker::predict(ReadableDataPoint dp){
     throw std::logic_error("No implementation of 'Ranker::predict' provided");
 }
 
-map<string, double> Ranker::getParameters(){
-    return {};
+void Ranker::loadJSON(std::ifstream& file){
+    throw std::logic_error("No implementation of 'Ranker::loadJSON' provided");
 }
 
-void Ranker::setParameters(map<string, double> parameters) {}
-
-string Ranker::name() const {
-    return "Ranker";
+void Ranker::saveJSON(std::ofstream& file) {
+    throw std::logic_error("No implementation of 'Ranker::saveJSON' provided");
 }
 
 void Ranker::extractFeatures(){
     // basic impl. extract the first seen datapoint and use its
     // featuresCount value to create the feature vector representation
-    auto first = this->training_samples.begin();
-    int maxFeature = first->get(0)->getFeatureCount();
-    this->features.resize(maxFeature);
-    std::iota(this->features.begin(), this->features.end(), 1);
-}
-
-void Ranker::log(vector<string> msg, log_level type, vector<int> sizes) const{
-    if (! verbose) return;
-
-    if (msg.size() != sizes.size()) {
-        auto it = std::max_element(msg.begin(), msg.end(),
-                                    [](const auto& a, const auto& b) {
-                                        return a.size() < b.size();
-                                    });
-        int max = it->size();
-        vector<int> new_sizes(msg.size(), max);
-        sizes = new_sizes;
-    }
-
-    std::stringstream stream;
-
-    for (int i = 0; i < msg.size(); i++)
-        stream << std::setw(sizes[i]) << msg[i] << " | ";
-
-    switch(type) {
-        case trace:
-            LOGGING(trace) << stream.str();
-            break;
-        case info:
-            LOGGING(info) << stream.str();
-            break;
-        case debug:
-            LOGGING(debug) << stream.str();
-            break;
-        case warning:
-            LOGGING(warning) << stream.str();
-            break;
-        case error:
-            LOGGING(error) << stream.str();
-            break;
-        case fatal:
-            LOGGING(fatal) << stream.str();
-            break;
+    if(!training_samples.empty()) {
+        auto first = this->training_samples.begin();
+        int maxFeature = first->get(0)->getFeatureCount();
+        this->features.resize(maxFeature);
+        std::iota(this->features.begin(), this->features.end(), 1);
     }
 }
-
-void Ranker::log(string msg, log_level type, int size) const {
-    if (! verbose) return;
-    if (size == 0) size = msg.size();
-    switch(type) {
-        case trace:
-            LOGGING(trace) << std::setw(size) << msg;
-            break;
-        case info:
-            LOGGING(info) << std::setw(size) << msg;
-            break;
-        case debug:
-            LOGGING(debug) << std::setw(size) << msg;
-            break;
-        case warning:
-            LOGGING(warning) << std::setw(size) << msg;
-            break;
-        case error:
-            LOGGING(error) << std::setw(size) << msg;
-            break;
-        case fatal:
-            LOGGING(fatal) << std::setw(size) << msg;
-            break;
-    }
-}
-
-

@@ -1,0 +1,154 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classltr_1_1_weak_ranker" kind="class" language="C++" prot="public">
+    <compoundname>ltr::WeakRanker</compoundname>
+    <basecompoundref refid="classltr_1_1_learner" prot="public" virt="non-virtual">ltr::Learner</basecompoundref>
+    <includes refid="_ada_rank_8hpp" local="no">AdaRank.hpp</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classltr_1_1_weak_ranker_1af3ad5f4ec4042ae7564e9599e83bb761" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int ltr::WeakRanker::featureID</definition>
+        <argsstring></argsstring>
+        <name>featureID</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="71" column="17" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classltr_1_1_weak_ranker_1a94a2d8a9f38d4449e26b7c5829193342" prot="public" static="no" const="no" explicit="yes" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WeakRanker::WeakRanker</definition>
+        <argsstring>(int featureID)</argsstring>
+        <name>WeakRanker</name>
+        <param>
+          <type>int</type>
+          <declname>featureID</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Weak <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>featureID</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="47" column="22" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_weak_ranker_1ad8541406ded864ac32f1e5c9a6702e10" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>WeakRanker::~WeakRanker</definition>
+        <argsstring>()</argsstring>
+        <name>~WeakRanker</name>
+        <briefdescription>
+<para>Destroy the Weak <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> object. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="53" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_weak_ranker_1a10cd60e3aa7955a9cb44816e3523a3d1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>double</type>
+        <definition>double WeakRanker::predict</definition>
+        <argsstring>(ReadableDataPoint dp) override</argsstring>
+        <name>predict</name>
+        <reimplements refid="classltr_1_1_learner_1acf85ea361fa758668779249d77ce2ee5">predict</reimplements>
+        <param>
+          <type>ReadableDataPoint</type>
+          <declname>dp</declname>
+        </param>
+        <briefdescription>
+<para>predict score for a single datapoint </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>dp</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>double </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="61" column="20" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="46" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="classltr_1_1_weak_ranker_1a1ad3bd87936013a73c34e79bab8c92c7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int WeakRanker::getFeature</definition>
+        <argsstring>() const</argsstring>
+        <name>getFeature</name>
+        <briefdescription>
+<para>Get the Feature value. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>int </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="68" column="17" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/impl/learning/ensemble/AdaRank.cpp" bodystart="51" bodyend="53"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Weak <ref refid="classltr_1_1_ranker" kindref="compound">Ranker</ref> used in <ref refid="classltr_1_1_ada_rank" kindref="compound">AdaRank</ref> boost algorithm Order items by a single feature. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>ltr::Learner</label>
+        <link refid="classltr_1_1_learner"/>
+      </node>
+      <node id="1">
+        <label>ltr::WeakRanker</label>
+        <link refid="classltr_1_1_weak_ranker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>ltr::Learner</label>
+        <link refid="classltr_1_1_learner"/>
+      </node>
+      <node id="1">
+        <label>ltr::WeakRanker</label>
+        <link refid="classltr_1_1_weak_ranker"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" line="40" column="36" bodyfile="/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble/AdaRank.hpp" bodystart="40" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classltr_1_1_weak_ranker_1af3ad5f4ec4042ae7564e9599e83bb761" prot="private" virt="non-virtual"><scope>ltr::WeakRanker</scope><name>featureID</name></member>
+      <member refid="classltr_1_1_weak_ranker_1a1ad3bd87936013a73c34e79bab8c92c7" prot="public" virt="non-virtual"><scope>ltr::WeakRanker</scope><name>getFeature</name></member>
+      <member refid="classltr_1_1_weak_ranker_1a10cd60e3aa7955a9cb44816e3523a3d1" prot="public" virt="virtual"><scope>ltr::WeakRanker</scope><name>predict</name></member>
+      <member refid="classltr_1_1_learner_1a8606e514b58a7e0caf51cfff1e247e44" prot="public" virt="non-virtual"><scope>ltr::WeakRanker</scope><name>rank</name></member>
+      <member refid="classltr_1_1_learner_1a5f32be74efa7fd80679d688def13c58e" prot="public" virt="non-virtual"><scope>ltr::WeakRanker</scope><name>rank</name></member>
+      <member refid="classltr_1_1_weak_ranker_1a94a2d8a9f38d4449e26b7c5829193342" prot="public" virt="non-virtual"><scope>ltr::WeakRanker</scope><name>WeakRanker</name></member>
+      <member refid="classltr_1_1_weak_ranker_1ad8541406ded864ac32f1e5c9a6702e10" prot="public" virt="non-virtual"><scope>ltr::WeakRanker</scope><name>~WeakRanker</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

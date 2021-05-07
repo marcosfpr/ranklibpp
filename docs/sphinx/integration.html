@@ -1,0 +1,471 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Integration &mdash; ltr++ 2021 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="License" href="license.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="quickstart.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> ltr++
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Integration</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c">1. C++</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#including-header-only">Including header-only</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#embed-as-cmake-subdirectory">Embed as CMake subdirectory</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#embed-with-cpm-cmake">Embed with CPM.cmake</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#find-as-cmake-package">Find as CMake package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#python">2. Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installing">3. Installing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#building">4. Building</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#update-c">4.1 Update C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#building-the-projet">4.2 Building the projet</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id1">Python</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Need Help?</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">ltr++</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Integration</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/integration.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="integration">
+<h1>Integration<a class="headerlink" href="#integration" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h2>
+<p>The main prerequisite for installing ltr++ is CMake 3.15 or higher. Other external libraries will be downloaded automatically,
+if you don’t have they. So that make sure you have CMake installed. Also, make sure that your operating system is compatible with
+any build that is working:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>System</p></th>
+<th class="head"><p>1.0.0</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Windows x86</p></td>
+<td><p><img alt="Passing" src="https://img.shields.io/badge/build-passing-brightgreen" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>Windows x64</p></td>
+<td><p><img alt="Passing" src="https://img.shields.io/badge/build-passing-brightgreen" /></p></td>
+</tr>
+<tr class="row-even"><td><p>MacOSX x64</p></td>
+<td><p><img alt="Passing" src="https://img.shields.io/badge/build-passing-brightgreen" /></p></td>
+</tr>
+<tr class="row-odd"><td><p>Linux x64</p></td>
+<td><p><img alt="Passing" src="https://img.shields.io/badge/build-passing-brightgreen" /></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="c">
+<h2>1. C++<a class="headerlink" href="#c" title="Permalink to this headline">¶</a></h2>
+<p>Using CMake and certifying that all prerequisites are ok, let’s understand how to build and install ltr.</p>
+<div class="section" id="including-header-only">
+<h3>Including header-only<a class="headerlink" href="#including-header-only" title="Permalink to this headline">¶</a></h3>
+<p>After installing the ltr library, you can import the library as a header-only file:</p>
+<div class="highlight-c notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;ltr.hpp&gt;</span><span class="cp"></span>
+</pre></div>
+</td></tr></table></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Make sure you have C++17 or higher installed.</p>
+</div>
+</div>
+<div class="section" id="embed-as-cmake-subdirectory">
+<h3>Embed as CMake subdirectory<a class="headerlink" href="#embed-as-cmake-subdirectory" title="Permalink to this headline">¶</a></h3>
+<p>You can use ltr++ directly in CMake projects as a subproject.</p>
+<p>Clone the whole project inside your own project:</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span>$ git clone https://github.com/marcosfpr/ltrpp/
+</pre></div>
+</td></tr></table></div>
+<p>and add the subdirectory to your CMake script:</p>
+<div class="highlight-cmake notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">add_subdirectory</span><span class="p">(</span><span class="s">ltrpp</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>When creating your executable, link the library to the targets you want:</p>
+<div class="highlight-cmake notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">add_executable</span><span class="p">(</span><span class="s">my_target</span> <span class="s">main.cpp</span><span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">my_target</span> <span class="s">PRIVATE</span> <span class="s">ltr</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Your target will be able to see the ltr++ headers now.</p>
+</div>
+<div class="section" id="embed-with-cpm-cmake">
+<h3>Embed with CPM.cmake<a class="headerlink" href="#embed-with-cpm-cmake" title="Permalink to this headline">¶</a></h3>
+<p><a class="reference external" href="https://github.com/TheLartians/CPM.cmake">CPM.cmake</a> is a nice wrapper around the CMake FetchContent function.
+Install <a class="reference external" href="https://github.com/TheLartians/CPM.cmake">CPM.cmake</a> and then use this command to add ltr++ to your build
+script:</p>
+<div class="highlight-cmake notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">CPMAddPackage</span><span class="p">(</span>
+        <span class="s">NAME</span> <span class="s">ltr</span>
+        <span class="s">GITHUB_REPOSITORY</span> <span class="s">marcosfpr/ltrpp</span>
+        <span class="s">GIT_TAG</span> <span class="s">origin/master</span> <span class="c"># or whatever tag you want</span>
+<span class="p">)</span>
+<span class="c"># ...</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">my_target</span> <span class="s">PUBLIC</span> <span class="s">ltr</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Your target will be able to see the ltr++ headers now.</p>
+</div>
+<div class="section" id="find-as-cmake-package">
+<h3>Find as CMake package<a class="headerlink" href="#find-as-cmake-package" title="Permalink to this headline">¶</a></h3>
+<p>If you are using CMake and have the library installed on your system, you can then find ltr++ with the
+usual <code class="docutils literal notranslate"><span class="pre">find_package</span></code> command:</p>
+<div class="highlight-cmake notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="nb">find_package</span><span class="p">(</span><span class="s">ltr</span> <span class="s">REQUIRED</span><span class="p">)</span>
+<span class="c"># ...</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span><span class="s">my_target</span> <span class="s">PUBLIC</span> <span class="s">ltr</span><span class="p">)</span>
+</pre></div>
+</td></tr></table></div>
+<p>Your target will be able to see the ltr++ headers now.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>There is no easy default directory for <code class="docutils literal notranslate"><span class="pre">find_package</span></code> on windows. You have
+to <a class="reference external" href="https://stackoverflow.com/questions/21314893/what-is-the-default-search-path-for-find-package-in-windows-using-cmake">set it</a> yourself.</p>
+</div>
+</div>
+</div>
+<div class="section" id="python">
+<h2>2. Python<a class="headerlink" href="#python" title="Permalink to this headline">¶</a></h2>
+<p>Development stage</p>
+</div>
+<div class="section" id="installing">
+<h2>3. Installing<a class="headerlink" href="#installing" title="Permalink to this headline">¶</a></h2>
+<p>Development stage</p>
+</div>
+<div class="section" id="building">
+<h2>4. Building<a class="headerlink" href="#building" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="update-c">
+<h3>4.1 Update C++<a class="headerlink" href="#update-c" title="Permalink to this headline">¶</a></h3>
+<p>Update your C++ compiler to at least C++17:</p>
+<p><strong>Ubuntu:</strong></p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># install GCC10</span>
+sudo apt install build-essential
+sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+sudo apt-get update
+sudo apt install gcc-10
+sudo apt install g++-10
+sudo update-alternatives --install /usr/bin/gcc gcc /usr/bin/gcc-10 <span class="m">10</span>
+sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-10 <span class="m">10</span>
+<span class="c1"># Choose gcc-10 there as the default compiler</span>
+update-alternatives --config g++
+</pre></div>
+</td></tr></table></div>
+<p><strong>Mac OS:</strong></p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span><span class="c1"># Download clang</span>
+curl --output clang.tar.xz -L https://github.com/llvm/llvm-project/releases/download/llvmorg-11.0.0/clang+llvm-11.0.0-x86_64-apple-darwin.tar.xz
+mkdir clang
+tar -xvJf clang.tar.xz -C clang
+<span class="c1"># Copy the files to use/local</span>
+<span class="nb">cd</span> clang/clang+llvm-11.0.0-x86_64-apple-darwin
+sudo cp -R * /usr/local/
+<span class="c1"># Make it your default compiler</span>
+<span class="nb">export</span> <span class="nv">CXX</span><span class="o">=</span>/usr/local/bin/clang++
+</pre></div>
+</td></tr></table></div>
+<p><strong>Windows:</strong></p>
+<blockquote>
+<div><p>Update your <a class="reference external" href="https://visualstudio.microsoft.com/">Visual Studio Compiler</a></p>
+</div></blockquote>
+</div>
+<div class="section" id="building-the-projet">
+<h3>4.2 Building the projet<a class="headerlink" href="#building-the-projet" title="Permalink to this headline">¶</a></h3>
+<p>After installing or updating the dependencies, clone the project with:</p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span>git clone https://github.com/marcosfpr/ltrpp.git
+<span class="nb">cd</span> pareto
+</pre></div>
+</td></tr></table></div>
+<p>And then build with:</p>
+<p><strong>Ubuntu:</strong></p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span>mkdir build
+<span class="nb">cd</span> build
+cmake -version
+cmake .. -DCMAKE_BUILD_TYPE<span class="o">=</span>Release -DCMAKE_CXX_FLAGS<span class="o">=</span><span class="s2">&quot;-O2&quot;</span>
+cmake --build . -j <span class="m">2</span> --config Release
+<span class="c1"># The next command for installing</span>
+sudo cmake --install .
+<span class="c1"># The next command for building the packages / installers</span>
+sudo cpack .
+</pre></div>
+</td></tr></table></div>
+<p><strong>Mac OS:</strong></p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span>mkdir build
+<span class="nb">cd</span> build
+cmake -version
+cmake .. -DCMAKE_BUILD_TYPE<span class="o">=</span>Release -DCMAKE_CXX_FLAGS<span class="o">=</span><span class="s2">&quot;-O2&quot;</span>
+cmake --build . -j <span class="m">2</span> --config Release
+<span class="c1"># The next command for installing</span>
+cmake --install .
+<span class="c1"># The next command for building the packages / installers</span>
+cpack .
+</pre></div>
+</td></tr></table></div>
+<p><strong>Windows:</strong></p>
+<div class="highlight-bash notranslate"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9</pre></div></td><td class="code"><div class="highlight"><pre><span></span>mkdir build
+<span class="nb">cd</span> build
+cmake -version
+cmake .. -DCMAKE_BUILD_TYPE<span class="o">=</span>Release -DCMAKE_CXX_FLAGS<span class="o">=</span><span class="s2">&quot;/O2&quot;</span>
+cmake --build . -j <span class="m">2</span> --config Release
+<span class="c1"># The next command for installing</span>
+cmake --install .
+<span class="c1"># The next command for building the packages / installers</span>
+cpack .
+</pre></div>
+</td></tr></table></div>
+</div>
+<div class="section" id="id1">
+<h3>Python<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div><p>Development stage</p>
+</div></blockquote>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="license.html" class="btn btn-neutral float-right" title="License" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="quickstart.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, Marcos Pontes and The Lemur Project.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['eval_10',['eval',['../classltr_1_1_ada_rank.html#adb41492ecfc39e77196b059dd6face78',1,'ltr::AdaRank::eval()'],['../classltr_1_1_ranker.html#a1516810fc4c57e57afa8c265ecb9c46d',1,'ltr::Ranker::eval()']]]
+  ['evaluateweakranker_4',['evaluateWeakRanker',['../classltr_1_1_ada_rank.html#a5823949cfd30d5b4fbbed0d506203faa',1,'ltr::AdaRank']]],
+  ['extractfeatures_5',['extractFeatures',['../classltr_1_1_ranker.html#a017be4905d31b7fcf3e070711e439b45',1,'ltr::Ranker']]]
 ];

@@ -78,14 +78,16 @@ namespace ltr {
          * Construct a new AdaRank object
          * @param dataset
          * @param scorer
-         * @param features
-         * @param validationSet
          * @param iter
          * @param tolerance
          * @param maxConsecutive
+         * @param features
+         * @param validationSet
          */
-        AdaRank(DataSet dataset, unique_ptr<MetricScorer> scorer, vector<int> features={}, DataSet validationSet={},
-                int iter=50, double tolerance=0.002, int maxConsecutive = 5);
+        AdaRank(DataSet dataset, unique_ptr<MetricScorer> scorer, int iter=50, double tolerance=0.002, int maxConsecutive = 5,
+                vector<int> features={}, DataSet validationSet={});
+
+        ~AdaRank();
 
         /**
          * @brief Learn to rank based on AdaRank.
@@ -100,26 +102,6 @@ namespace ltr {
          * @return double 
          */
         double predict(ReadableDataPoint dp) override;
-
-        /**
-         * @brief map of parameters
-         * 
-         * @return map <name of parameter, value> 
-         */
-        map<string, double> getParameters() override;
-
-        /**
-         * @brief Load AdaRank parameters map
-         * @param parameters
-         */
-        void setParameters(map<string, double> parameters) override;
-
-        /**
-         * @brief Return the name of the LTR Method.
-         * 
-         * @return string 
-         */
-        string name() const override;
         
         /**
          * @brief Set the Iter object
@@ -163,6 +145,18 @@ namespace ltr {
     protected:
 
         /**
+         * Save json in file
+         * @param file
+         */
+        void saveJSON(std::ofstream& file) override;
+
+        /**
+         * Load json from file
+         * @param file
+         */
+        void loadJSON(std::ifstream& file) override;
+
+        /**
          * @brief Learn the data
          * 
          * @param start iteration
@@ -184,9 +178,31 @@ namespace ltr {
          */
         double evaluateWeakRanker(WeakRanker& wk);
 
+        /**
+         * Print header table when starts to fit
+         */
+        void printHeader();
+
+        /**
+         * Print each iter step
+         * @param it
+         * @param feature
+         * @param train_score
+         * @param train_improve
+         * @param val_score
+         * @param val_improve
+         * @param status
+         */
+        void printIter(int it, int feature, double train_score, double train_improve, double val_score, double val_improve, string status);
+
+        /**
+         * Print AdaRank results after fit
+         */
+        void printResults();
+
         int iter, max_consecutive_selections, consecutive_selections, previous_feature;
 
-        double tolerance, previous_training_score;
+        double tolerance, previous_training_score, previous_validation_score;
 
         vector<double> sample_weights;
 

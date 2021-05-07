@@ -1,0 +1,155 @@
+name: ltrpp
+
+on: 
+  push:
+    paths:
+      - '**.c'
+      - '**.cpp'
+      - '**.h'
+      - '**.hpp'
+      - '**.cmake'
+      - '**/CMakeLists.txt'
+      - '.github/workflows/build.yml'
+    branches:
+      - master
+
+  pull_request:
+    paths:
+      - '**.c'
+      - '**.cpp'
+      - '**.h'
+      - '**.hpp'
+      - '**.cmake'
+      - '**/CMakeLists.txt'
+      - '.github/workflows/build.yml'
+    branches:
+      - dev
+      - master
+
+jobs:
+
+  Build:
+    env:
+      OHSUMED: ${{ github.workspace }}/tests/benchmarks/OHSUMED
+
+    name: ${{matrix.config.name}}
+    runs-on: ${{matrix.config.os}}
+    strategy:
+      fail-fast: false
+      matrix:
+        config:
+          - {
+            name: "Windows/2019/Static/X86/Release",
+            os: windows-2019,
+            config: Release,
+            cmake_extra_args: -G "Visual Studio 16 2019" -A Win32 -DBUILD_DOCS=OFF,
+            sudocmd: "",
+            artifact_name: "Windows x86",
+            cores: 2,
+          }
+          - {
+            name: "Windows/2019/Static/X64/Release",
+            os: windows-2019,
+            config: Release,
+            cmake_extra_args: -G "Visual Studio 16 2019" -A x64 -DCMAKE_CXX_FLAGS="/O2" -DBUILD_DOCS=OFF,
+            sudocmd: "",
+            artifact_name: "Windows x64",
+            cores: 2,
+          }
+          - {
+            name: "Ubuntu/18.04/Static/X64/Release",
+            os: ubuntu-18.04,
+            config: Release,
+            cmake_extra_args: "-DCMAKE_C_COMPILER=/usr/bin/gcc-10 -DCMAKE_CXX_COMPILER=/usr/bin/g++-10  -DCMAKE_CXX_FLAGS=\"-O2\" -DBUILD_DOCS=OFF",
+            sudocmd: "sudo",
+            artifact_name: "Linux",
+            cores: 2,
+          }
+          - {
+            name: "MacOSX/10.15/Static/X64/Release",
+            os: macos-10.15,
+            config: Release,
+            cmake_extra_args: "-DCMAKE_CXX_FLAGS=\"-O2\" -DBUILD_DOCS=OFF",
+            sudocmd: "sudo",
+            artifact_name: "MacOSX",
+            cores: 4,
+          }
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+
+      - name: Create Work Dir
+        run: mkdir build
+      
+      - name: Configure
+        working-directory: ./build
+        run: |
+          cmake .. ${{matrix.config.cmake_extra_args}} -DCMAKE_BUILD_TYPE=${{matrix.config.config}}
+      
+      - name: Build
+        working-directory: ./build
+        run: cmake --build . --parallel ${{matrix.config.cores}} --config ${{matrix.config.config}}
+
+      - name: Install
+        working-directory: ./build
+        run: ${{matrix.config.sudocmd}} cmake --install .
+      
+      - name: Create Packages
+        working-directory: ./build
+        run: ${{matrix.config.sudocmd}} cpack
+
+      - name: Archive Packages
+        uses: actions/upload-artifact@v2
+        with:
+          name: Binary Packages ${{matrix.config.artifact_name}}
+          path: build/ltrpp-?.?.?-*.*
+  
+  Coverage:
+    env:
+      OHSUMED: ${{ github.workspace }}/tests/benchmarks/OHSUMED
+
+    name: Tests and Coverage
+    runs-on: ubuntu-latest
+    steps:
+
+      - uses: actions/checkout@v2
+
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get install libgtest-dev valgrind lcov doxygen graphviz python-dev python3-pip
+          pip3 install sphinx breathe sphinx_rtd_theme
+
+
+      - name: Create Work Dir
+        run: mkdir build
+      
+      - name: Configure
+        working-directory: ./build
+        run: |
+          cmake .. -DCMAKE_C_COMPILER=/usr/bin/gcc-10 -DCMAKE_CXX_COMPILER=/usr/bin/g++-10  -DBUILD_DOCS=OFF -DCMAKE_BUILD_TYPE=Release
+      
+      - name: Build
+        working-directory: ./build
+        run: cmake --build . --parallel 4 --config Release
+
+      - name: Test
+        working-directory: ./build
+        run: make test
+
+      - name: Gcov
+        working-directory: ./build
+        run: make lcov
+
+      - name: Lcov
+        working-directory: ./build
+        run: make gcov
+      
+      - name: Codecov
+        working-directory: ./build
+        run: bash <(curl -s https://codecov.io/bash) -X gcov || echo "Codecov did not collect coverage reports"
+      

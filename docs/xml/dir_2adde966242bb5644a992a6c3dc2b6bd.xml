@@ -2,9 +2,11 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="dir_2adde966242bb5644a992a6c3dc2b6bd" kind="dir">
     <compoundname>/home/marcos/Projetos/ltrpp/ltr/lib/api/learning</compoundname>
-    <innerdir refid="dir_7609ca0ee18e749777b62eec7655f5cd">/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/boosting</innerdir>
+    <innerdir refid="dir_f633b869c91607fd79e93e0151dd3e87">/home/marcos/Projetos/ltrpp/ltr/lib/api/learning/ensemble</innerdir>
     <innerfile refid="_data_point_8hpp">DataPoint.hpp</innerfile>
     <innerfile refid="_data_set_8hpp">DataSet.hpp</innerfile>
+    <innerfile refid="_iterators_8hpp">Iterators.hpp</innerfile>
+    <innerfile refid="_learner_8hpp">Learner.hpp</innerfile>
     <innerfile refid="_ranker_8hpp">Ranker.hpp</innerfile>
     <innerfile refid="_rank_list_8hpp">RankList.hpp</innerfile>
     <briefdescription>

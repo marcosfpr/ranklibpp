@@ -22,12 +22,13 @@
 #include <algorithm>
 #include <utility>
 #include <iomanip>
+#include <sstream>
 
 #include "../../api/learning/DataPoint.hpp"
 
 #include "../../api/LtrError.hpp"
 
-#include "boost/algorithm/string.hpp"
+#include <boost/algorithm/string.hpp>
 
 #define NaN -1000.00
 

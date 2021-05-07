@@ -1,22 +1,4 @@
 var searchData=
 [
-  ['get_110',['get',['../classltr_1_1_rank_list.html#a51b857a46d0b1afa9c87724ba26ec384',1,'ltr::RankList']]],
-  ['getcached_111',['getCached',['../classltr_1_1_data_point.html#aad6f93104ca44609dbecfb6834ff193e',1,'ltr::DataPoint']]],
-  ['getdepth_112',['getDepth',['../classltr_1_1_metric_scorer.html#a8347d53c4d39a69db8110e53d757a6e4',1,'ltr::MetricScorer']]],
-  ['getdescription_113',['getDescription',['../classltr_1_1_data_point.html#a8ad3aea20be5cbd61f87a2d437e5fb2f',1,'ltr::DataPoint']]],
-  ['getenqueue_114',['getEnqueue',['../classltr_1_1_ada_rank.html#adb9bf4ec936f84fb942797e874cf8571',1,'ltr::AdaRank']]],
-  ['getfeaturecount_115',['getFeatureCount',['../classltr_1_1_data_point.html#afa99d3b2af98c6e4decc5bf3196fc499',1,'ltr::DataPoint']]],
-  ['getfeatures_116',['getFeatures',['../classltr_1_1_ranker.html#a584b627bf90240d0004e2d7cd09294c1',1,'ltr::Ranker']]],
-  ['getfeaturevalue_117',['getFeatureValue',['../classltr_1_1_data_point.html#a92f1ecb8817784d47bdf20684f000c1a',1,'ltr::DataPoint']]],
-  ['getfeaturevector_118',['getFeatureVector',['../classltr_1_1_data_point.html#a29cbf20c9e21eed09af3f1c65e9eb1b7',1,'ltr::DataPoint']]],
-  ['getid_119',['getID',['../classltr_1_1_data_point.html#a26a198c90449dab21eaa32d788a37bf1',1,'ltr::DataPoint']]],
-  ['getiterations_120',['getIterations',['../classltr_1_1_ada_rank.html#aeed163a1b4c2135d0d27597d640afdbe',1,'ltr::AdaRank']]],
-  ['getlabel_121',['getLabel',['../classltr_1_1_data_point.html#a0088094057c56b88b8dee2bd19f7b222',1,'ltr::DataPoint']]],
-  ['getmaxselcount_122',['getMaxSelCount',['../classltr_1_1_ada_rank.html#af7ad029fa7508b8ea03cd2671c8bb62f',1,'ltr::AdaRank']]],
-  ['getpartialranking_123',['getPartialRanking',['../classltr_1_1_rank_list.html#a0e44c3c26e00dbb773234cd97514bd67',1,'ltr::RankList']]],
-  ['getranking_124',['getRanking',['../classltr_1_1_rank_list.html#a6e73baf96dbe5e21ce57458ea2a9fbb5',1,'ltr::RankList']]],
-  ['getrelevancelabels_125',['getRelevanceLabels',['../classltr_1_1_metric_scorer.html#ab9ddb58509a8ee09d8ec8b8b12a18c1c',1,'ltr::MetricScorer']]],
-  ['gettolerance_126',['getTolerance',['../classltr_1_1_ada_rank.html#acbc552df345bc06e4dad9384e784e5d0',1,'ltr::AdaRank']]],
-  ['gettrainingscore_127',['getTrainingScore',['../classltr_1_1_ranker.html#ac5b782501ae5f4543141655454af75b8',1,'ltr::Ranker']]],
-  ['getvalidationscore_128',['getValidationScore',['../classltr_1_1_ranker.html#ab9051e82a25fd91ff0a0e1a15834775e',1,'ltr::Ranker']]]
+  ['fit_88',['fit',['../classltr_1_1_ada_rank.html#aacac7068a5546dd281d872f6bcd6aa62',1,'ltr::AdaRank::fit()'],['../classltr_1_1_ranker.html#ab613fb21ed03dbe10fcabb77b29f89d8',1,'ltr::Ranker::fit()']]]
 ];

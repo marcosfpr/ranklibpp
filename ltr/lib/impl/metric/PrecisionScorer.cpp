@@ -18,47 +18,37 @@
 //  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 //  THE SOFTWARE.
 
-#include "../../api/utils/JsonParser.hpp"
 
+#include "../../api/metric/PrecisionScorer.hpp"
+#include "../../api/learning/RankList.hpp"
 
-#include <iostream>
-#include <map>
-#include <utility> // pair
+using namespace ltr;
 
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/json_parser.hpp>
-
-namespace pt = boost::property_tree;
-
-void ltr::write_json(std::ofstream& file, const string& model, const map<string, double>& parameters) {
-    
-    pt::ptree root;
-
-    root.put("model", model);
-
-    pt::ptree parameters_node;
-    for(auto& parameter: parameters) 
-        parameters_node.put(parameter.first, parameter.second);
-    
-    root.add_child("parameters", parameters_node);
-
-    pt::write_json(file, root);
-
+PrecisionScorer::PrecisionScorer(int k):MetricScorer(){
+    this->depth = k;
 }
 
-std::pair<string, map<string, double>> ltr::load_json(std::ifstream& file) {
-    pt::ptree root;
+PrecisionScorer::PrecisionScorer(const PrecisionScorer& ms) = default;
 
-    pt::read_json(file, root);
+PrecisionScorer& PrecisionScorer::operator=(const PrecisionScorer& ms)= default;
 
-    map<string, double> params;
 
-    string model = root.get<string>("model");
-
-    auto params_node = root.get_child("parameters");
-    for( const auto& kv : params_node ){
-        params.insert(std::make_pair(kv.first, kv.second.get_value<double>()));
+double PrecisionScorer::score(RankList& rl){
+    double precision = 0.0;
+    for (int i = 0; i < depth; i++) {
+        if (rl.get(i)->getLabel() > 0) precision += 1;
     }
+    return precision / depth;
+}
 
-    return std::make_pair(model, params);
+unique_ptr<MetricScorer> PrecisionScorer::clone() const{
+    return std::make_unique<PrecisionScorer>( *this );
+}
+
+double PrecisionScorer::score(DataSet &ds) {
+    return MetricScorer::score(ds);
+}
+
+string PrecisionScorer::toString() {
+    return "P@"+std::to_string(this->depth);
 }

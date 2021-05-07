@@ -26,6 +26,8 @@
 #include <map>
 #include <string>
 #include <memory>
+#include <utility>
+#include <fstream>
 
 #include "Learner.hpp"
 #include "../utils/Logging.hpp"
@@ -77,26 +79,6 @@ namespace ltr {
              */
             virtual double predict(ReadableDataPoint dp);
 
-            /**
-             * @brief map of parameters
-             * 
-             * @return map <name of parameter, value> 
-             */
-            virtual map<string, double> getParameters();
-
-            /**
-             * @brief map of parameters
-             * @param map <name of parameter, value>
-             */
-            virtual void setParameters(map<string, double> parameters);
-
-            /**
-             * @brief Return the name of the LTR Method.
-             * 
-             * @return const string 
-             */
-            virtual string name() const;
-            
             /**
              * @brief Set the Training Set of Ranker
              * 
@@ -161,29 +143,24 @@ namespace ltr {
             void load(const string& fileToLoad);
 
         protected:
+
             /**
              * @brief Extract all features used on training samples.
-             * 
              */
             void extractFeatures();
 
             /**
-             * @brief Log a set of messages into screen;
-             * 
-             * @param msg 
-             * @param type
-             * @param size
+             * Save json in file
+             * @param file
              */
-            void log(vector<string> msg, log_level type, vector<int> sizes = {}) const;
+            virtual void saveJSON(std::ofstream& file);
 
             /**
-             * @brief Log a set of messages into screen;
-             *
-             * @param msg
-             * @param type
-             * @param size
+             * Load json from file
+             * @param file
              */
-            void log(string msg, log_level type, int size=0) const;
+            virtual void loadJSON(std::ifstream& file);
+
 
             DataSet training_samples, validation_samples;
 
