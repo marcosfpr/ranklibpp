@@ -1,5 +1,0 @@
-[0m2021.05.03 14:30:28 INFO  Started: Metals version 0.10.2 in workspace '/home/marcos/Projetos/ltrpp' for client vscode 1.55.2.[0m
-[0m2021.05.03 14:30:30 INFO  time: initialize in 1.74s[0m
-[0m2021.05.03 14:30:32 WARN  Build server is not auto-connectable.[0m
-[0m2021.05.03 14:30:32 WARN  no build tool detected in workspace '/home/marcos/Projetos/ltrpp'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
-[0m2021.05.03 14:45:26 INFO  shutting down Metals[0m

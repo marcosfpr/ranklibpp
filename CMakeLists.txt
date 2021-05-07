@@ -3,7 +3,7 @@
 #######################################################
 
 # Project Information
-cmake_minimum_required(VERSION 3.14.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.16.0 FATAL_ERROR)
 project(ltrpp VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 17)
 

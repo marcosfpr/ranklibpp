@@ -2,15 +2,12 @@
 ### Source                                          ###
 #######################################################
 
-
 CPMFindPackage(
-    NAME Boost
-    GITHUB_REPOSITORY Orphis/boost-cmake
-    VERSION 1.67.0
-    FIND_PACKAGE_ARGUMENTS "COMPONENTS boost"
+    NAME boost-cmake
+    GITHUB_REPOSITORY marcosfpr/boost-cmake
+    VERSION 1.71.0
+    FIND_PACKAGE_ARGUMENTS ""
 )
-
-add_definitions(-DBOOST_ALL_DYN_LINK)
 
 CPMFindPackage(
     NAME spdlog
@@ -19,6 +16,7 @@ CPMFindPackage(
     FIND_PACKAGE_ARGUMENTS ""
 )
 
+add_definitions(-DBOOST_ALL_DYN_LINK)
 
 find_package(Threads REQUIRED)
 
@@ -51,7 +49,7 @@ target_include_directories(
     PUBLIC api
 )
 
-# Linking
+# 
 target_link_libraries(ltr PRIVATE Boost::boost spdlog ${FILE_SYSTEM_LIB} Threads::Threads)
 
 target_compile_features(ltr PUBLIC cxx_std_17)
