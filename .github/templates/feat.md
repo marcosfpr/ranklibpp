@@ -1,6 +1,6 @@
 ---
 name: Improvement Proposal
-about: For formal improvement proposals. For discussing new ideas, please use "Matplot++ Ideas 💡" link below.
+about: ''
 title: ''
 labels: 
 assignees: ''
@@ -12,7 +12,7 @@ assignees: ''
 - [ ] *enhancement - backends*
 - [ ] *enhancement - build system*
 - [ ] *enhancement - documentation*
-- [ ] *enhancement - plot categories*
+- [ ] *enhancement - model categories*
 
 **The problem**
 <!--Please be civil. This is an environment for collaboration.-->
