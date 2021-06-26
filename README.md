@@ -1,20 +1,6 @@
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![codecov][codecov-shield]][codecov-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
-
-
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/marcosfpr/ltrpp">
-    <img src="images/logo.png" alt="Logo" width="300" height="150">
-  </a>
-
   <h3 align="center">Learning to Rank ++</h3>
 
   <p align="center">
@@ -29,38 +15,8 @@
   </p>
 </p>
 
-
-
-<!-- TABLE OF CONTENTS -->
-<details open="open">
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#integration">Integration</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ol>
-</details>
-
-
-
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-CppExtension and BuildExtension -> pytorch
 
 LTR++ is a Learning to Rank library written in C++ and based on the famous [RankLib](https://sourceforge.net/p/lemur/wiki/RankLib%20How%20to%20use/) library. The main goal of this project is to provide a simple, fast and memory safe wich implements a wide variety of LTR models. 
 
@@ -235,24 +191,3 @@ Distributed under the MIT License. See `LICENSE` for more information.
 ## Contact
 
 Marcos Pontes - mfprezende@gmail.com
-
-Project Link: [https://github.com/marcosfpr/ltrpp](https://github.com/marcosfpr/ltrpp)
-
-
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/marcosfpr/ltrpp.svg?style=for-the-badge
-[contributors-url]: https://github.com/marcosfpr/ltrpp/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/marcosfpr/ltrpp.svg?style=for-the-badge
-[forks-url]: https://github.com/marcosfpr/ltrpp/network/members
-[stars-shield]: https://img.shields.io/github/stars/marcosfpr/ltrpp.svg?style=for-the-badge
-[stars-url]: https://github.com/marcosfpr/ltrpp/stargazers
-[issues-shield]: https://img.shields.io/github/issues/marcosfpr/ltrpp.svg?style=for-the-badge
-[issues-url]: https://github.com/marcosfpr/ltrpp/issues
-[license-shield]: https://img.shields.io/github/license/marcosfpr/ltrpp.svg?style=for-the-badge
-[license-url]: https://github.com/marcosfpr/ltrpp/blob/master/LICENSE
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/marcosfpr
-[product-screenshot]: images/logo.png
-[codecov-shield]: https://img.shields.io/codecov/c/github/marcosfpr/ltrpp?style=for-the-badge
-[codecov-url]: https://codecov.io/gh/marcosfpr/ltrp
